@@ -74,7 +74,7 @@ namespace Example
             try
             {
                 // Create server
-                InlineResponse2001 result = apiInstance.CreateServer(server);
+                ServerListResponse result = apiInstance.CreateServer(server);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -111,19 +111,19 @@ Class | Method | HTTP request | Description
  - [Model.ErrorError](docs/ErrorError.md)
  - [Model.ErrorStatus](docs/ErrorStatus.md)
  - [Model.InlineResponse200](docs/InlineResponse200.md)
- - [Model.InlineResponse2001](docs/InlineResponse2001.md)
- - [Model.InlineResponse2002](docs/InlineResponse2002.md)
- - [Model.InlineResponse2002Storages](docs/InlineResponse2002Storages.md)
  - [Model.InlineResponse200Servers](docs/InlineResponse200Servers.md)
  - [Model.IpAddress](docs/IpAddress.md)
  - [Model.Server](docs/Server.md)
  - [Model.ServerIpAddresses](docs/ServerIpAddresses.md)
+ - [Model.ServerListResponse](docs/ServerListResponse.md)
  - [Model.ServerStorageDevices](docs/ServerStorageDevices.md)
  - [Model.ServerTags](docs/ServerTags.md)
  - [Model.Storage](docs/Storage.md)
  - [Model.StorageBackups](docs/StorageBackups.md)
  - [Model.StorageDevice](docs/StorageDevice.md)
  - [Model.StorageServers](docs/StorageServers.md)
+ - [Model.SuccessStoragesResponse](docs/SuccessStoragesResponse.md)
+ - [Model.SuccessStoragesResponseStorages](docs/SuccessStoragesResponseStorages.md)
 
 
 <a name="documentation-for-authorization"></a>

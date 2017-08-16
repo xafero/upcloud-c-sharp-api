@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="liststorages"></a>
 # **ListStorages**
-> InlineResponse2002 ListStorages ()
+> SuccessStoragesResponse ListStorages ()
 
 List of storages
 
@@ -32,7 +32,7 @@ namespace Example
             try
             {
                 // List of storages
-                InlineResponse2002 result = apiInstance.ListStorages();
+                SuccessStoragesResponse result = apiInstance.ListStorages();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -49,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**SuccessStoragesResponse**](SuccessStoragesResponse.md)
 
 ### Authorization
 

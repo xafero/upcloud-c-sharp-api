@@ -31,8 +31,8 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 ListStorages ();
+        /// <returns>SuccessStoragesResponse</returns>
+        SuccessStoragesResponse ListStorages ();
 
         /// <summary>
         /// List of storages
@@ -41,8 +41,8 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> ListStoragesWithHttpInfo ();
+        /// <returns>ApiResponse of SuccessStoragesResponse</returns>
+        ApiResponse<SuccessStoragesResponse> ListStoragesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> ListStoragesAsync ();
+        /// <returns>Task of SuccessStoragesResponse</returns>
+        System.Threading.Tasks.Task<SuccessStoragesResponse> ListStoragesAsync ();
 
         /// <summary>
         /// List of storages
@@ -62,8 +62,8 @@ namespace IO.Swagger.Api
         /// 
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListStoragesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStoragesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         /// List of storages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 ListStorages ()
+        /// <returns>SuccessStoragesResponse</returns>
+        public SuccessStoragesResponse ListStorages ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = ListStoragesWithHttpInfo();
+             ApiResponse<SuccessStoragesResponse> localVarResponse = ListStoragesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -179,8 +179,8 @@ namespace IO.Swagger.Api
         /// List of storages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > ListStoragesWithHttpInfo ()
+        /// <returns>ApiResponse of SuccessStoragesResponse</returns>
+        public ApiResponse< SuccessStoragesResponse > ListStoragesWithHttpInfo ()
         {
 
             var localVarPath = "/storage";
@@ -219,19 +219,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<SuccessStoragesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (SuccessStoragesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuccessStoragesResponse)));
         }
 
         /// <summary>
         /// List of storages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> ListStoragesAsync ()
+        /// <returns>Task of SuccessStoragesResponse</returns>
+        public async System.Threading.Tasks.Task<SuccessStoragesResponse> ListStoragesAsync ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await ListStoragesAsyncWithHttpInfo();
+             ApiResponse<SuccessStoragesResponse> localVarResponse = await ListStoragesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,8 +240,8 @@ namespace IO.Swagger.Api
         /// List of storages 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListStoragesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStoragesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/storage";
@@ -280,9 +280,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<SuccessStoragesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (SuccessStoragesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuccessStoragesResponse)));
         }
 
     }

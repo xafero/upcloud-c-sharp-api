@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createserver"></a>
 # **CreateServer**
-> InlineResponse2001 CreateServer (Server server = null)
+> ServerListResponse CreateServer (Server server = null)
 
 Create server
 
@@ -37,7 +37,7 @@ namespace Example
             try
             {
                 // Create server
-                InlineResponse2001 result = apiInstance.CreateServer(server);
+                ServerListResponse result = apiInstance.CreateServer(server);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ServerListResponse**](ServerListResponse.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a name="serverdetails"></a>
 # **ServerDetails**
-> InlineResponse2001 ServerDetails (Guid? serverId)
+> ServerListResponse ServerDetails (Guid? serverId)
 
 Server details
 
@@ -211,7 +211,7 @@ namespace Example
             try
             {
                 // Server details
-                InlineResponse2001 result = apiInstance.ServerDetails(serverId);
+                ServerListResponse result = apiInstance.ServerDetails(serverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ServerListResponse**](ServerListResponse.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ No authorization required
 
 <a name="updateserver"></a>
 # **UpdateServer**
-> InlineResponse2001 UpdateServer (Guid? serverId, Server server = null)
+> ServerListResponse UpdateServer (Guid? serverId, Server server = null)
 
 Modify server
 
@@ -271,7 +271,7 @@ namespace Example
             try
             {
                 // Modify server
-                InlineResponse2001 result = apiInstance.UpdateServer(serverId, server);
+                ServerListResponse result = apiInstance.UpdateServer(serverId, server);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ServerListResponse**](ServerListResponse.md)
 
 ### Authorization
 

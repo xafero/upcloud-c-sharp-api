@@ -32,8 +32,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 CreateServer (Server server = null);
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse CreateServer (Server server = null);
 
         /// <summary>
         /// Create server
@@ -43,8 +43,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> CreateServerWithHttpInfo (Server server = null);
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> CreateServerWithHttpInfo (Server server = null);
         /// <summary>
         /// Delete server
         /// </summary>
@@ -93,8 +93,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ServerDetails (Guid? serverId);
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse ServerDetails (Guid? serverId);
 
         /// <summary>
         /// Server details
@@ -104,8 +104,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ServerDetailsWithHttpInfo (Guid? serverId);
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> ServerDetailsWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Modify server
         /// </summary>
@@ -115,8 +115,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 UpdateServer (Guid? serverId, Server server = null);
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse UpdateServer (Guid? serverId, Server server = null);
 
         /// <summary>
         /// Modify server
@@ -127,8 +127,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> UpdateServerWithHttpInfo (Guid? serverId, Server server = null);
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> UpdateServerWithHttpInfo (Guid? serverId, Server server = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -139,8 +139,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> CreateServerAsync (Server server = null);
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> CreateServerAsync (Server server = null);
 
         /// <summary>
         /// Create server
@@ -150,8 +150,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> CreateServerAsyncWithHttpInfo (Server server = null);
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> CreateServerAsyncWithHttpInfo (Server server = null);
         /// <summary>
         /// Delete server
         /// </summary>
@@ -200,8 +200,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ServerDetailsAsync (Guid? serverId);
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> ServerDetailsAsync (Guid? serverId);
 
         /// <summary>
         /// Server details
@@ -211,8 +211,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerDetailsAsyncWithHttpInfo (Guid? serverId);
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerDetailsAsyncWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Modify server
         /// </summary>
@@ -222,8 +222,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> UpdateServerAsync (Guid? serverId, Server server = null);
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> UpdateServerAsync (Guid? serverId, Server server = null);
 
         /// <summary>
         /// Modify server
@@ -234,8 +234,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> UpdateServerAsyncWithHttpInfo (Guid? serverId, Server server = null);
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> UpdateServerAsyncWithHttpInfo (Guid? serverId, Server server = null);
         #endregion Asynchronous Operations
     }
 
@@ -341,10 +341,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 CreateServer (Server server = null)
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse CreateServer (Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = CreateServerWithHttpInfo(server);
+             ApiResponse<ServerListResponse> localVarResponse = CreateServerWithHttpInfo(server);
              return localVarResponse.Data;
         }
 
@@ -353,8 +353,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > CreateServerWithHttpInfo (Server server = null)
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > CreateServerWithHttpInfo (Server server = null)
         {
 
             var localVarPath = "/server";
@@ -402,9 +402,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
@@ -412,10 +412,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> CreateServerAsync (Server server = null)
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> CreateServerAsync (Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await CreateServerAsyncWithHttpInfo(server);
+             ApiResponse<ServerListResponse> localVarResponse = await CreateServerAsyncWithHttpInfo(server);
              return localVarResponse.Data;
 
         }
@@ -425,8 +425,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> CreateServerAsyncWithHttpInfo (Server server = null)
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> CreateServerAsyncWithHttpInfo (Server server = null)
         {
 
             var localVarPath = "/server";
@@ -474,9 +474,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
@@ -734,10 +734,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ServerDetails (Guid? serverId)
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse ServerDetails (Guid? serverId)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ServerDetailsWithHttpInfo(serverId);
+             ApiResponse<ServerListResponse> localVarResponse = ServerDetailsWithHttpInfo(serverId);
              return localVarResponse.Data;
         }
 
@@ -746,8 +746,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ServerDetailsWithHttpInfo (Guid? serverId)
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > ServerDetailsWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -789,9 +789,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
@@ -799,10 +799,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ServerDetailsAsync (Guid? serverId)
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> ServerDetailsAsync (Guid? serverId)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ServerDetailsAsyncWithHttpInfo(serverId);
+             ApiResponse<ServerListResponse> localVarResponse = await ServerDetailsAsyncWithHttpInfo(serverId);
              return localVarResponse.Data;
 
         }
@@ -812,8 +812,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerDetailsAsyncWithHttpInfo (Guid? serverId)
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerDetailsAsyncWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -855,9 +855,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
@@ -866,10 +866,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 UpdateServer (Guid? serverId, Server server = null)
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse UpdateServer (Guid? serverId, Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = UpdateServerWithHttpInfo(serverId, server);
+             ApiResponse<ServerListResponse> localVarResponse = UpdateServerWithHttpInfo(serverId, server);
              return localVarResponse.Data;
         }
 
@@ -879,8 +879,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > UpdateServerWithHttpInfo (Guid? serverId, Server server = null)
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > UpdateServerWithHttpInfo (Guid? serverId, Server server = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -932,9 +932,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
@@ -943,10 +943,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> UpdateServerAsync (Guid? serverId, Server server = null)
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> UpdateServerAsync (Guid? serverId, Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await UpdateServerAsyncWithHttpInfo(serverId, server);
+             ApiResponse<ServerListResponse> localVarResponse = await UpdateServerAsyncWithHttpInfo(serverId, server);
              return localVarResponse.Data;
 
         }
@@ -957,8 +957,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> UpdateServerAsyncWithHttpInfo (Guid? serverId, Server server = null)
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> UpdateServerAsyncWithHttpInfo (Guid? serverId, Server server = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1010,9 +1010,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
     }
