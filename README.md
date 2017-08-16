@@ -69,16 +69,17 @@ namespace Example
         {
 
             var apiInstance = new ServerApi();
+            var server = new Server(); // Server |  (optional) 
 
             try
             {
-                // List of servers
-                InlineResponse200 result = apiInstance.ServerGet();
+                // Create server
+                InlineResponse2001 result = apiInstance.CreateServer(server);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ServerApi.ServerGet: " + e.Message );
+                Debug.Print("Exception when calling ServerApi.CreateServer: " + e.Message );
             }
 
         }
@@ -93,12 +94,12 @@ All URIs are relative to *http://localhost/1.2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ServerApi* | [**ServerGet**](docs/ServerApi.md#serverget) | **GET** /server | List of servers
-*ServerApi* | [**ServerPost**](docs/ServerApi.md#serverpost) | **POST** /server | Create server
-*ServerApi* | [**ServerServerIdDelete**](docs/ServerApi.md#serverserveriddelete) | **DELETE** /server/{serverId} | Delete server
-*ServerApi* | [**ServerServerIdGet**](docs/ServerApi.md#serverserveridget) | **GET** /server/{serverId} | Server details
-*ServerApi* | [**ServerServerIdPut**](docs/ServerApi.md#serverserveridput) | **PUT** /server/{serverId} | Modify server
-*StorageApi* | [**StorageGet**](docs/StorageApi.md#storageget) | **GET** /storage | List of storages
+*ServerApi* | [**CreateServer**](docs/ServerApi.md#createserver) | **POST** /server | Create server
+*ServerApi* | [**DeleteServer**](docs/ServerApi.md#deleteserver) | **DELETE** /server/{serverId} | Delete server
+*ServerApi* | [**ListServers**](docs/ServerApi.md#listservers) | **GET** /server | List of servers
+*ServerApi* | [**ServerDetails**](docs/ServerApi.md#serverdetails) | **GET** /server/{serverId} | Server details
+*ServerApi* | [**UpdateServer**](docs/ServerApi.md#updateserver) | **PUT** /server/{serverId} | Modify server
+*StorageApi* | [**ListStorages**](docs/StorageApi.md#liststorages) | **GET** /storage | List of storages
 
 
 <a name="documentation-for-models"></a>

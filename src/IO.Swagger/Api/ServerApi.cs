@@ -25,25 +25,6 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// List of servers
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse200</returns>
-        InlineResponse200 ServerGet ();
-
-        /// <summary>
-        /// List of servers
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> ServerGetWithHttpInfo ();
-        /// <summary>
         /// Create server
         /// </summary>
         /// <remarks>
@@ -52,7 +33,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ServerPost (Server server = null);
+        InlineResponse2001 CreateServer (Server server = null);
 
         /// <summary>
         /// Create server
@@ -63,7 +44,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ServerPostWithHttpInfo (Server server = null);
+        ApiResponse<InlineResponse2001> CreateServerWithHttpInfo (Server server = null);
         /// <summary>
         /// Delete server
         /// </summary>
@@ -73,7 +54,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns></returns>
-        void ServerServerIdDelete (Guid? serverId);
+        void DeleteServer (Guid? serverId);
 
         /// <summary>
         /// Delete server
@@ -84,7 +65,26 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ServerServerIdDeleteWithHttpInfo (Guid? serverId);
+        ApiResponse<Object> DeleteServerWithHttpInfo (Guid? serverId);
+        /// <summary>
+        /// List of servers
+        /// </summary>
+        /// <remarks>
+        /// List servers
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>InlineResponse200</returns>
+        InlineResponse200 ListServers ();
+
+        /// <summary>
+        /// List of servers
+        /// </summary>
+        /// <remarks>
+        /// List servers
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        ApiResponse<InlineResponse200> ListServersWithHttpInfo ();
         /// <summary>
         /// Server details
         /// </summary>
@@ -94,7 +94,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ServerServerIdGet (Guid? serverId);
+        InlineResponse2001 ServerDetails (Guid? serverId);
 
         /// <summary>
         /// Server details
@@ -105,7 +105,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ServerServerIdGetWithHttpInfo (Guid? serverId);
+        ApiResponse<InlineResponse2001> ServerDetailsWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Modify server
         /// </summary>
@@ -116,7 +116,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ServerServerIdPut (Guid? serverId, Server server = null);
+        InlineResponse2001 UpdateServer (Guid? serverId, Server server = null);
 
         /// <summary>
         /// Modify server
@@ -128,28 +128,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ServerServerIdPutWithHttpInfo (Guid? serverId, Server server = null);
+        ApiResponse<InlineResponse2001> UpdateServerWithHttpInfo (Guid? serverId, Server server = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
-        /// <summary>
-        /// List of servers
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> ServerGetAsync ();
-
-        /// <summary>
-        /// List of servers
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ServerGetAsyncWithHttpInfo ();
         /// <summary>
         /// Create server
         /// </summary>
@@ -159,7 +140,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ServerPostAsync (Server server = null);
+        System.Threading.Tasks.Task<InlineResponse2001> CreateServerAsync (Server server = null);
 
         /// <summary>
         /// Create server
@@ -170,7 +151,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerPostAsyncWithHttpInfo (Server server = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> CreateServerAsyncWithHttpInfo (Server server = null);
         /// <summary>
         /// Delete server
         /// </summary>
@@ -180,7 +161,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ServerServerIdDeleteAsync (Guid? serverId);
+        System.Threading.Tasks.Task DeleteServerAsync (Guid? serverId);
 
         /// <summary>
         /// Delete server
@@ -191,7 +172,26 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ServerServerIdDeleteAsyncWithHttpInfo (Guid? serverId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteServerAsyncWithHttpInfo (Guid? serverId);
+        /// <summary>
+        /// List of servers
+        /// </summary>
+        /// <remarks>
+        /// List servers
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of InlineResponse200</returns>
+        System.Threading.Tasks.Task<InlineResponse200> ListServersAsync ();
+
+        /// <summary>
+        /// List of servers
+        /// </summary>
+        /// <remarks>
+        /// List servers
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListServersAsyncWithHttpInfo ();
         /// <summary>
         /// Server details
         /// </summary>
@@ -201,7 +201,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ServerServerIdGetAsync (Guid? serverId);
+        System.Threading.Tasks.Task<InlineResponse2001> ServerDetailsAsync (Guid? serverId);
 
         /// <summary>
         /// Server details
@@ -212,7 +212,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerServerIdGetAsyncWithHttpInfo (Guid? serverId);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerDetailsAsyncWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Modify server
         /// </summary>
@@ -223,7 +223,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ServerServerIdPutAsync (Guid? serverId, Server server = null);
+        System.Threading.Tasks.Task<InlineResponse2001> UpdateServerAsync (Guid? serverId, Server server = null);
 
         /// <summary>
         /// Modify server
@@ -235,7 +235,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerServerIdPutAsyncWithHttpInfo (Guid? serverId, Server server = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> UpdateServerAsyncWithHttpInfo (Guid? serverId, Server server = null);
         #endregion Asynchronous Operations
     }
 
@@ -337,135 +337,14 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// List of servers 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse200</returns>
-        public InlineResponse200 ServerGet ()
-        {
-             ApiResponse<InlineResponse200> localVarResponse = ServerGetWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// List of servers 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > ServerGetWithHttpInfo ()
-        {
-
-            var localVarPath = "/server";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
-        }
-
-        /// <summary>
-        /// List of servers 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> ServerGetAsync ()
-        {
-             ApiResponse<InlineResponse200> localVarResponse = await ServerGetAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// List of servers 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ServerGetAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/server";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
-        }
-
-        /// <summary>
         /// Create server 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ServerPost (Server server = null)
+        public InlineResponse2001 CreateServer (Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ServerPostWithHttpInfo(server);
+             ApiResponse<InlineResponse2001> localVarResponse = CreateServerWithHttpInfo(server);
              return localVarResponse.Data;
         }
 
@@ -475,7 +354,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ServerPostWithHttpInfo (Server server = null)
+        public ApiResponse< InlineResponse2001 > CreateServerWithHttpInfo (Server server = null)
         {
 
             var localVarPath = "/server";
@@ -519,7 +398,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerPost", localVarResponse);
+                Exception exception = ExceptionFactory("CreateServer", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -534,9 +413,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ServerPostAsync (Server server = null)
+        public async System.Threading.Tasks.Task<InlineResponse2001> CreateServerAsync (Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ServerPostAsyncWithHttpInfo(server);
+             ApiResponse<InlineResponse2001> localVarResponse = await CreateServerAsyncWithHttpInfo(server);
              return localVarResponse.Data;
 
         }
@@ -547,7 +426,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerPostAsyncWithHttpInfo (Server server = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> CreateServerAsyncWithHttpInfo (Server server = null)
         {
 
             var localVarPath = "/server";
@@ -591,7 +470,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerPost", localVarResponse);
+                Exception exception = ExceptionFactory("CreateServer", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -606,9 +485,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns></returns>
-        public void ServerServerIdDelete (Guid? serverId)
+        public void DeleteServer (Guid? serverId)
         {
-             ServerServerIdDeleteWithHttpInfo(serverId);
+             DeleteServerWithHttpInfo(serverId);
         }
 
         /// <summary>
@@ -617,11 +496,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ServerServerIdDeleteWithHttpInfo (Guid? serverId)
+        public ApiResponse<Object> DeleteServerWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerServerIdDelete");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->DeleteServer");
 
             var localVarPath = "/server/{serverId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -655,7 +534,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteServer", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -670,9 +549,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ServerServerIdDeleteAsync (Guid? serverId)
+        public async System.Threading.Tasks.Task DeleteServerAsync (Guid? serverId)
         {
-             await ServerServerIdDeleteAsyncWithHttpInfo(serverId);
+             await DeleteServerAsyncWithHttpInfo(serverId);
 
         }
 
@@ -682,11 +561,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to delete</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ServerServerIdDeleteAsyncWithHttpInfo (Guid? serverId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteServerAsyncWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerServerIdDelete");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->DeleteServer");
 
             var localVarPath = "/server/{serverId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -720,7 +599,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteServer", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -730,14 +609,135 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// List of servers List servers
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>InlineResponse200</returns>
+        public InlineResponse200 ListServers ()
+        {
+             ApiResponse<InlineResponse200> localVarResponse = ListServersWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List of servers List servers
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of InlineResponse200</returns>
+        public ApiResponse< InlineResponse200 > ListServersWithHttpInfo ()
+        {
+
+            var localVarPath = "/server";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListServers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+        }
+
+        /// <summary>
+        /// List of servers List servers
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of InlineResponse200</returns>
+        public async System.Threading.Tasks.Task<InlineResponse200> ListServersAsync ()
+        {
+             ApiResponse<InlineResponse200> localVarResponse = await ListServersAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List of servers List servers
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListServersAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/server";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListServers", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+        }
+
+        /// <summary>
         /// Server details 
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ServerServerIdGet (Guid? serverId)
+        public InlineResponse2001 ServerDetails (Guid? serverId)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ServerServerIdGetWithHttpInfo(serverId);
+             ApiResponse<InlineResponse2001> localVarResponse = ServerDetailsWithHttpInfo(serverId);
              return localVarResponse.Data;
         }
 
@@ -747,11 +747,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ServerServerIdGetWithHttpInfo (Guid? serverId)
+        public ApiResponse< InlineResponse2001 > ServerDetailsWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerServerIdGet");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerDetails");
 
             var localVarPath = "/server/{serverId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -785,7 +785,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdGet", localVarResponse);
+                Exception exception = ExceptionFactory("ServerDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -800,9 +800,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ServerServerIdGetAsync (Guid? serverId)
+        public async System.Threading.Tasks.Task<InlineResponse2001> ServerDetailsAsync (Guid? serverId)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ServerServerIdGetAsyncWithHttpInfo(serverId);
+             ApiResponse<InlineResponse2001> localVarResponse = await ServerDetailsAsyncWithHttpInfo(serverId);
              return localVarResponse.Data;
 
         }
@@ -813,11 +813,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to return</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerServerIdGetAsyncWithHttpInfo (Guid? serverId)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerDetailsAsyncWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerServerIdGet");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerDetails");
 
             var localVarPath = "/server/{serverId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -851,7 +851,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdGet", localVarResponse);
+                Exception exception = ExceptionFactory("ServerDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -867,9 +867,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ServerServerIdPut (Guid? serverId, Server server = null)
+        public InlineResponse2001 UpdateServer (Guid? serverId, Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ServerServerIdPutWithHttpInfo(serverId, server);
+             ApiResponse<InlineResponse2001> localVarResponse = UpdateServerWithHttpInfo(serverId, server);
              return localVarResponse.Data;
         }
 
@@ -880,11 +880,11 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ServerServerIdPutWithHttpInfo (Guid? serverId, Server server = null)
+        public ApiResponse< InlineResponse2001 > UpdateServerWithHttpInfo (Guid? serverId, Server server = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerServerIdPut");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->UpdateServer");
 
             var localVarPath = "/server/{serverId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -928,7 +928,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateServer", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -944,9 +944,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ServerServerIdPutAsync (Guid? serverId, Server server = null)
+        public async System.Threading.Tasks.Task<InlineResponse2001> UpdateServerAsync (Guid? serverId, Server server = null)
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ServerServerIdPutAsyncWithHttpInfo(serverId, server);
+             ApiResponse<InlineResponse2001> localVarResponse = await UpdateServerAsyncWithHttpInfo(serverId, server);
              return localVarResponse.Data;
 
         }
@@ -958,11 +958,11 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Id of server to modify</param>
         /// <param name="server"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ServerServerIdPutAsyncWithHttpInfo (Guid? serverId, Server server = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> UpdateServerAsyncWithHttpInfo (Guid? serverId, Server server = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->ServerServerIdPut");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->UpdateServer");
 
             var localVarPath = "/server/{serverId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1006,7 +1006,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateServer", localVarResponse);
                 if (exception != null) throw exception;
             }
 

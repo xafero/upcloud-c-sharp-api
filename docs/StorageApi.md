@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**StorageGet**](StorageApi.md#storageget) | **GET** /storage | List of storages
+[**ListStorages**](StorageApi.md#liststorages) | **GET** /storage | List of storages
 
 
-<a name="storageget"></a>
-# **StorageGet**
-> InlineResponse2002 StorageGet ()
+<a name="liststorages"></a>
+# **ListStorages**
+> InlineResponse2002 ListStorages ()
 
 List of storages
 
@@ -23,7 +23,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class StorageGetExample
+    public class ListStoragesExample
     {
         public void main()
         {
@@ -32,12 +32,12 @@ namespace Example
             try
             {
                 // List of storages
-                InlineResponse2002 result = apiInstance.StorageGet();
+                InlineResponse2002 result = apiInstance.ListStorages();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling StorageApi.StorageGet: " + e.Message );
+                Debug.Print("Exception when calling StorageApi.ListStorages: " + e.Message );
             }
         }
     }

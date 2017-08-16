@@ -32,7 +32,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 StorageGet ();
+        InlineResponse2002 ListStorages ();
 
         /// <summary>
         /// List of storages
@@ -42,7 +42,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> StorageGetWithHttpInfo ();
+        ApiResponse<InlineResponse2002> ListStoragesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> StorageGetAsync ();
+        System.Threading.Tasks.Task<InlineResponse2002> ListStoragesAsync ();
 
         /// <summary>
         /// List of storages
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> StorageGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListStoragesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 StorageGet ()
+        public InlineResponse2002 ListStorages ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = StorageGetWithHttpInfo();
+             ApiResponse<InlineResponse2002> localVarResponse = ListStoragesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > StorageGetWithHttpInfo ()
+        public ApiResponse< InlineResponse2002 > ListStoragesWithHttpInfo ()
         {
 
             var localVarPath = "/storage";
@@ -215,7 +215,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListStorages", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -229,9 +229,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> StorageGetAsync ()
+        public async System.Threading.Tasks.Task<InlineResponse2002> ListStoragesAsync ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await StorageGetAsyncWithHttpInfo();
+             ApiResponse<InlineResponse2002> localVarResponse = await ListStoragesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -241,7 +241,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> StorageGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListStoragesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/storage";
@@ -276,7 +276,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListStorages", localVarResponse);
                 if (exception != null) throw exception;
             }
 
