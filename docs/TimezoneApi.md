@@ -1,0 +1,66 @@
+# IO.Swagger.Api.TimezoneApi
+
+All URIs are relative to *http://localhost/1.2*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**TimezoneGet**](TimezoneApi.md#timezoneget) | **GET** /timezone | List timezones
+
+
+<a name="timezoneget"></a>
+# **TimezoneGet**
+> InlineResponse2002 TimezoneGet ()
+
+List timezones
+
+Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class TimezoneGetExample
+    {
+        public void main()
+        {
+            var apiInstance = new TimezoneApi();
+
+            try
+            {
+                // List timezones
+                InlineResponse2002 result = apiInstance.TimezoneGet();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TimezoneApi.TimezoneGet: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**InlineResponse2002**](InlineResponse2002.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
