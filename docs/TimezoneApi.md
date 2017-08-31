@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TimezoneGet**](TimezoneApi.md#timezoneget) | **GET** /timezone | List timezones
+[**ListTimezones**](TimezoneApi.md#listtimezones) | **GET** /timezone | List timezones
 
 
-<a name="timezoneget"></a>
-# **TimezoneGet**
-> InlineResponse2002 TimezoneGet ()
+<a name="listtimezones"></a>
+# **ListTimezones**
+> InlineResponse2002 ListTimezones ()
 
 List timezones
 
@@ -25,7 +25,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class TimezoneGetExample
+    public class ListTimezonesExample
     {
         public void main()
         {
@@ -34,12 +34,12 @@ namespace Example
             try
             {
                 // List timezones
-                InlineResponse2002 result = apiInstance.TimezoneGet();
+                InlineResponse2002 result = apiInstance.ListTimezones();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TimezoneApi.TimezoneGet: " + e.Message );
+                Debug.Print("Exception when calling TimezoneApi.ListTimezones: " + e.Message );
             }
         }
     }

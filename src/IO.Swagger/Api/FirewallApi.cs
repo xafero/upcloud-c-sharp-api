@@ -25,6 +25,29 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Create firewall rule
+        /// </summary>
+        /// <remarks>
+        /// Creates a new firewall rule
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="firewallRule"></param>
+        /// <returns></returns>
+        void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule);
+
+        /// <summary>
+        /// Create firewall rule
+        /// </summary>
+        /// <remarks>
+        /// Creates a new firewall rule
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="firewallRule"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CreateFirewallRuleWithHttpInfo (Guid? serverId, FirewallRule firewallRule);
+        /// <summary>
         /// Remove firewall rule
         /// </summary>
         /// <remarks>
@@ -34,7 +57,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns></returns>
-        void ServerServerIdFirewallRuleFirewallRuleNumberDelete (Guid? serverId, Guid? firewallRuleNumber);
+        void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Remove firewall rule
@@ -46,7 +69,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ServerServerIdFirewallRuleFirewallRuleNumberDeleteWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        ApiResponse<Object> DeleteFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// Get firewall rule details
         /// </summary>
@@ -57,7 +80,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>InlineResponse2008</returns>
-        InlineResponse2008 ServerServerIdFirewallRuleFirewallRuleNumberGet (Guid? serverId, Guid? firewallRuleNumber);
+        InlineResponse2008 GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -69,7 +92,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of InlineResponse2008</returns>
-        ApiResponse<InlineResponse2008> ServerServerIdFirewallRuleFirewallRuleNumberGetWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        ApiResponse<InlineResponse2008> GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// List firewall rules
         /// </summary>
@@ -91,6 +114,8 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <returns>ApiResponse of InlineResponse2007</returns>
         ApiResponse<InlineResponse2007> ServerServerIdFirewallRuleGetWithHttpInfo (Guid? serverId);
+        #endregion Synchronous Operations
+        #region Asynchronous Operations
         /// <summary>
         /// Create firewall rule
         /// </summary>
@@ -100,8 +125,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns></returns>
-        void ServerServerIdFirewallRulePost (Guid? serverId, FirewallRule firewallRule);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CreateFirewallRuleAsync (Guid? serverId, FirewallRule firewallRule);
 
         /// <summary>
         /// Create firewall rule
@@ -112,10 +137,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ServerServerIdFirewallRulePostWithHttpInfo (Guid? serverId, FirewallRule firewallRule);
-        #endregion Synchronous Operations
-        #region Asynchronous Operations
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateFirewallRuleAsyncWithHttpInfo (Guid? serverId, FirewallRule firewallRule);
         /// <summary>
         /// Remove firewall rule
         /// </summary>
@@ -126,7 +149,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ServerServerIdFirewallRuleFirewallRuleNumberDeleteAsync (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task DeleteFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Remove firewall rule
@@ -138,7 +161,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ServerServerIdFirewallRuleFirewallRuleNumberDeleteAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// Get firewall rule details
         /// </summary>
@@ -149,7 +172,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of InlineResponse2008</returns>
-        System.Threading.Tasks.Task<InlineResponse2008> ServerServerIdFirewallRuleFirewallRuleNumberGetAsync (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task<InlineResponse2008> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -161,7 +184,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse (InlineResponse2008)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> ServerServerIdFirewallRuleFirewallRuleNumberGetAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// List firewall rules
         /// </summary>
@@ -183,29 +206,6 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
         System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> ServerServerIdFirewallRuleGetAsyncWithHttpInfo (Guid? serverId);
-        /// <summary>
-        /// Create firewall rule
-        /// </summary>
-        /// <remarks>
-        /// Creates a new firewall rule
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="firewallRule"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ServerServerIdFirewallRulePostAsync (Guid? serverId, FirewallRule firewallRule);
-
-        /// <summary>
-        /// Create firewall rule
-        /// </summary>
-        /// <remarks>
-        /// Creates a new firewall rule
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="firewallRule"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ServerServerIdFirewallRulePostAsyncWithHttpInfo (Guid? serverId, FirewallRule firewallRule);
         #endregion Asynchronous Operations
     }
 
@@ -307,15 +307,170 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// Create firewall rule Creates a new firewall rule
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="firewallRule"></param>
+        /// <returns></returns>
+        public void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule)
+        {
+             CreateFirewallRuleWithHttpInfo(serverId, firewallRule);
+        }
+
+        /// <summary>
+        /// Create firewall rule Creates a new firewall rule
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="firewallRule"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CreateFirewallRuleWithHttpInfo (Guid? serverId, FirewallRule firewallRule)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->CreateFirewallRule");
+            // verify the required parameter 'firewallRule' is set
+            if (firewallRule == null)
+                throw new ApiException(400, "Missing required parameter 'firewallRule' when calling FirewallApi->CreateFirewallRule");
+
+            var localVarPath = "/server/{serverId}/firewall_rule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (firewallRule != null && firewallRule.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(firewallRule); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = firewallRule; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateFirewallRule", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Create firewall rule Creates a new firewall rule
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="firewallRule"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CreateFirewallRuleAsync (Guid? serverId, FirewallRule firewallRule)
+        {
+             await CreateFirewallRuleAsyncWithHttpInfo(serverId, firewallRule);
+
+        }
+
+        /// <summary>
+        /// Create firewall rule Creates a new firewall rule
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="firewallRule"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateFirewallRuleAsyncWithHttpInfo (Guid? serverId, FirewallRule firewallRule)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->CreateFirewallRule");
+            // verify the required parameter 'firewallRule' is set
+            if (firewallRule == null)
+                throw new ApiException(400, "Missing required parameter 'firewallRule' when calling FirewallApi->CreateFirewallRule");
+
+            var localVarPath = "/server/{serverId}/firewall_rule";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (firewallRule != null && firewallRule.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(firewallRule); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = firewallRule; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateFirewallRule", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
         /// Remove firewall rule Removes a firewall rule from a server. Firewall rules must be removed individually. The positions of remaining firewall rules will be adjusted after a rule is removed.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns></returns>
-        public void ServerServerIdFirewallRuleFirewallRuleNumberDelete (Guid? serverId, Guid? firewallRuleNumber)
+        public void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ServerServerIdFirewallRuleFirewallRuleNumberDeleteWithHttpInfo(serverId, firewallRuleNumber);
+             DeleteFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
         }
 
         /// <summary>
@@ -325,14 +480,14 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ServerServerIdFirewallRuleFirewallRuleNumberDeleteWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public ApiResponse<Object> DeleteFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberDelete");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->DeleteFirewallRule");
             // verify the required parameter 'firewallRuleNumber' is set
             if (firewallRuleNumber == null)
-                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberDelete");
+                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->DeleteFirewallRule");
 
             var localVarPath = "/server/{serverId}/firewall_rule/{firewallRuleNumber}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -367,7 +522,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdFirewallRuleFirewallRuleNumberDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteFirewallRule", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -383,9 +538,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ServerServerIdFirewallRuleFirewallRuleNumberDeleteAsync (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task DeleteFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
         {
-             await ServerServerIdFirewallRuleFirewallRuleNumberDeleteAsyncWithHttpInfo(serverId, firewallRuleNumber);
+             await DeleteFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
 
         }
 
@@ -396,14 +551,14 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ServerServerIdFirewallRuleFirewallRuleNumberDeleteAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberDelete");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->DeleteFirewallRule");
             // verify the required parameter 'firewallRuleNumber' is set
             if (firewallRuleNumber == null)
-                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberDelete");
+                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->DeleteFirewallRule");
 
             var localVarPath = "/server/{serverId}/firewall_rule/{firewallRuleNumber}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -438,7 +593,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdFirewallRuleFirewallRuleNumberDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteFirewallRule", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -454,9 +609,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>InlineResponse2008</returns>
-        public InlineResponse2008 ServerServerIdFirewallRuleFirewallRuleNumberGet (Guid? serverId, Guid? firewallRuleNumber)
+        public InlineResponse2008 GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ApiResponse<InlineResponse2008> localVarResponse = ServerServerIdFirewallRuleFirewallRuleNumberGetWithHttpInfo(serverId, firewallRuleNumber);
+             ApiResponse<InlineResponse2008> localVarResponse = GetFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
         }
 
@@ -467,14 +622,14 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of InlineResponse2008</returns>
-        public ApiResponse< InlineResponse2008 > ServerServerIdFirewallRuleFirewallRuleNumberGetWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public ApiResponse< InlineResponse2008 > GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberGet");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->GetFirewallRule");
             // verify the required parameter 'firewallRuleNumber' is set
             if (firewallRuleNumber == null)
-                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberGet");
+                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->GetFirewallRule");
 
             var localVarPath = "/server/{serverId}/firewall_rule/{firewallRuleNumber}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -509,7 +664,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdFirewallRuleFirewallRuleNumberGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetFirewallRule", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -525,9 +680,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of InlineResponse2008</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2008> ServerServerIdFirewallRuleFirewallRuleNumberGetAsync (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task<InlineResponse2008> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ApiResponse<InlineResponse2008> localVarResponse = await ServerServerIdFirewallRuleFirewallRuleNumberGetAsyncWithHttpInfo(serverId, firewallRuleNumber);
+             ApiResponse<InlineResponse2008> localVarResponse = await GetFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
 
         }
@@ -539,14 +694,14 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse (InlineResponse2008)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> ServerServerIdFirewallRuleFirewallRuleNumberGetAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberGet");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->GetFirewallRule");
             // verify the required parameter 'firewallRuleNumber' is set
             if (firewallRuleNumber == null)
-                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->ServerServerIdFirewallRuleFirewallRuleNumberGet");
+                throw new ApiException(400, "Missing required parameter 'firewallRuleNumber' when calling FirewallApi->GetFirewallRule");
 
             var localVarPath = "/server/{serverId}/firewall_rule/{firewallRuleNumber}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -581,7 +736,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdFirewallRuleFirewallRuleNumberGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetFirewallRule", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -719,161 +874,6 @@ namespace IO.Swagger.Api
             return new ApiResponse<InlineResponse2007>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
-        }
-
-        /// <summary>
-        /// Create firewall rule Creates a new firewall rule
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="firewallRule"></param>
-        /// <returns></returns>
-        public void ServerServerIdFirewallRulePost (Guid? serverId, FirewallRule firewallRule)
-        {
-             ServerServerIdFirewallRulePostWithHttpInfo(serverId, firewallRule);
-        }
-
-        /// <summary>
-        /// Create firewall rule Creates a new firewall rule
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="firewallRule"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ServerServerIdFirewallRulePostWithHttpInfo (Guid? serverId, FirewallRule firewallRule)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->ServerServerIdFirewallRulePost");
-            // verify the required parameter 'firewallRule' is set
-            if (firewallRule == null)
-                throw new ApiException(400, "Missing required parameter 'firewallRule' when calling FirewallApi->ServerServerIdFirewallRulePost");
-
-            var localVarPath = "/server/{serverId}/firewall_rule";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (firewallRule != null && firewallRule.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(firewallRule); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = firewallRule; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdFirewallRulePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Create firewall rule Creates a new firewall rule
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="firewallRule"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ServerServerIdFirewallRulePostAsync (Guid? serverId, FirewallRule firewallRule)
-        {
-             await ServerServerIdFirewallRulePostAsyncWithHttpInfo(serverId, firewallRule);
-
-        }
-
-        /// <summary>
-        /// Create firewall rule Creates a new firewall rule
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="firewallRule"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ServerServerIdFirewallRulePostAsyncWithHttpInfo (Guid? serverId, FirewallRule firewallRule)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling FirewallApi->ServerServerIdFirewallRulePost");
-            // verify the required parameter 'firewallRule' is set
-            if (firewallRule == null)
-                throw new ApiException(400, "Missing required parameter 'firewallRule' when calling FirewallApi->ServerServerIdFirewallRulePost");
-
-            var localVarPath = "/server/{serverId}/firewall_rule";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (firewallRule != null && firewallRule.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(firewallRule); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = firewallRule; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdFirewallRulePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
         }
 
     }

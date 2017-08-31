@@ -32,7 +32,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ZoneGet ();
+        InlineResponse2001 ListZones ();
 
         /// <summary>
         /// List available zones
@@ -42,7 +42,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ZoneGetWithHttpInfo ();
+        ApiResponse<InlineResponse2001> ListZonesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ZoneGetAsync ();
+        System.Threading.Tasks.Task<InlineResponse2001> ListZonesAsync ();
 
         /// <summary>
         /// List available zones
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ZoneGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ListZonesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ZoneGet ()
+        public InlineResponse2001 ListZones ()
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ZoneGetWithHttpInfo();
+             ApiResponse<InlineResponse2001> localVarResponse = ListZonesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ZoneGetWithHttpInfo ()
+        public ApiResponse< InlineResponse2001 > ListZonesWithHttpInfo ()
         {
 
             var localVarPath = "/zone";
@@ -215,7 +215,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ZoneGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListZones", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -229,9 +229,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ZoneGetAsync ()
+        public async System.Threading.Tasks.Task<InlineResponse2001> ListZonesAsync ()
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ZoneGetAsyncWithHttpInfo();
+             ApiResponse<InlineResponse2001> localVarResponse = await ListZonesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -241,7 +241,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ZoneGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ListZonesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/zone";
@@ -276,7 +276,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ZoneGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListZones", localVarResponse);
                 if (exception != null) throw exception;
             }
 

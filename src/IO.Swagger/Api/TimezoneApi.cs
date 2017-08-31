@@ -32,7 +32,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 TimezoneGet ();
+        InlineResponse2002 ListTimezones ();
 
         /// <summary>
         /// List timezones
@@ -42,7 +42,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> TimezoneGetWithHttpInfo ();
+        ApiResponse<InlineResponse2002> ListTimezonesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> TimezoneGetAsync ();
+        System.Threading.Tasks.Task<InlineResponse2002> ListTimezonesAsync ();
 
         /// <summary>
         /// List timezones
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> TimezoneGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListTimezonesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 TimezoneGet ()
+        public InlineResponse2002 ListTimezones ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = TimezoneGetWithHttpInfo();
+             ApiResponse<InlineResponse2002> localVarResponse = ListTimezonesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > TimezoneGetWithHttpInfo ()
+        public ApiResponse< InlineResponse2002 > ListTimezonesWithHttpInfo ()
         {
 
             var localVarPath = "/timezone";
@@ -215,7 +215,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TimezoneGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListTimezones", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -229,9 +229,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> TimezoneGetAsync ()
+        public async System.Threading.Tasks.Task<InlineResponse2002> ListTimezonesAsync ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await TimezoneGetAsyncWithHttpInfo();
+             ApiResponse<InlineResponse2002> localVarResponse = await ListTimezonesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -241,7 +241,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> TimezoneGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListTimezonesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/timezone";
@@ -276,7 +276,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TimezoneGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListTimezones", localVarResponse);
                 if (exception != null) throw exception;
             }
 

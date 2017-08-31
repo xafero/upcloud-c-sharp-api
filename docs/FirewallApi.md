@@ -4,15 +4,77 @@ All URIs are relative to *http://localhost/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ServerServerIdFirewallRuleFirewallRuleNumberDelete**](FirewallApi.md#serverserveridfirewallrulefirewallrulenumberdelete) | **DELETE** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Remove firewall rule
-[**ServerServerIdFirewallRuleFirewallRuleNumberGet**](FirewallApi.md#serverserveridfirewallrulefirewallrulenumberget) | **GET** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Get firewall rule details
+[**CreateFirewallRule**](FirewallApi.md#createfirewallrule) | **POST** /server/{serverId}/firewall_rule | Create firewall rule
+[**DeleteFirewallRule**](FirewallApi.md#deletefirewallrule) | **DELETE** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Remove firewall rule
+[**GetFirewallRule**](FirewallApi.md#getfirewallrule) | **GET** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Get firewall rule details
 [**ServerServerIdFirewallRuleGet**](FirewallApi.md#serverserveridfirewallruleget) | **GET** /server/{serverId}/firewall_rule | List firewall rules
-[**ServerServerIdFirewallRulePost**](FirewallApi.md#serverserveridfirewallrulepost) | **POST** /server/{serverId}/firewall_rule | Create firewall rule
 
 
-<a name="serverserveridfirewallrulefirewallrulenumberdelete"></a>
-# **ServerServerIdFirewallRuleFirewallRuleNumberDelete**
-> void ServerServerIdFirewallRuleFirewallRuleNumberDelete (Guid? serverId, Guid? firewallRuleNumber)
+<a name="createfirewallrule"></a>
+# **CreateFirewallRule**
+> void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule)
+
+Create firewall rule
+
+Creates a new firewall rule
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class CreateFirewallRuleExample
+    {
+        public void main()
+        {
+            var apiInstance = new FirewallApi();
+            var serverId = serverId_example;  // Guid? | Server id
+            var firewallRule = new FirewallRule(); // FirewallRule | 
+
+            try
+            {
+                // Create firewall rule
+                apiInstance.CreateFirewallRule(serverId, firewallRule);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FirewallApi.CreateFirewallRule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serverId** | **Guid?**| Server id | 
+ **firewallRule** | [**FirewallRule**](FirewallRule.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletefirewallrule"></a>
+# **DeleteFirewallRule**
+> void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
 
 Remove firewall rule
 
@@ -28,7 +90,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ServerServerIdFirewallRuleFirewallRuleNumberDeleteExample
+    public class DeleteFirewallRuleExample
     {
         public void main()
         {
@@ -39,11 +101,11 @@ namespace Example
             try
             {
                 // Remove firewall rule
-                apiInstance.ServerServerIdFirewallRuleFirewallRuleNumberDelete(serverId, firewallRuleNumber);
+                apiInstance.DeleteFirewallRule(serverId, firewallRuleNumber);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FirewallApi.ServerServerIdFirewallRuleFirewallRuleNumberDelete: " + e.Message );
+                Debug.Print("Exception when calling FirewallApi.DeleteFirewallRule: " + e.Message );
             }
         }
     }
@@ -72,9 +134,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="serverserveridfirewallrulefirewallrulenumberget"></a>
-# **ServerServerIdFirewallRuleFirewallRuleNumberGet**
-> InlineResponse2008 ServerServerIdFirewallRuleFirewallRuleNumberGet (Guid? serverId, Guid? firewallRuleNumber)
+<a name="getfirewallrule"></a>
+# **GetFirewallRule**
+> InlineResponse2008 GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
 
 Get firewall rule details
 
@@ -90,7 +152,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ServerServerIdFirewallRuleFirewallRuleNumberGetExample
+    public class GetFirewallRuleExample
     {
         public void main()
         {
@@ -101,12 +163,12 @@ namespace Example
             try
             {
                 // Get firewall rule details
-                InlineResponse2008 result = apiInstance.ServerServerIdFirewallRuleFirewallRuleNumberGet(serverId, firewallRuleNumber);
+                InlineResponse2008 result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling FirewallApi.ServerServerIdFirewallRuleFirewallRuleNumberGet: " + e.Message );
+                Debug.Print("Exception when calling FirewallApi.GetFirewallRule: " + e.Message );
             }
         }
     }
@@ -184,68 +246,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InlineResponse2007**](InlineResponse2007.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="serverserveridfirewallrulepost"></a>
-# **ServerServerIdFirewallRulePost**
-> void ServerServerIdFirewallRulePost (Guid? serverId, FirewallRule firewallRule)
-
-Create firewall rule
-
-Creates a new firewall rule
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class ServerServerIdFirewallRulePostExample
-    {
-        public void main()
-        {
-            var apiInstance = new FirewallApi();
-            var serverId = serverId_example;  // Guid? | Server id
-            var firewallRule = new FirewallRule(); // FirewallRule | 
-
-            try
-            {
-                // Create firewall rule
-                apiInstance.ServerServerIdFirewallRulePost(serverId, firewallRule);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling FirewallApi.ServerServerIdFirewallRulePost: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **serverId** | **Guid?**| Server id | 
- **firewallRule** | [**FirewallRule**](FirewallRule.md)|  | 
-
-### Return type
-
-void (empty response body)
 
 ### Authorization
 

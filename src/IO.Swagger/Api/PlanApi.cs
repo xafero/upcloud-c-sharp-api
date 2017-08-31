@@ -32,7 +32,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 PlanGet ();
+        InlineResponse2003 ListPlans ();
 
         /// <summary>
         /// List available plans
@@ -42,7 +42,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> PlanGetWithHttpInfo ();
+        ApiResponse<InlineResponse2003> ListPlansWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> PlanGetAsync ();
+        System.Threading.Tasks.Task<InlineResponse2003> ListPlansAsync ();
 
         /// <summary>
         /// List available plans
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> PlanGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ListPlansAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 PlanGet ()
+        public InlineResponse2003 ListPlans ()
         {
-             ApiResponse<InlineResponse2003> localVarResponse = PlanGetWithHttpInfo();
+             ApiResponse<InlineResponse2003> localVarResponse = ListPlansWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > PlanGetWithHttpInfo ()
+        public ApiResponse< InlineResponse2003 > ListPlansWithHttpInfo ()
         {
 
             var localVarPath = "/plan";
@@ -215,7 +215,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PlanGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListPlans", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -229,9 +229,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> PlanGetAsync ()
+        public async System.Threading.Tasks.Task<InlineResponse2003> ListPlansAsync ()
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await PlanGetAsyncWithHttpInfo();
+             ApiResponse<InlineResponse2003> localVarResponse = await ListPlansAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -241,7 +241,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> PlanGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ListPlansAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/plan";
@@ -276,7 +276,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PlanGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListPlans", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PriceGet**](PricesApi.md#priceget) | **GET** /price | List prices
+[**ListPrices**](PricesApi.md#listprices) | **GET** /price | List prices
 
 
-<a name="priceget"></a>
-# **PriceGet**
-> InlineResponse200 PriceGet ()
+<a name="listprices"></a>
+# **ListPrices**
+> InlineResponse200 ListPrices ()
 
 List prices
 
@@ -25,7 +25,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class PriceGetExample
+    public class ListPricesExample
     {
         public void main()
         {
@@ -34,12 +34,12 @@ namespace Example
             try
             {
                 // List prices
-                InlineResponse200 result = apiInstance.PriceGet();
+                InlineResponse200 result = apiInstance.ListPrices();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PricesApi.PriceGet: " + e.Message );
+                Debug.Print("Exception when calling PricesApi.ListPrices: " + e.Message );
             }
         }
     }

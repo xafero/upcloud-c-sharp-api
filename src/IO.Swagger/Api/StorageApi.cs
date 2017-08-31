@@ -25,6 +25,245 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Attach storage
+        /// </summary>
+        /// <remarks>
+        /// Attaches a storage as a device to a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse AttachStorage (Guid? serverId, StorageDevice storageDevice);
+
+        /// <summary>
+        /// Attach storage
+        /// </summary>
+        /// <remarks>
+        /// Attaches a storage as a device to a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <summary>
+        /// Create backup
+        /// </summary>
+        /// <remarks>
+        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 BackupStorage (Guid? storageId, Storage4 storage = null);
+
+        /// <summary>
+        /// Create backup
+        /// </summary>
+        /// <remarks>
+        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null);
+        /// <summary>
+        /// Cancel storage operation
+        /// </summary>
+        /// <remarks>
+        /// Cancels a running cloning operation and deletes the incomplete copy.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns></returns>
+        void CancelOperation (Guid? storageId);
+
+        /// <summary>
+        /// Cancel storage operation
+        /// </summary>
+        /// <remarks>
+        /// Cancels a running cloning operation and deletes the incomplete copy.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> CancelOperationWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// Clone storage
+        /// </summary>
+        /// <remarks>
+        /// Creates an exact copy of an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 CloneStorage (Guid? storageId, Storage2 storage = null);
+
+        /// <summary>
+        /// Clone storage
+        /// </summary>
+        /// <remarks>
+        /// Creates an exact copy of an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null);
+        /// <summary>
+        /// Create storage
+        /// </summary>
+        /// <remarks>
+        /// Creates a new storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 CreateStorage (Storage storage);
+
+        /// <summary>
+        /// Create storage
+        /// </summary>
+        /// <remarks>
+        /// Creates a new storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> CreateStorageWithHttpInfo (Storage storage);
+        /// <summary>
+        /// Delete storage
+        /// </summary>
+        /// <remarks>
+        /// Deleted an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns></returns>
+        void DeleteStorage (Guid? storageId);
+
+        /// <summary>
+        /// Delete storage
+        /// </summary>
+        /// <remarks>
+        /// Deleted an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteStorageWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// Detach storage
+        /// </summary>
+        /// <remarks>
+        /// Detaches a storage resource from a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse DetachStorage (Guid? serverId, StorageDevice storageDevice);
+
+        /// <summary>
+        /// Detach storage
+        /// </summary>
+        /// <remarks>
+        /// Detaches a storage resource from a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <summary>
+        /// Eject CD-ROM
+        /// </summary>
+        /// <remarks>
+        /// Ejects the storage from the CD-ROM device of a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse EjectCdrom (Guid? serverId);
+
+        /// <summary>
+        /// Eject CD-ROM
+        /// </summary>
+        /// <remarks>
+        /// Ejects the storage from the CD-ROM device of a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> EjectCdromWithHttpInfo (Guid? serverId);
+        /// <summary>
+        /// Add storage to favorites
+        /// </summary>
+        /// <remarks>
+        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns></returns>
+        void FavoriteStorage (Guid? storageId);
+
+        /// <summary>
+        /// Add storage to favorites
+        /// </summary>
+        /// <remarks>
+        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> FavoriteStorageWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// Get storage details
+        /// </summary>
+        /// <remarks>
+        /// Returns detailed information about a specific storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>InlineResponse201</returns>
+        InlineResponse201 GetStorageDetails (Guid? storageId);
+
+        /// <summary>
+        /// Get storage details
+        /// </summary>
+        /// <remarks>
+        /// Returns detailed information about a specific storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        ApiResponse<InlineResponse201> GetStorageDetailsWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// List of storages by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>SuccessStoragesResponse</returns>
+        SuccessStoragesResponse ListStorageTypes (string type);
+
+        /// <summary>
+        /// List of storages by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>ApiResponse of SuccessStoragesResponse</returns>
+        ApiResponse<SuccessStoragesResponse> ListStorageTypesWithHttpInfo (string type);
+        /// <summary>
         /// List of storages
         /// </summary>
         /// <remarks>
@@ -44,71 +283,6 @@ namespace IO.Swagger.Api
         /// <returns>ApiResponse of SuccessStoragesResponse</returns>
         ApiResponse<SuccessStoragesResponse> ListStoragesWithHttpInfo ();
         /// <summary>
-        /// List of storages by type
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>SuccessStoragesResponse</returns>
-        SuccessStoragesResponse ListStorages_0 (string type);
-
-        /// <summary>
-        /// List of storages by type
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>ApiResponse of SuccessStoragesResponse</returns>
-        ApiResponse<SuccessStoragesResponse> ListStorages_0WithHttpInfo (string type);
-        /// <summary>
-        /// Attach storage
-        /// </summary>
-        /// <remarks>
-        /// Attaches a storage as a device to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse ServerServerIdStorageAttachPost (Guid? serverId, StorageDevice storageDevice);
-
-        /// <summary>
-        /// Attach storage
-        /// </summary>
-        /// <remarks>
-        /// Attaches a storage as a device to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> ServerServerIdStorageAttachPostWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
-        /// <summary>
-        /// Eject CD-ROM
-        /// </summary>
-        /// <remarks>
-        /// Ejects the storage from the CD-ROM device of a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse ServerServerIdStorageCdromEjectPost (Guid? serverId);
-
-        /// <summary>
-        /// Eject CD-ROM
-        /// </summary>
-        /// <remarks>
-        /// Ejects the storage from the CD-ROM device of a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> ServerServerIdStorageCdromEjectPostWithHttpInfo (Guid? serverId);
-        /// <summary>
         /// Load CD-ROM
         /// </summary>
         /// <remarks>
@@ -118,7 +292,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>ServerListResponse</returns>
-        ServerListResponse ServerServerIdStorageCdromLoadPost (Guid? serverId, StorageDevice1 storageDevice = null);
+        ServerListResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null);
 
         /// <summary>
         /// Load CD-ROM
@@ -130,202 +304,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> ServerServerIdStorageCdromLoadPostWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
-        /// <summary>
-        /// Detach storage
-        /// </summary>
-        /// <remarks>
-        /// Detaches a storage resource from a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse ServerServerIdStorageDetachPost (Guid? serverId, StorageDevice storageDevice);
-
-        /// <summary>
-        /// Detach storage
-        /// </summary>
-        /// <remarks>
-        /// Detaches a storage resource from a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> ServerServerIdStorageDetachPostWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
-        /// <summary>
-        /// Create storage
-        /// </summary>
-        /// <remarks>
-        /// Creates a new storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 StoragePost (Storage storage);
-
-        /// <summary>
-        /// Create storage
-        /// </summary>
-        /// <remarks>
-        /// Creates a new storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> StoragePostWithHttpInfo (Storage storage);
-        /// <summary>
-        /// Create backup
-        /// </summary>
-        /// <remarks>
-        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 StorageStorageIdBackupPost (Guid? storageId, Storage4 storage = null);
-
-        /// <summary>
-        /// Create backup
-        /// </summary>
-        /// <remarks>
-        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> StorageStorageIdBackupPostWithHttpInfo (Guid? storageId, Storage4 storage = null);
-        /// <summary>
-        /// Cancel storage operation
-        /// </summary>
-        /// <remarks>
-        /// Cancels a running cloning operation and deletes the incomplete copy.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns></returns>
-        void StorageStorageIdCancelPost (Guid? storageId);
-
-        /// <summary>
-        /// Cancel storage operation
-        /// </summary>
-        /// <remarks>
-        /// Cancels a running cloning operation and deletes the incomplete copy.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> StorageStorageIdCancelPostWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Clone storage
-        /// </summary>
-        /// <remarks>
-        /// Creates an exact copy of an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 StorageStorageIdClonePost (Guid? storageId, Storage2 storage = null);
-
-        /// <summary>
-        /// Clone storage
-        /// </summary>
-        /// <remarks>
-        /// Creates an exact copy of an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> StorageStorageIdClonePostWithHttpInfo (Guid? storageId, Storage2 storage = null);
-        /// <summary>
-        /// Delete storage
-        /// </summary>
-        /// <remarks>
-        /// Deleted an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns></returns>
-        void StorageStorageIdDelete (Guid? storageId);
-
-        /// <summary>
-        /// Delete storage
-        /// </summary>
-        /// <remarks>
-        /// Deleted an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> StorageStorageIdDeleteWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Remove storage from favorites
-        /// </summary>
-        /// <remarks>
-        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns></returns>
-        void StorageStorageIdFavoriteDelete (Guid? storageId);
-
-        /// <summary>
-        /// Remove storage from favorites
-        /// </summary>
-        /// <remarks>
-        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> StorageStorageIdFavoriteDeleteWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Add storage to favorites
-        /// </summary>
-        /// <remarks>
-        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns></returns>
-        void StorageStorageIdFavoritePost (Guid? storageId);
-
-        /// <summary>
-        /// Add storage to favorites
-        /// </summary>
-        /// <remarks>
-        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> StorageStorageIdFavoritePostWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Get storage details
-        /// </summary>
-        /// <remarks>
-        /// Returns detailed information about a specific storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 StorageStorageIdGet (Guid? storageId);
-
-        /// <summary>
-        /// Get storage details
-        /// </summary>
-        /// <remarks>
-        /// Returns detailed information about a specific storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> StorageStorageIdGetWithHttpInfo (Guid? storageId);
+        ApiResponse<ServerListResponse> LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
         /// <summary>
         /// Modify storage
         /// </summary>
@@ -336,7 +315,7 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>InlineResponse201</returns>
-        InlineResponse201 StorageStorageIdPut (Guid? storageId, Storage1 storage);
+        InlineResponse201 ModifyStorage (Guid? storageId, Storage1 storage);
 
         /// <summary>
         /// Modify storage
@@ -348,7 +327,7 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> StorageStorageIdPutWithHttpInfo (Guid? storageId, Storage1 storage);
+        ApiResponse<InlineResponse201> ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage);
         /// <summary>
         /// Restore backup
         /// </summary>
@@ -358,7 +337,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns></returns>
-        void StorageStorageIdRestorePost (Guid? storageId);
+        void RestoreStorage (Guid? storageId);
 
         /// <summary>
         /// Restore backup
@@ -369,7 +348,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> StorageStorageIdRestorePostWithHttpInfo (Guid? storageId);
+        ApiResponse<Object> RestoreStorageWithHttpInfo (Guid? storageId);
         /// <summary>
         /// Templatize storage
         /// </summary>
@@ -380,7 +359,7 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>InlineResponse201</returns>
-        InlineResponse201 StorageStorageIdTemplatizePost (Guid? storageId, Storage3 storage = null);
+        InlineResponse201 TemplatizeStorage (Guid? storageId, Storage3 storage = null);
 
         /// <summary>
         /// Templatize storage
@@ -392,9 +371,269 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> StorageStorageIdTemplatizePostWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        ApiResponse<InlineResponse201> TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        /// <summary>
+        /// Remove storage from favorites
+        /// </summary>
+        /// <remarks>
+        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns></returns>
+        void UnfavoriteStorage (Guid? storageId);
+
+        /// <summary>
+        /// Remove storage from favorites
+        /// </summary>
+        /// <remarks>
+        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UnfavoriteStorageWithHttpInfo (Guid? storageId);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Attach storage
+        /// </summary>
+        /// <remarks>
+        /// Attaches a storage as a device to a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice);
+
+        /// <summary>
+        /// Attach storage
+        /// </summary>
+        /// <remarks>
+        /// Attaches a storage as a device to a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <summary>
+        /// Create backup
+        /// </summary>
+        /// <remarks>
+        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> BackupStorageAsync (Guid? storageId, Storage4 storage = null);
+
+        /// <summary>
+        /// Create backup
+        /// </summary>
+        /// <remarks>
+        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null);
+        /// <summary>
+        /// Cancel storage operation
+        /// </summary>
+        /// <remarks>
+        /// Cancels a running cloning operation and deletes the incomplete copy.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task CancelOperationAsync (Guid? storageId);
+
+        /// <summary>
+        /// Cancel storage operation
+        /// </summary>
+        /// <remarks>
+        /// Cancels a running cloning operation and deletes the incomplete copy.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> CancelOperationAsyncWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// Clone storage
+        /// </summary>
+        /// <remarks>
+        /// Creates an exact copy of an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> CloneStorageAsync (Guid? storageId, Storage2 storage = null);
+
+        /// <summary>
+        /// Clone storage
+        /// </summary>
+        /// <remarks>
+        /// Creates an exact copy of an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null);
+        /// <summary>
+        /// Create storage
+        /// </summary>
+        /// <remarks>
+        /// Creates a new storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> CreateStorageAsync (Storage storage);
+
+        /// <summary>
+        /// Create storage
+        /// </summary>
+        /// <remarks>
+        /// Creates a new storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateStorageAsyncWithHttpInfo (Storage storage);
+        /// <summary>
+        /// Delete storage
+        /// </summary>
+        /// <remarks>
+        /// Deleted an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteStorageAsync (Guid? storageId);
+
+        /// <summary>
+        /// Delete storage
+        /// </summary>
+        /// <remarks>
+        /// Deleted an existing storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStorageAsyncWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// Detach storage
+        /// </summary>
+        /// <remarks>
+        /// Detaches a storage resource from a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice);
+
+        /// <summary>
+        /// Detach storage
+        /// </summary>
+        /// <remarks>
+        /// Detaches a storage resource from a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <summary>
+        /// Eject CD-ROM
+        /// </summary>
+        /// <remarks>
+        /// Ejects the storage from the CD-ROM device of a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> EjectCdromAsync (Guid? serverId);
+
+        /// <summary>
+        /// Eject CD-ROM
+        /// </summary>
+        /// <remarks>
+        /// Ejects the storage from the CD-ROM device of a server.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId);
+        /// <summary>
+        /// Add storage to favorites
+        /// </summary>
+        /// <remarks>
+        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task FavoriteStorageAsync (Guid? storageId);
+
+        /// <summary>
+        /// Add storage to favorites
+        /// </summary>
+        /// <remarks>
+        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> FavoriteStorageAsyncWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// Get storage details
+        /// </summary>
+        /// <remarks>
+        /// Returns detailed information about a specific storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of InlineResponse201</returns>
+        System.Threading.Tasks.Task<InlineResponse201> GetStorageDetailsAsync (Guid? storageId);
+
+        /// <summary>
+        /// Get storage details
+        /// </summary>
+        /// <remarks>
+        /// Returns detailed information about a specific storage resource.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> GetStorageDetailsAsyncWithHttpInfo (Guid? storageId);
+        /// <summary>
+        /// List of storages by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>Task of SuccessStoragesResponse</returns>
+        System.Threading.Tasks.Task<SuccessStoragesResponse> ListStorageTypesAsync (string type);
+
+        /// <summary>
+        /// List of storages by type
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStorageTypesAsyncWithHttpInfo (string type);
         /// <summary>
         /// List of storages
         /// </summary>
@@ -415,71 +654,6 @@ namespace IO.Swagger.Api
         /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStoragesAsyncWithHttpInfo ();
         /// <summary>
-        /// List of storages by type
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>Task of SuccessStoragesResponse</returns>
-        System.Threading.Tasks.Task<SuccessStoragesResponse> ListStorages_0Async (string type);
-
-        /// <summary>
-        /// List of storages by type
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStorages_0AsyncWithHttpInfo (string type);
-        /// <summary>
-        /// Attach storage
-        /// </summary>
-        /// <remarks>
-        /// Attaches a storage as a device to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageAttachPostAsync (Guid? serverId, StorageDevice storageDevice);
-
-        /// <summary>
-        /// Attach storage
-        /// </summary>
-        /// <remarks>
-        /// Attaches a storage as a device to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageAttachPostAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
-        /// <summary>
-        /// Eject CD-ROM
-        /// </summary>
-        /// <remarks>
-        /// Ejects the storage from the CD-ROM device of a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageCdromEjectPostAsync (Guid? serverId);
-
-        /// <summary>
-        /// Eject CD-ROM
-        /// </summary>
-        /// <remarks>
-        /// Ejects the storage from the CD-ROM device of a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageCdromEjectPostAsyncWithHttpInfo (Guid? serverId);
-        /// <summary>
         /// Load CD-ROM
         /// </summary>
         /// <remarks>
@@ -489,7 +663,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageCdromLoadPostAsync (Guid? serverId, StorageDevice1 storageDevice = null);
+        System.Threading.Tasks.Task<ServerListResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null);
 
         /// <summary>
         /// Load CD-ROM
@@ -501,202 +675,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageCdromLoadPostAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
-        /// <summary>
-        /// Detach storage
-        /// </summary>
-        /// <remarks>
-        /// Detaches a storage resource from a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageDetachPostAsync (Guid? serverId, StorageDevice storageDevice);
-
-        /// <summary>
-        /// Detach storage
-        /// </summary>
-        /// <remarks>
-        /// Detaches a storage resource from a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageDetachPostAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
-        /// <summary>
-        /// Create storage
-        /// </summary>
-        /// <remarks>
-        /// Creates a new storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> StoragePostAsync (Storage storage);
-
-        /// <summary>
-        /// Create storage
-        /// </summary>
-        /// <remarks>
-        /// Creates a new storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StoragePostAsyncWithHttpInfo (Storage storage);
-        /// <summary>
-        /// Create backup
-        /// </summary>
-        /// <remarks>
-        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdBackupPostAsync (Guid? storageId, Storage4 storage = null);
-
-        /// <summary>
-        /// Create backup
-        /// </summary>
-        /// <remarks>
-        /// Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdBackupPostAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null);
-        /// <summary>
-        /// Cancel storage operation
-        /// </summary>
-        /// <remarks>
-        /// Cancels a running cloning operation and deletes the incomplete copy.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task StorageStorageIdCancelPostAsync (Guid? storageId);
-
-        /// <summary>
-        /// Cancel storage operation
-        /// </summary>
-        /// <remarks>
-        /// Cancels a running cloning operation and deletes the incomplete copy.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdCancelPostAsyncWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Clone storage
-        /// </summary>
-        /// <remarks>
-        /// Creates an exact copy of an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdClonePostAsync (Guid? storageId, Storage2 storage = null);
-
-        /// <summary>
-        /// Clone storage
-        /// </summary>
-        /// <remarks>
-        /// Creates an exact copy of an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdClonePostAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null);
-        /// <summary>
-        /// Delete storage
-        /// </summary>
-        /// <remarks>
-        /// Deleted an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task StorageStorageIdDeleteAsync (Guid? storageId);
-
-        /// <summary>
-        /// Delete storage
-        /// </summary>
-        /// <remarks>
-        /// Deleted an existing storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdDeleteAsyncWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Remove storage from favorites
-        /// </summary>
-        /// <remarks>
-        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task StorageStorageIdFavoriteDeleteAsync (Guid? storageId);
-
-        /// <summary>
-        /// Remove storage from favorites
-        /// </summary>
-        /// <remarks>
-        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdFavoriteDeleteAsyncWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Add storage to favorites
-        /// </summary>
-        /// <remarks>
-        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task StorageStorageIdFavoritePostAsync (Guid? storageId);
-
-        /// <summary>
-        /// Add storage to favorites
-        /// </summary>
-        /// <remarks>
-        /// Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdFavoritePostAsyncWithHttpInfo (Guid? storageId);
-        /// <summary>
-        /// Get storage details
-        /// </summary>
-        /// <remarks>
-        /// Returns detailed information about a specific storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdGetAsync (Guid? storageId);
-
-        /// <summary>
-        /// Get storage details
-        /// </summary>
-        /// <remarks>
-        /// Returns detailed information about a specific storage resource.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdGetAsyncWithHttpInfo (Guid? storageId);
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
         /// <summary>
         /// Modify storage
         /// </summary>
@@ -707,7 +686,7 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdPutAsync (Guid? storageId, Storage1 storage);
+        System.Threading.Tasks.Task<InlineResponse201> ModifyStorageAsync (Guid? storageId, Storage1 storage);
 
         /// <summary>
         /// Modify storage
@@ -719,7 +698,7 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdPutAsyncWithHttpInfo (Guid? storageId, Storage1 storage);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage);
         /// <summary>
         /// Restore backup
         /// </summary>
@@ -729,7 +708,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task StorageStorageIdRestorePostAsync (Guid? storageId);
+        System.Threading.Tasks.Task RestoreStorageAsync (Guid? storageId);
 
         /// <summary>
         /// Restore backup
@@ -740,7 +719,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdRestorePostAsyncWithHttpInfo (Guid? storageId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RestoreStorageAsyncWithHttpInfo (Guid? storageId);
         /// <summary>
         /// Templatize storage
         /// </summary>
@@ -751,7 +730,7 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdTemplatizePostAsync (Guid? storageId, Storage3 storage = null);
+        System.Threading.Tasks.Task<InlineResponse201> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null);
 
         /// <summary>
         /// Templatize storage
@@ -763,7 +742,28 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdTemplatizePostAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        /// <summary>
+        /// Remove storage from favorites
+        /// </summary>
+        /// <remarks>
+        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UnfavoriteStorageAsync (Guid? storageId);
+
+        /// <summary>
+        /// Remove storage from favorites
+        /// </summary>
+        /// <remarks>
+        /// Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UnfavoriteStorageAsyncWithHttpInfo (Guid? storageId);
         #endregion Asynchronous Operations
     }
 
@@ -862,6 +862,1549 @@ namespace IO.Swagger.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Attach storage Attaches a storage as a device to a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = AttachStorageWithHttpInfo(serverId, storageDevice);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Attach storage Attaches a storage as a device to a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->AttachStorage");
+            // verify the required parameter 'storageDevice' is set
+            if (storageDevice == null)
+                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->AttachStorage");
+
+            var localVarPath = "/server/{serverId}/storage/attach";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storageDevice; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AttachStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Attach storage Attaches a storage as a device to a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = await AttachStorageAsyncWithHttpInfo(serverId, storageDevice);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Attach storage Attaches a storage as a device to a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->AttachStorage");
+            // verify the required parameter 'storageDevice' is set
+            if (storageDevice == null)
+                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->AttachStorage");
+
+            var localVarPath = "/server/{serverId}/storage/attach";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storageDevice; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AttachStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 BackupStorage (Guid? storageId, Storage4 storage = null)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = BackupStorageWithHttpInfo(storageId, storage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->BackupStorage");
+
+            var localVarPath = "/storage/{storageId}/backup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+            if (storage != null && storage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storage; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BackupStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> BackupStorageAsync (Guid? storageId, Storage4 storage = null)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = await BackupStorageAsyncWithHttpInfo(storageId, storage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->BackupStorage");
+
+            var localVarPath = "/storage/{storageId}/backup";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+            if (storage != null && storage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storage; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("BackupStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns></returns>
+        public void CancelOperation (Guid? storageId)
+        {
+             CancelOperationWithHttpInfo(storageId);
+        }
+
+        /// <summary>
+        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> CancelOperationWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->CancelOperation");
+
+            var localVarPath = "/storage/{storageId}/cancel";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CancelOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task CancelOperationAsync (Guid? storageId)
+        {
+             await CancelOperationAsyncWithHttpInfo(storageId);
+
+        }
+
+        /// <summary>
+        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Strage id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CancelOperationAsyncWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->CancelOperation");
+
+            var localVarPath = "/storage/{storageId}/cancel";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CancelOperation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Clone storage Creates an exact copy of an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 CloneStorage (Guid? storageId, Storage2 storage = null)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = CloneStorageWithHttpInfo(storageId, storage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Clone storage Creates an exact copy of an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->CloneStorage");
+
+            var localVarPath = "/storage/{storageId}/clone";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+            if (storage != null && storage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storage; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CloneStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Clone storage Creates an exact copy of an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> CloneStorageAsync (Guid? storageId, Storage2 storage = null)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = await CloneStorageAsyncWithHttpInfo(storageId, storage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Clone storage Creates an exact copy of an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <param name="storage"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->CloneStorage");
+
+            var localVarPath = "/storage/{storageId}/clone";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+            if (storage != null && storage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storage; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CloneStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Create storage Creates a new storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 CreateStorage (Storage storage)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = CreateStorageWithHttpInfo(storage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create storage Creates a new storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > CreateStorageWithHttpInfo (Storage storage)
+        {
+            // verify the required parameter 'storage' is set
+            if (storage == null)
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->CreateStorage");
+
+            var localVarPath = "/storage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storage != null && storage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storage; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Create storage Creates a new storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> CreateStorageAsync (Storage storage)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = await CreateStorageAsyncWithHttpInfo(storage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create storage Creates a new storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storage"></param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateStorageAsyncWithHttpInfo (Storage storage)
+        {
+            // verify the required parameter 'storage' is set
+            if (storage == null)
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->CreateStorage");
+
+            var localVarPath = "/storage";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storage != null && storage.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storage; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Delete storage Deleted an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns></returns>
+        public void DeleteStorage (Guid? storageId)
+        {
+             DeleteStorageWithHttpInfo(storageId);
+        }
+
+        /// <summary>
+        /// Delete storage Deleted an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteStorageWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->DeleteStorage");
+
+            var localVarPath = "/storage/{storageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete storage Deleted an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteStorageAsync (Guid? storageId)
+        {
+             await DeleteStorageAsyncWithHttpInfo(storageId);
+
+        }
+
+        /// <summary>
+        /// Delete storage Deleted an existing storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStorageAsyncWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->DeleteStorage");
+
+            var localVarPath = "/storage/{storageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Detach storage Detaches a storage resource from a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = DetachStorageWithHttpInfo(serverId, storageDevice);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Detach storage Detaches a storage resource from a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->DetachStorage");
+            // verify the required parameter 'storageDevice' is set
+            if (storageDevice == null)
+                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->DetachStorage");
+
+            var localVarPath = "/server/{serverId}/storage/detach";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storageDevice; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DetachStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Detach storage Detaches a storage resource from a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = await DetachStorageAsyncWithHttpInfo(serverId, storageDevice);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Detach storage Detaches a storage resource from a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="storageDevice"></param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->DetachStorage");
+            // verify the required parameter 'storageDevice' is set
+            if (storageDevice == null)
+                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->DetachStorage");
+
+            var localVarPath = "/server/{serverId}/storage/detach";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = storageDevice; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DetachStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse EjectCdrom (Guid? serverId)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = EjectCdromWithHttpInfo(serverId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > EjectCdromWithHttpInfo (Guid? serverId)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->EjectCdrom");
+
+            var localVarPath = "/server/{serverId}/storage/cdrom/eject";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EjectCdrom", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> EjectCdromAsync (Guid? serverId)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = await EjectCdromAsyncWithHttpInfo(serverId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->EjectCdrom");
+
+            var localVarPath = "/server/{serverId}/storage/cdrom/eject";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("EjectCdrom", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns></returns>
+        public void FavoriteStorage (Guid? storageId)
+        {
+             FavoriteStorageWithHttpInfo(storageId);
+        }
+
+        /// <summary>
+        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> FavoriteStorageWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->FavoriteStorage");
+
+            var localVarPath = "/storage/{storageId}/favorite";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FavoriteStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task FavoriteStorageAsync (Guid? storageId)
+        {
+             await FavoriteStorageAsyncWithHttpInfo(storageId);
+
+        }
+
+        /// <summary>
+        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> FavoriteStorageAsyncWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->FavoriteStorage");
+
+            var localVarPath = "/storage/{storageId}/favorite";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FavoriteStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Get storage details Returns detailed information about a specific storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>InlineResponse201</returns>
+        public InlineResponse201 GetStorageDetails (Guid? storageId)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = GetStorageDetailsWithHttpInfo(storageId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get storage details Returns detailed information about a specific storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>ApiResponse of InlineResponse201</returns>
+        public ApiResponse< InlineResponse201 > GetStorageDetailsWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->GetStorageDetails");
+
+            var localVarPath = "/storage/{storageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStorageDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Get storage details Returns detailed information about a specific storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of InlineResponse201</returns>
+        public async System.Threading.Tasks.Task<InlineResponse201> GetStorageDetailsAsync (Guid? storageId)
+        {
+             ApiResponse<InlineResponse201> localVarResponse = await GetStorageDetailsAsyncWithHttpInfo(storageId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get storage details Returns detailed information about a specific storage resource.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId"></param>
+        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> GetStorageDetailsAsyncWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->GetStorageDetails");
+
+            var localVarPath = "/storage/{storageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetStorageDetails", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// List of storages by type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>SuccessStoragesResponse</returns>
+        public SuccessStoragesResponse ListStorageTypes (string type)
+        {
+             ApiResponse<SuccessStoragesResponse> localVarResponse = ListStorageTypesWithHttpInfo(type);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List of storages by type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>ApiResponse of SuccessStoragesResponse</returns>
+        public ApiResponse< SuccessStoragesResponse > ListStorageTypesWithHttpInfo (string type)
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling StorageApi->ListStorageTypes");
+
+            var localVarPath = "/storage/{type}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (type != null) localVarPathParams.Add("Type", Configuration.ApiClient.ParameterToString(type)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListStorageTypes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SuccessStoragesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuccessStoragesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuccessStoragesResponse)));
+        }
+
+        /// <summary>
+        /// List of storages by type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>Task of SuccessStoragesResponse</returns>
+        public async System.Threading.Tasks.Task<SuccessStoragesResponse> ListStorageTypesAsync (string type)
+        {
+             ApiResponse<SuccessStoragesResponse> localVarResponse = await ListStorageTypesAsyncWithHttpInfo(type);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List of storages by type 
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
+        /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStorageTypesAsyncWithHttpInfo (string type)
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling StorageApi->ListStorageTypes");
+
+            var localVarPath = "/storage/{type}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (type != null) localVarPathParams.Add("Type", Configuration.ApiClient.ParameterToString(type)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListStorageTypes", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SuccessStoragesResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SuccessStoragesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuccessStoragesResponse)));
         }
 
         /// <summary>
@@ -986,436 +2529,15 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// List of storages by type 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>SuccessStoragesResponse</returns>
-        public SuccessStoragesResponse ListStorages_0 (string type)
-        {
-             ApiResponse<SuccessStoragesResponse> localVarResponse = ListStorages_0WithHttpInfo(type);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// List of storages by type 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>ApiResponse of SuccessStoragesResponse</returns>
-        public ApiResponse< SuccessStoragesResponse > ListStorages_0WithHttpInfo (string type)
-        {
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling StorageApi->ListStorages_0");
-
-            var localVarPath = "/storage/{type}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (type != null) localVarPathParams.Add("Type", Configuration.ApiClient.ParameterToString(type)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ListStorages_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<SuccessStoragesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SuccessStoragesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuccessStoragesResponse)));
-        }
-
-        /// <summary>
-        /// List of storages by type 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>Task of SuccessStoragesResponse</returns>
-        public async System.Threading.Tasks.Task<SuccessStoragesResponse> ListStorages_0Async (string type)
-        {
-             ApiResponse<SuccessStoragesResponse> localVarResponse = await ListStorages_0AsyncWithHttpInfo(type);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// List of storages by type 
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Storage&#39;s access type (&#x60;public&#x60; or &#x60;private&#x60;) or storage type (&#x60;normal&#x60;, &#x60;backup&#x60;, &#x60;cdrom&#x60; or &#x60;template&#x60;) or &#x60;favorite&#x60; status</param>
-        /// <returns>Task of ApiResponse (SuccessStoragesResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SuccessStoragesResponse>> ListStorages_0AsyncWithHttpInfo (string type)
-        {
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling StorageApi->ListStorages_0");
-
-            var localVarPath = "/storage/{type}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (type != null) localVarPathParams.Add("Type", Configuration.ApiClient.ParameterToString(type)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ListStorages_0", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<SuccessStoragesResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (SuccessStoragesResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SuccessStoragesResponse)));
-        }
-
-        /// <summary>
-        /// Attach storage Attaches a storage as a device to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse ServerServerIdStorageAttachPost (Guid? serverId, StorageDevice storageDevice)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = ServerServerIdStorageAttachPostWithHttpInfo(serverId, storageDevice);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Attach storage Attaches a storage as a device to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > ServerServerIdStorageAttachPostWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageAttachPost");
-            // verify the required parameter 'storageDevice' is set
-            if (storageDevice == null)
-                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->ServerServerIdStorageAttachPost");
-
-            var localVarPath = "/server/{serverId}/storage/attach";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storageDevice; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdStorageAttachPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Attach storage Attaches a storage as a device to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageAttachPostAsync (Guid? serverId, StorageDevice storageDevice)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = await ServerServerIdStorageAttachPostAsyncWithHttpInfo(serverId, storageDevice);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Attach storage Attaches a storage as a device to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageAttachPostAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageAttachPost");
-            // verify the required parameter 'storageDevice' is set
-            if (storageDevice == null)
-                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->ServerServerIdStorageAttachPost");
-
-            var localVarPath = "/server/{serverId}/storage/attach";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storageDevice; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdStorageAttachPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse ServerServerIdStorageCdromEjectPost (Guid? serverId)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = ServerServerIdStorageCdromEjectPostWithHttpInfo(serverId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > ServerServerIdStorageCdromEjectPostWithHttpInfo (Guid? serverId)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageCdromEjectPost");
-
-            var localVarPath = "/server/{serverId}/storage/cdrom/eject";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdStorageCdromEjectPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageCdromEjectPostAsync (Guid? serverId)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = await ServerServerIdStorageCdromEjectPostAsyncWithHttpInfo(serverId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Eject CD-ROM Ejects the storage from the CD-ROM device of a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageCdromEjectPostAsyncWithHttpInfo (Guid? serverId)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageCdromEjectPost");
-
-            var localVarPath = "/server/{serverId}/storage/cdrom/eject";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdStorageCdromEjectPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
         /// Load CD-ROM Loads a storage as a CD-ROM in the CD-ROM device of a server.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>ServerListResponse</returns>
-        public ServerListResponse ServerServerIdStorageCdromLoadPost (Guid? serverId, StorageDevice1 storageDevice = null)
+        public ServerListResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
         {
-             ApiResponse<ServerListResponse> localVarResponse = ServerServerIdStorageCdromLoadPostWithHttpInfo(serverId, storageDevice);
+             ApiResponse<ServerListResponse> localVarResponse = LoadCdromWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
         }
 
@@ -1426,11 +2548,11 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > ServerServerIdStorageCdromLoadPostWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
+        public ApiResponse< ServerListResponse > LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageCdromLoadPost");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->LoadCdrom");
 
             var localVarPath = "/server/{serverId}/storage/cdrom/load";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1472,7 +2594,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdStorageCdromLoadPost", localVarResponse);
+                Exception exception = ExceptionFactory("LoadCdrom", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1488,9 +2610,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageCdromLoadPostAsync (Guid? serverId, StorageDevice1 storageDevice = null)
+        public async System.Threading.Tasks.Task<ServerListResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await ServerServerIdStorageCdromLoadPostAsyncWithHttpInfo(serverId, storageDevice);
+             ApiResponse<ServerListResponse> localVarResponse = await LoadCdromAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
 
         }
@@ -1502,11 +2624,11 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageCdromLoadPostAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageCdromLoadPost");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->LoadCdrom");
 
             var localVarPath = "/server/{serverId}/storage/cdrom/load";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1548,1264 +2670,13 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdStorageCdromLoadPost", localVarResponse);
+                Exception exception = ExceptionFactory("LoadCdrom", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Detach storage Detaches a storage resource from a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse ServerServerIdStorageDetachPost (Guid? serverId, StorageDevice storageDevice)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = ServerServerIdStorageDetachPostWithHttpInfo(serverId, storageDevice);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Detach storage Detaches a storage resource from a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > ServerServerIdStorageDetachPostWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageDetachPost");
-            // verify the required parameter 'storageDevice' is set
-            if (storageDevice == null)
-                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->ServerServerIdStorageDetachPost");
-
-            var localVarPath = "/server/{serverId}/storage/detach";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storageDevice; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdStorageDetachPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Detach storage Detaches a storage resource from a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> ServerServerIdStorageDetachPostAsync (Guid? serverId, StorageDevice storageDevice)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = await ServerServerIdStorageDetachPostAsyncWithHttpInfo(serverId, storageDevice);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Detach storage Detaches a storage resource from a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdStorageDetachPostAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->ServerServerIdStorageDetachPost");
-            // verify the required parameter 'storageDevice' is set
-            if (storageDevice == null)
-                throw new ApiException(400, "Missing required parameter 'storageDevice' when calling StorageApi->ServerServerIdStorageDetachPost");
-
-            var localVarPath = "/server/{serverId}/storage/detach";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (storageDevice != null && storageDevice.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storageDevice); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storageDevice; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdStorageDetachPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Create storage Creates a new storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 StoragePost (Storage storage)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = StoragePostWithHttpInfo(storage);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create storage Creates a new storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > StoragePostWithHttpInfo (Storage storage)
-        {
-            // verify the required parameter 'storage' is set
-            if (storage == null)
-                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->StoragePost");
-
-            var localVarPath = "/storage";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storage != null && storage.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storage; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StoragePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Create storage Creates a new storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> StoragePostAsync (Storage storage)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = await StoragePostAsyncWithHttpInfo(storage);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create storage Creates a new storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storage"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StoragePostAsyncWithHttpInfo (Storage storage)
-        {
-            // verify the required parameter 'storage' is set
-            if (storage == null)
-                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->StoragePost");
-
-            var localVarPath = "/storage";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storage != null && storage.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storage; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StoragePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 StorageStorageIdBackupPost (Guid? storageId, Storage4 storage = null)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = StorageStorageIdBackupPostWithHttpInfo(storageId, storage);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > StorageStorageIdBackupPostWithHttpInfo (Guid? storageId, Storage4 storage = null)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdBackupPost");
-
-            var localVarPath = "/storage/{storageId}/backup";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-            if (storage != null && storage.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storage; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdBackupPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdBackupPostAsync (Guid? storageId, Storage4 storage = null)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = await StorageStorageIdBackupPostAsyncWithHttpInfo(storageId, storage);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create backup Creates a point-in-time backup of a storage resource. For automatic, scheduled backups, see  &#x60;backup_rule&#x60; in Create storage or Modify storage.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdBackupPostAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdBackupPost");
-
-            var localVarPath = "/storage/{storageId}/backup";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-            if (storage != null && storage.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storage; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdBackupPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns></returns>
-        public void StorageStorageIdCancelPost (Guid? storageId)
-        {
-             StorageStorageIdCancelPostWithHttpInfo(storageId);
-        }
-
-        /// <summary>
-        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> StorageStorageIdCancelPostWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdCancelPost");
-
-            var localVarPath = "/storage/{storageId}/cancel";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdCancelPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task StorageStorageIdCancelPostAsync (Guid? storageId)
-        {
-             await StorageStorageIdCancelPostAsyncWithHttpInfo(storageId);
-
-        }
-
-        /// <summary>
-        /// Cancel storage operation Cancels a running cloning operation and deletes the incomplete copy.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Strage id</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdCancelPostAsyncWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdCancelPost");
-
-            var localVarPath = "/storage/{storageId}/cancel";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdCancelPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Clone storage Creates an exact copy of an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 StorageStorageIdClonePost (Guid? storageId, Storage2 storage = null)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = StorageStorageIdClonePostWithHttpInfo(storageId, storage);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Clone storage Creates an exact copy of an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > StorageStorageIdClonePostWithHttpInfo (Guid? storageId, Storage2 storage = null)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdClonePost");
-
-            var localVarPath = "/storage/{storageId}/clone";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-            if (storage != null && storage.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storage; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdClonePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Clone storage Creates an exact copy of an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdClonePostAsync (Guid? storageId, Storage2 storage = null)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = await StorageStorageIdClonePostAsyncWithHttpInfo(storageId, storage);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Clone storage Creates an exact copy of an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdClonePostAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdClonePost");
-
-            var localVarPath = "/storage/{storageId}/clone";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-            if (storage != null && storage.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(storage); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = storage; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdClonePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Delete storage Deleted an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns></returns>
-        public void StorageStorageIdDelete (Guid? storageId)
-        {
-             StorageStorageIdDeleteWithHttpInfo(storageId);
-        }
-
-        /// <summary>
-        /// Delete storage Deleted an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> StorageStorageIdDeleteWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdDelete");
-
-            var localVarPath = "/storage/{storageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Delete storage Deleted an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task StorageStorageIdDeleteAsync (Guid? storageId)
-        {
-             await StorageStorageIdDeleteAsyncWithHttpInfo(storageId);
-
-        }
-
-        /// <summary>
-        /// Delete storage Deleted an existing storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdDeleteAsyncWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdDelete");
-
-            var localVarPath = "/storage/{storageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns></returns>
-        public void StorageStorageIdFavoriteDelete (Guid? storageId)
-        {
-             StorageStorageIdFavoriteDeleteWithHttpInfo(storageId);
-        }
-
-        /// <summary>
-        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> StorageStorageIdFavoriteDeleteWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdFavoriteDelete");
-
-            var localVarPath = "/storage/{storageId}/favorite";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdFavoriteDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task StorageStorageIdFavoriteDeleteAsync (Guid? storageId)
-        {
-             await StorageStorageIdFavoriteDeleteAsyncWithHttpInfo(storageId);
-
-        }
-
-        /// <summary>
-        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdFavoriteDeleteAsyncWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdFavoriteDelete");
-
-            var localVarPath = "/storage/{storageId}/favorite";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdFavoriteDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns></returns>
-        public void StorageStorageIdFavoritePost (Guid? storageId)
-        {
-             StorageStorageIdFavoritePostWithHttpInfo(storageId);
-        }
-
-        /// <summary>
-        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> StorageStorageIdFavoritePostWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdFavoritePost");
-
-            var localVarPath = "/storage/{storageId}/favorite";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdFavoritePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task StorageStorageIdFavoritePostAsync (Guid? storageId)
-        {
-             await StorageStorageIdFavoritePostAsyncWithHttpInfo(storageId);
-
-        }
-
-        /// <summary>
-        /// Add storage to favorites Adds a storage to the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId">Storage id</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdFavoritePostAsyncWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdFavoritePost");
-
-            var localVarPath = "/storage/{storageId}/favorite";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdFavoritePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        /// Get storage details Returns detailed information about a specific storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 StorageStorageIdGet (Guid? storageId)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = StorageStorageIdGetWithHttpInfo(storageId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get storage details Returns detailed information about a specific storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > StorageStorageIdGetWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdGet");
-
-            var localVarPath = "/storage/{storageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
-        }
-
-        /// <summary>
-        /// Get storage details Returns detailed information about a specific storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdGetAsync (Guid? storageId)
-        {
-             ApiResponse<InlineResponse201> localVarResponse = await StorageStorageIdGetAsyncWithHttpInfo(storageId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get storage details Returns detailed information about a specific storage resource.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="storageId"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdGetAsyncWithHttpInfo (Guid? storageId)
-        {
-            // verify the required parameter 'storageId' is set
-            if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdGet");
-
-            var localVarPath = "/storage/{storageId}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("StorageStorageIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
         }
 
         /// <summary>
@@ -2815,9 +2686,9 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>InlineResponse201</returns>
-        public InlineResponse201 StorageStorageIdPut (Guid? storageId, Storage1 storage)
+        public InlineResponse201 ModifyStorage (Guid? storageId, Storage1 storage)
         {
-             ApiResponse<InlineResponse201> localVarResponse = StorageStorageIdPutWithHttpInfo(storageId, storage);
+             ApiResponse<InlineResponse201> localVarResponse = ModifyStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
         }
 
@@ -2828,14 +2699,14 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > StorageStorageIdPutWithHttpInfo (Guid? storageId, Storage1 storage)
+        public ApiResponse< InlineResponse201 > ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdPut");
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->ModifyStorage");
             // verify the required parameter 'storage' is set
             if (storage == null)
-                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->StorageStorageIdPut");
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->ModifyStorage");
 
             var localVarPath = "/storage/{storageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2877,7 +2748,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageStorageIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("ModifyStorage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2893,9 +2764,9 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdPutAsync (Guid? storageId, Storage1 storage)
+        public async System.Threading.Tasks.Task<InlineResponse201> ModifyStorageAsync (Guid? storageId, Storage1 storage)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await StorageStorageIdPutAsyncWithHttpInfo(storageId, storage);
+             ApiResponse<InlineResponse201> localVarResponse = await ModifyStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
 
         }
@@ -2907,14 +2778,14 @@ namespace IO.Swagger.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdPutAsyncWithHttpInfo (Guid? storageId, Storage1 storage)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdPut");
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->ModifyStorage");
             // verify the required parameter 'storage' is set
             if (storage == null)
-                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->StorageStorageIdPut");
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->ModifyStorage");
 
             var localVarPath = "/storage/{storageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2956,7 +2827,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageStorageIdPut", localVarResponse);
+                Exception exception = ExceptionFactory("ModifyStorage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2971,9 +2842,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns></returns>
-        public void StorageStorageIdRestorePost (Guid? storageId)
+        public void RestoreStorage (Guid? storageId)
         {
-             StorageStorageIdRestorePostWithHttpInfo(storageId);
+             RestoreStorageWithHttpInfo(storageId);
         }
 
         /// <summary>
@@ -2982,11 +2853,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> StorageStorageIdRestorePostWithHttpInfo (Guid? storageId)
+        public ApiResponse<Object> RestoreStorageWithHttpInfo (Guid? storageId)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdRestorePost");
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->RestoreStorage");
 
             var localVarPath = "/storage/{storageId}/restore";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3021,7 +2892,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageStorageIdRestorePost", localVarResponse);
+                Exception exception = ExceptionFactory("RestoreStorage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3036,9 +2907,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task StorageStorageIdRestorePostAsync (Guid? storageId)
+        public async System.Threading.Tasks.Task RestoreStorageAsync (Guid? storageId)
         {
-             await StorageStorageIdRestorePostAsyncWithHttpInfo(storageId);
+             await RestoreStorageAsyncWithHttpInfo(storageId);
 
         }
 
@@ -3048,11 +2919,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> StorageStorageIdRestorePostAsyncWithHttpInfo (Guid? storageId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RestoreStorageAsyncWithHttpInfo (Guid? storageId)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdRestorePost");
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->RestoreStorage");
 
             var localVarPath = "/storage/{storageId}/restore";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3087,7 +2958,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageStorageIdRestorePost", localVarResponse);
+                Exception exception = ExceptionFactory("RestoreStorage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3103,9 +2974,9 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>InlineResponse201</returns>
-        public InlineResponse201 StorageStorageIdTemplatizePost (Guid? storageId, Storage3 storage = null)
+        public InlineResponse201 TemplatizeStorage (Guid? storageId, Storage3 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = StorageStorageIdTemplatizePostWithHttpInfo(storageId, storage);
+             ApiResponse<InlineResponse201> localVarResponse = TemplatizeStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
         }
 
@@ -3116,11 +2987,11 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > StorageStorageIdTemplatizePostWithHttpInfo (Guid? storageId, Storage3 storage = null)
+        public ApiResponse< InlineResponse201 > TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdTemplatizePost");
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->TemplatizeStorage");
 
             var localVarPath = "/storage/{storageId}/templatize";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3162,7 +3033,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageStorageIdTemplatizePost", localVarResponse);
+                Exception exception = ExceptionFactory("TemplatizeStorage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3178,9 +3049,9 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> StorageStorageIdTemplatizePostAsync (Guid? storageId, Storage3 storage = null)
+        public async System.Threading.Tasks.Task<InlineResponse201> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await StorageStorageIdTemplatizePostAsyncWithHttpInfo(storageId, storage);
+             ApiResponse<InlineResponse201> localVarResponse = await TemplatizeStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
 
         }
@@ -3192,11 +3063,11 @@ namespace IO.Swagger.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> StorageStorageIdTemplatizePostAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
-                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->StorageStorageIdTemplatizePost");
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->TemplatizeStorage");
 
             var localVarPath = "/storage/{storageId}/templatize";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3238,13 +3109,142 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("StorageStorageIdTemplatizePost", localVarResponse);
+                Exception exception = ExceptionFactory("TemplatizeStorage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<InlineResponse201>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+        }
+
+        /// <summary>
+        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns></returns>
+        public void UnfavoriteStorage (Guid? storageId)
+        {
+             UnfavoriteStorageWithHttpInfo(storageId);
+        }
+
+        /// <summary>
+        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UnfavoriteStorageWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->UnfavoriteStorage");
+
+            var localVarPath = "/storage/{storageId}/favorite";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnfavoriteStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UnfavoriteStorageAsync (Guid? storageId)
+        {
+             await UnfavoriteStorageAsyncWithHttpInfo(storageId);
+
+        }
+
+        /// <summary>
+        /// Remove storage from favorites Delete a storage from the list of favorite storages. To list favorite storages, see List storages. This operations succeeds even if the storage is already on the list of favorites.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="storageId">Storage id</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UnfavoriteStorageAsyncWithHttpInfo (Guid? storageId)
+        {
+            // verify the required parameter 'storageId' is set
+            if (storageId == null)
+                throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->UnfavoriteStorage");
+
+            var localVarPath = "/storage/{storageId}/favorite";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UnfavoriteStorage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
     }

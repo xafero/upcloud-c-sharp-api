@@ -34,7 +34,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>ServerListResponse</returns>
-        ServerListResponse ServerServerIdTagTagListPost (Guid? serverId, string tagList);
+        ServerListResponse AssignTag (Guid? serverId, string tagList);
 
         /// <summary>
         /// Assign tag to a server
@@ -46,7 +46,91 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> ServerServerIdTagTagListPostWithHttpInfo (Guid? serverId, string tagList);
+        ApiResponse<ServerListResponse> AssignTagWithHttpInfo (Guid? serverId, string tagList);
+        /// <summary>
+        /// Create a new tag
+        /// </summary>
+        /// <remarks>
+        /// Creates a new tag. Existing servers can be tagged in same request
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tag"></param>
+        /// <returns>InlineResponse20010</returns>
+        InlineResponse20010 CreateTag (Tag tag);
+
+        /// <summary>
+        /// Create a new tag
+        /// </summary>
+        /// <remarks>
+        /// Creates a new tag. Existing servers can be tagged in same request
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tag"></param>
+        /// <returns>ApiResponse of InlineResponse20010</returns>
+        ApiResponse<InlineResponse20010> CreateTagWithHttpInfo (Tag tag);
+        /// <summary>
+        /// Delete tag
+        /// </summary>
+        /// <remarks>
+        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <returns></returns>
+        void DeleteTag (string tagName);
+
+        /// <summary>
+        /// Delete tag
+        /// </summary>
+        /// <remarks>
+        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTagWithHttpInfo (string tagName);
+        /// <summary>
+        /// List existing tags
+        /// </summary>
+        /// <remarks>
+        /// Returns all existing tags with their properties and servers tagged
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>InlineResponse2009</returns>
+        InlineResponse2009 ListTags ();
+
+        /// <summary>
+        /// List existing tags
+        /// </summary>
+        /// <remarks>
+        /// Returns all existing tags with their properties and servers tagged
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of InlineResponse2009</returns>
+        ApiResponse<InlineResponse2009> ListTagsWithHttpInfo ();
+        /// <summary>
+        /// Modify existing tag
+        /// </summary>
+        /// <remarks>
+        /// Changes attributes of an existing tag
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <param name="tag"></param>
+        /// <returns>InlineResponse20010</returns>
+        InlineResponse20010 ModifyTag (string tagName, Tag1 tag);
+
+        /// <summary>
+        /// Modify existing tag
+        /// </summary>
+        /// <remarks>
+        /// Changes attributes of an existing tag
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <param name="tag"></param>
+        /// <returns>ApiResponse of InlineResponse20010</returns>
+        ApiResponse<InlineResponse20010> ModifyTagWithHttpInfo (string tagName, Tag1 tag);
         /// <summary>
         /// Remove tag from server
         /// </summary>
@@ -57,7 +141,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
         /// <returns>ServerListResponse</returns>
-        ServerListResponse ServerServerIdUntagTagNamePost (Guid? serverId, string tagName);
+        ServerListResponse Untag (Guid? serverId, string tagName);
 
         /// <summary>
         /// Remove tag from server
@@ -69,91 +153,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
         /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> ServerServerIdUntagTagNamePostWithHttpInfo (Guid? serverId, string tagName);
-        /// <summary>
-        /// List existing tags
-        /// </summary>
-        /// <remarks>
-        /// Returns all existing tags with their properties and servers tagged
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2009</returns>
-        InlineResponse2009 TagGet ();
-
-        /// <summary>
-        /// List existing tags
-        /// </summary>
-        /// <remarks>
-        /// Returns all existing tags with their properties and servers tagged
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2009</returns>
-        ApiResponse<InlineResponse2009> TagGetWithHttpInfo ();
-        /// <summary>
-        /// Create a new tag
-        /// </summary>
-        /// <remarks>
-        /// Creates a new tag. Existing servers can be tagged in same request
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tag"></param>
-        /// <returns>InlineResponse20010</returns>
-        InlineResponse20010 TagPost (Tag tag);
-
-        /// <summary>
-        /// Create a new tag
-        /// </summary>
-        /// <remarks>
-        /// Creates a new tag. Existing servers can be tagged in same request
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tag"></param>
-        /// <returns>ApiResponse of InlineResponse20010</returns>
-        ApiResponse<InlineResponse20010> TagPostWithHttpInfo (Tag tag);
-        /// <summary>
-        /// Delete tag
-        /// </summary>
-        /// <remarks>
-        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <returns></returns>
-        void TagTagNameDelete (string tagName);
-
-        /// <summary>
-        /// Delete tag
-        /// </summary>
-        /// <remarks>
-        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> TagTagNameDeleteWithHttpInfo (string tagName);
-        /// <summary>
-        /// Modify existing tag
-        /// </summary>
-        /// <remarks>
-        /// Changes attributes of an existing tag
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <param name="tag"></param>
-        /// <returns>InlineResponse20010</returns>
-        InlineResponse20010 TagTagNamePut (string tagName, Tag1 tag);
-
-        /// <summary>
-        /// Modify existing tag
-        /// </summary>
-        /// <remarks>
-        /// Changes attributes of an existing tag
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <param name="tag"></param>
-        /// <returns>ApiResponse of InlineResponse20010</returns>
-        ApiResponse<InlineResponse20010> TagTagNamePutWithHttpInfo (string tagName, Tag1 tag);
+        ApiResponse<ServerListResponse> UntagWithHttpInfo (Guid? serverId, string tagName);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -166,7 +166,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> ServerServerIdTagTagListPostAsync (Guid? serverId, string tagList);
+        System.Threading.Tasks.Task<ServerListResponse> AssignTagAsync (Guid? serverId, string tagList);
 
         /// <summary>
         /// Assign tag to a server
@@ -178,7 +178,91 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdTagTagListPostAsyncWithHttpInfo (Guid? serverId, string tagList);
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AssignTagAsyncWithHttpInfo (Guid? serverId, string tagList);
+        /// <summary>
+        /// Create a new tag
+        /// </summary>
+        /// <remarks>
+        /// Creates a new tag. Existing servers can be tagged in same request
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tag"></param>
+        /// <returns>Task of InlineResponse20010</returns>
+        System.Threading.Tasks.Task<InlineResponse20010> CreateTagAsync (Tag tag);
+
+        /// <summary>
+        /// Create a new tag
+        /// </summary>
+        /// <remarks>
+        /// Creates a new tag. Existing servers can be tagged in same request
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tag"></param>
+        /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> CreateTagAsyncWithHttpInfo (Tag tag);
+        /// <summary>
+        /// Delete tag
+        /// </summary>
+        /// <remarks>
+        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTagAsync (string tagName);
+
+        /// <summary>
+        /// Delete tag
+        /// </summary>
+        /// <remarks>
+        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTagAsyncWithHttpInfo (string tagName);
+        /// <summary>
+        /// List existing tags
+        /// </summary>
+        /// <remarks>
+        /// Returns all existing tags with their properties and servers tagged
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of InlineResponse2009</returns>
+        System.Threading.Tasks.Task<InlineResponse2009> ListTagsAsync ();
+
+        /// <summary>
+        /// List existing tags
+        /// </summary>
+        /// <remarks>
+        /// Returns all existing tags with their properties and servers tagged
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (InlineResponse2009)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2009>> ListTagsAsyncWithHttpInfo ();
+        /// <summary>
+        /// Modify existing tag
+        /// </summary>
+        /// <remarks>
+        /// Changes attributes of an existing tag
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <param name="tag"></param>
+        /// <returns>Task of InlineResponse20010</returns>
+        System.Threading.Tasks.Task<InlineResponse20010> ModifyTagAsync (string tagName, Tag1 tag);
+
+        /// <summary>
+        /// Modify existing tag
+        /// </summary>
+        /// <remarks>
+        /// Changes attributes of an existing tag
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="tagName">Tag name</param>
+        /// <param name="tag"></param>
+        /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> ModifyTagAsyncWithHttpInfo (string tagName, Tag1 tag);
         /// <summary>
         /// Remove tag from server
         /// </summary>
@@ -189,7 +273,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
         /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> ServerServerIdUntagTagNamePostAsync (Guid? serverId, string tagName);
+        System.Threading.Tasks.Task<ServerListResponse> UntagAsync (Guid? serverId, string tagName);
 
         /// <summary>
         /// Remove tag from server
@@ -201,91 +285,7 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
         /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdUntagTagNamePostAsyncWithHttpInfo (Guid? serverId, string tagName);
-        /// <summary>
-        /// List existing tags
-        /// </summary>
-        /// <remarks>
-        /// Returns all existing tags with their properties and servers tagged
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2009</returns>
-        System.Threading.Tasks.Task<InlineResponse2009> TagGetAsync ();
-
-        /// <summary>
-        /// List existing tags
-        /// </summary>
-        /// <remarks>
-        /// Returns all existing tags with their properties and servers tagged
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2009)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2009>> TagGetAsyncWithHttpInfo ();
-        /// <summary>
-        /// Create a new tag
-        /// </summary>
-        /// <remarks>
-        /// Creates a new tag. Existing servers can be tagged in same request
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tag"></param>
-        /// <returns>Task of InlineResponse20010</returns>
-        System.Threading.Tasks.Task<InlineResponse20010> TagPostAsync (Tag tag);
-
-        /// <summary>
-        /// Create a new tag
-        /// </summary>
-        /// <remarks>
-        /// Creates a new tag. Existing servers can be tagged in same request
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tag"></param>
-        /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> TagPostAsyncWithHttpInfo (Tag tag);
-        /// <summary>
-        /// Delete tag
-        /// </summary>
-        /// <remarks>
-        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task TagTagNameDeleteAsync (string tagName);
-
-        /// <summary>
-        /// Delete tag
-        /// </summary>
-        /// <remarks>
-        /// Deleting existing tag untags all servers from specified tag and deletes tag definition
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> TagTagNameDeleteAsyncWithHttpInfo (string tagName);
-        /// <summary>
-        /// Modify existing tag
-        /// </summary>
-        /// <remarks>
-        /// Changes attributes of an existing tag
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <param name="tag"></param>
-        /// <returns>Task of InlineResponse20010</returns>
-        System.Threading.Tasks.Task<InlineResponse20010> TagTagNamePutAsync (string tagName, Tag1 tag);
-
-        /// <summary>
-        /// Modify existing tag
-        /// </summary>
-        /// <remarks>
-        /// Changes attributes of an existing tag
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tagName">Tag name</param>
-        /// <param name="tag"></param>
-        /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> TagTagNamePutAsyncWithHttpInfo (string tagName, Tag1 tag);
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> UntagAsyncWithHttpInfo (Guid? serverId, string tagName);
         #endregion Asynchronous Operations
     }
 
@@ -393,9 +393,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>ServerListResponse</returns>
-        public ServerListResponse ServerServerIdTagTagListPost (Guid? serverId, string tagList)
+        public ServerListResponse AssignTag (Guid? serverId, string tagList)
         {
-             ApiResponse<ServerListResponse> localVarResponse = ServerServerIdTagTagListPostWithHttpInfo(serverId, tagList);
+             ApiResponse<ServerListResponse> localVarResponse = AssignTagWithHttpInfo(serverId, tagList);
              return localVarResponse.Data;
         }
 
@@ -406,14 +406,14 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > ServerServerIdTagTagListPostWithHttpInfo (Guid? serverId, string tagList)
+        public ApiResponse< ServerListResponse > AssignTagWithHttpInfo (Guid? serverId, string tagList)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->ServerServerIdTagTagListPost");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->AssignTag");
             // verify the required parameter 'tagList' is set
             if (tagList == null)
-                throw new ApiException(400, "Missing required parameter 'tagList' when calling TagApi->ServerServerIdTagTagListPost");
+                throw new ApiException(400, "Missing required parameter 'tagList' when calling TagApi->AssignTag");
 
             var localVarPath = "/server/{serverId}/tag/{tagList}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -448,7 +448,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdTagTagListPost", localVarResponse);
+                Exception exception = ExceptionFactory("AssignTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -464,9 +464,9 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> ServerServerIdTagTagListPostAsync (Guid? serverId, string tagList)
+        public async System.Threading.Tasks.Task<ServerListResponse> AssignTagAsync (Guid? serverId, string tagList)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await ServerServerIdTagTagListPostAsyncWithHttpInfo(serverId, tagList);
+             ApiResponse<ServerListResponse> localVarResponse = await AssignTagAsyncWithHttpInfo(serverId, tagList);
              return localVarResponse.Data;
 
         }
@@ -478,14 +478,14 @@ namespace IO.Swagger.Api
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
         /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdTagTagListPostAsyncWithHttpInfo (Guid? serverId, string tagList)
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AssignTagAsyncWithHttpInfo (Guid? serverId, string tagList)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->ServerServerIdTagTagListPost");
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->AssignTag");
             // verify the required parameter 'tagList' is set
             if (tagList == null)
-                throw new ApiException(400, "Missing required parameter 'tagList' when calling TagApi->ServerServerIdTagTagListPost");
+                throw new ApiException(400, "Missing required parameter 'tagList' when calling TagApi->AssignTag");
 
             var localVarPath = "/server/{serverId}/tag/{tagList}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -520,275 +520,13 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("ServerServerIdTagTagListPost", localVarResponse);
+                Exception exception = ExceptionFactory("AssignTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Remove tag from server Untags tags from given server. The tag(s) must exist
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse ServerServerIdUntagTagNamePost (Guid? serverId, string tagName)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = ServerServerIdUntagTagNamePostWithHttpInfo(serverId, tagName);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Remove tag from server Untags tags from given server. The tag(s) must exist
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > ServerServerIdUntagTagNamePostWithHttpInfo (Guid? serverId, string tagName)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->ServerServerIdUntagTagNamePost");
-            // verify the required parameter 'tagName' is set
-            if (tagName == null)
-                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->ServerServerIdUntagTagNamePost");
-
-            var localVarPath = "/server/{serverId}/untag/{tagName}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdUntagTagNamePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// Remove tag from server Untags tags from given server. The tag(s) must exist
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> ServerServerIdUntagTagNamePostAsync (Guid? serverId, string tagName)
-        {
-             ApiResponse<ServerListResponse> localVarResponse = await ServerServerIdUntagTagNamePostAsyncWithHttpInfo(serverId, tagName);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Remove tag from server Untags tags from given server. The tag(s) must exist
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="serverId">Server id</param>
-        /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ServerServerIdUntagTagNamePostAsyncWithHttpInfo (Guid? serverId, string tagName)
-        {
-            // verify the required parameter 'serverId' is set
-            if (serverId == null)
-                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->ServerServerIdUntagTagNamePost");
-            // verify the required parameter 'tagName' is set
-            if (tagName == null)
-                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->ServerServerIdUntagTagNamePost");
-
-            var localVarPath = "/server/{serverId}/untag/{tagName}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("ServerServerIdUntagTagNamePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
-        }
-
-        /// <summary>
-        /// List existing tags Returns all existing tags with their properties and servers tagged
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2009</returns>
-        public InlineResponse2009 TagGet ()
-        {
-             ApiResponse<InlineResponse2009> localVarResponse = TagGetWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// List existing tags Returns all existing tags with their properties and servers tagged
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2009</returns>
-        public ApiResponse< InlineResponse2009 > TagGetWithHttpInfo ()
-        {
-
-            var localVarPath = "/tag";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TagGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2009>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2009) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2009)));
-        }
-
-        /// <summary>
-        /// List existing tags Returns all existing tags with their properties and servers tagged
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2009</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2009> TagGetAsync ()
-        {
-             ApiResponse<InlineResponse2009> localVarResponse = await TagGetAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// List existing tags Returns all existing tags with their properties and servers tagged
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2009)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2009>> TagGetAsyncWithHttpInfo ()
-        {
-
-            var localVarPath = "/tag";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TagGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2009>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2009) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2009)));
         }
 
         /// <summary>
@@ -797,9 +535,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>InlineResponse20010</returns>
-        public InlineResponse20010 TagPost (Tag tag)
+        public InlineResponse20010 CreateTag (Tag tag)
         {
-             ApiResponse<InlineResponse20010> localVarResponse = TagPostWithHttpInfo(tag);
+             ApiResponse<InlineResponse20010> localVarResponse = CreateTagWithHttpInfo(tag);
              return localVarResponse.Data;
         }
 
@@ -809,11 +547,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>ApiResponse of InlineResponse20010</returns>
-        public ApiResponse< InlineResponse20010 > TagPostWithHttpInfo (Tag tag)
+        public ApiResponse< InlineResponse20010 > CreateTagWithHttpInfo (Tag tag)
         {
             // verify the required parameter 'tag' is set
             if (tag == null)
-                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->TagPost");
+                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->CreateTag");
 
             var localVarPath = "/tag";
             var localVarPathParams = new Dictionary<String, String>();
@@ -854,7 +592,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TagPost", localVarResponse);
+                Exception exception = ExceptionFactory("CreateTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -869,9 +607,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>Task of InlineResponse20010</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20010> TagPostAsync (Tag tag)
+        public async System.Threading.Tasks.Task<InlineResponse20010> CreateTagAsync (Tag tag)
         {
-             ApiResponse<InlineResponse20010> localVarResponse = await TagPostAsyncWithHttpInfo(tag);
+             ApiResponse<InlineResponse20010> localVarResponse = await CreateTagAsyncWithHttpInfo(tag);
              return localVarResponse.Data;
 
         }
@@ -882,11 +620,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> TagPostAsyncWithHttpInfo (Tag tag)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> CreateTagAsyncWithHttpInfo (Tag tag)
         {
             // verify the required parameter 'tag' is set
             if (tag == null)
-                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->TagPost");
+                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->CreateTag");
 
             var localVarPath = "/tag";
             var localVarPathParams = new Dictionary<String, String>();
@@ -927,7 +665,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TagPost", localVarResponse);
+                Exception exception = ExceptionFactory("CreateTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -942,9 +680,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tagName">Tag name</param>
         /// <returns></returns>
-        public void TagTagNameDelete (string tagName)
+        public void DeleteTag (string tagName)
         {
-             TagTagNameDeleteWithHttpInfo(tagName);
+             DeleteTagWithHttpInfo(tagName);
         }
 
         /// <summary>
@@ -953,11 +691,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tagName">Tag name</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> TagTagNameDeleteWithHttpInfo (string tagName)
+        public ApiResponse<Object> DeleteTagWithHttpInfo (string tagName)
         {
             // verify the required parameter 'tagName' is set
             if (tagName == null)
-                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->TagTagNameDelete");
+                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->DeleteTag");
 
             var localVarPath = "/tag/{tagName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -991,7 +729,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TagTagNameDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1006,9 +744,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tagName">Tag name</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task TagTagNameDeleteAsync (string tagName)
+        public async System.Threading.Tasks.Task DeleteTagAsync (string tagName)
         {
-             await TagTagNameDeleteAsyncWithHttpInfo(tagName);
+             await DeleteTagAsyncWithHttpInfo(tagName);
 
         }
 
@@ -1018,11 +756,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tagName">Tag name</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> TagTagNameDeleteAsyncWithHttpInfo (string tagName)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTagAsyncWithHttpInfo (string tagName)
         {
             // verify the required parameter 'tagName' is set
             if (tagName == null)
-                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->TagTagNameDelete");
+                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->DeleteTag");
 
             var localVarPath = "/tag/{tagName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1056,7 +794,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TagTagNameDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1066,15 +804,134 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// List existing tags Returns all existing tags with their properties and servers tagged
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>InlineResponse2009</returns>
+        public InlineResponse2009 ListTags ()
+        {
+             ApiResponse<InlineResponse2009> localVarResponse = ListTagsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List existing tags Returns all existing tags with their properties and servers tagged
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of InlineResponse2009</returns>
+        public ApiResponse< InlineResponse2009 > ListTagsWithHttpInfo ()
+        {
+
+            var localVarPath = "/tag";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListTags", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2009>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse2009) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2009)));
+        }
+
+        /// <summary>
+        /// List existing tags Returns all existing tags with their properties and servers tagged
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of InlineResponse2009</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2009> ListTagsAsync ()
+        {
+             ApiResponse<InlineResponse2009> localVarResponse = await ListTagsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List existing tags Returns all existing tags with their properties and servers tagged
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (InlineResponse2009)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2009>> ListTagsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/tag";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListTags", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2009>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse2009) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2009)));
+        }
+
+        /// <summary>
         /// Modify existing tag Changes attributes of an existing tag
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>InlineResponse20010</returns>
-        public InlineResponse20010 TagTagNamePut (string tagName, Tag1 tag)
+        public InlineResponse20010 ModifyTag (string tagName, Tag1 tag)
         {
-             ApiResponse<InlineResponse20010> localVarResponse = TagTagNamePutWithHttpInfo(tagName, tag);
+             ApiResponse<InlineResponse20010> localVarResponse = ModifyTagWithHttpInfo(tagName, tag);
              return localVarResponse.Data;
         }
 
@@ -1085,14 +942,14 @@ namespace IO.Swagger.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>ApiResponse of InlineResponse20010</returns>
-        public ApiResponse< InlineResponse20010 > TagTagNamePutWithHttpInfo (string tagName, Tag1 tag)
+        public ApiResponse< InlineResponse20010 > ModifyTagWithHttpInfo (string tagName, Tag1 tag)
         {
             // verify the required parameter 'tagName' is set
             if (tagName == null)
-                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->TagTagNamePut");
+                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->ModifyTag");
             // verify the required parameter 'tag' is set
             if (tag == null)
-                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->TagTagNamePut");
+                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->ModifyTag");
 
             var localVarPath = "/tag/{tagName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1134,7 +991,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TagTagNamePut", localVarResponse);
+                Exception exception = ExceptionFactory("ModifyTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1150,9 +1007,9 @@ namespace IO.Swagger.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>Task of InlineResponse20010</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20010> TagTagNamePutAsync (string tagName, Tag1 tag)
+        public async System.Threading.Tasks.Task<InlineResponse20010> ModifyTagAsync (string tagName, Tag1 tag)
         {
-             ApiResponse<InlineResponse20010> localVarResponse = await TagTagNamePutAsyncWithHttpInfo(tagName, tag);
+             ApiResponse<InlineResponse20010> localVarResponse = await ModifyTagAsyncWithHttpInfo(tagName, tag);
              return localVarResponse.Data;
 
         }
@@ -1164,14 +1021,14 @@ namespace IO.Swagger.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>Task of ApiResponse (InlineResponse20010)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> TagTagNamePutAsyncWithHttpInfo (string tagName, Tag1 tag)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse20010>> ModifyTagAsyncWithHttpInfo (string tagName, Tag1 tag)
         {
             // verify the required parameter 'tagName' is set
             if (tagName == null)
-                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->TagTagNamePut");
+                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->ModifyTag");
             // verify the required parameter 'tag' is set
             if (tag == null)
-                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->TagTagNamePut");
+                throw new ApiException(400, "Missing required parameter 'tag' when calling TagApi->ModifyTag");
 
             var localVarPath = "/tag/{tagName}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1213,13 +1070,156 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("TagTagNamePut", localVarResponse);
+                Exception exception = ExceptionFactory("ModifyTag", localVarResponse);
                 if (exception != null) throw exception;
             }
 
             return new ApiResponse<InlineResponse20010>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (InlineResponse20010) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse20010)));
+        }
+
+        /// <summary>
+        /// Remove tag from server Untags tags from given server. The tag(s) must exist
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse Untag (Guid? serverId, string tagName)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = UntagWithHttpInfo(serverId, tagName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove tag from server Untags tags from given server. The tag(s) must exist
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > UntagWithHttpInfo (Guid? serverId, string tagName)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->Untag");
+            // verify the required parameter 'tagName' is set
+            if (tagName == null)
+                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->Untag");
+
+            var localVarPath = "/server/{serverId}/untag/{tagName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Untag", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+        }
+
+        /// <summary>
+        /// Remove tag from server Untags tags from given server. The tag(s) must exist
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> UntagAsync (Guid? serverId, string tagName)
+        {
+             ApiResponse<ServerListResponse> localVarResponse = await UntagAsyncWithHttpInfo(serverId, tagName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove tag from server Untags tags from given server. The tag(s) must exist
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="serverId">Server id</param>
+        /// <param name="tagName">Tag name</param>
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> UntagAsyncWithHttpInfo (Guid? serverId, string tagName)
+        {
+            // verify the required parameter 'serverId' is set
+            if (serverId == null)
+                throw new ApiException(400, "Missing required parameter 'serverId' when calling TagApi->Untag");
+            // verify the required parameter 'tagName' is set
+            if (tagName == null)
+                throw new ApiException(400, "Missing required parameter 'tagName' when calling TagApi->Untag");
+
+            var localVarPath = "/server/{serverId}/untag/{tagName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
+            if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("Untag", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
     }

@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ZoneGet**](ZoneApi.md#zoneget) | **GET** /zone | List available zones
+[**ListZones**](ZoneApi.md#listzones) | **GET** /zone | List available zones
 
 
-<a name="zoneget"></a>
-# **ZoneGet**
-> InlineResponse2001 ZoneGet ()
+<a name="listzones"></a>
+# **ListZones**
+> InlineResponse2001 ListZones ()
 
 List available zones
 
@@ -25,7 +25,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class ZoneGetExample
+    public class ListZonesExample
     {
         public void main()
         {
@@ -34,12 +34,12 @@ namespace Example
             try
             {
                 // List available zones
-                InlineResponse2001 result = apiInstance.ZoneGet();
+                InlineResponse2001 result = apiInstance.ListZones();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ZoneApi.ZoneGet: " + e.Message );
+                Debug.Print("Exception when calling ZoneApi.ListZones: " + e.Message );
             }
         }
     }

@@ -32,7 +32,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Account</returns>
-        Account AccountGet ();
+        Account GetAccount ();
 
         /// <summary>
         /// Account information
@@ -42,7 +42,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Account</returns>
-        ApiResponse<Account> AccountGetWithHttpInfo ();
+        ApiResponse<Account> GetAccountWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Account</returns>
-        System.Threading.Tasks.Task<Account> AccountGetAsync ();
+        System.Threading.Tasks.Task<Account> GetAccountAsync ();
 
         /// <summary>
         /// Account information
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Account)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Account>> AccountGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Account>> GetAccountAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Account</returns>
-        public Account AccountGet ()
+        public Account GetAccount ()
         {
-             ApiResponse<Account> localVarResponse = AccountGetWithHttpInfo();
+             ApiResponse<Account> localVarResponse = GetAccountWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Account</returns>
-        public ApiResponse< Account > AccountGetWithHttpInfo ()
+        public ApiResponse< Account > GetAccountWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -214,7 +214,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AccountGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAccount", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -228,9 +228,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Account</returns>
-        public async System.Threading.Tasks.Task<Account> AccountGetAsync ()
+        public async System.Threading.Tasks.Task<Account> GetAccountAsync ()
         {
-             ApiResponse<Account> localVarResponse = await AccountGetAsyncWithHttpInfo();
+             ApiResponse<Account> localVarResponse = await GetAccountAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,7 +240,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Account)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Account>> AccountGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Account>> GetAccountAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -274,7 +274,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("AccountGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetAccount", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -32,7 +32,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse200</returns>
-        InlineResponse200 PriceGet ();
+        InlineResponse200 ListPrices ();
 
         /// <summary>
         /// List prices
@@ -42,7 +42,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> PriceGetWithHttpInfo ();
+        ApiResponse<InlineResponse200> ListPricesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -53,7 +53,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> PriceGetAsync ();
+        System.Threading.Tasks.Task<InlineResponse200> ListPricesAsync ();
 
         /// <summary>
         /// List prices
@@ -63,7 +63,7 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> PriceGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListPricesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -169,9 +169,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>InlineResponse200</returns>
-        public InlineResponse200 PriceGet ()
+        public InlineResponse200 ListPrices ()
         {
-             ApiResponse<InlineResponse200> localVarResponse = PriceGetWithHttpInfo();
+             ApiResponse<InlineResponse200> localVarResponse = ListPricesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -180,7 +180,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > PriceGetWithHttpInfo ()
+        public ApiResponse< InlineResponse200 > ListPricesWithHttpInfo ()
         {
 
             var localVarPath = "/price";
@@ -214,7 +214,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PriceGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListPrices", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -228,9 +228,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> PriceGetAsync ()
+        public async System.Threading.Tasks.Task<InlineResponse200> ListPricesAsync ()
         {
-             ApiResponse<InlineResponse200> localVarResponse = await PriceGetAsyncWithHttpInfo();
+             ApiResponse<InlineResponse200> localVarResponse = await ListPricesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,7 +240,7 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> PriceGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListPricesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/price";
@@ -274,7 +274,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("PriceGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListPrices", localVarResponse);
                 if (exception != null) throw exception;
             }
 

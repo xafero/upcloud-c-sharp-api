@@ -25,24 +25,26 @@ namespace IO.Swagger.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// List IP addresses
+        /// Assign IP address
         /// </summary>
         /// <remarks>
-        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assigns a new IP address to a server.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2006</returns>
-        InlineResponse2006 IpAddressGet ();
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>InlineResponse2011</returns>
+        InlineResponse2011 AddIp (IpAddress ipAddress = null);
 
         /// <summary>
-        /// List IP addresses
+        /// Assign IP address
         /// </summary>
         /// <remarks>
-        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assigns a new IP address to a server.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        ApiResponse<InlineResponse2006> IpAddressGetWithHttpInfo ();
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2011</returns>
+        ApiResponse<InlineResponse2011> AddIpWithHttpInfo (IpAddress ipAddress = null);
         /// <summary>
         /// Release IP address
         /// </summary>
@@ -52,7 +54,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns></returns>
-        void IpAddressIpDelete (string ip);
+        void DeleteIp (string ip);
 
         /// <summary>
         /// Release IP address
@@ -63,7 +65,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IpAddressIpDeleteWithHttpInfo (string ip);
+        ApiResponse<Object> DeleteIpWithHttpInfo (string ip);
         /// <summary>
         /// Get IP address details
         /// </summary>
@@ -73,7 +75,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 IpAddressIpGet (string ip);
+        InlineResponse2011 GetDetails (string ip);
 
         /// <summary>
         /// Get IP address details
@@ -84,7 +86,26 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> IpAddressIpGetWithHttpInfo (string ip);
+        ApiResponse<InlineResponse2011> GetDetailsWithHttpInfo (string ip);
+        /// <summary>
+        /// List IP addresses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>InlineResponse2006</returns>
+        InlineResponse2006 ListIps ();
+
+        /// <summary>
+        /// List IP addresses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of InlineResponse2006</returns>
+        ApiResponse<InlineResponse2006> ListIpsWithHttpInfo ();
         /// <summary>
         /// Modify IP address
         /// </summary>
@@ -95,7 +116,7 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 IpAddressIpPut (string ip, IpAddress1 ipAddress = null);
+        InlineResponse2011 ModifyIp (string ip, IpAddress1 ipAddress = null);
 
         /// <summary>
         /// Modify IP address
@@ -107,49 +128,30 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> IpAddressIpPutWithHttpInfo (string ip, IpAddress1 ipAddress = null);
-        /// <summary>
-        /// Assign IP address
-        /// </summary>
-        /// <remarks>
-        /// Assigns a new IP address to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        InlineResponse2011 IpAddressPost (IpAddress ipAddress = null);
-
-        /// <summary>
-        /// Assign IP address
-        /// </summary>
-        /// <remarks>
-        /// Assigns a new IP address to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        ApiResponse<InlineResponse2011> IpAddressPostWithHttpInfo (IpAddress ipAddress = null);
+        ApiResponse<InlineResponse2011> ModifyIpWithHttpInfo (string ip, IpAddress1 ipAddress = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// List IP addresses
+        /// Assign IP address
         /// </summary>
         /// <remarks>
-        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assigns a new IP address to a server.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2006</returns>
-        System.Threading.Tasks.Task<InlineResponse2006> IpAddressGetAsync ();
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>Task of InlineResponse2011</returns>
+        System.Threading.Tasks.Task<InlineResponse2011> AddIpAsync (IpAddress ipAddress = null);
 
         /// <summary>
-        /// List IP addresses
+        /// Assign IP address
         /// </summary>
         /// <remarks>
-        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assigns a new IP address to a server.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> IpAddressGetAsyncWithHttpInfo ();
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddIpAsyncWithHttpInfo (IpAddress ipAddress = null);
         /// <summary>
         /// Release IP address
         /// </summary>
@@ -159,7 +161,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IpAddressIpDeleteAsync (string ip);
+        System.Threading.Tasks.Task DeleteIpAsync (string ip);
 
         /// <summary>
         /// Release IP address
@@ -170,7 +172,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IpAddressIpDeleteAsyncWithHttpInfo (string ip);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIpAsyncWithHttpInfo (string ip);
         /// <summary>
         /// Get IP address details
         /// </summary>
@@ -180,7 +182,7 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> IpAddressIpGetAsync (string ip);
+        System.Threading.Tasks.Task<InlineResponse2011> GetDetailsAsync (string ip);
 
         /// <summary>
         /// Get IP address details
@@ -191,7 +193,26 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> IpAddressIpGetAsyncWithHttpInfo (string ip);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> GetDetailsAsyncWithHttpInfo (string ip);
+        /// <summary>
+        /// List IP addresses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of InlineResponse2006</returns>
+        System.Threading.Tasks.Task<InlineResponse2006> ListIpsAsync ();
+
+        /// <summary>
+        /// List IP addresses
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </remarks>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ListIpsAsyncWithHttpInfo ();
         /// <summary>
         /// Modify IP address
         /// </summary>
@@ -202,7 +223,7 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> IpAddressIpPutAsync (string ip, IpAddress1 ipAddress = null);
+        System.Threading.Tasks.Task<InlineResponse2011> ModifyIpAsync (string ip, IpAddress1 ipAddress = null);
 
         /// <summary>
         /// Modify IP address
@@ -214,28 +235,7 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> IpAddressIpPutAsyncWithHttpInfo (string ip, IpAddress1 ipAddress = null);
-        /// <summary>
-        /// Assign IP address
-        /// </summary>
-        /// <remarks>
-        /// Assigns a new IP address to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        System.Threading.Tasks.Task<InlineResponse2011> IpAddressPostAsync (IpAddress ipAddress = null);
-
-        /// <summary>
-        /// Assign IP address
-        /// </summary>
-        /// <remarks>
-        /// Assigns a new IP address to a server.
-        /// </remarks>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> IpAddressPostAsyncWithHttpInfo (IpAddress ipAddress = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> ModifyIpAsyncWithHttpInfo (string ip, IpAddress1 ipAddress = null);
         #endregion Asynchronous Operations
     }
 
@@ -337,22 +337,24 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
-        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assign IP address Assigns a new IP address to a server.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2006</returns>
-        public InlineResponse2006 IpAddressGet ()
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>InlineResponse2011</returns>
+        public InlineResponse2011 AddIp (IpAddress ipAddress = null)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = IpAddressGetWithHttpInfo();
+             ApiResponse<InlineResponse2011> localVarResponse = AddIpWithHttpInfo(ipAddress);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assign IP address Assigns a new IP address to a server.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2006</returns>
-        public ApiResponse< InlineResponse2006 > IpAddressGetWithHttpInfo ()
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>ApiResponse of InlineResponse2011</returns>
+        public ApiResponse< InlineResponse2011 > AddIpWithHttpInfo (IpAddress ipAddress = null)
         {
 
             var localVarPath = "/ip_address";
@@ -375,44 +377,54 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (ipAddress != null && ipAddress.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(ipAddress); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ipAddress; // byte array
+            }
 
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressGet", localVarResponse);
+                Exception exception = ExceptionFactory("AddIp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (InlineResponse2011) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
         }
 
         /// <summary>
-        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assign IP address Assigns a new IP address to a server.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2006</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2006> IpAddressGetAsync ()
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>Task of InlineResponse2011</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2011> AddIpAsync (IpAddress ipAddress = null)
         {
-             ApiResponse<InlineResponse2006> localVarResponse = await IpAddressGetAsyncWithHttpInfo();
+             ApiResponse<InlineResponse2011> localVarResponse = await AddIpAsyncWithHttpInfo(ipAddress);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// Assign IP address Assigns a new IP address to a server.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> IpAddressGetAsyncWithHttpInfo ()
+        /// <param name="ipAddress"> (optional)</param>
+        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> AddIpAsyncWithHttpInfo (IpAddress ipAddress = null)
         {
 
             var localVarPath = "/ip_address";
@@ -435,24 +447,32 @@ namespace IO.Swagger.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (ipAddress != null && ipAddress.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(ipAddress); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = ipAddress; // byte array
+            }
 
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressGet", localVarResponse);
+                Exception exception = ExceptionFactory("AddIp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+                (InlineResponse2011) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
         }
 
         /// <summary>
@@ -461,9 +481,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns></returns>
-        public void IpAddressIpDelete (string ip)
+        public void DeleteIp (string ip)
         {
-             IpAddressIpDeleteWithHttpInfo(ip);
+             DeleteIpWithHttpInfo(ip);
         }
 
         /// <summary>
@@ -472,11 +492,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IpAddressIpDeleteWithHttpInfo (string ip)
+        public ApiResponse<Object> DeleteIpWithHttpInfo (string ip)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
-                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->IpAddressIpDelete");
+                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->DeleteIp");
 
             var localVarPath = "/ip_address/{ip}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -510,7 +530,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressIpDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteIp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -525,9 +545,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IpAddressIpDeleteAsync (string ip)
+        public async System.Threading.Tasks.Task DeleteIpAsync (string ip)
         {
-             await IpAddressIpDeleteAsyncWithHttpInfo(ip);
+             await DeleteIpAsyncWithHttpInfo(ip);
 
         }
 
@@ -537,11 +557,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IpAddressIpDeleteAsyncWithHttpInfo (string ip)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIpAsyncWithHttpInfo (string ip)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
-                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->IpAddressIpDelete");
+                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->DeleteIp");
 
             var localVarPath = "/ip_address/{ip}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -575,7 +595,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressIpDelete", localVarResponse);
+                Exception exception = ExceptionFactory("DeleteIp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -590,9 +610,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 IpAddressIpGet (string ip)
+        public InlineResponse2011 GetDetails (string ip)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = IpAddressIpGetWithHttpInfo(ip);
+             ApiResponse<InlineResponse2011> localVarResponse = GetDetailsWithHttpInfo(ip);
              return localVarResponse.Data;
         }
 
@@ -602,11 +622,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > IpAddressIpGetWithHttpInfo (string ip)
+        public ApiResponse< InlineResponse2011 > GetDetailsWithHttpInfo (string ip)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
-                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->IpAddressIpGet");
+                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->GetDetails");
 
             var localVarPath = "/ip_address/{ip}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -640,7 +660,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressIpGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -655,9 +675,9 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> IpAddressIpGetAsync (string ip)
+        public async System.Threading.Tasks.Task<InlineResponse2011> GetDetailsAsync (string ip)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = await IpAddressIpGetAsyncWithHttpInfo(ip);
+             ApiResponse<InlineResponse2011> localVarResponse = await GetDetailsAsyncWithHttpInfo(ip);
              return localVarResponse.Data;
 
         }
@@ -668,11 +688,11 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> IpAddressIpGetAsyncWithHttpInfo (string ip)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> GetDetailsAsyncWithHttpInfo (string ip)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
-                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->IpAddressIpGet");
+                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->GetDetails");
 
             var localVarPath = "/ip_address/{ip}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -706,7 +726,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressIpGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetDetails", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -716,15 +736,134 @@ namespace IO.Swagger.Api
         }
 
         /// <summary>
+        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>InlineResponse2006</returns>
+        public InlineResponse2006 ListIps ()
+        {
+             ApiResponse<InlineResponse2006> localVarResponse = ListIpsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of InlineResponse2006</returns>
+        public ApiResponse< InlineResponse2006 > ListIpsWithHttpInfo ()
+        {
+
+            var localVarPath = "/ip_address";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListIps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+        }
+
+        /// <summary>
+        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of InlineResponse2006</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2006> ListIpsAsync ()
+        {
+             ApiResponse<InlineResponse2006> localVarResponse = await ListIpsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List IP addresses Returns a list of all IP addresses assigned to servers on the current user account.
+        /// </summary>
+        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (InlineResponse2006)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2006>> ListIpsAsyncWithHttpInfo ()
+        {
+
+            var localVarPath = "/ip_address";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListIps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<InlineResponse2006>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (InlineResponse2006) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2006)));
+        }
+
+        /// <summary>
         /// Modify IP address Modifies the reverse DNS PTR record corresponding to an IP address. The PTR record can only be set to public IP address.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 IpAddressIpPut (string ip, IpAddress1 ipAddress = null)
+        public InlineResponse2011 ModifyIp (string ip, IpAddress1 ipAddress = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = IpAddressIpPutWithHttpInfo(ip, ipAddress);
+             ApiResponse<InlineResponse2011> localVarResponse = ModifyIpWithHttpInfo(ip, ipAddress);
              return localVarResponse.Data;
         }
 
@@ -735,11 +874,11 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > IpAddressIpPutWithHttpInfo (string ip, IpAddress1 ipAddress = null)
+        public ApiResponse< InlineResponse2011 > ModifyIpWithHttpInfo (string ip, IpAddress1 ipAddress = null)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
-                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->IpAddressIpPut");
+                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->ModifyIp");
 
             var localVarPath = "/ip_address/{ip}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -781,7 +920,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressIpPut", localVarResponse);
+                Exception exception = ExceptionFactory("ModifyIp", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -797,9 +936,9 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> IpAddressIpPutAsync (string ip, IpAddress1 ipAddress = null)
+        public async System.Threading.Tasks.Task<InlineResponse2011> ModifyIpAsync (string ip, IpAddress1 ipAddress = null)
         {
-             ApiResponse<InlineResponse2011> localVarResponse = await IpAddressIpPutAsyncWithHttpInfo(ip, ipAddress);
+             ApiResponse<InlineResponse2011> localVarResponse = await ModifyIpAsyncWithHttpInfo(ip, ipAddress);
              return localVarResponse.Data;
 
         }
@@ -811,11 +950,11 @@ namespace IO.Swagger.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> IpAddressIpPutAsyncWithHttpInfo (string ip, IpAddress1 ipAddress = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> ModifyIpAsyncWithHttpInfo (string ip, IpAddress1 ipAddress = null)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
-                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->IpAddressIpPut");
+                throw new ApiException(400, "Missing required parameter 'ip' when calling IPAddressApi->ModifyIp");
 
             var localVarPath = "/ip_address/{ip}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -857,146 +996,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IpAddressIpPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2011) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
-        }
-
-        /// <summary>
-        /// Assign IP address Assigns a new IP address to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>InlineResponse2011</returns>
-        public InlineResponse2011 IpAddressPost (IpAddress ipAddress = null)
-        {
-             ApiResponse<InlineResponse2011> localVarResponse = IpAddressPostWithHttpInfo(ipAddress);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Assign IP address Assigns a new IP address to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse2011</returns>
-        public ApiResponse< InlineResponse2011 > IpAddressPostWithHttpInfo (IpAddress ipAddress = null)
-        {
-
-            var localVarPath = "/ip_address";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (ipAddress != null && ipAddress.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(ipAddress); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = ipAddress; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("IpAddressPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<InlineResponse2011>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2011) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2011)));
-        }
-
-        /// <summary>
-        /// Assign IP address Assigns a new IP address to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>Task of InlineResponse2011</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2011> IpAddressPostAsync (IpAddress ipAddress = null)
-        {
-             ApiResponse<InlineResponse2011> localVarResponse = await IpAddressPostAsyncWithHttpInfo(ipAddress);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Assign IP address Assigns a new IP address to a server.
-        /// </summary>
-        /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="ipAddress"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse2011)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2011>> IpAddressPostAsyncWithHttpInfo (IpAddress ipAddress = null)
-        {
-
-            var localVarPath = "/ip_address";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (ipAddress != null && ipAddress.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(ipAddress); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = ipAddress; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("IpAddressPost", localVarResponse);
+                Exception exception = ExceptionFactory("ModifyIp", localVarResponse);
                 if (exception != null) throw exception;
             }
 

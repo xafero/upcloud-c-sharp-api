@@ -4,12 +4,12 @@ All URIs are relative to *http://localhost/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AccountGet**](AccountApi.md#accountget) | **GET** /account | Account information
+[**GetAccount**](AccountApi.md#getaccount) | **GET** /account | Account information
 
 
-<a name="accountget"></a>
-# **AccountGet**
-> Account AccountGet ()
+<a name="getaccount"></a>
+# **GetAccount**
+> Account GetAccount ()
 
 Account information
 
@@ -25,7 +25,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class AccountGetExample
+    public class GetAccountExample
     {
         public void main()
         {
@@ -34,12 +34,12 @@ namespace Example
             try
             {
                 // Account information
-                Account result = apiInstance.AccountGet();
+                Account result = apiInstance.GetAccount();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountApi.AccountGet: " + e.Message );
+                Debug.Print("Exception when calling AccountApi.GetAccount: " + e.Message );
             }
         }
     }
