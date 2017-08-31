@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="addip"></a>
 # **AddIp**
-> InlineResponse2011 AddIp (IpAddress ipAddress = null)
+> AssignIpResponse AddIp (IpAddress ipAddress = null)
 
 Assign IP address
 
@@ -39,7 +39,7 @@ namespace Example
             try
             {
                 // Assign IP address
-                InlineResponse2011 result = apiInstance.AddIp(ipAddress);
+                AssignIpResponse result = apiInstance.AddIp(ipAddress);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**AssignIpResponse**](AssignIpResponse.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 <a name="getdetails"></a>
 # **GetDetails**
-> InlineResponse2011 GetDetails (string ip)
+> AssignIpResponse GetDetails (string ip)
 
 Get IP address details
 
@@ -160,7 +160,7 @@ namespace Example
             try
             {
                 // Get IP address details
-                InlineResponse2011 result = apiInstance.GetDetails(ip);
+                AssignIpResponse result = apiInstance.GetDetails(ip);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**AssignIpResponse**](AssignIpResponse.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 
 <a name="listips"></a>
 # **ListIps**
-> InlineResponse2006 ListIps ()
+> IpAddressListResponse ListIps ()
 
 List IP addresses
 
@@ -220,7 +220,7 @@ namespace Example
             try
             {
                 // List IP addresses
-                InlineResponse2006 result = apiInstance.ListIps();
+                IpAddressListResponse result = apiInstance.ListIps();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -237,7 +237,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**IpAddressListResponse**](IpAddressListResponse.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ No authorization required
 
 <a name="modifyip"></a>
 # **ModifyIp**
-> InlineResponse2011 ModifyIp (string ip, IpAddress1 ipAddress = null)
+> AssignIpResponse ModifyIp (string ip, IpAddress1 ipAddress = null)
 
 Modify IP address
 
@@ -279,7 +279,7 @@ namespace Example
             try
             {
                 // Modify IP address
-                InlineResponse2011 result = apiInstance.ModifyIp(ip, ipAddress);
+                AssignIpResponse result = apiInstance.ModifyIp(ip, ipAddress);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2011**](InlineResponse2011.md)
+[**AssignIpResponse**](AssignIpResponse.md)
 
 ### Authorization
 

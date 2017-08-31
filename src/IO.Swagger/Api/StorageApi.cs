@@ -56,8 +56,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 BackupStorage (Guid? storageId, Storage4 storage = null);
+        /// <returns>CreateStorageResponse</returns>
+        CreateStorageResponse BackupStorage (Guid? storageId, Storage4 storage = null);
 
         /// <summary>
         /// Create backup
@@ -68,8 +68,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null);
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        ApiResponse<CreateStorageResponse> BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null);
         /// <summary>
         /// Cancel storage operation
         /// </summary>
@@ -100,8 +100,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 CloneStorage (Guid? storageId, Storage2 storage = null);
+        /// <returns>CreateStorageResponse</returns>
+        CreateStorageResponse CloneStorage (Guid? storageId, Storage2 storage = null);
 
         /// <summary>
         /// Clone storage
@@ -112,8 +112,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null);
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        ApiResponse<CreateStorageResponse> CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null);
         /// <summary>
         /// Create storage
         /// </summary>
@@ -122,8 +122,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 CreateStorage (Storage storage);
+        /// <returns>CreateStorageResponse</returns>
+        CreateStorageResponse CreateStorage (Storage storage);
 
         /// <summary>
         /// Create storage
@@ -133,8 +133,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> CreateStorageWithHttpInfo (Storage storage);
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        ApiResponse<CreateStorageResponse> CreateStorageWithHttpInfo (Storage storage);
         /// <summary>
         /// Delete storage
         /// </summary>
@@ -229,8 +229,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 GetStorageDetails (Guid? storageId);
+        /// <returns>CreateStorageResponse</returns>
+        CreateStorageResponse GetStorageDetails (Guid? storageId);
 
         /// <summary>
         /// Get storage details
@@ -240,8 +240,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> GetStorageDetailsWithHttpInfo (Guid? storageId);
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        ApiResponse<CreateStorageResponse> GetStorageDetailsWithHttpInfo (Guid? storageId);
         /// <summary>
         /// List of storages by type
         /// </summary>
@@ -314,8 +314,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 ModifyStorage (Guid? storageId, Storage1 storage);
+        /// <returns>CreateStorageResponse</returns>
+        CreateStorageResponse ModifyStorage (Guid? storageId, Storage1 storage);
 
         /// <summary>
         /// Modify storage
@@ -326,8 +326,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage);
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        ApiResponse<CreateStorageResponse> ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage);
         /// <summary>
         /// Restore backup
         /// </summary>
@@ -358,8 +358,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        InlineResponse201 TemplatizeStorage (Guid? storageId, Storage3 storage = null);
+        /// <returns>CreateStorageResponse</returns>
+        CreateStorageResponse TemplatizeStorage (Guid? storageId, Storage3 storage = null);
 
         /// <summary>
         /// Templatize storage
@@ -370,8 +370,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        ApiResponse<InlineResponse201> TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        ApiResponse<CreateStorageResponse> TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null);
         /// <summary>
         /// Remove storage from favorites
         /// </summary>
@@ -427,8 +427,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> BackupStorageAsync (Guid? storageId, Storage4 storage = null);
+        /// <returns>Task of CreateStorageResponse</returns>
+        System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, Storage4 storage = null);
 
         /// <summary>
         /// Create backup
@@ -439,8 +439,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null);
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null);
         /// <summary>
         /// Cancel storage operation
         /// </summary>
@@ -471,8 +471,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> CloneStorageAsync (Guid? storageId, Storage2 storage = null);
+        /// <returns>Task of CreateStorageResponse</returns>
+        System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, Storage2 storage = null);
 
         /// <summary>
         /// Clone storage
@@ -483,8 +483,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null);
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null);
         /// <summary>
         /// Create storage
         /// </summary>
@@ -493,8 +493,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> CreateStorageAsync (Storage storage);
+        /// <returns>Task of CreateStorageResponse</returns>
+        System.Threading.Tasks.Task<CreateStorageResponse> CreateStorageAsync (Storage storage);
 
         /// <summary>
         /// Create storage
@@ -504,8 +504,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateStorageAsyncWithHttpInfo (Storage storage);
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CreateStorageAsyncWithHttpInfo (Storage storage);
         /// <summary>
         /// Delete storage
         /// </summary>
@@ -600,8 +600,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> GetStorageDetailsAsync (Guid? storageId);
+        /// <returns>Task of CreateStorageResponse</returns>
+        System.Threading.Tasks.Task<CreateStorageResponse> GetStorageDetailsAsync (Guid? storageId);
 
         /// <summary>
         /// Get storage details
@@ -611,8 +611,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> GetStorageDetailsAsyncWithHttpInfo (Guid? storageId);
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> GetStorageDetailsAsyncWithHttpInfo (Guid? storageId);
         /// <summary>
         /// List of storages by type
         /// </summary>
@@ -685,8 +685,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> ModifyStorageAsync (Guid? storageId, Storage1 storage);
+        /// <returns>Task of CreateStorageResponse</returns>
+        System.Threading.Tasks.Task<CreateStorageResponse> ModifyStorageAsync (Guid? storageId, Storage1 storage);
 
         /// <summary>
         /// Modify storage
@@ -697,8 +697,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage);
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage);
         /// <summary>
         /// Restore backup
         /// </summary>
@@ -729,8 +729,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        System.Threading.Tasks.Task<InlineResponse201> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null);
+        /// <returns>Task of CreateStorageResponse</returns>
+        System.Threading.Tasks.Task<CreateStorageResponse> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null);
 
         /// <summary>
         /// Templatize storage
@@ -741,8 +741,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null);
         /// <summary>
         /// Remove storage from favorites
         /// </summary>
@@ -1027,10 +1027,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 BackupStorage (Guid? storageId, Storage4 storage = null)
+        /// <returns>CreateStorageResponse</returns>
+        public CreateStorageResponse BackupStorage (Guid? storageId, Storage4 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = BackupStorageWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = BackupStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
         }
 
@@ -1040,8 +1040,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null)
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        public ApiResponse< CreateStorageResponse > BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1091,9 +1091,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -1102,10 +1102,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> BackupStorageAsync (Guid? storageId, Storage4 storage = null)
+        /// <returns>Task of CreateStorageResponse</returns>
+        public async System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, Storage4 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await BackupStorageAsyncWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = await BackupStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
 
         }
@@ -1116,8 +1116,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null)
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1167,9 +1167,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -1307,10 +1307,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 CloneStorage (Guid? storageId, Storage2 storage = null)
+        /// <returns>CreateStorageResponse</returns>
+        public CreateStorageResponse CloneStorage (Guid? storageId, Storage2 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = CloneStorageWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = CloneStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
         }
 
@@ -1320,8 +1320,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null)
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        public ApiResponse< CreateStorageResponse > CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1371,9 +1371,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -1382,10 +1382,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> CloneStorageAsync (Guid? storageId, Storage2 storage = null)
+        /// <returns>Task of CreateStorageResponse</returns>
+        public async System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, Storage2 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await CloneStorageAsyncWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = await CloneStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
 
         }
@@ -1396,8 +1396,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null)
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1447,9 +1447,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -1457,10 +1457,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 CreateStorage (Storage storage)
+        /// <returns>CreateStorageResponse</returns>
+        public CreateStorageResponse CreateStorage (Storage storage)
         {
-             ApiResponse<InlineResponse201> localVarResponse = CreateStorageWithHttpInfo(storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = CreateStorageWithHttpInfo(storage);
              return localVarResponse.Data;
         }
 
@@ -1469,8 +1469,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > CreateStorageWithHttpInfo (Storage storage)
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        public ApiResponse< CreateStorageResponse > CreateStorageWithHttpInfo (Storage storage)
         {
             // verify the required parameter 'storage' is set
             if (storage == null)
@@ -1519,9 +1519,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -1529,10 +1529,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> CreateStorageAsync (Storage storage)
+        /// <returns>Task of CreateStorageResponse</returns>
+        public async System.Threading.Tasks.Task<CreateStorageResponse> CreateStorageAsync (Storage storage)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await CreateStorageAsyncWithHttpInfo(storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = await CreateStorageAsyncWithHttpInfo(storage);
              return localVarResponse.Data;
 
         }
@@ -1542,8 +1542,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> CreateStorageAsyncWithHttpInfo (Storage storage)
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CreateStorageAsyncWithHttpInfo (Storage storage)
         {
             // verify the required parameter 'storage' is set
             if (storage == null)
@@ -1592,9 +1592,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -2148,10 +2148,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 GetStorageDetails (Guid? storageId)
+        /// <returns>CreateStorageResponse</returns>
+        public CreateStorageResponse GetStorageDetails (Guid? storageId)
         {
-             ApiResponse<InlineResponse201> localVarResponse = GetStorageDetailsWithHttpInfo(storageId);
+             ApiResponse<CreateStorageResponse> localVarResponse = GetStorageDetailsWithHttpInfo(storageId);
              return localVarResponse.Data;
         }
 
@@ -2160,8 +2160,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > GetStorageDetailsWithHttpInfo (Guid? storageId)
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        public ApiResponse< CreateStorageResponse > GetStorageDetailsWithHttpInfo (Guid? storageId)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -2203,9 +2203,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -2213,10 +2213,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> GetStorageDetailsAsync (Guid? storageId)
+        /// <returns>Task of CreateStorageResponse</returns>
+        public async System.Threading.Tasks.Task<CreateStorageResponse> GetStorageDetailsAsync (Guid? storageId)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await GetStorageDetailsAsyncWithHttpInfo(storageId);
+             ApiResponse<CreateStorageResponse> localVarResponse = await GetStorageDetailsAsyncWithHttpInfo(storageId);
              return localVarResponse.Data;
 
         }
@@ -2226,8 +2226,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> GetStorageDetailsAsyncWithHttpInfo (Guid? storageId)
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> GetStorageDetailsAsyncWithHttpInfo (Guid? storageId)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -2269,9 +2269,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -2685,10 +2685,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 ModifyStorage (Guid? storageId, Storage1 storage)
+        /// <returns>CreateStorageResponse</returns>
+        public CreateStorageResponse ModifyStorage (Guid? storageId, Storage1 storage)
         {
-             ApiResponse<InlineResponse201> localVarResponse = ModifyStorageWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = ModifyStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
         }
 
@@ -2698,8 +2698,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage)
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        public ApiResponse< CreateStorageResponse > ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -2752,9 +2752,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -2763,10 +2763,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> ModifyStorageAsync (Guid? storageId, Storage1 storage)
+        /// <returns>Task of CreateStorageResponse</returns>
+        public async System.Threading.Tasks.Task<CreateStorageResponse> ModifyStorageAsync (Guid? storageId, Storage1 storage)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await ModifyStorageAsyncWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = await ModifyStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
 
         }
@@ -2777,8 +2777,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage)
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -2831,9 +2831,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -2973,10 +2973,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>InlineResponse201</returns>
-        public InlineResponse201 TemplatizeStorage (Guid? storageId, Storage3 storage = null)
+        /// <returns>CreateStorageResponse</returns>
+        public CreateStorageResponse TemplatizeStorage (Guid? storageId, Storage3 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = TemplatizeStorageWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = TemplatizeStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
         }
 
@@ -2986,8 +2986,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>ApiResponse of InlineResponse201</returns>
-        public ApiResponse< InlineResponse201 > TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null)
+        /// <returns>ApiResponse of CreateStorageResponse</returns>
+        public ApiResponse< CreateStorageResponse > TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -3037,9 +3037,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>
@@ -3048,10 +3048,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of InlineResponse201</returns>
-        public async System.Threading.Tasks.Task<InlineResponse201> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null)
+        /// <returns>Task of CreateStorageResponse</returns>
+        public async System.Threading.Tasks.Task<CreateStorageResponse> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null)
         {
-             ApiResponse<InlineResponse201> localVarResponse = await TemplatizeStorageAsyncWithHttpInfo(storageId, storage);
+             ApiResponse<CreateStorageResponse> localVarResponse = await TemplatizeStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
 
         }
@@ -3062,8 +3062,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
-        /// <returns>Task of ApiResponse (InlineResponse201)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse201>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null)
+        /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -3113,9 +3113,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse201>(localVarStatusCode,
+            return new ApiResponse<CreateStorageResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse201) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse201)));
+                (CreateStorageResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateStorageResponse)));
         }
 
         /// <summary>

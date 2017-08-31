@@ -77,7 +77,7 @@ No authorization required
 
 <a name="createtag"></a>
 # **CreateTag**
-> InlineResponse20010 CreateTag (Tag tag)
+> CreateNewTagResponse CreateTag (Tag tag)
 
 Create a new tag
 
@@ -103,7 +103,7 @@ namespace Example
             try
             {
                 // Create a new tag
-                InlineResponse20010 result = apiInstance.CreateTag(tag);
+                CreateNewTagResponse result = apiInstance.CreateTag(tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**CreateNewTagResponse**](CreateNewTagResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ No authorization required
 
 <a name="listtags"></a>
 # **ListTags**
-> InlineResponse2009 ListTags ()
+> TagListResponse ListTags ()
 
 List existing tags
 
@@ -223,7 +223,7 @@ namespace Example
             try
             {
                 // List existing tags
-                InlineResponse2009 result = apiInstance.ListTags();
+                TagListResponse result = apiInstance.ListTags();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -240,7 +240,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**TagListResponse**](TagListResponse.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ No authorization required
 
 <a name="modifytag"></a>
 # **ModifyTag**
-> InlineResponse20010 ModifyTag (string tagName, Tag1 tag)
+> CreateNewTagResponse ModifyTag (string tagName, Tag1 tag)
 
 Modify existing tag
 
@@ -282,7 +282,7 @@ namespace Example
             try
             {
                 // Modify existing tag
-                InlineResponse20010 result = apiInstance.ModifyTag(tagName, tag);
+                CreateNewTagResponse result = apiInstance.ModifyTag(tagName, tag);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**CreateNewTagResponse**](CreateNewTagResponse.md)
 
 ### Authorization
 

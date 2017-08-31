@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listtimezones"></a>
 # **ListTimezones**
-> InlineResponse2002 ListTimezones ()
+> TimezoneListResponse ListTimezones ()
 
 List timezones
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // List timezones
-                InlineResponse2002 result = apiInstance.ListTimezones();
+                TimezoneListResponse result = apiInstance.ListTimezones();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**TimezoneListResponse**](TimezoneListResponse.md)
 
 ### Authorization
 

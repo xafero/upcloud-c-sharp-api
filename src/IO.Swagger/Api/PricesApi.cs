@@ -31,8 +31,8 @@ namespace IO.Swagger.Api
         /// Returns a list resource prices.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse200</returns>
-        InlineResponse200 ListPrices ();
+        /// <returns>PriceListResponse</returns>
+        PriceListResponse ListPrices ();
 
         /// <summary>
         /// List prices
@@ -41,8 +41,8 @@ namespace IO.Swagger.Api
         /// Returns a list resource prices.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> ListPricesWithHttpInfo ();
+        /// <returns>ApiResponse of PriceListResponse</returns>
+        ApiResponse<PriceListResponse> ListPricesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// Returns a list resource prices.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> ListPricesAsync ();
+        /// <returns>Task of PriceListResponse</returns>
+        System.Threading.Tasks.Task<PriceListResponse> ListPricesAsync ();
 
         /// <summary>
         /// List prices
@@ -62,8 +62,8 @@ namespace IO.Swagger.Api
         /// Returns a list resource prices.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListPricesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (PriceListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PriceListResponse>> ListPricesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         /// List prices Returns a list resource prices.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse200</returns>
-        public InlineResponse200 ListPrices ()
+        /// <returns>PriceListResponse</returns>
+        public PriceListResponse ListPrices ()
         {
-             ApiResponse<InlineResponse200> localVarResponse = ListPricesWithHttpInfo();
+             ApiResponse<PriceListResponse> localVarResponse = ListPricesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -179,8 +179,8 @@ namespace IO.Swagger.Api
         /// List prices Returns a list resource prices.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > ListPricesWithHttpInfo ()
+        /// <returns>ApiResponse of PriceListResponse</returns>
+        public ApiResponse< PriceListResponse > ListPricesWithHttpInfo ()
         {
 
             var localVarPath = "/price";
@@ -218,19 +218,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<PriceListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (PriceListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PriceListResponse)));
         }
 
         /// <summary>
         /// List prices Returns a list resource prices.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> ListPricesAsync ()
+        /// <returns>Task of PriceListResponse</returns>
+        public async System.Threading.Tasks.Task<PriceListResponse> ListPricesAsync ()
         {
-             ApiResponse<InlineResponse200> localVarResponse = await ListPricesAsyncWithHttpInfo();
+             ApiResponse<PriceListResponse> localVarResponse = await ListPricesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -239,8 +239,8 @@ namespace IO.Swagger.Api
         /// List prices Returns a list resource prices.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> ListPricesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (PriceListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PriceListResponse>> ListPricesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/price";
@@ -278,9 +278,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse200>(localVarStatusCode,
+            return new ApiResponse<PriceListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse200) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse200)));
+                (PriceListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PriceListResponse)));
         }
 
     }

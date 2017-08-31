@@ -88,7 +88,7 @@ No authorization required
 
 <a name="backupstorage"></a>
 # **BackupStorage**
-> InlineResponse201 BackupStorage (Guid? storageId, Storage4 storage = null)
+> CreateStorageResponse BackupStorage (Guid? storageId, Storage4 storage = null)
 
 Create backup
 
@@ -115,7 +115,7 @@ namespace Example
             try
             {
                 // Create backup
-                InlineResponse201 result = apiInstance.BackupStorage(storageId, storage);
+                CreateStorageResponse result = apiInstance.BackupStorage(storageId, storage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateStorageResponse**](CreateStorageResponse.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ No authorization required
 
 <a name="clonestorage"></a>
 # **CloneStorage**
-> InlineResponse201 CloneStorage (Guid? storageId, Storage2 storage = null)
+> CreateStorageResponse CloneStorage (Guid? storageId, Storage2 storage = null)
 
 Clone storage
 
@@ -238,7 +238,7 @@ namespace Example
             try
             {
                 // Clone storage
-                InlineResponse201 result = apiInstance.CloneStorage(storageId, storage);
+                CreateStorageResponse result = apiInstance.CloneStorage(storageId, storage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateStorageResponse**](CreateStorageResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ No authorization required
 
 <a name="createstorage"></a>
 # **CreateStorage**
-> InlineResponse201 CreateStorage (Storage storage)
+> CreateStorageResponse CreateStorage (Storage storage)
 
 Create storage
 
@@ -300,7 +300,7 @@ namespace Example
             try
             {
                 // Create storage
-                InlineResponse201 result = apiInstance.CreateStorage(storage);
+                CreateStorageResponse result = apiInstance.CreateStorage(storage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateStorageResponse**](CreateStorageResponse.md)
 
 ### Authorization
 
@@ -579,7 +579,7 @@ No authorization required
 
 <a name="getstoragedetails"></a>
 # **GetStorageDetails**
-> InlineResponse201 GetStorageDetails (Guid? storageId)
+> CreateStorageResponse GetStorageDetails (Guid? storageId)
 
 Get storage details
 
@@ -605,7 +605,7 @@ namespace Example
             try
             {
                 // Get storage details
-                InlineResponse201 result = apiInstance.GetStorageDetails(storageId);
+                CreateStorageResponse result = apiInstance.GetStorageDetails(storageId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateStorageResponse**](CreateStorageResponse.md)
 
 ### Authorization
 
@@ -817,7 +817,7 @@ No authorization required
 
 <a name="modifystorage"></a>
 # **ModifyStorage**
-> InlineResponse201 ModifyStorage (Guid? storageId, Storage1 storage)
+> CreateStorageResponse ModifyStorage (Guid? storageId, Storage1 storage)
 
 Modify storage
 
@@ -844,7 +844,7 @@ namespace Example
             try
             {
                 // Modify storage
-                InlineResponse201 result = apiInstance.ModifyStorage(storageId, storage);
+                CreateStorageResponse result = apiInstance.ModifyStorage(storageId, storage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -865,7 +865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateStorageResponse**](CreateStorageResponse.md)
 
 ### Authorization
 
@@ -940,7 +940,7 @@ No authorization required
 
 <a name="templatizestorage"></a>
 # **TemplatizeStorage**
-> InlineResponse201 TemplatizeStorage (Guid? storageId, Storage3 storage = null)
+> CreateStorageResponse TemplatizeStorage (Guid? storageId, Storage3 storage = null)
 
 Templatize storage
 
@@ -967,7 +967,7 @@ namespace Example
             try
             {
                 // Templatize storage
-                InlineResponse201 result = apiInstance.TemplatizeStorage(storageId, storage);
+                CreateStorageResponse result = apiInstance.TemplatizeStorage(storageId, storage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**CreateStorageResponse**](CreateStorageResponse.md)
 
 ### Authorization
 

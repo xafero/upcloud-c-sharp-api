@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Firewall** | **string** | The state of the server firewall rules. | [optional] [default to FirewallEnum.On]
 **Host** | **decimal?** |  | [optional] 
 **Hostname** | **string** | A valid hostname, e.g. host.example.com. The maximum length is 128 characters. | [optional] 
-**IpAddresses** | [**InlineResponse2006IpAddresses**](InlineResponse2006IpAddresses.md) |  | [optional] 
+**IpAddresses** | [**IpAddressListResponseIpAddresses**](IpAddressListResponseIpAddresses.md) |  | [optional] 
 **License** | **decimal?** |  | [optional] 
 **MemoryAmount** | **decimal?** | The amount of main memory in megabytes. See List server configurations. | [optional] 
 **NicModel** | **string** | The model of the server&#39;s network interfaces. | [optional] [default to "e1000"]

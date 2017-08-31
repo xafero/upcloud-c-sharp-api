@@ -31,8 +31,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available plans.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2003</returns>
-        InlineResponse2003 ListPlans ();
+        /// <returns>AvailablePlanListResponse</returns>
+        AvailablePlanListResponse ListPlans ();
 
         /// <summary>
         /// List available plans
@@ -41,8 +41,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available plans.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        ApiResponse<InlineResponse2003> ListPlansWithHttpInfo ();
+        /// <returns>ApiResponse of AvailablePlanListResponse</returns>
+        ApiResponse<AvailablePlanListResponse> ListPlansWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available plans.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2003</returns>
-        System.Threading.Tasks.Task<InlineResponse2003> ListPlansAsync ();
+        /// <returns>Task of AvailablePlanListResponse</returns>
+        System.Threading.Tasks.Task<AvailablePlanListResponse> ListPlansAsync ();
 
         /// <summary>
         /// List available plans
@@ -62,8 +62,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available plans.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ListPlansAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (AvailablePlanListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AvailablePlanListResponse>> ListPlansAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         /// List available plans Returns a list of available plans.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2003</returns>
-        public InlineResponse2003 ListPlans ()
+        /// <returns>AvailablePlanListResponse</returns>
+        public AvailablePlanListResponse ListPlans ()
         {
-             ApiResponse<InlineResponse2003> localVarResponse = ListPlansWithHttpInfo();
+             ApiResponse<AvailablePlanListResponse> localVarResponse = ListPlansWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -179,8 +179,8 @@ namespace IO.Swagger.Api
         /// List available plans Returns a list of available plans.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2003</returns>
-        public ApiResponse< InlineResponse2003 > ListPlansWithHttpInfo ()
+        /// <returns>ApiResponse of AvailablePlanListResponse</returns>
+        public ApiResponse< AvailablePlanListResponse > ListPlansWithHttpInfo ()
         {
 
             var localVarPath = "/plan";
@@ -219,19 +219,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<AvailablePlanListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (AvailablePlanListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailablePlanListResponse)));
         }
 
         /// <summary>
         /// List available plans Returns a list of available plans.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2003</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2003> ListPlansAsync ()
+        /// <returns>Task of AvailablePlanListResponse</returns>
+        public async System.Threading.Tasks.Task<AvailablePlanListResponse> ListPlansAsync ()
         {
-             ApiResponse<InlineResponse2003> localVarResponse = await ListPlansAsyncWithHttpInfo();
+             ApiResponse<AvailablePlanListResponse> localVarResponse = await ListPlansAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,8 +240,8 @@ namespace IO.Swagger.Api
         /// List available plans Returns a list of available plans.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2003)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2003>> ListPlansAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (AvailablePlanListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AvailablePlanListResponse>> ListPlansAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/plan";
@@ -280,9 +280,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2003>(localVarStatusCode,
+            return new ApiResponse<AvailablePlanListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2003) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2003)));
+                (AvailablePlanListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AvailablePlanListResponse)));
         }
 
     }

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listplans"></a>
 # **ListPlans**
-> InlineResponse2003 ListPlans ()
+> AvailablePlanListResponse ListPlans ()
 
 List available plans
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // List available plans
-                InlineResponse2003 result = apiInstance.ListPlans();
+                AvailablePlanListResponse result = apiInstance.ListPlans();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**AvailablePlanListResponse**](AvailablePlanListResponse.md)
 
 ### Authorization
 

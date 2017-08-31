@@ -31,8 +31,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2002</returns>
-        InlineResponse2002 ListTimezones ();
+        /// <returns>TimezoneListResponse</returns>
+        TimezoneListResponse ListTimezones ();
 
         /// <summary>
         /// List timezones
@@ -41,8 +41,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        ApiResponse<InlineResponse2002> ListTimezonesWithHttpInfo ();
+        /// <returns>ApiResponse of TimezoneListResponse</returns>
+        ApiResponse<TimezoneListResponse> ListTimezonesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2002</returns>
-        System.Threading.Tasks.Task<InlineResponse2002> ListTimezonesAsync ();
+        /// <returns>Task of TimezoneListResponse</returns>
+        System.Threading.Tasks.Task<TimezoneListResponse> ListTimezonesAsync ();
 
         /// <summary>
         /// List timezones
@@ -62,8 +62,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListTimezonesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (TimezoneListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TimezoneListResponse>> ListTimezonesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         /// List timezones Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2002</returns>
-        public InlineResponse2002 ListTimezones ()
+        /// <returns>TimezoneListResponse</returns>
+        public TimezoneListResponse ListTimezones ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = ListTimezonesWithHttpInfo();
+             ApiResponse<TimezoneListResponse> localVarResponse = ListTimezonesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -179,8 +179,8 @@ namespace IO.Swagger.Api
         /// List timezones Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2002</returns>
-        public ApiResponse< InlineResponse2002 > ListTimezonesWithHttpInfo ()
+        /// <returns>ApiResponse of TimezoneListResponse</returns>
+        public ApiResponse< TimezoneListResponse > ListTimezonesWithHttpInfo ()
         {
 
             var localVarPath = "/timezone";
@@ -219,19 +219,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<TimezoneListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (TimezoneListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimezoneListResponse)));
         }
 
         /// <summary>
         /// List timezones Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2002</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2002> ListTimezonesAsync ()
+        /// <returns>Task of TimezoneListResponse</returns>
+        public async System.Threading.Tasks.Task<TimezoneListResponse> ListTimezonesAsync ()
         {
-             ApiResponse<InlineResponse2002> localVarResponse = await ListTimezonesAsyncWithHttpInfo();
+             ApiResponse<TimezoneListResponse> localVarResponse = await ListTimezonesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,8 +240,8 @@ namespace IO.Swagger.Api
         /// List timezones Returns a list of available timezones. Timezones are used to set the hardware clock for servers.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> ListTimezonesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (TimezoneListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TimezoneListResponse>> ListTimezonesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/timezone";
@@ -280,9 +280,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
+            return new ApiResponse<TimezoneListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
+                (TimezoneListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TimezoneListResponse)));
         }
 
     }

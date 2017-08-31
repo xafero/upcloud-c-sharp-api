@@ -31,8 +31,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available zones.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2001</returns>
-        InlineResponse2001 ListZones ();
+        /// <returns>ZoneListResponse</returns>
+        ZoneListResponse ListZones ();
 
         /// <summary>
         /// List available zones
@@ -41,8 +41,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available zones.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        ApiResponse<InlineResponse2001> ListZonesWithHttpInfo ();
+        /// <returns>ApiResponse of ZoneListResponse</returns>
+        ApiResponse<ZoneListResponse> ListZonesWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -52,8 +52,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available zones.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2001</returns>
-        System.Threading.Tasks.Task<InlineResponse2001> ListZonesAsync ();
+        /// <returns>Task of ZoneListResponse</returns>
+        System.Threading.Tasks.Task<ZoneListResponse> ListZonesAsync ();
 
         /// <summary>
         /// List available zones
@@ -62,8 +62,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available zones.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ListZonesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ZoneListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ZoneListResponse>> ListZonesAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -168,10 +168,10 @@ namespace IO.Swagger.Api
         /// List available zones Returns a list of available zones.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2001</returns>
-        public InlineResponse2001 ListZones ()
+        /// <returns>ZoneListResponse</returns>
+        public ZoneListResponse ListZones ()
         {
-             ApiResponse<InlineResponse2001> localVarResponse = ListZonesWithHttpInfo();
+             ApiResponse<ZoneListResponse> localVarResponse = ListZonesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -179,8 +179,8 @@ namespace IO.Swagger.Api
         /// List available zones Returns a list of available zones.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2001</returns>
-        public ApiResponse< InlineResponse2001 > ListZonesWithHttpInfo ()
+        /// <returns>ApiResponse of ZoneListResponse</returns>
+        public ApiResponse< ZoneListResponse > ListZonesWithHttpInfo ()
         {
 
             var localVarPath = "/zone";
@@ -219,19 +219,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ZoneListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ZoneListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ZoneListResponse)));
         }
 
         /// <summary>
         /// List available zones Returns a list of available zones.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2001</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2001> ListZonesAsync ()
+        /// <returns>Task of ZoneListResponse</returns>
+        public async System.Threading.Tasks.Task<ZoneListResponse> ListZonesAsync ()
         {
-             ApiResponse<InlineResponse2001> localVarResponse = await ListZonesAsyncWithHttpInfo();
+             ApiResponse<ZoneListResponse> localVarResponse = await ListZonesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,8 +240,8 @@ namespace IO.Swagger.Api
         /// List available zones Returns a list of available zones.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2001)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2001>> ListZonesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ZoneListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ZoneListResponse>> ListZonesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/zone";
@@ -280,9 +280,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2001>(localVarStatusCode,
+            return new ApiResponse<ZoneListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2001) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2001)));
+                (ZoneListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ZoneListResponse)));
         }
 
     }

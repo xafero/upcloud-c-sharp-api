@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listzones"></a>
 # **ListZones**
-> InlineResponse2001 ListZones ()
+> ZoneListResponse ListZones ()
 
 List available zones
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // List available zones
-                InlineResponse2001 result = apiInstance.ListZones();
+                ZoneListResponse result = apiInstance.ListZones();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**ZoneListResponse**](ZoneListResponse.md)
 
 ### Authorization
 

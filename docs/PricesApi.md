@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listprices"></a>
 # **ListPrices**
-> InlineResponse200 ListPrices ()
+> PriceListResponse ListPrices ()
 
 List prices
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // List prices
-                InlineResponse200 result = apiInstance.ListPrices();
+                PriceListResponse result = apiInstance.ListPrices();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -51,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**PriceListResponse**](PriceListResponse.md)
 
 ### Authorization
 

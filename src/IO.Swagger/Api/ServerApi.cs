@@ -211,8 +211,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>InlineResponse2008</returns>
-        InlineResponse2008 GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>FirewallRuleDetailsResponse</returns>
+        FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -223,8 +223,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>ApiResponse of InlineResponse2008</returns>
-        ApiResponse<InlineResponse2008> GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>ApiResponse of FirewallRuleDetailsResponse</returns>
+        ApiResponse<FirewallRuleDetailsResponse> GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// List server configurations
         /// </summary>
@@ -232,8 +232,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2004</returns>
-        InlineResponse2004 ListServerConfigurations ();
+        /// <returns>ConfigurationListResponse</returns>
+        ConfigurationListResponse ListServerConfigurations ();
 
         /// <summary>
         /// List server configurations
@@ -242,8 +242,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        ApiResponse<InlineResponse2004> ListServerConfigurationsWithHttpInfo ();
+        /// <returns>ApiResponse of ConfigurationListResponse</returns>
+        ApiResponse<ConfigurationListResponse> ListServerConfigurationsWithHttpInfo ();
         /// <summary>
         /// List of servers
         /// </summary>
@@ -251,8 +251,8 @@ namespace IO.Swagger.Api
         /// Returns a list of all servers associated with the current account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2005</returns>
-        InlineResponse2005 ListServers ();
+        /// <returns>ServerListResponse</returns>
+        ServerListResponse ListServers ();
 
         /// <summary>
         /// List of servers
@@ -261,8 +261,8 @@ namespace IO.Swagger.Api
         /// Returns a list of all servers associated with the current account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        ApiResponse<InlineResponse2005> ListServersWithHttpInfo ();
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        ApiResponse<ServerListResponse> ListServersWithHttpInfo ();
         /// <summary>
         /// Load CD-ROM
         /// </summary>
@@ -361,8 +361,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>InlineResponse2007</returns>
-        InlineResponse2007 ServerServerIdFirewallRuleGet (Guid? serverId);
+        /// <returns>FirewallRuleListResponse</returns>
+        FirewallRuleListResponse ServerServerIdFirewallRuleGet (Guid? serverId);
 
         /// <summary>
         /// List firewall rules
@@ -372,8 +372,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of InlineResponse2007</returns>
-        ApiResponse<InlineResponse2007> ServerServerIdFirewallRuleGetWithHttpInfo (Guid? serverId);
+        /// <returns>ApiResponse of FirewallRuleListResponse</returns>
+        ApiResponse<FirewallRuleListResponse> ServerServerIdFirewallRuleGetWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Start server
         /// </summary>
@@ -630,8 +630,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of InlineResponse2008</returns>
-        System.Threading.Tasks.Task<InlineResponse2008> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>Task of FirewallRuleDetailsResponse</returns>
+        System.Threading.Tasks.Task<FirewallRuleDetailsResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -642,8 +642,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of ApiResponse (InlineResponse2008)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>Task of ApiResponse (FirewallRuleDetailsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FirewallRuleDetailsResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// List server configurations
         /// </summary>
@@ -651,8 +651,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2004</returns>
-        System.Threading.Tasks.Task<InlineResponse2004> ListServerConfigurationsAsync ();
+        /// <returns>Task of ConfigurationListResponse</returns>
+        System.Threading.Tasks.Task<ConfigurationListResponse> ListServerConfigurationsAsync ();
 
         /// <summary>
         /// List server configurations
@@ -661,8 +661,8 @@ namespace IO.Swagger.Api
         /// Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListServerConfigurationsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ConfigurationListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConfigurationListResponse>> ListServerConfigurationsAsyncWithHttpInfo ();
         /// <summary>
         /// List of servers
         /// </summary>
@@ -670,8 +670,8 @@ namespace IO.Swagger.Api
         /// Returns a list of all servers associated with the current account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2005</returns>
-        System.Threading.Tasks.Task<InlineResponse2005> ListServersAsync ();
+        /// <returns>Task of ServerListResponse</returns>
+        System.Threading.Tasks.Task<ServerListResponse> ListServersAsync ();
 
         /// <summary>
         /// List of servers
@@ -680,8 +680,8 @@ namespace IO.Swagger.Api
         /// Returns a list of all servers associated with the current account.
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> ListServersAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ListServersAsyncWithHttpInfo ();
         /// <summary>
         /// Load CD-ROM
         /// </summary>
@@ -780,8 +780,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of InlineResponse2007</returns>
-        System.Threading.Tasks.Task<InlineResponse2007> ServerServerIdFirewallRuleGetAsync (Guid? serverId);
+        /// <returns>Task of FirewallRuleListResponse</returns>
+        System.Threading.Tasks.Task<FirewallRuleListResponse> ServerServerIdFirewallRuleGetAsync (Guid? serverId);
 
         /// <summary>
         /// List firewall rules
@@ -791,8 +791,8 @@ namespace IO.Swagger.Api
         /// </remarks>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> ServerServerIdFirewallRuleGetAsyncWithHttpInfo (Guid? serverId);
+        /// <returns>Task of ApiResponse (FirewallRuleListResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FirewallRuleListResponse>> ServerServerIdFirewallRuleGetAsyncWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Start server
         /// </summary>
@@ -2122,10 +2122,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>InlineResponse2008</returns>
-        public InlineResponse2008 GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>FirewallRuleDetailsResponse</returns>
+        public FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ApiResponse<InlineResponse2008> localVarResponse = GetFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
+             ApiResponse<FirewallRuleDetailsResponse> localVarResponse = GetFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
         }
 
@@ -2135,8 +2135,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>ApiResponse of InlineResponse2008</returns>
-        public ApiResponse< InlineResponse2008 > GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>ApiResponse of FirewallRuleDetailsResponse</returns>
+        public ApiResponse< FirewallRuleDetailsResponse > GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2182,9 +2182,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2008>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleDetailsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2008) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2008)));
+                (FirewallRuleDetailsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleDetailsResponse)));
         }
 
         /// <summary>
@@ -2193,10 +2193,10 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of InlineResponse2008</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2008> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>Task of FirewallRuleDetailsResponse</returns>
+        public async System.Threading.Tasks.Task<FirewallRuleDetailsResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ApiResponse<InlineResponse2008> localVarResponse = await GetFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
+             ApiResponse<FirewallRuleDetailsResponse> localVarResponse = await GetFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
 
         }
@@ -2207,8 +2207,8 @@ namespace IO.Swagger.Api
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of ApiResponse (InlineResponse2008)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2008>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>Task of ApiResponse (FirewallRuleDetailsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleDetailsResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2254,19 +2254,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2008>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleDetailsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2008) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2008)));
+                (FirewallRuleDetailsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleDetailsResponse)));
         }
 
         /// <summary>
         /// List server configurations Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2004</returns>
-        public InlineResponse2004 ListServerConfigurations ()
+        /// <returns>ConfigurationListResponse</returns>
+        public ConfigurationListResponse ListServerConfigurations ()
         {
-             ApiResponse<InlineResponse2004> localVarResponse = ListServerConfigurationsWithHttpInfo();
+             ApiResponse<ConfigurationListResponse> localVarResponse = ListServerConfigurationsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -2274,8 +2274,8 @@ namespace IO.Swagger.Api
         /// List server configurations Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2004</returns>
-        public ApiResponse< InlineResponse2004 > ListServerConfigurationsWithHttpInfo ()
+        /// <returns>ApiResponse of ConfigurationListResponse</returns>
+        public ApiResponse< ConfigurationListResponse > ListServerConfigurationsWithHttpInfo ()
         {
 
             var localVarPath = "/server_size";
@@ -2314,19 +2314,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<ConfigurationListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (ConfigurationListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfigurationListResponse)));
         }
 
         /// <summary>
         /// List server configurations Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2004</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2004> ListServerConfigurationsAsync ()
+        /// <returns>Task of ConfigurationListResponse</returns>
+        public async System.Threading.Tasks.Task<ConfigurationListResponse> ListServerConfigurationsAsync ()
         {
-             ApiResponse<InlineResponse2004> localVarResponse = await ListServerConfigurationsAsyncWithHttpInfo();
+             ApiResponse<ConfigurationListResponse> localVarResponse = await ListServerConfigurationsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -2335,8 +2335,8 @@ namespace IO.Swagger.Api
         /// List server configurations Returns a list of available server configurations. A server configuration consists of a combination of CPU core count and main memory amount. All servers are created using these configurations.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2004)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2004>> ListServerConfigurationsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ConfigurationListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConfigurationListResponse>> ListServerConfigurationsAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/server_size";
@@ -2375,19 +2375,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2004>(localVarStatusCode,
+            return new ApiResponse<ConfigurationListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2004) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2004)));
+                (ConfigurationListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConfigurationListResponse)));
         }
 
         /// <summary>
         /// List of servers Returns a list of all servers associated with the current account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>InlineResponse2005</returns>
-        public InlineResponse2005 ListServers ()
+        /// <returns>ServerListResponse</returns>
+        public ServerListResponse ListServers ()
         {
-             ApiResponse<InlineResponse2005> localVarResponse = ListServersWithHttpInfo();
+             ApiResponse<ServerListResponse> localVarResponse = ListServersWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -2395,8 +2395,8 @@ namespace IO.Swagger.Api
         /// List of servers Returns a list of all servers associated with the current account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of InlineResponse2005</returns>
-        public ApiResponse< InlineResponse2005 > ListServersWithHttpInfo ()
+        /// <returns>ApiResponse of ServerListResponse</returns>
+        public ApiResponse< ServerListResponse > ListServersWithHttpInfo ()
         {
 
             var localVarPath = "/server";
@@ -2435,19 +2435,19 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2005) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
         /// List of servers Returns a list of all servers associated with the current account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of InlineResponse2005</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2005> ListServersAsync ()
+        /// <returns>Task of ServerListResponse</returns>
+        public async System.Threading.Tasks.Task<ServerListResponse> ListServersAsync ()
         {
-             ApiResponse<InlineResponse2005> localVarResponse = await ListServersAsyncWithHttpInfo();
+             ApiResponse<ServerListResponse> localVarResponse = await ListServersAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -2456,8 +2456,8 @@ namespace IO.Swagger.Api
         /// List of servers Returns a list of all servers associated with the current account.
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (InlineResponse2005)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2005>> ListServersAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> ListServersAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/server";
@@ -2496,9 +2496,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2005>(localVarStatusCode,
+            return new ApiResponse<ServerListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2005) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2005)));
+                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
         }
 
         /// <summary>
@@ -3102,10 +3102,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>InlineResponse2007</returns>
-        public InlineResponse2007 ServerServerIdFirewallRuleGet (Guid? serverId)
+        /// <returns>FirewallRuleListResponse</returns>
+        public FirewallRuleListResponse ServerServerIdFirewallRuleGet (Guid? serverId)
         {
-             ApiResponse<InlineResponse2007> localVarResponse = ServerServerIdFirewallRuleGetWithHttpInfo(serverId);
+             ApiResponse<FirewallRuleListResponse> localVarResponse = ServerServerIdFirewallRuleGetWithHttpInfo(serverId);
              return localVarResponse.Data;
         }
 
@@ -3114,8 +3114,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of InlineResponse2007</returns>
-        public ApiResponse< InlineResponse2007 > ServerServerIdFirewallRuleGetWithHttpInfo (Guid? serverId)
+        /// <returns>ApiResponse of FirewallRuleListResponse</returns>
+        public ApiResponse< FirewallRuleListResponse > ServerServerIdFirewallRuleGetWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -3157,9 +3157,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2007>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
+                (FirewallRuleListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleListResponse)));
         }
 
         /// <summary>
@@ -3167,10 +3167,10 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of InlineResponse2007</returns>
-        public async System.Threading.Tasks.Task<InlineResponse2007> ServerServerIdFirewallRuleGetAsync (Guid? serverId)
+        /// <returns>Task of FirewallRuleListResponse</returns>
+        public async System.Threading.Tasks.Task<FirewallRuleListResponse> ServerServerIdFirewallRuleGetAsync (Guid? serverId)
         {
-             ApiResponse<InlineResponse2007> localVarResponse = await ServerServerIdFirewallRuleGetAsyncWithHttpInfo(serverId);
+             ApiResponse<FirewallRuleListResponse> localVarResponse = await ServerServerIdFirewallRuleGetAsyncWithHttpInfo(serverId);
              return localVarResponse.Data;
 
         }
@@ -3180,8 +3180,8 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <exception cref="IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (InlineResponse2007)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2007>> ServerServerIdFirewallRuleGetAsyncWithHttpInfo (Guid? serverId)
+        /// <returns>Task of ApiResponse (FirewallRuleListResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleListResponse>> ServerServerIdFirewallRuleGetAsyncWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -3223,9 +3223,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<InlineResponse2007>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleListResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InlineResponse2007) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2007)));
+                (FirewallRuleListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleListResponse)));
         }
 
         /// <summary>

@@ -520,7 +520,7 @@ No authorization required
 
 <a name="getfirewallrule"></a>
 # **GetFirewallRule**
-> InlineResponse2008 GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
 
 Get firewall rule details
 
@@ -547,7 +547,7 @@ namespace Example
             try
             {
                 // Get firewall rule details
-                InlineResponse2008 result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
+                FirewallRuleDetailsResponse result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**FirewallRuleDetailsResponse**](FirewallRuleDetailsResponse.md)
 
 ### Authorization
 
@@ -583,7 +583,7 @@ No authorization required
 
 <a name="listserverconfigurations"></a>
 # **ListServerConfigurations**
-> InlineResponse2004 ListServerConfigurations ()
+> ConfigurationListResponse ListServerConfigurations ()
 
 List server configurations
 
@@ -608,7 +608,7 @@ namespace Example
             try
             {
                 // List server configurations
-                InlineResponse2004 result = apiInstance.ListServerConfigurations();
+                ConfigurationListResponse result = apiInstance.ListServerConfigurations();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -625,7 +625,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**ConfigurationListResponse**](ConfigurationListResponse.md)
 
 ### Authorization
 
@@ -640,7 +640,7 @@ No authorization required
 
 <a name="listservers"></a>
 # **ListServers**
-> InlineResponse2005 ListServers ()
+> ServerListResponse ListServers ()
 
 List of servers
 
@@ -665,7 +665,7 @@ namespace Example
             try
             {
                 // List of servers
-                InlineResponse2005 result = apiInstance.ListServers();
+                ServerListResponse result = apiInstance.ListServers();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -682,7 +682,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**ServerListResponse**](ServerListResponse.md)
 
 ### Authorization
 
@@ -945,7 +945,7 @@ No authorization required
 
 <a name="serverserveridfirewallruleget"></a>
 # **ServerServerIdFirewallRuleGet**
-> InlineResponse2007 ServerServerIdFirewallRuleGet (Guid? serverId)
+> FirewallRuleListResponse ServerServerIdFirewallRuleGet (Guid? serverId)
 
 List firewall rules
 
@@ -971,7 +971,7 @@ namespace Example
             try
             {
                 // List firewall rules
-                InlineResponse2007 result = apiInstance.ServerServerIdFirewallRuleGet(serverId);
+                FirewallRuleListResponse result = apiInstance.ServerServerIdFirewallRuleGet(serverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -991,7 +991,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**FirewallRuleListResponse**](FirewallRuleListResponse.md)
 
 ### Authorization
 
