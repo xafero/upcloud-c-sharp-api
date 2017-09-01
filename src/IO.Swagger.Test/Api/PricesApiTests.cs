@@ -65,14 +65,14 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test PriceGet
+        /// Test ListPrices
         /// </summary>
         [Test]
-        public void PriceGetTest()
+        public void ListPricesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.PriceGet();
-            //Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200");
+            //var response = instance.ListPrices();
+            //Assert.IsInstanceOf<PriceListResponse> (response, "response is PriceListResponse");
         }
         
     }

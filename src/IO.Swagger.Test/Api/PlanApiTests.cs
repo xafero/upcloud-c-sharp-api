@@ -65,14 +65,14 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test PlanGet
+        /// Test ListPlans
         /// </summary>
         [Test]
-        public void PlanGetTest()
+        public void ListPlansTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.PlanGet();
-            //Assert.IsInstanceOf<InlineResponse2003> (response, "response is InlineResponse2003");
+            //var response = instance.ListPlans();
+            //Assert.IsInstanceOf<AvailablePlanListResponse> (response, "response is AvailablePlanListResponse");
         }
         
     }

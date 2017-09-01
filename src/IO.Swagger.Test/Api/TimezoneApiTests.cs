@@ -65,14 +65,14 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test TimezoneGet
+        /// Test ListTimezones
         /// </summary>
         [Test]
-        public void TimezoneGetTest()
+        public void ListTimezonesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.TimezoneGet();
-            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
+            //var response = instance.ListTimezones();
+            //Assert.IsInstanceOf<TimezoneListResponse> (response, "response is TimezoneListResponse");
         }
         
     }

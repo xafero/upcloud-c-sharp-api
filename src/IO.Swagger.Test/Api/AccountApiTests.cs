@@ -65,13 +65,13 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test AccountGet
+        /// Test GetAccount
         /// </summary>
         [Test]
-        public void AccountGetTest()
+        public void GetAccountTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.AccountGet();
+            //var response = instance.GetAccount();
             //Assert.IsInstanceOf<Account> (response, "response is Account");
         }
         

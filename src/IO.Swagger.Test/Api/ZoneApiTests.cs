@@ -65,14 +65,14 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test ZoneGet
+        /// Test ListZones
         /// </summary>
         [Test]
-        public void ZoneGetTest()
+        public void ListZonesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ZoneGet();
-            //Assert.IsInstanceOf<InlineResponse2001> (response, "response is InlineResponse2001");
+            //var response = instance.ListZones();
+            //Assert.IsInstanceOf<ZoneListResponse> (response, "response is ZoneListResponse");
         }
         
     }

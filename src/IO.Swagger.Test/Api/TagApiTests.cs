@@ -65,77 +65,77 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test ServerServerIdTagTagListPost
+        /// Test AssignTag
         /// </summary>
         [Test]
-        public void ServerServerIdTagTagListPostTest()
+        public void AssignTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //string tagList = null;
-            //var response = instance.ServerServerIdTagTagListPost(serverId, tagList);
+            //var response = instance.AssignTag(serverId, tagList);
             //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
         }
         
         /// <summary>
-        /// Test ServerServerIdUntagTagNamePost
+        /// Test CreateTag
         /// </summary>
         [Test]
-        public void ServerServerIdUntagTagNamePostTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Guid? serverId = null;
-            //string tagName = null;
-            //var response = instance.ServerServerIdUntagTagNamePost(serverId, tagName);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
-        }
-        
-        /// <summary>
-        /// Test TagGet
-        /// </summary>
-        [Test]
-        public void TagGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.TagGet();
-            //Assert.IsInstanceOf<InlineResponse2009> (response, "response is InlineResponse2009");
-        }
-        
-        /// <summary>
-        /// Test TagPost
-        /// </summary>
-        [Test]
-        public void TagPostTest()
+        public void CreateTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Tag tag = null;
-            //var response = instance.TagPost(tag);
-            //Assert.IsInstanceOf<InlineResponse20010> (response, "response is InlineResponse20010");
+            //var response = instance.CreateTag(tag);
+            //Assert.IsInstanceOf<CreateNewTagResponse> (response, "response is CreateNewTagResponse");
         }
         
         /// <summary>
-        /// Test TagTagNameDelete
+        /// Test DeleteTag
         /// </summary>
         [Test]
-        public void TagTagNameDeleteTest()
+        public void DeleteTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string tagName = null;
-            //instance.TagTagNameDelete(tagName);
+            //instance.DeleteTag(tagName);
             
         }
         
         /// <summary>
-        /// Test TagTagNamePut
+        /// Test ListTags
         /// </summary>
         [Test]
-        public void TagTagNamePutTest()
+        public void ListTagsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ListTags();
+            //Assert.IsInstanceOf<TagListResponse> (response, "response is TagListResponse");
+        }
+        
+        /// <summary>
+        /// Test ModifyTag
+        /// </summary>
+        [Test]
+        public void ModifyTagTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string tagName = null;
             //Tag1 tag = null;
-            //var response = instance.TagTagNamePut(tagName, tag);
-            //Assert.IsInstanceOf<InlineResponse20010> (response, "response is InlineResponse20010");
+            //var response = instance.ModifyTag(tagName, tag);
+            //Assert.IsInstanceOf<CreateNewTagResponse> (response, "response is CreateNewTagResponse");
+        }
+        
+        /// <summary>
+        /// Test Untag
+        /// </summary>
+        [Test]
+        public void UntagTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //Guid? serverId = null;
+            //string tagName = null;
+            //var response = instance.Untag(serverId, tagName);
+            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
         }
         
     }

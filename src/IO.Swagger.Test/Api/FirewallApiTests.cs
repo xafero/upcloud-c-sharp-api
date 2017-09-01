@@ -65,29 +65,42 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test ServerServerIdFirewallRuleFirewallRuleNumberDelete
+        /// Test CreateFirewallRule
         /// </summary>
         [Test]
-        public void ServerServerIdFirewallRuleFirewallRuleNumberDeleteTest()
+        public void CreateFirewallRuleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
-            //Guid? firewallRuleNumber = null;
-            //instance.ServerServerIdFirewallRuleFirewallRuleNumberDelete(serverId, firewallRuleNumber);
+            //FirewallRule firewallRule = null;
+            //instance.CreateFirewallRule(serverId, firewallRule);
             
         }
         
         /// <summary>
-        /// Test ServerServerIdFirewallRuleFirewallRuleNumberGet
+        /// Test DeleteFirewallRule
         /// </summary>
         [Test]
-        public void ServerServerIdFirewallRuleFirewallRuleNumberGetTest()
+        public void DeleteFirewallRuleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //Guid? firewallRuleNumber = null;
-            //var response = instance.ServerServerIdFirewallRuleFirewallRuleNumberGet(serverId, firewallRuleNumber);
-            //Assert.IsInstanceOf<InlineResponse2008> (response, "response is InlineResponse2008");
+            //instance.DeleteFirewallRule(serverId, firewallRuleNumber);
+            
+        }
+        
+        /// <summary>
+        /// Test GetFirewallRule
+        /// </summary>
+        [Test]
+        public void GetFirewallRuleTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //Guid? serverId = null;
+            //Guid? firewallRuleNumber = null;
+            //var response = instance.GetFirewallRule(serverId, firewallRuleNumber);
+            //Assert.IsInstanceOf<FirewallRuleDetailsResponse> (response, "response is FirewallRuleDetailsResponse");
         }
         
         /// <summary>
@@ -99,20 +112,7 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //var response = instance.ServerServerIdFirewallRuleGet(serverId);
-            //Assert.IsInstanceOf<InlineResponse2007> (response, "response is InlineResponse2007");
-        }
-        
-        /// <summary>
-        /// Test ServerServerIdFirewallRulePost
-        /// </summary>
-        [Test]
-        public void ServerServerIdFirewallRulePostTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Guid? serverId = null;
-            //FirewallRule firewallRule = null;
-            //instance.ServerServerIdFirewallRulePost(serverId, firewallRule);
-            
+            //Assert.IsInstanceOf<FirewallRuleListResponse> (response, "response is FirewallRuleListResponse");
         }
         
     }

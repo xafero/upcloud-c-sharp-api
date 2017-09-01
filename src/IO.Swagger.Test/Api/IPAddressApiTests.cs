@@ -65,63 +65,63 @@ namespace IO.Swagger.Test
 
         
         /// <summary>
-        /// Test IpAddressGet
+        /// Test AddIp
         /// </summary>
         [Test]
-        public void IpAddressGetTest()
+        public void AddIpTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.IpAddressGet();
-            //Assert.IsInstanceOf<InlineResponse2006> (response, "response is InlineResponse2006");
+            //IpAddress ipAddress = null;
+            //var response = instance.AddIp(ipAddress);
+            //Assert.IsInstanceOf<AssignIpResponse> (response, "response is AssignIpResponse");
         }
         
         /// <summary>
-        /// Test IpAddressIpDelete
+        /// Test DeleteIp
         /// </summary>
         [Test]
-        public void IpAddressIpDeleteTest()
+        public void DeleteIpTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string ip = null;
-            //instance.IpAddressIpDelete(ip);
+            //instance.DeleteIp(ip);
             
         }
         
         /// <summary>
-        /// Test IpAddressIpGet
+        /// Test GetDetails
         /// </summary>
         [Test]
-        public void IpAddressIpGetTest()
+        public void GetDetailsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string ip = null;
-            //var response = instance.IpAddressIpGet(ip);
-            //Assert.IsInstanceOf<InlineResponse2011> (response, "response is InlineResponse2011");
+            //var response = instance.GetDetails(ip);
+            //Assert.IsInstanceOf<AssignIpResponse> (response, "response is AssignIpResponse");
         }
         
         /// <summary>
-        /// Test IpAddressIpPut
+        /// Test ListIps
         /// </summary>
         [Test]
-        public void IpAddressIpPutTest()
+        public void ListIpsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ListIps();
+            //Assert.IsInstanceOf<IpAddressListResponse> (response, "response is IpAddressListResponse");
+        }
+        
+        /// <summary>
+        /// Test ModifyIp
+        /// </summary>
+        [Test]
+        public void ModifyIpTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string ip = null;
             //IpAddress1 ipAddress = null;
-            //var response = instance.IpAddressIpPut(ip, ipAddress);
-            //Assert.IsInstanceOf<InlineResponse2011> (response, "response is InlineResponse2011");
-        }
-        
-        /// <summary>
-        /// Test IpAddressPost
-        /// </summary>
-        [Test]
-        public void IpAddressPostTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //IpAddress ipAddress = null;
-            //var response = instance.IpAddressPost(ipAddress);
-            //Assert.IsInstanceOf<InlineResponse2011> (response, "response is InlineResponse2011");
+            //var response = instance.ModifyIp(ip, ipAddress);
+            //Assert.IsInstanceOf<AssignIpResponse> (response, "response is AssignIpResponse");
         }
         
     }
