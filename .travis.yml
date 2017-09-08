@@ -2,6 +2,6 @@
 language: csharp
 mono:
   - latest
-solution: IO.Swagger.sln
+solution: Upcloud.sln
 script:
   - /bin/sh ./mono_nunit_test.sh

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BackupRule
+# Upcloud.Model.BackupRule
 ## Properties
 
 Name | Type | Description | Notes

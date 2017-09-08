@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Price
+# Upcloud.Model.Price
 ## Properties
 
 Name | Type | Description | Notes

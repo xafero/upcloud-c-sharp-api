@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ZoneListResponseZones
+# Upcloud.Model.ZoneListResponseZones
 ## Properties
 
 Name | Type | Description | Notes

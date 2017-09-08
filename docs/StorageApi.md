@@ -1,4 +1,4 @@
-# IO.Swagger.Api.StorageApi
+# Upcloud.Api.StorageApi
 
 All URIs are relative to *http://api.upcloud.com/1.2*
 
@@ -35,9 +35,9 @@ Attaches a storage as a device to a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -98,9 +98,9 @@ Creates a point-in-time backup of a storage resource. For automatic, scheduled b
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -161,9 +161,9 @@ Cancels a running cloning operation and deletes the incomplete copy.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -221,9 +221,9 @@ Creates an exact copy of an existing storage resource.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -284,9 +284,9 @@ Creates a new storage resource.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -345,9 +345,9 @@ Deleted an existing storage resource.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -405,9 +405,9 @@ Detaches a storage resource from a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -468,9 +468,9 @@ Ejects the storage from the CD-ROM device of a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -529,9 +529,9 @@ Adds a storage to the list of favorite storages. To list favorite storages, see 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -589,9 +589,9 @@ Returns detailed information about a specific storage resource.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -648,9 +648,9 @@ List of storages by type
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -707,9 +707,9 @@ List of storages
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -764,9 +764,9 @@ Loads a storage as a CD-ROM in the CD-ROM device of a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -827,9 +827,9 @@ Modifies an existing storage resource. This operation is used to rename or resiz
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -890,9 +890,9 @@ Restores the origin storage with data from the specified backup storage.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -950,9 +950,9 @@ Creates an exact copy of an existing storage resource which can be used as a tem
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -1013,9 +1013,9 @@ Delete a storage from the list of favorite storages. To list favorite storages, 
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {

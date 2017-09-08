@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TagServers
+# Upcloud.Model.TagServers
 ## Properties
 
 Name | Type | Description | Notes

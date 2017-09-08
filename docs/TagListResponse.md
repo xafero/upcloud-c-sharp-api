@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TagListResponse
+# Upcloud.Model.TagListResponse
 ## Properties
 
 Name | Type | Description | Notes

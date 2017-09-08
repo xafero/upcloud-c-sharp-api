@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StorageState
+# Upcloud.Model.StorageState
 ## Properties
 
 Name | Type | Description | Notes

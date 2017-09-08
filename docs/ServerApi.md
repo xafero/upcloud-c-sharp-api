@@ -1,4 +1,4 @@
-# IO.Swagger.Api.ServerApi
+# Upcloud.Api.ServerApi
 
 All URIs are relative to *http://api.upcloud.com/1.2*
 
@@ -37,9 +37,9 @@ Servers can be tagged with one or more tags. The tags used must exist
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -100,9 +100,9 @@ Attaches a storage as a device to a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -163,9 +163,9 @@ Creates a new firewall rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -225,9 +225,9 @@ Creates a new server instance.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -286,9 +286,9 @@ Removes a firewall rule from a server. Firewall rules must be removed individual
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -346,9 +346,9 @@ Delete server
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -406,9 +406,9 @@ Detaches a storage resource from a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -469,9 +469,9 @@ Ejects the storage from the CD-ROM device of a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -530,9 +530,9 @@ Returns detailed information about a specific firewall rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -593,9 +593,9 @@ Returns a list of available server configurations. A server configuration consis
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -650,9 +650,9 @@ Returns a list of all servers associated with the current account.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -707,9 +707,9 @@ Loads a storage as a CD-ROM in the CD-ROM device of a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -768,9 +768,9 @@ Modify server
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -831,9 +831,9 @@ Stops and starts a server. The server state must be `started`.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -894,9 +894,9 @@ Returns detailed information about a specific server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -955,9 +955,9 @@ Returns a list of firewall rules for a specific server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -1016,9 +1016,9 @@ Starts a stopped server. The server state must be `stopped`.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -1077,9 +1077,9 @@ Stops a started server. The server state must be `started`.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -1140,9 +1140,9 @@ Untags tags from given server. The tag(s) must exist
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {

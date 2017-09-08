@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Tag
+# Upcloud.Model.Tag
 ## Properties
 
 Name | Type | Description | Notes

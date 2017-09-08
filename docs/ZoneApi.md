@@ -1,4 +1,4 @@
-# IO.Swagger.Api.ZoneApi
+# Upcloud.Api.ZoneApi
 
 All URIs are relative to *http://api.upcloud.com/1.2*
 
@@ -19,9 +19,9 @@ Returns a list of available zones.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {

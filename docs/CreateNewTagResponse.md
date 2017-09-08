@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateNewTagResponse
+# Upcloud.Model.CreateNewTagResponse
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StorageServers
+# Upcloud.Model.StorageServers
 ## Properties
 
 Name | Type | Description | Notes

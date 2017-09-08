@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ServerSize
+# Upcloud.Model.ServerSize
 ## Properties
 
 Name | Type | Description | Notes

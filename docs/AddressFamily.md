@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AddressFamily
+# Upcloud.Model.AddressFamily
 ## Properties
 
 Name | Type | Description | Notes

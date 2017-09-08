@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StorageDevice
+# Upcloud.Model.StorageDevice
 ## Properties
 
 Name | Type | Description | Notes

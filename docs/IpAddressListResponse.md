@@ -1,4 +1,4 @@
-# IO.Swagger.Model.IpAddressListResponse
+# Upcloud.Model.IpAddressListResponse
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.SuccessStoragesResponse
+# Upcloud.Model.SuccessStoragesResponse
 ## Properties
 
 Name | Type | Description | Notes

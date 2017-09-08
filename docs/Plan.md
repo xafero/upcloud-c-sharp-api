@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Plan
+# Upcloud.Model.Plan
 ## Properties
 
 Name | Type | Description | Notes

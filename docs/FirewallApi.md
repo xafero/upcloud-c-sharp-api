@@ -1,4 +1,4 @@
-# IO.Swagger.Api.FirewallApi
+# Upcloud.Api.FirewallApi
 
 All URIs are relative to *http://api.upcloud.com/1.2*
 
@@ -22,9 +22,9 @@ Creates a new firewall rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -84,9 +84,9 @@ Removes a firewall rule from a server. Firewall rules must be removed individual
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -146,9 +146,9 @@ Returns detailed information about a specific firewall rule
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -209,9 +209,9 @@ Returns a list of firewall rules for a specific server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {

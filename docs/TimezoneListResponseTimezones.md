@@ -1,4 +1,4 @@
-# IO.Swagger.Model.TimezoneListResponseTimezones
+# Upcloud.Model.TimezoneListResponseTimezones
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Api.IPAddressApi
+# Upcloud.Api.IPAddressApi
 
 All URIs are relative to *http://api.upcloud.com/1.2*
 
@@ -23,9 +23,9 @@ Assigns a new IP address to a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -84,9 +84,9 @@ Removes an IP address from a server.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -144,9 +144,9 @@ Returns detailed information about a specific IP address.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -205,9 +205,9 @@ Returns a list of all IP addresses assigned to servers on the current user accou
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {
@@ -262,9 +262,9 @@ Modifies the reverse DNS PTR record corresponding to an IP address. The PTR reco
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
+using Upcloud.Api;
+using Upcloud.Client;
+using Upcloud.Model;
 
 namespace Example
 {

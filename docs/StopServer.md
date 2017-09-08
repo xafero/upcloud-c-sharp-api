@@ -1,4 +1,4 @@
-# IO.Swagger.Model.StopServer
+# Upcloud.Model.StopServer
 ## Properties
 
 Name | Type | Description | Notes

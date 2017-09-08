@@ -1,4 +1,4 @@
-# IO.Swagger.Model.IpAddress1
+# Upcloud.Model.IpAddress1
 ## Properties
 
 Name | Type | Description | Notes

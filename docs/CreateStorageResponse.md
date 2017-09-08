@@ -1,4 +1,4 @@
-# IO.Swagger.Model.CreateStorageResponse
+# Upcloud.Model.CreateStorageResponse
 ## Properties
 
 Name | Type | Description | Notes

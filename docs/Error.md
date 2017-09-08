@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Error
+# Upcloud.Model.Error
 ## Properties
 
 Name | Type | Description | Notes

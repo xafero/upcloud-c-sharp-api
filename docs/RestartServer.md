@@ -1,4 +1,4 @@
-# IO.Swagger.Model.RestartServer
+# Upcloud.Model.RestartServer
 ## Properties
 
 Name | Type | Description | Notes

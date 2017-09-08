@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AssignIpResponse
+# Upcloud.Model.AssignIpResponse
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PriceZone
+# Upcloud.Model.PriceZone
 ## Properties
 
 Name | Type | Description | Notes

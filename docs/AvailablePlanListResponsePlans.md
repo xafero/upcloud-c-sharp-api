@@ -1,4 +1,4 @@
-# IO.Swagger.Model.AvailablePlanListResponsePlans
+# Upcloud.Model.AvailablePlanListResponsePlans
 ## Properties
 
 Name | Type | Description | Notes

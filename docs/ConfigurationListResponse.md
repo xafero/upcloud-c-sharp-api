@@ -1,4 +1,4 @@
-# IO.Swagger.Model.ConfigurationListResponse
+# Upcloud.Model.ConfigurationListResponse
 ## Properties
 
 Name | Type | Description | Notes

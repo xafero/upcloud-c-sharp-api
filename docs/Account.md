@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Account
+# Upcloud.Model.Account
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Model.FirewallRuleDetailsResponse
+# Upcloud.Model.FirewallRuleDetailsResponse
 ## Properties
 
 Name | Type | Description | Notes
