@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="assigntag"></a>
 # **AssignTag**
-> ServerListResponse AssignTag (Guid? serverId, string tagList)
+> CreateServerResponse AssignTag (Guid? serverId, string tagList)
 
 Assign tag to a server
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Assign tag to a server
-                ServerListResponse result = apiInstance.AssignTag(serverId, tagList);
+                CreateServerResponse result = apiInstance.AssignTag(serverId, tagList);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ No authorization required
 
 <a name="untag"></a>
 # **Untag**
-> ServerListResponse Untag (Guid? serverId, string tagName)
+> CreateServerResponse Untag (Guid? serverId, string tagName)
 
 Remove tag from server
 
@@ -345,7 +345,7 @@ namespace Example
             try
             {
                 // Remove tag from server
-                ServerListResponse result = apiInstance.Untag(serverId, tagName);
+                CreateServerResponse result = apiInstance.Untag(serverId, tagName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 

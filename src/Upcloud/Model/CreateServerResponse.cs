@@ -24,25 +24,25 @@ using SwaggerDateConverter = Upcloud.Client.SwaggerDateConverter;
 namespace Upcloud.Model
 {
     /// <summary>
-    /// ServerListResponse
+    /// CreateServerResponse
     /// </summary>
     [DataContract]
-    public partial class ServerListResponse :  IEquatable<ServerListResponse>, IValidatableObject
+    public partial class CreateServerResponse :  IEquatable<CreateServerResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServerListResponse" /> class.
+        /// Initializes a new instance of the <see cref="CreateServerResponse" /> class.
         /// </summary>
-        /// <param name="Servers">Servers.</param>
-        public ServerListResponse(ServerListResponseServers Servers = default(ServerListResponseServers))
+        /// <param name="Server">Server.</param>
+        public CreateServerResponse(Server Server = default(Server))
         {
-            this.Servers = Servers;
+            this.Server = Server;
         }
         
         /// <summary>
-        /// Gets or Sets Servers
+        /// Gets or Sets Server
         /// </summary>
-        [DataMember(Name="servers", EmitDefaultValue=false)]
-        public ServerListResponseServers Servers { get; set; }
+        [DataMember(Name="server", EmitDefaultValue=false)]
+        public Server Server { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -51,8 +51,8 @@ namespace Upcloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ServerListResponse {\n");
-            sb.Append("  Servers: ").Append(Servers).Append("\n");
+            sb.Append("class CreateServerResponse {\n");
+            sb.Append("  Server: ").Append(Server).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,24 +73,24 @@ namespace Upcloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ServerListResponse);
+            return this.Equals(input as CreateServerResponse);
         }
 
         /// <summary>
-        /// Returns true if ServerListResponse instances are equal
+        /// Returns true if CreateServerResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of ServerListResponse to be compared</param>
+        /// <param name="input">Instance of CreateServerResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ServerListResponse input)
+        public bool Equals(CreateServerResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Servers == input.Servers ||
-                    (this.Servers != null &&
-                    this.Servers.Equals(input.Servers))
+                    this.Server == input.Server ||
+                    (this.Server != null &&
+                    this.Server.Equals(input.Server))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Servers != null)
-                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
+                if (this.Server != null)
+                    hashCode = hashCode * 59 + this.Server.GetHashCode();
                 return hashCode;
             }
         }

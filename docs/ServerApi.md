@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 <a name="assigntag"></a>
 # **AssignTag**
-> ServerListResponse AssignTag (Guid? serverId, string tagList)
+> CreateServerResponse AssignTag (Guid? serverId, string tagList)
 
 Assign tag to a server
 
@@ -54,7 +54,7 @@ namespace Example
             try
             {
                 // Assign tag to a server
-                ServerListResponse result = apiInstance.AssignTag(serverId, tagList);
+                CreateServerResponse result = apiInstance.AssignTag(serverId, tagList);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ No authorization required
 
 <a name="attachstorage"></a>
 # **AttachStorage**
-> ServerListResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
 
 Attach storage
 
@@ -117,7 +117,7 @@ namespace Example
             try
             {
                 // Attach storage
-                ServerListResponse result = apiInstance.AttachStorage(serverId, storageDevice);
+                CreateServerResponse result = apiInstance.AttachStorage(serverId, storageDevice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ No authorization required
 
 <a name="createfirewallrule"></a>
 # **CreateFirewallRule**
-> void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule)
+> FirewallRuleCreateResponse CreateFirewallRule (Guid? serverId, FirewallRuleRequest firewallRule)
 
 Create firewall rule
 
@@ -175,12 +175,13 @@ namespace Example
         {
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var firewallRule = new FirewallRule(); // FirewallRule | 
+            var firewallRule = new FirewallRuleRequest(); // FirewallRuleRequest | 
 
             try
             {
                 // Create firewall rule
-                apiInstance.CreateFirewallRule(serverId, firewallRule);
+                FirewallRuleCreateResponse result = apiInstance.CreateFirewallRule(serverId, firewallRule);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -196,11 +197,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **firewallRule** | [**FirewallRule**](FirewallRule.md)|  | 
+ **firewallRule** | [**FirewallRuleRequest**](FirewallRuleRequest.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**FirewallRuleCreateResponse**](FirewallRuleCreateResponse.md)
 
 ### Authorization
 
@@ -215,7 +216,7 @@ No authorization required
 
 <a name="createserver"></a>
 # **CreateServer**
-> ServerListResponse CreateServer (Server server = null)
+> CreateServerResponse CreateServer (Server server = null)
 
 Create server
 
@@ -241,7 +242,7 @@ namespace Example
             try
             {
                 // Create server
-                ServerListResponse result = apiInstance.CreateServer(server);
+                CreateServerResponse result = apiInstance.CreateServer(server);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -261,7 +262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -396,7 +397,7 @@ No authorization required
 
 <a name="detachstorage"></a>
 # **DetachStorage**
-> ServerListResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
 
 Detach storage
 
@@ -423,7 +424,7 @@ namespace Example
             try
             {
                 // Detach storage
-                ServerListResponse result = apiInstance.DetachStorage(serverId, storageDevice);
+                CreateServerResponse result = apiInstance.DetachStorage(serverId, storageDevice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -444,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -459,7 +460,7 @@ No authorization required
 
 <a name="ejectcdrom"></a>
 # **EjectCdrom**
-> ServerListResponse EjectCdrom (Guid? serverId)
+> CreateServerResponse EjectCdrom (Guid? serverId)
 
 Eject CD-ROM
 
@@ -485,7 +486,7 @@ namespace Example
             try
             {
                 // Eject CD-ROM
-                ServerListResponse result = apiInstance.EjectCdrom(serverId);
+                CreateServerResponse result = apiInstance.EjectCdrom(serverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -505,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -520,7 +521,7 @@ No authorization required
 
 <a name="getfirewallrule"></a>
 # **GetFirewallRule**
-> FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
 
 Get firewall rule details
 
@@ -547,7 +548,7 @@ namespace Example
             try
             {
                 // Get firewall rule details
-                FirewallRuleDetailsResponse result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
+                FirewallRuleCreateResponse result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -568,7 +569,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FirewallRuleDetailsResponse**](FirewallRuleDetailsResponse.md)
+[**FirewallRuleCreateResponse**](FirewallRuleCreateResponse.md)
 
 ### Authorization
 
@@ -697,7 +698,7 @@ No authorization required
 
 <a name="loadcdrom"></a>
 # **LoadCdrom**
-> ServerListResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
+> CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
 
 Load CD-ROM
 
@@ -724,7 +725,7 @@ namespace Example
             try
             {
                 // Load CD-ROM
-                ServerListResponse result = apiInstance.LoadCdrom(serverId, storageDevice);
+                CreateServerResponse result = apiInstance.LoadCdrom(serverId, storageDevice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -745,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -760,7 +761,7 @@ No authorization required
 
 <a name="modifyserver"></a>
 # **ModifyServer**
-> ServerListResponse ModifyServer (Guid? serverId, Server server = null)
+> CreateServerResponse ModifyServer (Guid? serverId, Server server = null)
 
 Modify server
 
@@ -785,7 +786,7 @@ namespace Example
             try
             {
                 // Modify server
-                ServerListResponse result = apiInstance.ModifyServer(serverId, server);
+                CreateServerResponse result = apiInstance.ModifyServer(serverId, server);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -806,7 +807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -821,7 +822,7 @@ No authorization required
 
 <a name="restartserver"></a>
 # **RestartServer**
-> ServerListResponse RestartServer (Guid? serverId, RestartServer restartServer)
+> CreateServerResponse RestartServer (Guid? serverId, RestartServer restartServer)
 
 Restart server
 
@@ -848,7 +849,7 @@ namespace Example
             try
             {
                 // Restart server
-                ServerListResponse result = apiInstance.RestartServer(serverId, restartServer);
+                CreateServerResponse result = apiInstance.RestartServer(serverId, restartServer);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -869,7 +870,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -884,7 +885,7 @@ No authorization required
 
 <a name="serverdetails"></a>
 # **ServerDetails**
-> ServerListResponse ServerDetails (Guid? serverId)
+> CreateServerResponse ServerDetails (Guid? serverId)
 
 Get server details
 
@@ -910,7 +911,7 @@ namespace Example
             try
             {
                 // Get server details
-                ServerListResponse result = apiInstance.ServerDetails(serverId);
+                CreateServerResponse result = apiInstance.ServerDetails(serverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -930,7 +931,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -1006,7 +1007,7 @@ No authorization required
 
 <a name="startserver"></a>
 # **StartServer**
-> ServerListResponse StartServer (Guid? serverId)
+> CreateServerResponse StartServer (Guid? serverId)
 
 Start server
 
@@ -1032,7 +1033,7 @@ namespace Example
             try
             {
                 // Start server
-                ServerListResponse result = apiInstance.StartServer(serverId);
+                CreateServerResponse result = apiInstance.StartServer(serverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1052,7 +1053,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -1067,7 +1068,7 @@ No authorization required
 
 <a name="stopserver"></a>
 # **StopServer**
-> ServerListResponse StopServer (Guid? serverId, StopServer stopServer)
+> CreateServerResponse StopServer (Guid? serverId, StopServer stopServer)
 
 Stop server
 
@@ -1094,7 +1095,7 @@ namespace Example
             try
             {
                 // Stop server
-                ServerListResponse result = apiInstance.StopServer(serverId, stopServer);
+                CreateServerResponse result = apiInstance.StopServer(serverId, stopServer);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1115,7 +1116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -1130,7 +1131,7 @@ No authorization required
 
 <a name="untag"></a>
 # **Untag**
-> ServerListResponse Untag (Guid? serverId, string tagName)
+> CreateServerResponse Untag (Guid? serverId, string tagName)
 
 Remove tag from server
 
@@ -1157,7 +1158,7 @@ namespace Example
             try
             {
                 // Remove tag from server
-                ServerListResponse result = apiInstance.Untag(serverId, tagName);
+                CreateServerResponse result = apiInstance.Untag(serverId, tagName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1178,7 +1179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 

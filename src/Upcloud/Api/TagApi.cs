@@ -32,8 +32,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse AssignTag (Guid? serverId, string tagList);
+        /// <returns>CreateServerResponse</returns>
+        CreateServerResponse AssignTag (Guid? serverId, string tagList);
 
         /// <summary>
         /// Assign tag to a server
@@ -44,8 +44,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> AssignTagWithHttpInfo (Guid? serverId, string tagList);
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        ApiResponse<CreateServerResponse> AssignTagWithHttpInfo (Guid? serverId, string tagList);
         /// <summary>
         /// Create a new tag
         /// </summary>
@@ -139,8 +139,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse Untag (Guid? serverId, string tagName);
+        /// <returns>CreateServerResponse</returns>
+        CreateServerResponse Untag (Guid? serverId, string tagName);
 
         /// <summary>
         /// Remove tag from server
@@ -151,8 +151,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> UntagWithHttpInfo (Guid? serverId, string tagName);
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        ApiResponse<CreateServerResponse> UntagWithHttpInfo (Guid? serverId, string tagName);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -164,8 +164,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> AssignTagAsync (Guid? serverId, string tagList);
+        /// <returns>Task of CreateServerResponse</returns>
+        System.Threading.Tasks.Task<CreateServerResponse> AssignTagAsync (Guid? serverId, string tagList);
 
         /// <summary>
         /// Assign tag to a server
@@ -176,8 +176,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AssignTagAsyncWithHttpInfo (Guid? serverId, string tagList);
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AssignTagAsyncWithHttpInfo (Guid? serverId, string tagList);
         /// <summary>
         /// Create a new tag
         /// </summary>
@@ -271,8 +271,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> UntagAsync (Guid? serverId, string tagName);
+        /// <returns>Task of CreateServerResponse</returns>
+        System.Threading.Tasks.Task<CreateServerResponse> UntagAsync (Guid? serverId, string tagName);
 
         /// <summary>
         /// Remove tag from server
@@ -283,8 +283,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> UntagAsyncWithHttpInfo (Guid? serverId, string tagName);
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> UntagAsyncWithHttpInfo (Guid? serverId, string tagName);
         #endregion Asynchronous Operations
     }
 
@@ -391,10 +391,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse AssignTag (Guid? serverId, string tagList)
+        /// <returns>CreateServerResponse</returns>
+        public CreateServerResponse AssignTag (Guid? serverId, string tagList)
         {
-             ApiResponse<ServerListResponse> localVarResponse = AssignTagWithHttpInfo(serverId, tagList);
+             ApiResponse<CreateServerResponse> localVarResponse = AssignTagWithHttpInfo(serverId, tagList);
              return localVarResponse.Data;
         }
 
@@ -404,8 +404,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > AssignTagWithHttpInfo (Guid? serverId, string tagList)
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        public ApiResponse< CreateServerResponse > AssignTagWithHttpInfo (Guid? serverId, string tagList)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -453,9 +453,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -464,10 +464,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> AssignTagAsync (Guid? serverId, string tagList)
+        /// <returns>Task of CreateServerResponse</returns>
+        public async System.Threading.Tasks.Task<CreateServerResponse> AssignTagAsync (Guid? serverId, string tagList)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await AssignTagAsyncWithHttpInfo(serverId, tagList);
+             ApiResponse<CreateServerResponse> localVarResponse = await AssignTagAsyncWithHttpInfo(serverId, tagList);
              return localVarResponse.Data;
 
         }
@@ -478,8 +478,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagList">List of tags</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AssignTagAsyncWithHttpInfo (Guid? serverId, string tagList)
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AssignTagAsyncWithHttpInfo (Guid? serverId, string tagList)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -527,9 +527,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -1104,10 +1104,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse Untag (Guid? serverId, string tagName)
+        /// <returns>CreateServerResponse</returns>
+        public CreateServerResponse Untag (Guid? serverId, string tagName)
         {
-             ApiResponse<ServerListResponse> localVarResponse = UntagWithHttpInfo(serverId, tagName);
+             ApiResponse<CreateServerResponse> localVarResponse = UntagWithHttpInfo(serverId, tagName);
              return localVarResponse.Data;
         }
 
@@ -1117,8 +1117,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > UntagWithHttpInfo (Guid? serverId, string tagName)
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        public ApiResponse< CreateServerResponse > UntagWithHttpInfo (Guid? serverId, string tagName)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1166,9 +1166,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -1177,10 +1177,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> UntagAsync (Guid? serverId, string tagName)
+        /// <returns>Task of CreateServerResponse</returns>
+        public async System.Threading.Tasks.Task<CreateServerResponse> UntagAsync (Guid? serverId, string tagName)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await UntagAsyncWithHttpInfo(serverId, tagName);
+             ApiResponse<CreateServerResponse> localVarResponse = await UntagAsyncWithHttpInfo(serverId, tagName);
              return localVarResponse.Data;
 
         }
@@ -1191,8 +1191,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="tagName">Tag name</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> UntagAsyncWithHttpInfo (Guid? serverId, string tagName)
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> UntagAsyncWithHttpInfo (Guid? serverId, string tagName)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1240,9 +1240,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
     }

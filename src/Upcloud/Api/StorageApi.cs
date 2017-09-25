@@ -32,8 +32,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse AttachStorage (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>CreateServerResponse</returns>
+        CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice);
 
         /// <summary>
         /// Attach storage
@@ -44,8 +44,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        ApiResponse<CreateServerResponse> AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
         /// <summary>
         /// Create backup
         /// </summary>
@@ -164,8 +164,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse DetachStorage (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>CreateServerResponse</returns>
+        CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice);
 
         /// <summary>
         /// Detach storage
@@ -176,8 +176,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        ApiResponse<CreateServerResponse> DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
         /// <summary>
         /// Eject CD-ROM
         /// </summary>
@@ -186,8 +186,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse EjectCdrom (Guid? serverId);
+        /// <returns>CreateServerResponse</returns>
+        CreateServerResponse EjectCdrom (Guid? serverId);
 
         /// <summary>
         /// Eject CD-ROM
@@ -197,8 +197,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> EjectCdromWithHttpInfo (Guid? serverId);
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        ApiResponse<CreateServerResponse> EjectCdromWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Add storage to favorites
         /// </summary>
@@ -290,8 +290,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>ServerListResponse</returns>
-        ServerListResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null);
+        /// <returns>CreateServerResponse</returns>
+        CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null);
 
         /// <summary>
         /// Load CD-ROM
@@ -302,8 +302,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        ApiResponse<ServerListResponse> LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        ApiResponse<CreateServerResponse> LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
         /// <summary>
         /// Modify storage
         /// </summary>
@@ -403,8 +403,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>Task of CreateServerResponse</returns>
+        System.Threading.Tasks.Task<CreateServerResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice);
 
         /// <summary>
         /// Attach storage
@@ -415,8 +415,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
         /// <summary>
         /// Create backup
         /// </summary>
@@ -535,8 +535,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>Task of CreateServerResponse</returns>
+        System.Threading.Tasks.Task<CreateServerResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice);
 
         /// <summary>
         /// Detach storage
@@ -547,8 +547,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
         /// <summary>
         /// Eject CD-ROM
         /// </summary>
@@ -557,8 +557,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> EjectCdromAsync (Guid? serverId);
+        /// <returns>Task of CreateServerResponse</returns>
+        System.Threading.Tasks.Task<CreateServerResponse> EjectCdromAsync (Guid? serverId);
 
         /// <summary>
         /// Eject CD-ROM
@@ -568,8 +568,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId);
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Add storage to favorites
         /// </summary>
@@ -661,8 +661,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>Task of ServerListResponse</returns>
-        System.Threading.Tasks.Task<ServerListResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null);
+        /// <returns>Task of CreateServerResponse</returns>
+        System.Threading.Tasks.Task<CreateServerResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null);
 
         /// <summary>
         /// Load CD-ROM
@@ -673,8 +673,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
         /// <summary>
         /// Modify storage
         /// </summary>
@@ -869,10 +869,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>CreateServerResponse</returns>
+        public CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
         {
-             ApiResponse<ServerListResponse> localVarResponse = AttachStorageWithHttpInfo(serverId, storageDevice);
+             ApiResponse<CreateServerResponse> localVarResponse = AttachStorageWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
         }
 
@@ -882,8 +882,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        public ApiResponse< CreateServerResponse > AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -938,9 +938,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -949,10 +949,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>Task of CreateServerResponse</returns>
+        public async System.Threading.Tasks.Task<CreateServerResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await AttachStorageAsyncWithHttpInfo(serverId, storageDevice);
+             ApiResponse<CreateServerResponse> localVarResponse = await AttachStorageAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
 
         }
@@ -963,8 +963,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1019,9 +1019,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -1755,10 +1755,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>CreateServerResponse</returns>
+        public CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
         {
-             ApiResponse<ServerListResponse> localVarResponse = DetachStorageWithHttpInfo(serverId, storageDevice);
+             ApiResponse<CreateServerResponse> localVarResponse = DetachStorageWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
         }
 
@@ -1768,8 +1768,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        public ApiResponse< CreateServerResponse > DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1824,9 +1824,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -1835,10 +1835,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>Task of CreateServerResponse</returns>
+        public async System.Threading.Tasks.Task<CreateServerResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await DetachStorageAsyncWithHttpInfo(serverId, storageDevice);
+             ApiResponse<CreateServerResponse> localVarResponse = await DetachStorageAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
 
         }
@@ -1849,8 +1849,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1905,9 +1905,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -1915,10 +1915,10 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse EjectCdrom (Guid? serverId)
+        /// <returns>CreateServerResponse</returns>
+        public CreateServerResponse EjectCdrom (Guid? serverId)
         {
-             ApiResponse<ServerListResponse> localVarResponse = EjectCdromWithHttpInfo(serverId);
+             ApiResponse<CreateServerResponse> localVarResponse = EjectCdromWithHttpInfo(serverId);
              return localVarResponse.Data;
         }
 
@@ -1927,8 +1927,8 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > EjectCdromWithHttpInfo (Guid? serverId)
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        public ApiResponse< CreateServerResponse > EjectCdromWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1972,9 +1972,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -1982,10 +1982,10 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> EjectCdromAsync (Guid? serverId)
+        /// <returns>Task of CreateServerResponse</returns>
+        public async System.Threading.Tasks.Task<CreateServerResponse> EjectCdromAsync (Guid? serverId)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await EjectCdromAsyncWithHttpInfo(serverId);
+             ApiResponse<CreateServerResponse> localVarResponse = await EjectCdromAsyncWithHttpInfo(serverId);
              return localVarResponse.Data;
 
         }
@@ -1995,8 +1995,8 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId)
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2040,9 +2040,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -2577,10 +2577,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>ServerListResponse</returns>
-        public ServerListResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
+        /// <returns>CreateServerResponse</returns>
+        public CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
         {
-             ApiResponse<ServerListResponse> localVarResponse = LoadCdromWithHttpInfo(serverId, storageDevice);
+             ApiResponse<CreateServerResponse> localVarResponse = LoadCdromWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
         }
 
@@ -2590,8 +2590,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>ApiResponse of ServerListResponse</returns>
-        public ApiResponse< ServerListResponse > LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
+        /// <returns>ApiResponse of CreateServerResponse</returns>
+        public ApiResponse< CreateServerResponse > LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2643,9 +2643,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>
@@ -2654,10 +2654,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>Task of ServerListResponse</returns>
-        public async System.Threading.Tasks.Task<ServerListResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null)
+        /// <returns>Task of CreateServerResponse</returns>
+        public async System.Threading.Tasks.Task<CreateServerResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null)
         {
-             ApiResponse<ServerListResponse> localVarResponse = await LoadCdromAsyncWithHttpInfo(serverId, storageDevice);
+             ApiResponse<CreateServerResponse> localVarResponse = await LoadCdromAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
 
         }
@@ -2668,8 +2668,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
-        /// <returns>Task of ApiResponse (ServerListResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerListResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
+        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2721,9 +2721,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ServerListResponse>(localVarStatusCode,
+            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerListResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerListResponse)));
+                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
         }
 
         /// <summary>

@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 <a name="attachstorage"></a>
 # **AttachStorage**
-> ServerListResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
 
 Attach storage
 
@@ -52,7 +52,7 @@ namespace Example
             try
             {
                 // Attach storage
-                ServerListResponse result = apiInstance.AttachStorage(serverId, storageDevice);
+                CreateServerResponse result = apiInstance.AttachStorage(serverId, storageDevice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -395,7 +395,7 @@ No authorization required
 
 <a name="detachstorage"></a>
 # **DetachStorage**
-> ServerListResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
 
 Detach storage
 
@@ -422,7 +422,7 @@ namespace Example
             try
             {
                 // Detach storage
-                ServerListResponse result = apiInstance.DetachStorage(serverId, storageDevice);
+                CreateServerResponse result = apiInstance.DetachStorage(serverId, storageDevice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ No authorization required
 
 <a name="ejectcdrom"></a>
 # **EjectCdrom**
-> ServerListResponse EjectCdrom (Guid? serverId)
+> CreateServerResponse EjectCdrom (Guid? serverId)
 
 Eject CD-ROM
 
@@ -484,7 +484,7 @@ namespace Example
             try
             {
                 // Eject CD-ROM
-                ServerListResponse result = apiInstance.EjectCdrom(serverId);
+                CreateServerResponse result = apiInstance.EjectCdrom(serverId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 
@@ -754,7 +754,7 @@ No authorization required
 
 <a name="loadcdrom"></a>
 # **LoadCdrom**
-> ServerListResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
+> CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
 
 Load CD-ROM
 
@@ -781,7 +781,7 @@ namespace Example
             try
             {
                 // Load CD-ROM
-                ServerListResponse result = apiInstance.LoadCdrom(serverId, storageDevice);
+                CreateServerResponse result = apiInstance.LoadCdrom(serverId, storageDevice);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -802,7 +802,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ServerListResponse**](ServerListResponse.md)
+[**CreateServerResponse**](CreateServerResponse.md)
 
 ### Authorization
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="createfirewallrule"></a>
 # **CreateFirewallRule**
-> void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule)
+> FirewallRuleCreateResponse CreateFirewallRule (Guid? serverId, FirewallRuleRequest firewallRule)
 
 Create firewall rule
 
@@ -34,12 +34,13 @@ namespace Example
         {
             var apiInstance = new FirewallApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var firewallRule = new FirewallRule(); // FirewallRule | 
+            var firewallRule = new FirewallRuleRequest(); // FirewallRuleRequest | 
 
             try
             {
                 // Create firewall rule
-                apiInstance.CreateFirewallRule(serverId, firewallRule);
+                FirewallRuleCreateResponse result = apiInstance.CreateFirewallRule(serverId, firewallRule);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -55,11 +56,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **firewallRule** | [**FirewallRule**](FirewallRule.md)|  | 
+ **firewallRule** | [**FirewallRuleRequest**](FirewallRuleRequest.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**FirewallRuleCreateResponse**](FirewallRuleCreateResponse.md)
 
 ### Authorization
 
@@ -136,7 +137,7 @@ No authorization required
 
 <a name="getfirewallrule"></a>
 # **GetFirewallRule**
-> FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
 
 Get firewall rule details
 
@@ -163,7 +164,7 @@ namespace Example
             try
             {
                 // Get firewall rule details
-                FirewallRuleDetailsResponse result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
+                FirewallRuleCreateResponse result = apiInstance.GetFirewallRule(serverId, firewallRuleNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -184,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FirewallRuleDetailsResponse**](FirewallRuleDetailsResponse.md)
+[**FirewallRuleCreateResponse**](FirewallRuleCreateResponse.md)
 
 ### Authorization
 

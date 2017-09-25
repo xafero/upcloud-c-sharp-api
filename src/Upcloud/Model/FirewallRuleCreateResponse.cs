@@ -24,25 +24,25 @@ using SwaggerDateConverter = Upcloud.Client.SwaggerDateConverter;
 namespace Upcloud.Model
 {
     /// <summary>
-    /// ServerListResponse
+    /// FirewallRuleCreateResponse
     /// </summary>
     [DataContract]
-    public partial class ServerListResponse :  IEquatable<ServerListResponse>, IValidatableObject
+    public partial class FirewallRuleCreateResponse :  IEquatable<FirewallRuleCreateResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServerListResponse" /> class.
+        /// Initializes a new instance of the <see cref="FirewallRuleCreateResponse" /> class.
         /// </summary>
-        /// <param name="Servers">Servers.</param>
-        public ServerListResponse(ServerListResponseServers Servers = default(ServerListResponseServers))
+        /// <param name="FirewallRule">FirewallRule.</param>
+        public FirewallRuleCreateResponse(FirewallRule FirewallRule = default(FirewallRule))
         {
-            this.Servers = Servers;
+            this.FirewallRule = FirewallRule;
         }
         
         /// <summary>
-        /// Gets or Sets Servers
+        /// Gets or Sets FirewallRule
         /// </summary>
-        [DataMember(Name="servers", EmitDefaultValue=false)]
-        public ServerListResponseServers Servers { get; set; }
+        [DataMember(Name="firewall_rule", EmitDefaultValue=false)]
+        public FirewallRule FirewallRule { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -51,8 +51,8 @@ namespace Upcloud.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ServerListResponse {\n");
-            sb.Append("  Servers: ").Append(Servers).Append("\n");
+            sb.Append("class FirewallRuleCreateResponse {\n");
+            sb.Append("  FirewallRule: ").Append(FirewallRule).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,24 +73,24 @@ namespace Upcloud.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ServerListResponse);
+            return this.Equals(input as FirewallRuleCreateResponse);
         }
 
         /// <summary>
-        /// Returns true if ServerListResponse instances are equal
+        /// Returns true if FirewallRuleCreateResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of ServerListResponse to be compared</param>
+        /// <param name="input">Instance of FirewallRuleCreateResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ServerListResponse input)
+        public bool Equals(FirewallRuleCreateResponse input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Servers == input.Servers ||
-                    (this.Servers != null &&
-                    this.Servers.Equals(input.Servers))
+                    this.FirewallRule == input.FirewallRule ||
+                    (this.FirewallRule != null &&
+                    this.FirewallRule.Equals(input.FirewallRule))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Servers != null)
-                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
+                if (this.FirewallRule != null)
+                    hashCode = hashCode * 59 + this.FirewallRule.GetHashCode();
                 return hashCode;
             }
         }

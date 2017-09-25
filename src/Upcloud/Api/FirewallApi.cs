@@ -32,8 +32,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns></returns>
-        void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule);
+        /// <returns>FirewallRuleCreateResponse</returns>
+        FirewallRuleCreateResponse CreateFirewallRule (Guid? serverId, FirewallRuleRequest firewallRule);
 
         /// <summary>
         /// Create firewall rule
@@ -44,8 +44,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateFirewallRuleWithHttpInfo (Guid? serverId, FirewallRule firewallRule);
+        /// <returns>ApiResponse of FirewallRuleCreateResponse</returns>
+        ApiResponse<FirewallRuleCreateResponse> CreateFirewallRuleWithHttpInfo (Guid? serverId, FirewallRuleRequest firewallRule);
         /// <summary>
         /// Remove firewall rule
         /// </summary>
@@ -78,8 +78,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>FirewallRuleDetailsResponse</returns>
-        FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>FirewallRuleCreateResponse</returns>
+        FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -90,8 +90,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>ApiResponse of FirewallRuleDetailsResponse</returns>
-        ApiResponse<FirewallRuleDetailsResponse> GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>ApiResponse of FirewallRuleCreateResponse</returns>
+        ApiResponse<FirewallRuleCreateResponse> GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// List firewall rules
         /// </summary>
@@ -124,8 +124,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateFirewallRuleAsync (Guid? serverId, FirewallRule firewallRule);
+        /// <returns>Task of FirewallRuleCreateResponse</returns>
+        System.Threading.Tasks.Task<FirewallRuleCreateResponse> CreateFirewallRuleAsync (Guid? serverId, FirewallRuleRequest firewallRule);
 
         /// <summary>
         /// Create firewall rule
@@ -136,8 +136,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateFirewallRuleAsyncWithHttpInfo (Guid? serverId, FirewallRule firewallRule);
+        /// <returns>Task of ApiResponse (FirewallRuleCreateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> CreateFirewallRuleAsyncWithHttpInfo (Guid? serverId, FirewallRuleRequest firewallRule);
         /// <summary>
         /// Remove firewall rule
         /// </summary>
@@ -170,8 +170,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of FirewallRuleDetailsResponse</returns>
-        System.Threading.Tasks.Task<FirewallRuleDetailsResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>Task of FirewallRuleCreateResponse</returns>
+        System.Threading.Tasks.Task<FirewallRuleCreateResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -182,8 +182,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of ApiResponse (FirewallRuleDetailsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FirewallRuleDetailsResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        /// <returns>Task of ApiResponse (FirewallRuleCreateResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
         /// <summary>
         /// List firewall rules
         /// </summary>
@@ -311,10 +311,11 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns></returns>
-        public void CreateFirewallRule (Guid? serverId, FirewallRule firewallRule)
+        /// <returns>FirewallRuleCreateResponse</returns>
+        public FirewallRuleCreateResponse CreateFirewallRule (Guid? serverId, FirewallRuleRequest firewallRule)
         {
-             CreateFirewallRuleWithHttpInfo(serverId, firewallRule);
+             ApiResponse<FirewallRuleCreateResponse> localVarResponse = CreateFirewallRuleWithHttpInfo(serverId, firewallRule);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -323,8 +324,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateFirewallRuleWithHttpInfo (Guid? serverId, FirewallRule firewallRule)
+        /// <returns>ApiResponse of FirewallRuleCreateResponse</returns>
+        public ApiResponse< FirewallRuleCreateResponse > CreateFirewallRuleWithHttpInfo (Guid? serverId, FirewallRuleRequest firewallRule)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -379,9 +380,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleCreateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (FirewallRuleCreateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleCreateResponse)));
         }
 
         /// <summary>
@@ -390,10 +391,11 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateFirewallRuleAsync (Guid? serverId, FirewallRule firewallRule)
+        /// <returns>Task of FirewallRuleCreateResponse</returns>
+        public async System.Threading.Tasks.Task<FirewallRuleCreateResponse> CreateFirewallRuleAsync (Guid? serverId, FirewallRuleRequest firewallRule)
         {
-             await CreateFirewallRuleAsyncWithHttpInfo(serverId, firewallRule);
+             ApiResponse<FirewallRuleCreateResponse> localVarResponse = await CreateFirewallRuleAsyncWithHttpInfo(serverId, firewallRule);
+             return localVarResponse.Data;
 
         }
 
@@ -403,8 +405,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRule"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateFirewallRuleAsyncWithHttpInfo (Guid? serverId, FirewallRule firewallRule)
+        /// <returns>Task of ApiResponse (FirewallRuleCreateResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> CreateFirewallRuleAsyncWithHttpInfo (Guid? serverId, FirewallRuleRequest firewallRule)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -459,9 +461,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleCreateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (FirewallRuleCreateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleCreateResponse)));
         }
 
         /// <summary>
@@ -615,10 +617,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>FirewallRuleDetailsResponse</returns>
-        public FirewallRuleDetailsResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>FirewallRuleCreateResponse</returns>
+        public FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ApiResponse<FirewallRuleDetailsResponse> localVarResponse = GetFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
+             ApiResponse<FirewallRuleCreateResponse> localVarResponse = GetFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
         }
 
@@ -628,8 +630,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>ApiResponse of FirewallRuleDetailsResponse</returns>
-        public ApiResponse< FirewallRuleDetailsResponse > GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>ApiResponse of FirewallRuleCreateResponse</returns>
+        public ApiResponse< FirewallRuleCreateResponse > GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -677,9 +679,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FirewallRuleDetailsResponse>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleCreateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FirewallRuleDetailsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleDetailsResponse)));
+                (FirewallRuleCreateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleCreateResponse)));
         }
 
         /// <summary>
@@ -688,10 +690,10 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of FirewallRuleDetailsResponse</returns>
-        public async System.Threading.Tasks.Task<FirewallRuleDetailsResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>Task of FirewallRuleCreateResponse</returns>
+        public async System.Threading.Tasks.Task<FirewallRuleCreateResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
         {
-             ApiResponse<FirewallRuleDetailsResponse> localVarResponse = await GetFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
+             ApiResponse<FirewallRuleCreateResponse> localVarResponse = await GetFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
 
         }
@@ -702,8 +704,8 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
-        /// <returns>Task of ApiResponse (FirewallRuleDetailsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleDetailsResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        /// <returns>Task of ApiResponse (FirewallRuleCreateResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -751,9 +753,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<FirewallRuleDetailsResponse>(localVarStatusCode,
+            return new ApiResponse<FirewallRuleCreateResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FirewallRuleDetailsResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleDetailsResponse)));
+                (FirewallRuleCreateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FirewallRuleCreateResponse)));
         }
 
         /// <summary>
