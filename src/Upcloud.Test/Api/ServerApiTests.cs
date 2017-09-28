@@ -69,7 +69,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //string tagList = null;
             //var response = instance.AssignTag(serverId, tagList);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -82,7 +82,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StorageDevice storageDevice = null;
             //var response = instance.AttachStorage(serverId, storageDevice);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -93,9 +93,9 @@ namespace Upcloud.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
-            //FirewallRule firewallRule = null;
-            //instance.CreateFirewallRule(serverId, firewallRule);
-            
+            //FirewallRuleRequest firewallRule = null;
+            //var response = instance.CreateFirewallRule(serverId, firewallRule);
+            //Assert.IsInstanceOf<FirewallRuleCreateResponse> (response, "response is FirewallRuleCreateResponse");
         }
         
         /// <summary>
@@ -107,7 +107,7 @@ namespace Upcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Server server = null;
             //var response = instance.CreateServer(server);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -145,7 +145,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StorageDevice storageDevice = null;
             //var response = instance.DetachStorage(serverId, storageDevice);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -157,7 +157,7 @@ namespace Upcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //var response = instance.EjectCdrom(serverId);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -170,7 +170,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //Guid? firewallRuleNumber = null;
             //var response = instance.GetFirewallRule(serverId, firewallRuleNumber);
-            //Assert.IsInstanceOf<FirewallRuleDetailsResponse> (response, "response is FirewallRuleDetailsResponse");
+            //Assert.IsInstanceOf<FirewallRuleCreateResponse> (response, "response is FirewallRuleCreateResponse");
         }
         
         /// <summary>
@@ -205,7 +205,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StorageDevice1 storageDevice = null;
             //var response = instance.LoadCdrom(serverId, storageDevice);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -218,7 +218,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //Server server = null;
             //var response = instance.ModifyServer(serverId, server);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -231,7 +231,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //RestartServer restartServer = null;
             //var response = instance.RestartServer(serverId, restartServer);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -243,7 +243,7 @@ namespace Upcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //var response = instance.ServerDetails(serverId);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -267,7 +267,7 @@ namespace Upcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //var response = instance.StartServer(serverId);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -280,7 +280,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StopServer stopServer = null;
             //var response = instance.StopServer(serverId, stopServer);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -293,7 +293,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //string tagName = null;
             //var response = instance.Untag(serverId, tagName);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
     }

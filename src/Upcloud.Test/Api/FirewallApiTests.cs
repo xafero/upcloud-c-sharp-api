@@ -67,9 +67,9 @@ namespace Upcloud.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
-            //FirewallRule firewallRule = null;
-            //instance.CreateFirewallRule(serverId, firewallRule);
-            
+            //FirewallRuleRequest firewallRule = null;
+            //var response = instance.CreateFirewallRule(serverId, firewallRule);
+            //Assert.IsInstanceOf<FirewallRuleCreateResponse> (response, "response is FirewallRuleCreateResponse");
         }
         
         /// <summary>
@@ -95,7 +95,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //Guid? firewallRuleNumber = null;
             //var response = instance.GetFirewallRule(serverId, firewallRuleNumber);
-            //Assert.IsInstanceOf<FirewallRuleDetailsResponse> (response, "response is FirewallRuleDetailsResponse");
+            //Assert.IsInstanceOf<FirewallRuleCreateResponse> (response, "response is FirewallRuleCreateResponse");
         }
         
         /// <summary>

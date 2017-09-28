@@ -12,7 +12,7 @@ OpenAPI spec version: 1.2.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{74749BBC-C3C5-4DB4-A3EB-4B5204BAFDE4}</ProjectGuid>
+    <ProjectGuid>{936D98D8-F83D-4564-8229-D514788B2C68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Upcloud</RootNamespace>

@@ -69,7 +69,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StorageDevice storageDevice = null;
             //var response = instance.AttachStorage(serverId, storageDevice);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -144,7 +144,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StorageDevice storageDevice = null;
             //var response = instance.DetachStorage(serverId, storageDevice);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -156,7 +156,7 @@ namespace Upcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //Guid? serverId = null;
             //var response = instance.EjectCdrom(serverId);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -216,7 +216,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //StorageDevice1 storageDevice = null;
             //var response = instance.LoadCdrom(serverId, storageDevice);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>

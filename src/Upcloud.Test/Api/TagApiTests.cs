@@ -69,7 +69,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //string tagList = null;
             //var response = instance.AssignTag(serverId, tagList);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
         /// <summary>
@@ -130,7 +130,7 @@ namespace Upcloud.Test
             //Guid? serverId = null;
             //string tagName = null;
             //var response = instance.Untag(serverId, tagName);
-            //Assert.IsInstanceOf<ServerListResponse> (response, "response is ServerListResponse");
+            //Assert.IsInstanceOf<CreateServerResponse> (response, "response is CreateServerResponse");
         }
         
     }

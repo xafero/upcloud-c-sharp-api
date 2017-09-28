@@ -60,12 +60,124 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'FirewallRule'
+        /// Test the property 'Direction'
         /// </summary>
         [Test]
-        public void FirewallRuleTest()
+        public void DirectionTest()
         {
-            // TODO unit test for the property 'FirewallRule'
+            // TODO unit test for the property 'Direction'
+        }
+        /// <summary>
+        /// Test the property 'Action'
+        /// </summary>
+        [Test]
+        public void ActionTest()
+        {
+            // TODO unit test for the property 'Action'
+        }
+        /// <summary>
+        /// Test the property 'Position'
+        /// </summary>
+        [Test]
+        public void PositionTest()
+        {
+            // TODO unit test for the property 'Position'
+        }
+        /// <summary>
+        /// Test the property 'Family'
+        /// </summary>
+        [Test]
+        public void FamilyTest()
+        {
+            // TODO unit test for the property 'Family'
+        }
+        /// <summary>
+        /// Test the property 'Protocol'
+        /// </summary>
+        [Test]
+        public void ProtocolTest()
+        {
+            // TODO unit test for the property 'Protocol'
+        }
+        /// <summary>
+        /// Test the property 'IcmpType'
+        /// </summary>
+        [Test]
+        public void IcmpTypeTest()
+        {
+            // TODO unit test for the property 'IcmpType'
+        }
+        /// <summary>
+        /// Test the property 'DestinationAddressStart'
+        /// </summary>
+        [Test]
+        public void DestinationAddressStartTest()
+        {
+            // TODO unit test for the property 'DestinationAddressStart'
+        }
+        /// <summary>
+        /// Test the property 'DestinationAddressEnd'
+        /// </summary>
+        [Test]
+        public void DestinationAddressEndTest()
+        {
+            // TODO unit test for the property 'DestinationAddressEnd'
+        }
+        /// <summary>
+        /// Test the property 'DestinationPortStart'
+        /// </summary>
+        [Test]
+        public void DestinationPortStartTest()
+        {
+            // TODO unit test for the property 'DestinationPortStart'
+        }
+        /// <summary>
+        /// Test the property 'DestinationPortEnd'
+        /// </summary>
+        [Test]
+        public void DestinationPortEndTest()
+        {
+            // TODO unit test for the property 'DestinationPortEnd'
+        }
+        /// <summary>
+        /// Test the property 'SourceAddressStart'
+        /// </summary>
+        [Test]
+        public void SourceAddressStartTest()
+        {
+            // TODO unit test for the property 'SourceAddressStart'
+        }
+        /// <summary>
+        /// Test the property 'SourceAddressEnd'
+        /// </summary>
+        [Test]
+        public void SourceAddressEndTest()
+        {
+            // TODO unit test for the property 'SourceAddressEnd'
+        }
+        /// <summary>
+        /// Test the property 'SourcePortStart'
+        /// </summary>
+        [Test]
+        public void SourcePortStartTest()
+        {
+            // TODO unit test for the property 'SourcePortStart'
+        }
+        /// <summary>
+        /// Test the property 'SourcePortEnd'
+        /// </summary>
+        [Test]
+        public void SourcePortEndTest()
+        {
+            // TODO unit test for the property 'SourcePortEnd'
+        }
+        /// <summary>
+        /// Test the property 'Comment'
+        /// </summary>
+        [Test]
+        public void CommentTest()
+        {
+            // TODO unit test for the property 'Comment'
         }
 
     }
