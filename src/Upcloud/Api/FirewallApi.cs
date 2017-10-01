@@ -56,7 +56,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns></returns>
-        void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
+        void DeleteFirewallRule (Guid? serverId, decimal? firewallRuleNumber);
 
         /// <summary>
         /// Remove firewall rule
@@ -68,7 +68,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        ApiResponse<Object> DeleteFirewallRuleWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber);
         /// <summary>
         /// Get firewall rule details
         /// </summary>
@@ -79,7 +79,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>FirewallRuleCreateResponse</returns>
-        FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber);
+        FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, decimal? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -91,7 +91,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of FirewallRuleCreateResponse</returns>
-        ApiResponse<FirewallRuleCreateResponse> GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        ApiResponse<FirewallRuleCreateResponse> GetFirewallRuleWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber);
         /// <summary>
         /// List firewall rules
         /// </summary>
@@ -148,7 +148,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task DeleteFirewallRuleAsync (Guid? serverId, decimal? firewallRuleNumber);
 
         /// <summary>
         /// Remove firewall rule
@@ -160,7 +160,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirewallRuleAsyncWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber);
         /// <summary>
         /// Get firewall rule details
         /// </summary>
@@ -171,7 +171,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of FirewallRuleCreateResponse</returns>
-        System.Threading.Tasks.Task<FirewallRuleCreateResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task<FirewallRuleCreateResponse> GetFirewallRuleAsync (Guid? serverId, decimal? firewallRuleNumber);
 
         /// <summary>
         /// Get firewall rule details
@@ -183,7 +183,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse (FirewallRuleCreateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber);
+        System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber);
         /// <summary>
         /// List firewall rules
         /// </summary>
@@ -366,6 +366,12 @@ namespace Upcloud.Api
                 localVarPostBody = firewallRule; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -447,6 +453,12 @@ namespace Upcloud.Api
                 localVarPostBody = firewallRule; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -473,7 +485,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns></returns>
-        public void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+        public void DeleteFirewallRule (Guid? serverId, decimal? firewallRuleNumber)
         {
              DeleteFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
         }
@@ -485,7 +497,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public ApiResponse<Object> DeleteFirewallRuleWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -519,6 +531,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (firewallRuleNumber != null) localVarPathParams.Add("firewallRuleNumber", Configuration.ApiClient.ParameterToString(firewallRuleNumber)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -545,7 +563,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task DeleteFirewallRuleAsync (Guid? serverId, decimal? firewallRuleNumber)
         {
              await DeleteFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
 
@@ -558,7 +576,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFirewallRuleAsyncWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -592,6 +610,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (firewallRuleNumber != null) localVarPathParams.Add("firewallRuleNumber", Configuration.ApiClient.ParameterToString(firewallRuleNumber)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -618,7 +642,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>FirewallRuleCreateResponse</returns>
-        public FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+        public FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, decimal? firewallRuleNumber)
         {
              ApiResponse<FirewallRuleCreateResponse> localVarResponse = GetFirewallRuleWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
@@ -631,7 +655,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>ApiResponse of FirewallRuleCreateResponse</returns>
-        public ApiResponse< FirewallRuleCreateResponse > GetFirewallRuleWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public ApiResponse< FirewallRuleCreateResponse > GetFirewallRuleWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -665,6 +689,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (firewallRuleNumber != null) localVarPathParams.Add("firewallRuleNumber", Configuration.ApiClient.ParameterToString(firewallRuleNumber)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -691,7 +721,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of FirewallRuleCreateResponse</returns>
-        public async System.Threading.Tasks.Task<FirewallRuleCreateResponse> GetFirewallRuleAsync (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task<FirewallRuleCreateResponse> GetFirewallRuleAsync (Guid? serverId, decimal? firewallRuleNumber)
         {
              ApiResponse<FirewallRuleCreateResponse> localVarResponse = await GetFirewallRuleAsyncWithHttpInfo(serverId, firewallRuleNumber);
              return localVarResponse.Data;
@@ -705,7 +735,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="firewallRuleNumber">Denotes the index of the firewall rule in the server&#39;s firewall rule list</param>
         /// <returns>Task of ApiResponse (FirewallRuleCreateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, Guid? firewallRuleNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<FirewallRuleCreateResponse>> GetFirewallRuleAsyncWithHttpInfo (Guid? serverId, decimal? firewallRuleNumber)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -739,6 +769,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (firewallRuleNumber != null) localVarPathParams.Add("firewallRuleNumber", Configuration.ApiClient.ParameterToString(firewallRuleNumber)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -806,6 +842,12 @@ namespace Upcloud.Api
 
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -874,6 +916,12 @@ namespace Upcloud.Api
 
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

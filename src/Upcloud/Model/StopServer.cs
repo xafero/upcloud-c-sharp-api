@@ -30,58 +30,19 @@ namespace Upcloud.Model
     public partial class StopServer :  IEquatable<StopServer>, IValidatableObject
     {
         /// <summary>
-        /// Type of stop operation performed on the server.
-        /// </summary>
-        /// <value>Type of stop operation performed on the server.</value>
-        [JsonConverter(typeof(StringEnumConverter))]
-        public enum StopTypeEnum
-        {
-            
-            /// <summary>
-            /// Enum Soft for "soft"
-            /// </summary>
-            [EnumMember(Value = "soft")]
-            Soft,
-            
-            /// <summary>
-            /// Enum Hard for "hard"
-            /// </summary>
-            [EnumMember(Value = "hard")]
-            Hard
-        }
-
-        /// <summary>
-        /// Type of stop operation performed on the server.
-        /// </summary>
-        /// <value>Type of stop operation performed on the server.</value>
-        [DataMember(Name="stop_type", EmitDefaultValue=false)]
-        public StopTypeEnum? StopType { get; set; }
-        /// <summary>
         /// Initializes a new instance of the <see cref="StopServer" /> class.
         /// </summary>
-        /// <param name="StopType">Type of stop operation performed on the server. (default to StopTypeEnum.Soft).</param>
-        /// <param name="Timeout">The stop timeout in seconds..</param>
-        public StopServer(StopTypeEnum? StopType = StopTypeEnum.Soft, decimal? Timeout = default(decimal?))
+        /// <param name="StopServer">StopServer.</param>
+        public StopServer(StopServerRequest StopServer = default(StopServerRequest))
         {
-            // use default value if no "StopType" provided
-            if (StopType == null)
-            {
-                this.StopType = StopTypeEnum.Soft;
-            }
-            else
-            {
-                this.StopType = StopType;
-            }
-            this.Timeout = Timeout;
+            this.StopServer = StopServer;
         }
         
-
         /// <summary>
-        /// The stop timeout in seconds.
+        /// Gets or Sets StopServer
         /// </summary>
-        /// <value>The stop timeout in seconds.</value>
-        [DataMember(Name="timeout", EmitDefaultValue=false)]
-        public decimal? Timeout { get; set; }
+        [DataMember(Name="stop_server", EmitDefaultValue=false)]
+        public StopServerRequest StopServer { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,8 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StopServer {\n");
-            sb.Append("  StopType: ").Append(StopType).Append("\n");
-            sb.Append("  Timeout: ").Append(Timeout).Append("\n");
+            sb.Append("  StopServer: ").Append(StopServer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,14 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.StopType == input.StopType ||
-                    (this.StopType != null &&
-                    this.StopType.Equals(input.StopType))
-                ) && 
-                (
-                    this.Timeout == input.Timeout ||
-                    (this.Timeout != null &&
-                    this.Timeout.Equals(input.Timeout))
+                    this.StopServer == input.StopServer ||
+                    (this.StopServer != null &&
+                    this.StopServer.Equals(input.StopServer))
                 );
         }
 
@@ -148,10 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.StopType != null)
-                    hashCode = hashCode * 59 + this.StopType.GetHashCode();
-                if (this.Timeout != null)
-                    hashCode = hashCode * 59 + this.Timeout.GetHashCode();
+                if (this.StopServer != null)
+                    hashCode = hashCode * 59 + this.StopServer.GetHashCode();
                 return hashCode;
             }
         }
@@ -163,18 +116,6 @@ namespace Upcloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Timeout (decimal?) maximum
-            if(this.Timeout > (decimal?)600)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Timeout, must be a value less than or equal to 600.", new [] { "Timeout" });
-            }
-
-            // Timeout (decimal?) minimum
-            if(this.Timeout < (decimal?)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Timeout, must be a value greater than or equal to 1.", new [] { "Timeout" });
-            }
-
             yield break;
         }
     }

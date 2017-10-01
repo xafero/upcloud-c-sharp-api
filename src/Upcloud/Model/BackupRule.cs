@@ -94,13 +94,21 @@ namespace Upcloud.Model
         /// Initializes a new instance of the <see cref="BackupRule" /> class.
         /// </summary>
         /// <param name="Interval">Interval.</param>
+        /// <param name="Time">Time.</param>
         /// <param name="Retention">Retention.</param>
-        public BackupRule(IntervalEnum? Interval = default(IntervalEnum?), decimal? Retention = default(decimal?))
+        public BackupRule(IntervalEnum? Interval = default(IntervalEnum?), string Time = default(string), decimal? Retention = default(decimal?))
         {
             this.Interval = Interval;
+            this.Time = Time;
             this.Retention = Retention;
         }
         
+
+        /// <summary>
+        /// Gets or Sets Time
+        /// </summary>
+        [DataMember(Name="time", EmitDefaultValue=false)]
+        public string Time { get; set; }
 
         /// <summary>
         /// Gets or Sets Retention
@@ -117,6 +125,7 @@ namespace Upcloud.Model
             var sb = new StringBuilder();
             sb.Append("class BackupRule {\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
+            sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  Retention: ").Append(Retention).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -158,6 +167,11 @@ namespace Upcloud.Model
                     this.Interval.Equals(input.Interval))
                 ) && 
                 (
+                    this.Time == input.Time ||
+                    (this.Time != null &&
+                    this.Time.Equals(input.Time))
+                ) && 
+                (
                     this.Retention == input.Retention ||
                     (this.Retention != null &&
                     this.Retention.Equals(input.Retention))
@@ -175,6 +189,8 @@ namespace Upcloud.Model
                 int hashCode = 41;
                 if (this.Interval != null)
                     hashCode = hashCode * 59 + this.Interval.GetHashCode();
+                if (this.Time != null)
+                    hashCode = hashCode * 59 + this.Time.GetHashCode();
                 if (this.Retention != null)
                     hashCode = hashCode * 59 + this.Retention.GetHashCode();
                 return hashCode;

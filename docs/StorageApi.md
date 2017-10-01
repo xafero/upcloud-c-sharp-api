@@ -1,6 +1,6 @@
 # Upcloud.Api.StorageApi
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**CreateStorage**](StorageApi.md#createstorage) | **POST** /storage | Create storage
 [**DeleteStorage**](StorageApi.md#deletestorage) | **DELETE** /storage/{storageId} | Delete storage
 [**DetachStorage**](StorageApi.md#detachstorage) | **POST** /server/{serverId}/storage/detach | Detach storage
-[**EjectCdrom**](StorageApi.md#ejectcdrom) | **POST** /server/{serverId}/storage/cdrom/eject | Eject CD-ROM
+[**EjectCdrom**](StorageApi.md#ejectcdrom) | **POST** /server/{serverId}/cdrom/eject | Eject CD-ROM
 [**FavoriteStorage**](StorageApi.md#favoritestorage) | **POST** /storage/{storageId}/favorite | Add storage to favorites
 [**GetStorageDetails**](StorageApi.md#getstoragedetails) | **GET** /storage/{storageId} | Get storage details
 [**ListStorageTypes**](StorageApi.md#liststoragetypes) | **GET** /storage/{type}/ | List of storages by type
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 <a name="attachstorage"></a>
 # **AttachStorage**
-> CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse AttachStorage (Guid? serverId, AttachStorageDeviceRequest storageDevice)
 
 Attach storage
 
@@ -45,9 +45,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var storageDevice = new StorageDevice(); // StorageDevice | 
+            var storageDevice = new AttachStorageDeviceRequest(); // AttachStorageDeviceRequest | 
 
             try
             {
@@ -69,7 +73,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **storageDevice** | [**StorageDevice**](StorageDevice.md)|  | 
+ **storageDevice** | [**AttachStorageDeviceRequest**](AttachStorageDeviceRequest.md)|  | 
 
 ### Return type
 
@@ -77,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -88,7 +92,7 @@ No authorization required
 
 <a name="backupstorage"></a>
 # **BackupStorage**
-> CreateStorageResponse BackupStorage (Guid? storageId, Storage4 storage = null)
+> CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage = null)
 
 Create backup
 
@@ -108,9 +112,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
-            var storage = new Storage4(); // Storage4 |  (optional) 
+            var storage = new CreateBackupStorageRequest(); // CreateBackupStorageRequest |  (optional) 
 
             try
             {
@@ -132,7 +140,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storageId** | **Guid?**| Storage id | 
- **storage** | [**Storage4**](Storage4.md)|  | [optional] 
+ **storage** | [**CreateBackupStorageRequest**](CreateBackupStorageRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -140,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -171,6 +179,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Strage id
 
@@ -200,7 +212,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -211,7 +223,7 @@ No authorization required
 
 <a name="clonestorage"></a>
 # **CloneStorage**
-> CreateStorageResponse CloneStorage (Guid? storageId, Storage2 storage = null)
+> CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage = null)
 
 Clone storage
 
@@ -231,9 +243,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
-            var storage = new Storage2(); // Storage2 |  (optional) 
+            var storage = new CloneStorageRequest(); // CloneStorageRequest |  (optional) 
 
             try
             {
@@ -255,7 +271,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storageId** | **Guid?**| Storage id | 
- **storage** | [**Storage2**](Storage2.md)|  | [optional] 
+ **storage** | [**CloneStorageRequest**](CloneStorageRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -263,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -274,7 +290,7 @@ No authorization required
 
 <a name="createstorage"></a>
 # **CreateStorage**
-> CreateStorageResponse CreateStorage (Storage storage)
+> CreateStorageResponse CreateStorage (CreateStorageRequest storage)
 
 Create storage
 
@@ -294,8 +310,12 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
-            var storage = new Storage(); // Storage | 
+            var storage = new CreateStorageRequest(); // CreateStorageRequest | 
 
             try
             {
@@ -316,7 +336,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **storage** | [**Storage**](Storage.md)|  | 
+ **storage** | [**CreateStorageRequest**](CreateStorageRequest.md)|  | 
 
 ### Return type
 
@@ -324,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -355,6 +375,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | 
 
@@ -384,7 +408,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -395,7 +419,7 @@ No authorization required
 
 <a name="detachstorage"></a>
 # **DetachStorage**
-> CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse DetachStorage (Guid? serverId, StorageDeviceDetachRequest storageDevice)
 
 Detach storage
 
@@ -415,9 +439,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var storageDevice = new StorageDevice(); // StorageDevice | 
+            var storageDevice = new StorageDeviceDetachRequest(); // StorageDeviceDetachRequest | 
 
             try
             {
@@ -439,7 +467,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **storageDevice** | [**StorageDevice**](StorageDevice.md)|  | 
+ **storageDevice** | [**StorageDeviceDetachRequest**](StorageDeviceDetachRequest.md)|  | 
 
 ### Return type
 
@@ -447,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -458,7 +486,7 @@ No authorization required
 
 <a name="ejectcdrom"></a>
 # **EjectCdrom**
-> CreateServerResponse EjectCdrom (Guid? serverId)
+> void EjectCdrom (Guid? serverId)
 
 Eject CD-ROM
 
@@ -478,14 +506,17 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var serverId = serverId_example;  // Guid? | Server id
 
             try
             {
                 // Eject CD-ROM
-                CreateServerResponse result = apiInstance.EjectCdrom(serverId);
-                Debug.WriteLine(result);
+                apiInstance.EjectCdrom(serverId);
             }
             catch (Exception e)
             {
@@ -504,11 +535,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateServerResponse**](CreateServerResponse.md)
+void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -539,6 +570,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
 
@@ -568,7 +603,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -599,6 +634,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | 
 
@@ -629,7 +668,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -658,6 +697,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var type = type_example;  // string | Storage's access type (`public` or `private`) or storage type (`normal`, `backup`, `cdrom` or `template`) or `favorite` status
 
@@ -688,7 +731,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -717,6 +760,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
 
             try
@@ -743,7 +790,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -754,7 +801,7 @@ No authorization required
 
 <a name="loadcdrom"></a>
 # **LoadCdrom**
-> CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
+> CreateServerResponse LoadCdrom (Guid? serverId, StorageDeviceLoadRequest storageDevice = null)
 
 Load CD-ROM
 
@@ -774,9 +821,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var storageDevice = new StorageDevice1(); // StorageDevice1 |  (optional) 
+            var storageDevice = new StorageDeviceLoadRequest(); // StorageDeviceLoadRequest |  (optional) 
 
             try
             {
@@ -798,7 +849,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **storageDevice** | [**StorageDevice1**](StorageDevice1.md)|  | [optional] 
+ **storageDevice** | [**StorageDeviceLoadRequest**](StorageDeviceLoadRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -806,7 +857,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -817,7 +868,7 @@ No authorization required
 
 <a name="modifystorage"></a>
 # **ModifyStorage**
-> CreateStorageResponse ModifyStorage (Guid? storageId, Storage1 storage)
+> CreateStorageResponse ModifyStorage (Guid? storageId, ModifyStorageRequest storage)
 
 Modify storage
 
@@ -837,9 +888,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | 
-            var storage = new Storage1(); // Storage1 | 
+            var storage = new ModifyStorageRequest(); // ModifyStorageRequest | 
 
             try
             {
@@ -861,7 +916,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storageId** | **Guid?**|  | 
- **storage** | [**Storage1**](Storage1.md)|  | 
+ **storage** | [**ModifyStorageRequest**](ModifyStorageRequest.md)|  | 
 
 ### Return type
 
@@ -869,7 +924,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -900,6 +955,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
 
@@ -929,7 +988,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -940,7 +999,7 @@ No authorization required
 
 <a name="templatizestorage"></a>
 # **TemplatizeStorage**
-> CreateStorageResponse TemplatizeStorage (Guid? storageId, Storage3 storage = null)
+> CreateStorageResponse TemplatizeStorage (Guid? storageId, TemplitizeStorageRequest storage = null)
 
 Templatize storage
 
@@ -960,9 +1019,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
-            var storage = new Storage3(); // Storage3 |  (optional) 
+            var storage = new TemplitizeStorageRequest(); // TemplitizeStorageRequest |  (optional) 
 
             try
             {
@@ -984,7 +1047,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storageId** | **Guid?**| Storage id | 
- **storage** | [**Storage3**](Storage3.md)|  | [optional] 
+ **storage** | [**TemplitizeStorageRequest**](TemplitizeStorageRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -992,7 +1055,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -1023,6 +1086,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
 
@@ -1052,7 +1119,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 

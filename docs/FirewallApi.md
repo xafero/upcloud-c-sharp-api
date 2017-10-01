@@ -1,6 +1,6 @@
 # Upcloud.Api.FirewallApi
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -32,6 +32,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new FirewallApi();
             var serverId = serverId_example;  // Guid? | Server id
             var firewallRule = new FirewallRuleRequest(); // FirewallRuleRequest | 
@@ -64,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -75,7 +79,7 @@ No authorization required
 
 <a name="deletefirewallrule"></a>
 # **DeleteFirewallRule**
-> void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> void DeleteFirewallRule (Guid? serverId, decimal? firewallRuleNumber)
 
 Remove firewall rule
 
@@ -95,9 +99,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new FirewallApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var firewallRuleNumber = firewallRuleNumber_example;  // Guid? | Denotes the index of the firewall rule in the server's firewall rule list
+            var firewallRuleNumber = 3.4;  // decimal? | Denotes the index of the firewall rule in the server's firewall rule list
 
             try
             {
@@ -118,7 +126,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **firewallRuleNumber** | **Guid?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
+ **firewallRuleNumber** | **decimal?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
 
 ### Return type
 
@@ -126,7 +134,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -137,7 +145,7 @@ No authorization required
 
 <a name="getfirewallrule"></a>
 # **GetFirewallRule**
-> FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, decimal? firewallRuleNumber)
 
 Get firewall rule details
 
@@ -157,9 +165,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new FirewallApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var firewallRuleNumber = firewallRuleNumber_example;  // Guid? | Denotes the index of the firewall rule in the server's firewall rule list
+            var firewallRuleNumber = 3.4;  // decimal? | Denotes the index of the firewall rule in the server's firewall rule list
 
             try
             {
@@ -181,7 +193,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **firewallRuleNumber** | **Guid?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
+ **firewallRuleNumber** | **decimal?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
 
 ### Return type
 
@@ -189,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -220,6 +232,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new FirewallApi();
             var serverId = serverId_example;  // Guid? | Server id
 
@@ -250,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 

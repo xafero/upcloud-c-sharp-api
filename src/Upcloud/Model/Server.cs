@@ -176,7 +176,7 @@ namespace Upcloud.Model
         /// <param name="VncPassword">The VNC remote access password..</param>
         /// <param name="VncPort">VncPort.</param>
         /// <param name="Zone">Zone.</param>
-        public Server(BootOrderEnum? BootOrder = default(BootOrderEnum?), decimal? CoreNumber = default(decimal?), FirewallEnum? Firewall = FirewallEnum.On, decimal? Host = default(decimal?), string Hostname = default(string), IpAddressListResponseIpAddresses IpAddresses = default(IpAddressListResponseIpAddresses), decimal? License = default(decimal?), decimal? MemoryAmount = default(decimal?), string NicModel = "e1000", string Plan = "custom", decimal? PlanIpv4Bytes = default(decimal?), decimal? PlanIpv6Bytes = default(decimal?), ServerState State = default(ServerState), ServerStorageDevices StorageDevices = default(ServerStorageDevices), ServerTags Tags = default(ServerTags), Timezone Timezone = default(Timezone), string Title = default(string), Guid? Uuid = default(Guid?), VideoModelEnum? VideoModel = VideoModelEnum.Vga, VncEnum? Vnc = VncEnum.Off, string VncHost = default(string), string VncPassword = default(string), string VncPort = default(string), string Zone = default(string))
+        public Server(BootOrderEnum? BootOrder = default(BootOrderEnum?), decimal? CoreNumber = default(decimal?), FirewallEnum? Firewall = FirewallEnum.On, decimal? Host = default(decimal?), string Hostname = default(string), IpAddresses IpAddresses = default(IpAddresses), decimal? License = default(decimal?), decimal? MemoryAmount = default(decimal?), string NicModel = "e1000", string Plan = "custom", decimal? PlanIpv4Bytes = default(decimal?), decimal? PlanIpv6Bytes = default(decimal?), ServerState State = default(ServerState), ServerStorageDevices StorageDevices = default(ServerStorageDevices), ServerTags Tags = default(ServerTags), Timezone Timezone = default(Timezone), string Title = default(string), Guid? Uuid = default(Guid?), VideoModelEnum? VideoModel = VideoModelEnum.Vga, VncEnum? Vnc = VncEnum.Off, string VncHost = default(string), string VncPassword = default(string), string VncPort = default(string), string Zone = default(string))
         {
             this.BootOrder = BootOrder;
             this.CoreNumber = CoreNumber;
@@ -270,7 +270,7 @@ namespace Upcloud.Model
         /// Gets or Sets IpAddresses
         /// </summary>
         [DataMember(Name="ip_addresses", EmitDefaultValue=false)]
-        public IpAddressListResponseIpAddresses IpAddresses { get; set; }
+        public IpAddresses IpAddresses { get; set; }
 
         /// <summary>
         /// Gets or Sets License

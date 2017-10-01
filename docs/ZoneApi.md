@@ -1,6 +1,6 @@
 # Upcloud.Api.ZoneApi
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -29,6 +29,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ZoneApi();
 
             try
@@ -55,7 +59,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 

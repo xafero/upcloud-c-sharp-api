@@ -1,6 +1,6 @@
 # Upcloud.Api.AccountApi
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="getaccount"></a>
 # **GetAccount**
-> Account GetAccount ()
+> AccountResponse GetAccount ()
 
 Account information
 
@@ -29,12 +29,16 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new AccountApi();
 
             try
             {
                 // Account information
-                Account result = apiInstance.GetAccount();
+                AccountResponse result = apiInstance.GetAccount();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -51,11 +55,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Account**](Account.md)
+[**AccountResponse**](AccountResponse.md)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 

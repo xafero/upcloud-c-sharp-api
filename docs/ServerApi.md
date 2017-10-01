@@ -1,6 +1,6 @@
 # Upcloud.Api.ServerApi
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 [**DeleteFirewallRule**](ServerApi.md#deletefirewallrule) | **DELETE** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Remove firewall rule
 [**DeleteServer**](ServerApi.md#deleteserver) | **DELETE** /server/{serverId} | Delete server
 [**DetachStorage**](ServerApi.md#detachstorage) | **POST** /server/{serverId}/storage/detach | Detach storage
-[**EjectCdrom**](ServerApi.md#ejectcdrom) | **POST** /server/{serverId}/storage/cdrom/eject | Eject CD-ROM
+[**EjectCdrom**](ServerApi.md#ejectcdrom) | **POST** /server/{serverId}/cdrom/eject | Eject CD-ROM
 [**GetFirewallRule**](ServerApi.md#getfirewallrule) | **GET** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Get firewall rule details
 [**ListServerConfigurations**](ServerApi.md#listserverconfigurations) | **GET** /server_size | List server configurations
 [**ListServers**](ServerApi.md#listservers) | **GET** /server | List of servers
@@ -90,7 +90,7 @@ No authorization required
 
 <a name="attachstorage"></a>
 # **AttachStorage**
-> CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse AttachStorage (Guid? serverId, AttachStorageDeviceRequest storageDevice)
 
 Attach storage
 
@@ -110,9 +110,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var storageDevice = new StorageDevice(); // StorageDevice | 
+            var storageDevice = new AttachStorageDeviceRequest(); // AttachStorageDeviceRequest | 
 
             try
             {
@@ -134,7 +138,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **storageDevice** | [**StorageDevice**](StorageDevice.md)|  | 
+ **storageDevice** | [**AttachStorageDeviceRequest**](AttachStorageDeviceRequest.md)|  | 
 
 ### Return type
 
@@ -142,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -173,6 +177,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
             var firewallRule = new FirewallRuleRequest(); // FirewallRuleRequest | 
@@ -205,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -216,7 +224,7 @@ No authorization required
 
 <a name="createserver"></a>
 # **CreateServer**
-> CreateServerResponse CreateServer (Server server = null)
+> CreateServerResponse CreateServer (CreateServerRequest server = null)
 
 Create server
 
@@ -236,8 +244,12 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
-            var server = new Server(); // Server |  (optional) 
+            var server = new CreateServerRequest(); // CreateServerRequest |  (optional) 
 
             try
             {
@@ -258,7 +270,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **server** | [**Server**](Server.md)|  | [optional] 
+ **server** | [**CreateServerRequest**](CreateServerRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -266,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -277,7 +289,7 @@ No authorization required
 
 <a name="deletefirewallrule"></a>
 # **DeleteFirewallRule**
-> void DeleteFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> void DeleteFirewallRule (Guid? serverId, decimal? firewallRuleNumber)
 
 Remove firewall rule
 
@@ -297,9 +309,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var firewallRuleNumber = firewallRuleNumber_example;  // Guid? | Denotes the index of the firewall rule in the server's firewall rule list
+            var firewallRuleNumber = 3.4;  // decimal? | Denotes the index of the firewall rule in the server's firewall rule list
 
             try
             {
@@ -320,7 +336,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **firewallRuleNumber** | **Guid?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
+ **firewallRuleNumber** | **decimal?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
 
 ### Return type
 
@@ -328,7 +344,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -357,6 +373,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Id of server to delete
 
@@ -386,7 +406,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -397,7 +417,7 @@ No authorization required
 
 <a name="detachstorage"></a>
 # **DetachStorage**
-> CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+> CreateServerResponse DetachStorage (Guid? serverId, StorageDeviceDetachRequest storageDevice)
 
 Detach storage
 
@@ -417,9 +437,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var storageDevice = new StorageDevice(); // StorageDevice | 
+            var storageDevice = new StorageDeviceDetachRequest(); // StorageDeviceDetachRequest | 
 
             try
             {
@@ -441,7 +465,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **storageDevice** | [**StorageDevice**](StorageDevice.md)|  | 
+ **storageDevice** | [**StorageDeviceDetachRequest**](StorageDeviceDetachRequest.md)|  | 
 
 ### Return type
 
@@ -449,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -460,7 +484,7 @@ No authorization required
 
 <a name="ejectcdrom"></a>
 # **EjectCdrom**
-> CreateServerResponse EjectCdrom (Guid? serverId)
+> void EjectCdrom (Guid? serverId)
 
 Eject CD-ROM
 
@@ -480,14 +504,17 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
 
             try
             {
                 // Eject CD-ROM
-                CreateServerResponse result = apiInstance.EjectCdrom(serverId);
-                Debug.WriteLine(result);
+                apiInstance.EjectCdrom(serverId);
             }
             catch (Exception e)
             {
@@ -506,11 +533,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateServerResponse**](CreateServerResponse.md)
+void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -521,7 +548,7 @@ No authorization required
 
 <a name="getfirewallrule"></a>
 # **GetFirewallRule**
-> FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, Guid? firewallRuleNumber)
+> FirewallRuleCreateResponse GetFirewallRule (Guid? serverId, decimal? firewallRuleNumber)
 
 Get firewall rule details
 
@@ -541,9 +568,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var firewallRuleNumber = firewallRuleNumber_example;  // Guid? | Denotes the index of the firewall rule in the server's firewall rule list
+            var firewallRuleNumber = 3.4;  // decimal? | Denotes the index of the firewall rule in the server's firewall rule list
 
             try
             {
@@ -565,7 +596,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **firewallRuleNumber** | **Guid?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
+ **firewallRuleNumber** | **decimal?**| Denotes the index of the firewall rule in the server&#39;s firewall rule list | 
 
 ### Return type
 
@@ -573,7 +604,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -604,6 +635,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
 
             try
@@ -630,7 +665,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -661,6 +696,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
 
             try
@@ -687,7 +726,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -698,7 +737,7 @@ No authorization required
 
 <a name="loadcdrom"></a>
 # **LoadCdrom**
-> CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
+> CreateServerResponse LoadCdrom (Guid? serverId, StorageDeviceLoadRequest storageDevice = null)
 
 Load CD-ROM
 
@@ -718,9 +757,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
-            var storageDevice = new StorageDevice1(); // StorageDevice1 |  (optional) 
+            var storageDevice = new StorageDeviceLoadRequest(); // StorageDeviceLoadRequest |  (optional) 
 
             try
             {
@@ -742,7 +785,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Server id | 
- **storageDevice** | [**StorageDevice1**](StorageDevice1.md)|  | [optional] 
+ **storageDevice** | [**StorageDeviceLoadRequest**](StorageDeviceLoadRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -750,7 +793,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -779,6 +822,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Id of server to modify
             var server = new Server(); // Server |  (optional) 
@@ -811,7 +858,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -905,6 +952,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Id of server to return
 
@@ -935,7 +986,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -966,6 +1017,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Server id
 
@@ -996,7 +1051,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -1027,6 +1082,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Id of server to start
 
@@ -1057,7 +1116,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -1088,6 +1147,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Id of server to stop
             var stopServer = new StopServer(); // StopServer | 
@@ -1120,7 +1183,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 

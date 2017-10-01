@@ -30,8 +30,8 @@ namespace Upcloud.Api
         /// Returns information on the user&#39;s account.
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Account</returns>
-        Account GetAccount ();
+        /// <returns>AccountResponse</returns>
+        AccountResponse GetAccount ();
 
         /// <summary>
         /// Account information
@@ -40,8 +40,8 @@ namespace Upcloud.Api
         /// Returns information on the user&#39;s account.
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Account</returns>
-        ApiResponse<Account> GetAccountWithHttpInfo ();
+        /// <returns>ApiResponse of AccountResponse</returns>
+        ApiResponse<AccountResponse> GetAccountWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -51,8 +51,8 @@ namespace Upcloud.Api
         /// Returns information on the user&#39;s account.
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Account</returns>
-        System.Threading.Tasks.Task<Account> GetAccountAsync ();
+        /// <returns>Task of AccountResponse</returns>
+        System.Threading.Tasks.Task<AccountResponse> GetAccountAsync ();
 
         /// <summary>
         /// Account information
@@ -61,8 +61,8 @@ namespace Upcloud.Api
         /// Returns information on the user&#39;s account.
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Account)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Account>> GetAccountAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (AccountResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountResponse>> GetAccountAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -167,10 +167,10 @@ namespace Upcloud.Api
         /// Account information Returns information on the user&#39;s account.
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Account</returns>
-        public Account GetAccount ()
+        /// <returns>AccountResponse</returns>
+        public AccountResponse GetAccount ()
         {
-             ApiResponse<Account> localVarResponse = GetAccountWithHttpInfo();
+             ApiResponse<AccountResponse> localVarResponse = GetAccountWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -178,8 +178,8 @@ namespace Upcloud.Api
         /// Account information Returns information on the user&#39;s account.
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Account</returns>
-        public ApiResponse< Account > GetAccountWithHttpInfo ()
+        /// <returns>ApiResponse of AccountResponse</returns>
+        public ApiResponse< AccountResponse > GetAccountWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -205,6 +205,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -219,19 +225,19 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Account>(localVarStatusCode,
+            return new ApiResponse<AccountResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Account) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Account)));
+                (AccountResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountResponse)));
         }
 
         /// <summary>
         /// Account information Returns information on the user&#39;s account.
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of Account</returns>
-        public async System.Threading.Tasks.Task<Account> GetAccountAsync ()
+        /// <returns>Task of AccountResponse</returns>
+        public async System.Threading.Tasks.Task<AccountResponse> GetAccountAsync ()
         {
-             ApiResponse<Account> localVarResponse = await GetAccountAsyncWithHttpInfo();
+             ApiResponse<AccountResponse> localVarResponse = await GetAccountAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -240,8 +246,8 @@ namespace Upcloud.Api
         /// Account information Returns information on the user&#39;s account.
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (Account)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Account>> GetAccountAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (AccountResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AccountResponse>> GetAccountAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/account";
@@ -267,6 +273,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -281,9 +293,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Account>(localVarStatusCode,
+            return new ApiResponse<AccountResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Account) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Account)));
+                (AccountResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountResponse)));
         }
 
     }

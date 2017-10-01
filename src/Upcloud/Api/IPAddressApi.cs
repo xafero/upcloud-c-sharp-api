@@ -32,7 +32,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>AssignIpResponse</returns>
-        AssignIpResponse AddIp (IpAddress ipAddress = null);
+        AssignIpResponse AddIp (AddIpRequest ipAddress = null);
 
         /// <summary>
         /// Assign IP address
@@ -43,7 +43,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>ApiResponse of AssignIpResponse</returns>
-        ApiResponse<AssignIpResponse> AddIpWithHttpInfo (IpAddress ipAddress = null);
+        ApiResponse<AssignIpResponse> AddIpWithHttpInfo (AddIpRequest ipAddress = null);
         /// <summary>
         /// Release IP address
         /// </summary>
@@ -115,7 +115,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>AssignIpResponse</returns>
-        AssignIpResponse ModifyIp (string ip, IpAddress1 ipAddress = null);
+        AssignIpResponse ModifyIp (string ip, ModifyIpRequest ipAddress = null);
 
         /// <summary>
         /// Modify IP address
@@ -127,7 +127,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>ApiResponse of AssignIpResponse</returns>
-        ApiResponse<AssignIpResponse> ModifyIpWithHttpInfo (string ip, IpAddress1 ipAddress = null);
+        ApiResponse<AssignIpResponse> ModifyIpWithHttpInfo (string ip, ModifyIpRequest ipAddress = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -139,7 +139,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of AssignIpResponse</returns>
-        System.Threading.Tasks.Task<AssignIpResponse> AddIpAsync (IpAddress ipAddress = null);
+        System.Threading.Tasks.Task<AssignIpResponse> AddIpAsync (AddIpRequest ipAddress = null);
 
         /// <summary>
         /// Assign IP address
@@ -150,7 +150,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (AssignIpResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> AddIpAsyncWithHttpInfo (IpAddress ipAddress = null);
+        System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> AddIpAsyncWithHttpInfo (AddIpRequest ipAddress = null);
         /// <summary>
         /// Release IP address
         /// </summary>
@@ -222,7 +222,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of AssignIpResponse</returns>
-        System.Threading.Tasks.Task<AssignIpResponse> ModifyIpAsync (string ip, IpAddress1 ipAddress = null);
+        System.Threading.Tasks.Task<AssignIpResponse> ModifyIpAsync (string ip, ModifyIpRequest ipAddress = null);
 
         /// <summary>
         /// Modify IP address
@@ -234,7 +234,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (AssignIpResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> ModifyIpAsyncWithHttpInfo (string ip, IpAddress1 ipAddress = null);
+        System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> ModifyIpAsyncWithHttpInfo (string ip, ModifyIpRequest ipAddress = null);
         #endregion Asynchronous Operations
     }
 
@@ -341,7 +341,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>AssignIpResponse</returns>
-        public AssignIpResponse AddIp (IpAddress ipAddress = null)
+        public AssignIpResponse AddIp (AddIpRequest ipAddress = null)
         {
              ApiResponse<AssignIpResponse> localVarResponse = AddIpWithHttpInfo(ipAddress);
              return localVarResponse.Data;
@@ -353,7 +353,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>ApiResponse of AssignIpResponse</returns>
-        public ApiResponse< AssignIpResponse > AddIpWithHttpInfo (IpAddress ipAddress = null)
+        public ApiResponse< AssignIpResponse > AddIpWithHttpInfo (AddIpRequest ipAddress = null)
         {
 
             var localVarPath = "/ip_address";
@@ -387,6 +387,12 @@ namespace Upcloud.Api
                 localVarPostBody = ipAddress; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -412,7 +418,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of AssignIpResponse</returns>
-        public async System.Threading.Tasks.Task<AssignIpResponse> AddIpAsync (IpAddress ipAddress = null)
+        public async System.Threading.Tasks.Task<AssignIpResponse> AddIpAsync (AddIpRequest ipAddress = null)
         {
              ApiResponse<AssignIpResponse> localVarResponse = await AddIpAsyncWithHttpInfo(ipAddress);
              return localVarResponse.Data;
@@ -425,7 +431,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (AssignIpResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> AddIpAsyncWithHttpInfo (IpAddress ipAddress = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> AddIpAsyncWithHttpInfo (AddIpRequest ipAddress = null)
         {
 
             var localVarPath = "/ip_address";
@@ -459,6 +465,12 @@ namespace Upcloud.Api
                 localVarPostBody = ipAddress; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -525,6 +537,12 @@ namespace Upcloud.Api
 
             if (ip != null) localVarPathParams.Add("ip", Configuration.ApiClient.ParameterToString(ip)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -592,6 +610,12 @@ namespace Upcloud.Api
 
             if (ip != null) localVarPathParams.Add("ip", Configuration.ApiClient.ParameterToString(ip)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -659,6 +683,12 @@ namespace Upcloud.Api
 
             if (ip != null) localVarPathParams.Add("ip", Configuration.ApiClient.ParameterToString(ip)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -727,6 +757,12 @@ namespace Upcloud.Api
 
             if (ip != null) localVarPathParams.Add("ip", Configuration.ApiClient.ParameterToString(ip)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -788,6 +824,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -850,6 +892,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -876,7 +924,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>AssignIpResponse</returns>
-        public AssignIpResponse ModifyIp (string ip, IpAddress1 ipAddress = null)
+        public AssignIpResponse ModifyIp (string ip, ModifyIpRequest ipAddress = null)
         {
              ApiResponse<AssignIpResponse> localVarResponse = ModifyIpWithHttpInfo(ip, ipAddress);
              return localVarResponse.Data;
@@ -889,7 +937,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>ApiResponse of AssignIpResponse</returns>
-        public ApiResponse< AssignIpResponse > ModifyIpWithHttpInfo (string ip, IpAddress1 ipAddress = null)
+        public ApiResponse< AssignIpResponse > ModifyIpWithHttpInfo (string ip, ModifyIpRequest ipAddress = null)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
@@ -927,6 +975,12 @@ namespace Upcloud.Api
                 localVarPostBody = ipAddress; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -953,7 +1007,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of AssignIpResponse</returns>
-        public async System.Threading.Tasks.Task<AssignIpResponse> ModifyIpAsync (string ip, IpAddress1 ipAddress = null)
+        public async System.Threading.Tasks.Task<AssignIpResponse> ModifyIpAsync (string ip, ModifyIpRequest ipAddress = null)
         {
              ApiResponse<AssignIpResponse> localVarResponse = await ModifyIpAsyncWithHttpInfo(ip, ipAddress);
              return localVarResponse.Data;
@@ -967,7 +1021,7 @@ namespace Upcloud.Api
         /// <param name="ip">Ip address</param>
         /// <param name="ipAddress"> (optional)</param>
         /// <returns>Task of ApiResponse (AssignIpResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> ModifyIpAsyncWithHttpInfo (string ip, IpAddress1 ipAddress = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssignIpResponse>> ModifyIpAsyncWithHttpInfo (string ip, ModifyIpRequest ipAddress = null)
         {
             // verify the required parameter 'ip' is set
             if (ip == null)
@@ -1005,6 +1059,12 @@ namespace Upcloud.Api
                 localVarPostBody = ipAddress; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

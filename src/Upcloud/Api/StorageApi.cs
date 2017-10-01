@@ -33,7 +33,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>CreateServerResponse</returns>
-        CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice);
+        CreateServerResponse AttachStorage (Guid? serverId, AttachStorageDeviceRequest storageDevice);
 
         /// <summary>
         /// Attach storage
@@ -45,7 +45,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        ApiResponse<CreateServerResponse> AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        ApiResponse<CreateServerResponse> AttachStorageWithHttpInfo (Guid? serverId, AttachStorageDeviceRequest storageDevice);
         /// <summary>
         /// Create backup
         /// </summary>
@@ -56,7 +56,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse BackupStorage (Guid? storageId, Storage4 storage = null);
+        CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage = null);
 
         /// <summary>
         /// Create backup
@@ -68,7 +68,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null);
+        ApiResponse<CreateStorageResponse> BackupStorageWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null);
         /// <summary>
         /// Cancel storage operation
         /// </summary>
@@ -100,7 +100,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse CloneStorage (Guid? storageId, Storage2 storage = null);
+        CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage = null);
 
         /// <summary>
         /// Clone storage
@@ -112,7 +112,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null);
+        ApiResponse<CreateStorageResponse> CloneStorageWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null);
         /// <summary>
         /// Create storage
         /// </summary>
@@ -122,7 +122,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse CreateStorage (Storage storage);
+        CreateStorageResponse CreateStorage (CreateStorageRequest storage);
 
         /// <summary>
         /// Create storage
@@ -133,7 +133,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> CreateStorageWithHttpInfo (Storage storage);
+        ApiResponse<CreateStorageResponse> CreateStorageWithHttpInfo (CreateStorageRequest storage);
         /// <summary>
         /// Delete storage
         /// </summary>
@@ -165,7 +165,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>CreateServerResponse</returns>
-        CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice);
+        CreateServerResponse DetachStorage (Guid? serverId, StorageDeviceDetachRequest storageDevice);
 
         /// <summary>
         /// Detach storage
@@ -177,7 +177,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        ApiResponse<CreateServerResponse> DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        ApiResponse<CreateServerResponse> DetachStorageWithHttpInfo (Guid? serverId, StorageDeviceDetachRequest storageDevice);
         /// <summary>
         /// Eject CD-ROM
         /// </summary>
@@ -186,8 +186,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>CreateServerResponse</returns>
-        CreateServerResponse EjectCdrom (Guid? serverId);
+        /// <returns></returns>
+        void EjectCdrom (Guid? serverId);
 
         /// <summary>
         /// Eject CD-ROM
@@ -197,8 +197,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of CreateServerResponse</returns>
-        ApiResponse<CreateServerResponse> EjectCdromWithHttpInfo (Guid? serverId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> EjectCdromWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Add storage to favorites
         /// </summary>
@@ -291,7 +291,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>CreateServerResponse</returns>
-        CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null);
+        CreateServerResponse LoadCdrom (Guid? serverId, StorageDeviceLoadRequest storageDevice = null);
 
         /// <summary>
         /// Load CD-ROM
@@ -303,7 +303,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        ApiResponse<CreateServerResponse> LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
+        ApiResponse<CreateServerResponse> LoadCdromWithHttpInfo (Guid? serverId, StorageDeviceLoadRequest storageDevice = null);
         /// <summary>
         /// Modify storage
         /// </summary>
@@ -314,7 +314,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse ModifyStorage (Guid? storageId, Storage1 storage);
+        CreateStorageResponse ModifyStorage (Guid? storageId, ModifyStorageRequest storage);
 
         /// <summary>
         /// Modify storage
@@ -326,7 +326,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage);
+        ApiResponse<CreateStorageResponse> ModifyStorageWithHttpInfo (Guid? storageId, ModifyStorageRequest storage);
         /// <summary>
         /// Restore backup
         /// </summary>
@@ -358,7 +358,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse TemplatizeStorage (Guid? storageId, Storage3 storage = null);
+        CreateStorageResponse TemplatizeStorage (Guid? storageId, TemplitizeStorageRequest storage = null);
 
         /// <summary>
         /// Templatize storage
@@ -370,7 +370,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        ApiResponse<CreateStorageResponse> TemplatizeStorageWithHttpInfo (Guid? storageId, TemplitizeStorageRequest storage = null);
         /// <summary>
         /// Remove storage from favorites
         /// </summary>
@@ -404,7 +404,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of CreateServerResponse</returns>
-        System.Threading.Tasks.Task<CreateServerResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice);
+        System.Threading.Tasks.Task<CreateServerResponse> AttachStorageAsync (Guid? serverId, AttachStorageDeviceRequest storageDevice);
 
         /// <summary>
         /// Attach storage
@@ -416,7 +416,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, AttachStorageDeviceRequest storageDevice);
         /// <summary>
         /// Create backup
         /// </summary>
@@ -427,7 +427,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, Storage4 storage = null);
+        System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, CreateBackupStorageRequest storage = null);
 
         /// <summary>
         /// Create backup
@@ -439,7 +439,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null);
         /// <summary>
         /// Cancel storage operation
         /// </summary>
@@ -471,7 +471,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, Storage2 storage = null);
+        System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, CloneStorageRequest storage = null);
 
         /// <summary>
         /// Clone storage
@@ -483,7 +483,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null);
         /// <summary>
         /// Create storage
         /// </summary>
@@ -493,7 +493,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> CreateStorageAsync (Storage storage);
+        System.Threading.Tasks.Task<CreateStorageResponse> CreateStorageAsync (CreateStorageRequest storage);
 
         /// <summary>
         /// Create storage
@@ -504,7 +504,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CreateStorageAsyncWithHttpInfo (Storage storage);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CreateStorageAsyncWithHttpInfo (CreateStorageRequest storage);
         /// <summary>
         /// Delete storage
         /// </summary>
@@ -536,7 +536,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of CreateServerResponse</returns>
-        System.Threading.Tasks.Task<CreateServerResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice);
+        System.Threading.Tasks.Task<CreateServerResponse> DetachStorageAsync (Guid? serverId, StorageDeviceDetachRequest storageDevice);
 
         /// <summary>
         /// Detach storage
@@ -548,7 +548,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice);
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDeviceDetachRequest storageDevice);
         /// <summary>
         /// Eject CD-ROM
         /// </summary>
@@ -557,8 +557,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of CreateServerResponse</returns>
-        System.Threading.Tasks.Task<CreateServerResponse> EjectCdromAsync (Guid? serverId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task EjectCdromAsync (Guid? serverId);
 
         /// <summary>
         /// Eject CD-ROM
@@ -568,8 +568,8 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> EjectCdromAsyncWithHttpInfo (Guid? serverId);
         /// <summary>
         /// Add storage to favorites
         /// </summary>
@@ -662,7 +662,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of CreateServerResponse</returns>
-        System.Threading.Tasks.Task<CreateServerResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null);
+        System.Threading.Tasks.Task<CreateServerResponse> LoadCdromAsync (Guid? serverId, StorageDeviceLoadRequest storageDevice = null);
 
         /// <summary>
         /// Load CD-ROM
@@ -674,7 +674,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDeviceLoadRequest storageDevice = null);
         /// <summary>
         /// Modify storage
         /// </summary>
@@ -685,7 +685,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> ModifyStorageAsync (Guid? storageId, Storage1 storage);
+        System.Threading.Tasks.Task<CreateStorageResponse> ModifyStorageAsync (Guid? storageId, ModifyStorageRequest storage);
 
         /// <summary>
         /// Modify storage
@@ -697,7 +697,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, ModifyStorageRequest storage);
         /// <summary>
         /// Restore backup
         /// </summary>
@@ -729,7 +729,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null);
+        System.Threading.Tasks.Task<CreateStorageResponse> TemplatizeStorageAsync (Guid? storageId, TemplitizeStorageRequest storage = null);
 
         /// <summary>
         /// Templatize storage
@@ -741,7 +741,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, TemplitizeStorageRequest storage = null);
         /// <summary>
         /// Remove storage from favorites
         /// </summary>
@@ -870,7 +870,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>CreateServerResponse</returns>
-        public CreateServerResponse AttachStorage (Guid? serverId, StorageDevice storageDevice)
+        public CreateServerResponse AttachStorage (Guid? serverId, AttachStorageDeviceRequest storageDevice)
         {
              ApiResponse<CreateServerResponse> localVarResponse = AttachStorageWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
@@ -883,7 +883,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        public ApiResponse< CreateServerResponse > AttachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        public ApiResponse< CreateServerResponse > AttachStorageWithHttpInfo (Guid? serverId, AttachStorageDeviceRequest storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -924,6 +924,12 @@ namespace Upcloud.Api
                 localVarPostBody = storageDevice; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -950,7 +956,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of CreateServerResponse</returns>
-        public async System.Threading.Tasks.Task<CreateServerResponse> AttachStorageAsync (Guid? serverId, StorageDevice storageDevice)
+        public async System.Threading.Tasks.Task<CreateServerResponse> AttachStorageAsync (Guid? serverId, AttachStorageDeviceRequest storageDevice)
         {
              ApiResponse<CreateServerResponse> localVarResponse = await AttachStorageAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
@@ -964,7 +970,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> AttachStorageAsyncWithHttpInfo (Guid? serverId, AttachStorageDeviceRequest storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1005,6 +1011,12 @@ namespace Upcloud.Api
                 localVarPostBody = storageDevice; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1031,7 +1043,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse BackupStorage (Guid? storageId, Storage4 storage = null)
+        public CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage = null)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = BackupStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1044,7 +1056,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > BackupStorageWithHttpInfo (Guid? storageId, Storage4 storage = null)
+        public ApiResponse< CreateStorageResponse > BackupStorageWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1082,6 +1094,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1108,7 +1126,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, Storage4 storage = null)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, CreateBackupStorageRequest storage = null)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await BackupStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1122,7 +1140,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, Storage4 storage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1160,6 +1178,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1226,6 +1250,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1293,6 +1323,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1319,7 +1355,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse CloneStorage (Guid? storageId, Storage2 storage = null)
+        public CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage = null)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = CloneStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1332,7 +1368,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > CloneStorageWithHttpInfo (Guid? storageId, Storage2 storage = null)
+        public ApiResponse< CreateStorageResponse > CloneStorageWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1370,6 +1406,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1396,7 +1438,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, Storage2 storage = null)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, CloneStorageRequest storage = null)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await CloneStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1410,7 +1452,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, Storage2 storage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -1448,6 +1490,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1473,7 +1521,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse CreateStorage (Storage storage)
+        public CreateStorageResponse CreateStorage (CreateStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = CreateStorageWithHttpInfo(storage);
              return localVarResponse.Data;
@@ -1485,7 +1533,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > CreateStorageWithHttpInfo (Storage storage)
+        public ApiResponse< CreateStorageResponse > CreateStorageWithHttpInfo (CreateStorageRequest storage)
         {
             // verify the required parameter 'storage' is set
             if (storage == null)
@@ -1522,6 +1570,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1547,7 +1601,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> CreateStorageAsync (Storage storage)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> CreateStorageAsync (CreateStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await CreateStorageAsyncWithHttpInfo(storage);
              return localVarResponse.Data;
@@ -1560,7 +1614,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CreateStorageAsyncWithHttpInfo (Storage storage)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CreateStorageAsyncWithHttpInfo (CreateStorageRequest storage)
         {
             // verify the required parameter 'storage' is set
             if (storage == null)
@@ -1597,6 +1651,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1663,6 +1723,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1730,6 +1796,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1756,7 +1828,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>CreateServerResponse</returns>
-        public CreateServerResponse DetachStorage (Guid? serverId, StorageDevice storageDevice)
+        public CreateServerResponse DetachStorage (Guid? serverId, StorageDeviceDetachRequest storageDevice)
         {
              ApiResponse<CreateServerResponse> localVarResponse = DetachStorageWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
@@ -1769,7 +1841,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        public ApiResponse< CreateServerResponse > DetachStorageWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        public ApiResponse< CreateServerResponse > DetachStorageWithHttpInfo (Guid? serverId, StorageDeviceDetachRequest storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1810,6 +1882,12 @@ namespace Upcloud.Api
                 localVarPostBody = storageDevice; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1836,7 +1914,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of CreateServerResponse</returns>
-        public async System.Threading.Tasks.Task<CreateServerResponse> DetachStorageAsync (Guid? serverId, StorageDevice storageDevice)
+        public async System.Threading.Tasks.Task<CreateServerResponse> DetachStorageAsync (Guid? serverId, StorageDeviceDetachRequest storageDevice)
         {
              ApiResponse<CreateServerResponse> localVarResponse = await DetachStorageAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
@@ -1850,7 +1928,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"></param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDevice storageDevice)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> DetachStorageAsyncWithHttpInfo (Guid? serverId, StorageDeviceDetachRequest storageDevice)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -1891,6 +1969,12 @@ namespace Upcloud.Api
                 localVarPostBody = storageDevice; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1915,11 +1999,10 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>CreateServerResponse</returns>
-        public CreateServerResponse EjectCdrom (Guid? serverId)
+        /// <returns></returns>
+        public void EjectCdrom (Guid? serverId)
         {
-             ApiResponse<CreateServerResponse> localVarResponse = EjectCdromWithHttpInfo(serverId);
-             return localVarResponse.Data;
+             EjectCdromWithHttpInfo(serverId);
         }
 
         /// <summary>
@@ -1927,14 +2010,14 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>ApiResponse of CreateServerResponse</returns>
-        public ApiResponse< CreateServerResponse > EjectCdromWithHttpInfo (Guid? serverId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> EjectCdromWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
                 throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->EjectCdrom");
 
-            var localVarPath = "/server/{serverId}/storage/cdrom/eject";
+            var localVarPath = "/server/{serverId}/cdrom/eject";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -1958,6 +2041,12 @@ namespace Upcloud.Api
 
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1972,9 +2061,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
+                null);
         }
 
         /// <summary>
@@ -1982,11 +2071,10 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of CreateServerResponse</returns>
-        public async System.Threading.Tasks.Task<CreateServerResponse> EjectCdromAsync (Guid? serverId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task EjectCdromAsync (Guid? serverId)
         {
-             ApiResponse<CreateServerResponse> localVarResponse = await EjectCdromAsyncWithHttpInfo(serverId);
-             return localVarResponse.Data;
+             await EjectCdromAsyncWithHttpInfo(serverId);
 
         }
 
@@ -1995,14 +2083,14 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Server id</param>
-        /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> EjectCdromAsyncWithHttpInfo (Guid? serverId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> EjectCdromAsyncWithHttpInfo (Guid? serverId)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
                 throw new ApiException(400, "Missing required parameter 'serverId' when calling StorageApi->EjectCdrom");
 
-            var localVarPath = "/server/{serverId}/storage/cdrom/eject";
+            var localVarPath = "/server/{serverId}/cdrom/eject";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -2026,6 +2114,12 @@ namespace Upcloud.Api
 
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2040,9 +2134,9 @@ namespace Upcloud.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CreateServerResponse>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CreateServerResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateServerResponse)));
+                null);
         }
 
         /// <summary>
@@ -2092,6 +2186,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2159,6 +2259,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2226,6 +2332,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2294,6 +2406,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2361,6 +2479,12 @@ namespace Upcloud.Api
 
             if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2429,6 +2553,12 @@ namespace Upcloud.Api
 
             if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2490,6 +2620,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2552,6 +2688,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2578,7 +2720,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>CreateServerResponse</returns>
-        public CreateServerResponse LoadCdrom (Guid? serverId, StorageDevice1 storageDevice = null)
+        public CreateServerResponse LoadCdrom (Guid? serverId, StorageDeviceLoadRequest storageDevice = null)
         {
              ApiResponse<CreateServerResponse> localVarResponse = LoadCdromWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
@@ -2591,7 +2733,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        public ApiResponse< CreateServerResponse > LoadCdromWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
+        public ApiResponse< CreateServerResponse > LoadCdromWithHttpInfo (Guid? serverId, StorageDeviceLoadRequest storageDevice = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2629,6 +2771,12 @@ namespace Upcloud.Api
                 localVarPostBody = storageDevice; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2655,7 +2803,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of CreateServerResponse</returns>
-        public async System.Threading.Tasks.Task<CreateServerResponse> LoadCdromAsync (Guid? serverId, StorageDevice1 storageDevice = null)
+        public async System.Threading.Tasks.Task<CreateServerResponse> LoadCdromAsync (Guid? serverId, StorageDeviceLoadRequest storageDevice = null)
         {
              ApiResponse<CreateServerResponse> localVarResponse = await LoadCdromAsyncWithHttpInfo(serverId, storageDevice);
              return localVarResponse.Data;
@@ -2669,7 +2817,7 @@ namespace Upcloud.Api
         /// <param name="serverId">Server id</param>
         /// <param name="storageDevice"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDevice1 storageDevice = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> LoadCdromAsyncWithHttpInfo (Guid? serverId, StorageDeviceLoadRequest storageDevice = null)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
@@ -2707,6 +2855,12 @@ namespace Upcloud.Api
                 localVarPostBody = storageDevice; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2733,7 +2887,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse ModifyStorage (Guid? storageId, Storage1 storage)
+        public CreateStorageResponse ModifyStorage (Guid? storageId, ModifyStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = ModifyStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -2746,7 +2900,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > ModifyStorageWithHttpInfo (Guid? storageId, Storage1 storage)
+        public ApiResponse< CreateStorageResponse > ModifyStorageWithHttpInfo (Guid? storageId, ModifyStorageRequest storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -2787,6 +2941,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2813,7 +2973,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> ModifyStorageAsync (Guid? storageId, Storage1 storage)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> ModifyStorageAsync (Guid? storageId, ModifyStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await ModifyStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -2827,7 +2987,7 @@ namespace Upcloud.Api
         /// <param name="storageId"></param>
         /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, Storage1 storage)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> ModifyStorageAsyncWithHttpInfo (Guid? storageId, ModifyStorageRequest storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -2868,6 +3028,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2934,6 +3100,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3001,6 +3173,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3027,7 +3205,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse TemplatizeStorage (Guid? storageId, Storage3 storage = null)
+        public CreateStorageResponse TemplatizeStorage (Guid? storageId, TemplitizeStorageRequest storage = null)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = TemplatizeStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -3040,7 +3218,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > TemplatizeStorageWithHttpInfo (Guid? storageId, Storage3 storage = null)
+        public ApiResponse< CreateStorageResponse > TemplatizeStorageWithHttpInfo (Guid? storageId, TemplitizeStorageRequest storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -3078,6 +3256,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3104,7 +3288,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> TemplatizeStorageAsync (Guid? storageId, Storage3 storage = null)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> TemplatizeStorageAsync (Guid? storageId, TemplitizeStorageRequest storage = null)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await TemplatizeStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -3118,7 +3302,7 @@ namespace Upcloud.Api
         /// <param name="storageId">Storage id</param>
         /// <param name="storage"> (optional)</param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, Storage3 storage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> TemplatizeStorageAsyncWithHttpInfo (Guid? storageId, TemplitizeStorageRequest storage = null)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
@@ -3156,6 +3340,12 @@ namespace Upcloud.Api
                 localVarPostBody = storage; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3222,6 +3412,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3289,6 +3485,12 @@ namespace Upcloud.Api
 
             if (storageId != null) localVarPathParams.Add("storageId", Configuration.ApiClient.ParameterToString(storageId)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

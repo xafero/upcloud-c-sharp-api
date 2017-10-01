@@ -62,12 +62,16 @@ namespace Example
         public void main()
         {
 
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new AccountApi();
 
             try
             {
                 // Account information
-                Account result = apiInstance.GetAccount();
+                AccountResponse result = apiInstance.GetAccount();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -83,7 +87,7 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -106,7 +110,7 @@ Class | Method | HTTP request | Description
 *ServerApi* | [**DeleteFirewallRule**](docs/ServerApi.md#deletefirewallrule) | **DELETE** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Remove firewall rule
 *ServerApi* | [**DeleteServer**](docs/ServerApi.md#deleteserver) | **DELETE** /server/{serverId} | Delete server
 *ServerApi* | [**DetachStorage**](docs/ServerApi.md#detachstorage) | **POST** /server/{serverId}/storage/detach | Detach storage
-*ServerApi* | [**EjectCdrom**](docs/ServerApi.md#ejectcdrom) | **POST** /server/{serverId}/storage/cdrom/eject | Eject CD-ROM
+*ServerApi* | [**EjectCdrom**](docs/ServerApi.md#ejectcdrom) | **POST** /server/{serverId}/cdrom/eject | Eject CD-ROM
 *ServerApi* | [**GetFirewallRule**](docs/ServerApi.md#getfirewallrule) | **GET** /server/{serverId}/firewall_rule/{firewallRuleNumber} | Get firewall rule details
 *ServerApi* | [**ListServerConfigurations**](docs/ServerApi.md#listserverconfigurations) | **GET** /server_size | List server configurations
 *ServerApi* | [**ListServers**](docs/ServerApi.md#listservers) | **GET** /server | List of servers
@@ -125,7 +129,7 @@ Class | Method | HTTP request | Description
 *StorageApi* | [**CreateStorage**](docs/StorageApi.md#createstorage) | **POST** /storage | Create storage
 *StorageApi* | [**DeleteStorage**](docs/StorageApi.md#deletestorage) | **DELETE** /storage/{storageId} | Delete storage
 *StorageApi* | [**DetachStorage**](docs/StorageApi.md#detachstorage) | **POST** /server/{serverId}/storage/detach | Detach storage
-*StorageApi* | [**EjectCdrom**](docs/StorageApi.md#ejectcdrom) | **POST** /server/{serverId}/storage/cdrom/eject | Eject CD-ROM
+*StorageApi* | [**EjectCdrom**](docs/StorageApi.md#ejectcdrom) | **POST** /server/{serverId}/cdrom/eject | Eject CD-ROM
 *StorageApi* | [**FavoriteStorage**](docs/StorageApi.md#favoritestorage) | **POST** /storage/{storageId}/favorite | Add storage to favorites
 *StorageApi* | [**GetStorageDetails**](docs/StorageApi.md#getstoragedetails) | **GET** /storage/{storageId} | Get storage details
 *StorageApi* | [**ListStorageTypes**](docs/StorageApi.md#liststoragetypes) | **GET** /storage/{type}/ | List of storages by type
@@ -149,15 +153,22 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.Account](docs/Account.md)
+ - [Model.AccountResponse](docs/AccountResponse.md)
+ - [Model.AddIpRequest](docs/AddIpRequest.md)
  - [Model.AddressFamily](docs/AddressFamily.md)
  - [Model.AssignIpResponse](docs/AssignIpResponse.md)
+ - [Model.AttachStorageDeviceRequest](docs/AttachStorageDeviceRequest.md)
  - [Model.AvailablePlanListResponse](docs/AvailablePlanListResponse.md)
  - [Model.AvailablePlanListResponsePlans](docs/AvailablePlanListResponsePlans.md)
  - [Model.BackupRule](docs/BackupRule.md)
+ - [Model.CloneStorageRequest](docs/CloneStorageRequest.md)
  - [Model.ConfigurationListResponse](docs/ConfigurationListResponse.md)
  - [Model.ConfigurationListResponseServerSizes](docs/ConfigurationListResponseServerSizes.md)
+ - [Model.CreateBackupStorageRequest](docs/CreateBackupStorageRequest.md)
  - [Model.CreateNewTagResponse](docs/CreateNewTagResponse.md)
+ - [Model.CreateServerRequest](docs/CreateServerRequest.md)
  - [Model.CreateServerResponse](docs/CreateServerResponse.md)
+ - [Model.CreateStorageRequest](docs/CreateStorageRequest.md)
  - [Model.CreateStorageResponse](docs/CreateStorageResponse.md)
  - [Model.Error](docs/Error.md)
  - [Model.ErrorCode](docs/ErrorCode.md)
@@ -169,13 +180,14 @@ Class | Method | HTTP request | Description
  - [Model.FirewallRuleListResponseFirewallRules](docs/FirewallRuleListResponseFirewallRules.md)
  - [Model.FirewallRuleRequest](docs/FirewallRuleRequest.md)
  - [Model.IpAddress](docs/IpAddress.md)
- - [Model.IpAddress1](docs/IpAddress1.md)
  - [Model.IpAddressListResponse](docs/IpAddressListResponse.md)
- - [Model.IpAddressListResponseIpAddresses](docs/IpAddressListResponseIpAddresses.md)
+ - [Model.IpAddresses](docs/IpAddresses.md)
+ - [Model.ModifyIpRequest](docs/ModifyIpRequest.md)
+ - [Model.ModifyStorageRequest](docs/ModifyStorageRequest.md)
  - [Model.Plan](docs/Plan.md)
  - [Model.Price](docs/Price.md)
  - [Model.PriceListResponse](docs/PriceListResponse.md)
- - [Model.PriceListResponsePrice](docs/PriceListResponsePrice.md)
+ - [Model.PriceListResponsePrices](docs/PriceListResponsePrices.md)
  - [Model.PriceZone](docs/PriceZone.md)
  - [Model.RestartServer](docs/RestartServer.md)
  - [Model.Server](docs/Server.md)
@@ -186,15 +198,13 @@ Class | Method | HTTP request | Description
  - [Model.ServerStorageDevices](docs/ServerStorageDevices.md)
  - [Model.ServerTags](docs/ServerTags.md)
  - [Model.StopServer](docs/StopServer.md)
+ - [Model.StopServerRequest](docs/StopServerRequest.md)
  - [Model.Storage](docs/Storage.md)
- - [Model.Storage1](docs/Storage1.md)
- - [Model.Storage2](docs/Storage2.md)
- - [Model.Storage3](docs/Storage3.md)
- - [Model.Storage4](docs/Storage4.md)
  - [Model.StorageAccessType](docs/StorageAccessType.md)
  - [Model.StorageBackups](docs/StorageBackups.md)
  - [Model.StorageDevice](docs/StorageDevice.md)
- - [Model.StorageDevice1](docs/StorageDevice1.md)
+ - [Model.StorageDeviceDetachRequest](docs/StorageDeviceDetachRequest.md)
+ - [Model.StorageDeviceLoadRequest](docs/StorageDeviceLoadRequest.md)
  - [Model.StorageServers](docs/StorageServers.md)
  - [Model.StorageState](docs/StorageState.md)
  - [Model.StorageTier](docs/StorageTier.md)
@@ -206,6 +216,7 @@ Class | Method | HTTP request | Description
  - [Model.TagListResponse](docs/TagListResponse.md)
  - [Model.TagListResponseTags](docs/TagListResponseTags.md)
  - [Model.TagServers](docs/TagServers.md)
+ - [Model.TemplitizeStorageRequest](docs/TemplitizeStorageRequest.md)
  - [Model.Timezone](docs/Timezone.md)
  - [Model.TimezoneListResponse](docs/TimezoneListResponse.md)
  - [Model.TimezoneListResponseTimezones](docs/TimezoneListResponseTimezones.md)
@@ -217,4 +228,8 @@ Class | Method | HTTP request | Description
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
-All endpoints do not require authorization.
+<a name="baseAuth"></a>
+### baseAuth
+
+- **Type**: HTTP basic authentication
+

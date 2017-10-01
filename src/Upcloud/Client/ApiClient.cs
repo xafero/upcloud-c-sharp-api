@@ -52,12 +52,12 @@ namespace Upcloud.Client
         public ApiClient()
         {
             Configuration = Upcloud.Client.Configuration.Default;
-            RestClient = new RestClient("http://api.upcloud.com/1.2");
+            RestClient = new RestClient("https://api.upcloud.com/1.2");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (http://api.upcloud.com/1.2).
+        /// with default base path (https://api.upcloud.com/1.2).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -72,7 +72,7 @@ namespace Upcloud.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "http://api.upcloud.com/1.2")
+        public ApiClient(String basePath = "https://api.upcloud.com/1.2")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

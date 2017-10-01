@@ -53,7 +53,13 @@ namespace Upcloud.Model
         /// Enum Backup for "backup"
         /// </summary>
         [EnumMember(Value = "backup")]
-        Backup
+        Backup,
+        
+        /// <summary>
+        /// Enum Normal for "normal"
+        /// </summary>
+        [EnumMember(Value = "normal")]
+        Normal
     }
 
 }

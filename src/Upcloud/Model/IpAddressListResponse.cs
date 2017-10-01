@@ -33,7 +33,7 @@ namespace Upcloud.Model
         /// Initializes a new instance of the <see cref="IpAddressListResponse" /> class.
         /// </summary>
         /// <param name="IpAddresses">IpAddresses.</param>
-        public IpAddressListResponse(IpAddressListResponseIpAddresses IpAddresses = default(IpAddressListResponseIpAddresses))
+        public IpAddressListResponse(IpAddresses IpAddresses = default(IpAddresses))
         {
             this.IpAddresses = IpAddresses;
         }
@@ -42,7 +42,7 @@ namespace Upcloud.Model
         /// Gets or Sets IpAddresses
         /// </summary>
         [DataMember(Name="ip_addresses", EmitDefaultValue=false)]
-        public IpAddressListResponseIpAddresses IpAddresses { get; set; }
+        public IpAddresses IpAddresses { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

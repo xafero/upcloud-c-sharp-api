@@ -145,7 +145,7 @@ namespace Upcloud.Model
         /// <param name="SourcePortStart">The source port range starts from this port number..</param>
         /// <param name="SourcePortEnd">The source port range ends to this port number..</param>
         /// <param name="Comment">Freeform comment string for the rule..</param>
-        public FirewallRule(DirectionEnum? Direction = default(DirectionEnum?), ActionEnum? Action = default(ActionEnum?), decimal? Position = default(decimal?), AddressFamily Family = default(AddressFamily), ProtocolEnum? Protocol = default(ProtocolEnum?), decimal? IcmpType = default(decimal?), string DestinationAddressStart = default(string), string DestinationAddressEnd = default(string), decimal? DestinationPortStart = default(decimal?), decimal? DestinationPortEnd = default(decimal?), string SourceAddressStart = default(string), string SourceAddressEnd = default(string), decimal? SourcePortStart = default(decimal?), decimal? SourcePortEnd = default(decimal?), string Comment = default(string))
+        public FirewallRule(DirectionEnum? Direction = default(DirectionEnum?), ActionEnum? Action = default(ActionEnum?), decimal? Position = default(decimal?), AddressFamily Family = default(AddressFamily), ProtocolEnum? Protocol = default(ProtocolEnum?), string IcmpType = default(string), string DestinationAddressStart = default(string), string DestinationAddressEnd = default(string), decimal? DestinationPortStart = default(decimal?), decimal? DestinationPortEnd = default(decimal?), string SourceAddressStart = default(string), string SourceAddressEnd = default(string), decimal? SourcePortStart = default(decimal?), decimal? SourcePortEnd = default(decimal?), string Comment = default(string))
         {
             // to ensure "Direction" is required (not null)
             if (Direction == null)
@@ -210,7 +210,7 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>The ICMP type.</value>
         [DataMember(Name="icmp_type", EmitDefaultValue=false)]
-        public decimal? IcmpType { get; set; }
+        public string IcmpType { get; set; }
 
         /// <summary>
         /// The destination address range starts from this address.
@@ -469,18 +469,6 @@ namespace Upcloud.Model
             if(this.Position < (decimal?)1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Position, must be a value greater than or equal to 1.", new [] { "Position" });
-            }
-
-            // IcmpType (decimal?) maximum
-            if(this.IcmpType > (decimal?)255)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IcmpType, must be a value less than or equal to 255.", new [] { "IcmpType" });
-            }
-
-            // IcmpType (decimal?) minimum
-            if(this.IcmpType < (decimal?)0)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for IcmpType, must be a value greater than or equal to 0.", new [] { "IcmpType" });
             }
 
             // DestinationPortStart (decimal?) maximum

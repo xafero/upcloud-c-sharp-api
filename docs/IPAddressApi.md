@@ -1,6 +1,6 @@
 # Upcloud.Api.IPAddressApi
 
-All URIs are relative to *http://api.upcloud.com/1.2*
+All URIs are relative to *https://api.upcloud.com/1.2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="addip"></a>
 # **AddIp**
-> AssignIpResponse AddIp (IpAddress ipAddress = null)
+> AssignIpResponse AddIp (AddIpRequest ipAddress = null)
 
 Assign IP address
 
@@ -33,8 +33,12 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new IPAddressApi();
-            var ipAddress = new IpAddress(); // IpAddress |  (optional) 
+            var ipAddress = new AddIpRequest(); // AddIpRequest |  (optional) 
 
             try
             {
@@ -55,7 +59,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ipAddress** | [**IpAddress**](IpAddress.md)|  | [optional] 
+ **ipAddress** | [**AddIpRequest**](AddIpRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -63,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -94,6 +98,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new IPAddressApi();
             var ip = ip_example;  // string | Ip address
 
@@ -123,7 +131,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -154,6 +162,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new IPAddressApi();
             var ip = ip_example;  // string | Ip address
 
@@ -184,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -215,6 +227,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new IPAddressApi();
 
             try
@@ -241,7 +257,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -252,7 +268,7 @@ No authorization required
 
 <a name="modifyip"></a>
 # **ModifyIp**
-> AssignIpResponse ModifyIp (string ip, IpAddress1 ipAddress = null)
+> AssignIpResponse ModifyIp (string ip, ModifyIpRequest ipAddress = null)
 
 Modify IP address
 
@@ -272,9 +288,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new IPAddressApi();
             var ip = ip_example;  // string | Ip address
-            var ipAddress = new IpAddress1(); // IpAddress1 |  (optional) 
+            var ipAddress = new ModifyIpRequest(); // ModifyIpRequest |  (optional) 
 
             try
             {
@@ -296,7 +316,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ip** | **string**| Ip address | 
- **ipAddress** | [**IpAddress1**](IpAddress1.md)|  | [optional] 
+ **ipAddress** | [**ModifyIpRequest**](ModifyIpRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -304,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
