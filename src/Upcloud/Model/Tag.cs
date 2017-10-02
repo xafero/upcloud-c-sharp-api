@@ -32,17 +32,48 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Tag" /> class.
         /// </summary>
-        /// <param name="_Tag">_Tag.</param>
-        public Tag(Tag _Tag = default(Tag))
+        [JsonConstructorAttribute]
+        protected Tag() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Tag" /> class.
+        /// </summary>
+        /// <param name="Name">The new tag (required).</param>
+        /// <param name="Description">Description of the tag.</param>
+        /// <param name="Servers">Servers.</param>
+        public Tag(string Name = default(string), string Description = default(string), TagServers Servers = default(TagServers))
         {
-            this._Tag = _Tag;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Tag and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            this.Description = Description;
+            this.Servers = Servers;
         }
         
         /// <summary>
-        /// Gets or Sets _Tag
+        /// The new tag
         /// </summary>
-        [DataMember(Name="tag", EmitDefaultValue=false)]
-        public Tag _Tag { get; set; }
+        /// <value>The new tag</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Description of the tag
+        /// </summary>
+        /// <value>Description of the tag</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Servers
+        /// </summary>
+        [DataMember(Name="servers", EmitDefaultValue=false)]
+        public TagServers Servers { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +83,9 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Tag {\n");
-            sb.Append("  _Tag: ").Append(_Tag).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Servers: ").Append(Servers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +121,19 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this._Tag == input._Tag ||
-                    (this._Tag != null &&
-                    this._Tag.Equals(input._Tag))
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
+                    this.Servers == input.Servers ||
+                    (this.Servers != null &&
+                    this.Servers.Equals(input.Servers))
                 );
         }
 
@@ -103,8 +146,12 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._Tag != null)
-                    hashCode = hashCode * 59 + this._Tag.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.Servers != null)
+                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
                 return hashCode;
             }
         }
@@ -116,6 +163,24 @@ namespace Upcloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // Name (string) maxLength
+            if(this.Name != null && this.Name.Length > 32)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 32.", new [] { "Name" });
+            }
+
+            // Name (string) minLength
+            if(this.Name != null && this.Name.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 1.", new [] { "Name" });
+            }
+
+            // Description (string) maxLength
+            if(this.Description != null && this.Description.Length > 255)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 255.", new [] { "Description" });
+            }
+
             yield break;
         }
     }

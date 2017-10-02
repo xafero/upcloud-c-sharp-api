@@ -34,6 +34,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new TagApi();
             var serverId = serverId_example;  // Guid? | Server id
             var tagList = tagList_example;  // string | List of tags
@@ -66,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -77,7 +81,7 @@ No authorization required
 
 <a name="createtag"></a>
 # **CreateTag**
-> CreateNewTagResponse CreateTag (Tag tag)
+> CreateNewTagResponse CreateTag (TagCreateRequest tag)
 
 Create a new tag
 
@@ -97,8 +101,12 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new TagApi();
-            var tag = new Tag(); // Tag | 
+            var tag = new TagCreateRequest(); // TagCreateRequest | 
 
             try
             {
@@ -119,7 +127,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | [**Tag**](Tag.md)|  | 
+ **tag** | [**TagCreateRequest**](TagCreateRequest.md)|  | 
 
 ### Return type
 
@@ -127,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -158,6 +166,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new TagApi();
             var tagName = tagName_example;  // string | Tag name
 
@@ -187,7 +199,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -218,6 +230,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new TagApi();
 
             try
@@ -244,7 +260,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -255,7 +271,7 @@ No authorization required
 
 <a name="modifytag"></a>
 # **ModifyTag**
-> CreateNewTagResponse ModifyTag (string tagName, Tag1 tag)
+> CreateNewTagResponse ModifyTag (string tagName, ModifyTagRequest tag)
 
 Modify existing tag
 
@@ -275,9 +291,13 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new TagApi();
             var tagName = tagName_example;  // string | Tag name
-            var tag = new Tag1(); // Tag1 | 
+            var tag = new ModifyTagRequest(); // ModifyTagRequest | 
 
             try
             {
@@ -299,7 +319,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tagName** | **string**| Tag name | 
- **tag** | [**Tag1**](Tag1.md)|  | 
+ **tag** | [**ModifyTagRequest**](ModifyTagRequest.md)|  | 
 
 ### Return type
 
@@ -307,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 
@@ -338,6 +358,10 @@ namespace Example
     {
         public void main()
         {
+            // Configure HTTP basic authorization: baseAuth
+            Configuration.Default.Username = "YOUR_USERNAME";
+            Configuration.Default.Password = "YOUR_PASSWORD";
+
             var apiInstance = new TagApi();
             var serverId = serverId_example;  // Guid? | Server id
             var tagName = tagName_example;  // string | Tag name
@@ -370,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[baseAuth](../README.md#baseAuth)
 
 ### HTTP request headers
 

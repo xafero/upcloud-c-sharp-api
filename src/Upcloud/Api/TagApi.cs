@@ -55,7 +55,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>CreateNewTagResponse</returns>
-        CreateNewTagResponse CreateTag (Tag tag);
+        CreateNewTagResponse CreateTag (TagCreateRequest tag);
 
         /// <summary>
         /// Create a new tag
@@ -66,7 +66,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>ApiResponse of CreateNewTagResponse</returns>
-        ApiResponse<CreateNewTagResponse> CreateTagWithHttpInfo (Tag tag);
+        ApiResponse<CreateNewTagResponse> CreateTagWithHttpInfo (TagCreateRequest tag);
         /// <summary>
         /// Delete tag
         /// </summary>
@@ -117,7 +117,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>CreateNewTagResponse</returns>
-        CreateNewTagResponse ModifyTag (string tagName, Tag1 tag);
+        CreateNewTagResponse ModifyTag (string tagName, ModifyTagRequest tag);
 
         /// <summary>
         /// Modify existing tag
@@ -129,7 +129,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>ApiResponse of CreateNewTagResponse</returns>
-        ApiResponse<CreateNewTagResponse> ModifyTagWithHttpInfo (string tagName, Tag1 tag);
+        ApiResponse<CreateNewTagResponse> ModifyTagWithHttpInfo (string tagName, ModifyTagRequest tag);
         /// <summary>
         /// Remove tag from server
         /// </summary>
@@ -187,7 +187,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>Task of CreateNewTagResponse</returns>
-        System.Threading.Tasks.Task<CreateNewTagResponse> CreateTagAsync (Tag tag);
+        System.Threading.Tasks.Task<CreateNewTagResponse> CreateTagAsync (TagCreateRequest tag);
 
         /// <summary>
         /// Create a new tag
@@ -198,7 +198,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>Task of ApiResponse (CreateNewTagResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> CreateTagAsyncWithHttpInfo (Tag tag);
+        System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> CreateTagAsyncWithHttpInfo (TagCreateRequest tag);
         /// <summary>
         /// Delete tag
         /// </summary>
@@ -249,7 +249,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>Task of CreateNewTagResponse</returns>
-        System.Threading.Tasks.Task<CreateNewTagResponse> ModifyTagAsync (string tagName, Tag1 tag);
+        System.Threading.Tasks.Task<CreateNewTagResponse> ModifyTagAsync (string tagName, ModifyTagRequest tag);
 
         /// <summary>
         /// Modify existing tag
@@ -261,7 +261,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>Task of ApiResponse (CreateNewTagResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> ModifyTagAsyncWithHttpInfo (string tagName, Tag1 tag);
+        System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> ModifyTagAsyncWithHttpInfo (string tagName, ModifyTagRequest tag);
         /// <summary>
         /// Remove tag from server
         /// </summary>
@@ -439,6 +439,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (tagList != null) localVarPathParams.Add("tagList", Configuration.ApiClient.ParameterToString(tagList)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -513,6 +519,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (tagList != null) localVarPathParams.Add("tagList", Configuration.ApiClient.ParameterToString(tagList)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -538,7 +550,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>CreateNewTagResponse</returns>
-        public CreateNewTagResponse CreateTag (Tag tag)
+        public CreateNewTagResponse CreateTag (TagCreateRequest tag)
         {
              ApiResponse<CreateNewTagResponse> localVarResponse = CreateTagWithHttpInfo(tag);
              return localVarResponse.Data;
@@ -550,7 +562,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>ApiResponse of CreateNewTagResponse</returns>
-        public ApiResponse< CreateNewTagResponse > CreateTagWithHttpInfo (Tag tag)
+        public ApiResponse< CreateNewTagResponse > CreateTagWithHttpInfo (TagCreateRequest tag)
         {
             // verify the required parameter 'tag' is set
             if (tag == null)
@@ -587,6 +599,12 @@ namespace Upcloud.Api
                 localVarPostBody = tag; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -612,7 +630,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>Task of CreateNewTagResponse</returns>
-        public async System.Threading.Tasks.Task<CreateNewTagResponse> CreateTagAsync (Tag tag)
+        public async System.Threading.Tasks.Task<CreateNewTagResponse> CreateTagAsync (TagCreateRequest tag)
         {
              ApiResponse<CreateNewTagResponse> localVarResponse = await CreateTagAsyncWithHttpInfo(tag);
              return localVarResponse.Data;
@@ -625,7 +643,7 @@ namespace Upcloud.Api
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tag"></param>
         /// <returns>Task of ApiResponse (CreateNewTagResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> CreateTagAsyncWithHttpInfo (Tag tag)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> CreateTagAsyncWithHttpInfo (TagCreateRequest tag)
         {
             // verify the required parameter 'tag' is set
             if (tag == null)
@@ -662,6 +680,12 @@ namespace Upcloud.Api
                 localVarPostBody = tag; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -728,6 +752,12 @@ namespace Upcloud.Api
 
             if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -795,6 +825,12 @@ namespace Upcloud.Api
 
             if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -856,6 +892,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -918,6 +960,12 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -944,7 +992,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>CreateNewTagResponse</returns>
-        public CreateNewTagResponse ModifyTag (string tagName, Tag1 tag)
+        public CreateNewTagResponse ModifyTag (string tagName, ModifyTagRequest tag)
         {
              ApiResponse<CreateNewTagResponse> localVarResponse = ModifyTagWithHttpInfo(tagName, tag);
              return localVarResponse.Data;
@@ -957,7 +1005,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>ApiResponse of CreateNewTagResponse</returns>
-        public ApiResponse< CreateNewTagResponse > ModifyTagWithHttpInfo (string tagName, Tag1 tag)
+        public ApiResponse< CreateNewTagResponse > ModifyTagWithHttpInfo (string tagName, ModifyTagRequest tag)
         {
             // verify the required parameter 'tagName' is set
             if (tagName == null)
@@ -998,6 +1046,12 @@ namespace Upcloud.Api
                 localVarPostBody = tag; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1024,7 +1078,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>Task of CreateNewTagResponse</returns>
-        public async System.Threading.Tasks.Task<CreateNewTagResponse> ModifyTagAsync (string tagName, Tag1 tag)
+        public async System.Threading.Tasks.Task<CreateNewTagResponse> ModifyTagAsync (string tagName, ModifyTagRequest tag)
         {
              ApiResponse<CreateNewTagResponse> localVarResponse = await ModifyTagAsyncWithHttpInfo(tagName, tag);
              return localVarResponse.Data;
@@ -1038,7 +1092,7 @@ namespace Upcloud.Api
         /// <param name="tagName">Tag name</param>
         /// <param name="tag"></param>
         /// <returns>Task of ApiResponse (CreateNewTagResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> ModifyTagAsyncWithHttpInfo (string tagName, Tag1 tag)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateNewTagResponse>> ModifyTagAsyncWithHttpInfo (string tagName, ModifyTagRequest tag)
         {
             // verify the required parameter 'tagName' is set
             if (tagName == null)
@@ -1079,6 +1133,12 @@ namespace Upcloud.Api
                 localVarPostBody = tag; // byte array
             }
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1152,6 +1212,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1226,6 +1292,12 @@ namespace Upcloud.Api
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
             if (tagName != null) localVarPathParams.Add("tagName", Configuration.ApiClient.ParameterToString(tagName)); // path parameter
 
+            // authentication (baseAuth) required
+            // http basic authentication required
+            if (!String.IsNullOrEmpty(Configuration.Username) || !String.IsNullOrEmpty(Configuration.Password))
+            {
+                localVarHeaderParams["Authorization"] = "Basic " + ApiClient.Base64Encode(Configuration.Username + ":" + Configuration.Password);
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
