@@ -33,7 +33,7 @@ namespace Upcloud.Model
         /// Initializes a new instance of the <see cref="TimezoneListResponseTimezones" /> class.
         /// </summary>
         /// <param name="Timezone">Timezone.</param>
-        public TimezoneListResponseTimezones(List<Timezone> Timezone = default(List<Timezone>))
+        public TimezoneListResponseTimezones(List<string> Timezone = default(List<string>))
         {
             this.Timezone = Timezone;
         }
@@ -42,7 +42,7 @@ namespace Upcloud.Model
         /// Gets or Sets Timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
-        public List<Timezone> Timezone { get; set; }
+        public List<string> Timezone { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
