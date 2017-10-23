@@ -72,7 +72,7 @@ namespace Upcloud.Model
         }
 
         /// <summary>
-        /// Gets or Sets PartOfPlan
+        /// Gets or Sets partOfPlan
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PartOfPlanEnum
@@ -96,56 +96,56 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>Is address for private or public network.</value>
         [DataMember(Name="access", EmitDefaultValue=false)]
-        public AccessEnum? Access { get; set; }
+        public AccessEnum? access { get; set; }
         /// <summary>
         /// The address family of new IP address.
         /// </summary>
         /// <value>The address family of new IP address.</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
-        public FamilyEnum? Family { get; set; }
+        public FamilyEnum? family { get; set; }
         /// <summary>
-        /// Gets or Sets PartOfPlan
+        /// Gets or Sets partOfPlan
         /// </summary>
         [DataMember(Name="part_of_plan", EmitDefaultValue=false)]
-        public PartOfPlanEnum? PartOfPlan { get; set; }
+        public PartOfPlanEnum? partOfPlan { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="IpAddress" /> class.
         /// </summary>
-        /// <param name="Access">Is address for private or public network..</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="Family">The address family of new IP address..</param>
-        /// <param name="PtrRecord">PtrRecord.</param>
-        /// <param name="Server">Server.</param>
-        /// <param name="PartOfPlan">PartOfPlan.</param>
-        public IpAddress(AccessEnum? Access = default(AccessEnum?), string Address = default(string), FamilyEnum? Family = default(FamilyEnum?), string PtrRecord = default(string), Guid? Server = default(Guid?), PartOfPlanEnum? PartOfPlan = default(PartOfPlanEnum?))
+        /// <param name="access">Is address for private or public network..</param>
+        /// <param name="address">address.</param>
+        /// <param name="family">The address family of new IP address..</param>
+        /// <param name="ptrRecord">ptrRecord.</param>
+        /// <param name="server">server.</param>
+        /// <param name="partOfPlan">partOfPlan.</param>
+        public IpAddress(AccessEnum? access = default(AccessEnum?), string address = default(string), FamilyEnum? family = default(FamilyEnum?), string ptrRecord = default(string), Guid? server = default(Guid?), PartOfPlanEnum? partOfPlan = default(PartOfPlanEnum?))
         {
-            this.Access = Access;
-            this.Address = Address;
-            this.Family = Family;
-            this.PtrRecord = PtrRecord;
-            this.Server = Server;
-            this.PartOfPlan = PartOfPlan;
+            this.access = access;
+            this.address = address;
+            this.family = family;
+            this.ptrRecord = ptrRecord;
+            this.server = server;
+            this.partOfPlan = partOfPlan;
         }
         
 
         /// <summary>
-        /// Gets or Sets Address
+        /// Gets or Sets address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
-        public string Address { get; set; }
+        public string address { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets PtrRecord
+        /// Gets or Sets ptrRecord
         /// </summary>
         [DataMember(Name="ptr_record", EmitDefaultValue=false)]
-        public string PtrRecord { get; set; }
+        public string ptrRecord { get; set; }
 
         /// <summary>
-        /// Gets or Sets Server
+        /// Gets or Sets server
         /// </summary>
         [DataMember(Name="server", EmitDefaultValue=false)]
-        public Guid? Server { get; set; }
+        public Guid? server { get; set; }
 
 
         /// <summary>
@@ -156,12 +156,12 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IpAddress {\n");
-            sb.Append("  Access: ").Append(Access).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  Family: ").Append(Family).Append("\n");
-            sb.Append("  PtrRecord: ").Append(PtrRecord).Append("\n");
-            sb.Append("  Server: ").Append(Server).Append("\n");
-            sb.Append("  PartOfPlan: ").Append(PartOfPlan).Append("\n");
+            sb.Append("  access: ").Append(access).Append("\n");
+            sb.Append("  address: ").Append(address).Append("\n");
+            sb.Append("  family: ").Append(family).Append("\n");
+            sb.Append("  ptrRecord: ").Append(ptrRecord).Append("\n");
+            sb.Append("  server: ").Append(server).Append("\n");
+            sb.Append("  partOfPlan: ").Append(partOfPlan).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -197,34 +197,34 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Access == input.Access ||
-                    (this.Access != null &&
-                    this.Access.Equals(input.Access))
+                    this.access == input.access ||
+                    (this.access != null &&
+                    this.access.Equals(input.access))
                 ) && 
                 (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
+                    this.address == input.address ||
+                    (this.address != null &&
+                    this.address.Equals(input.address))
                 ) && 
                 (
-                    this.Family == input.Family ||
-                    (this.Family != null &&
-                    this.Family.Equals(input.Family))
+                    this.family == input.family ||
+                    (this.family != null &&
+                    this.family.Equals(input.family))
                 ) && 
                 (
-                    this.PtrRecord == input.PtrRecord ||
-                    (this.PtrRecord != null &&
-                    this.PtrRecord.Equals(input.PtrRecord))
+                    this.ptrRecord == input.ptrRecord ||
+                    (this.ptrRecord != null &&
+                    this.ptrRecord.Equals(input.ptrRecord))
                 ) && 
                 (
-                    this.Server == input.Server ||
-                    (this.Server != null &&
-                    this.Server.Equals(input.Server))
+                    this.server == input.server ||
+                    (this.server != null &&
+                    this.server.Equals(input.server))
                 ) && 
                 (
-                    this.PartOfPlan == input.PartOfPlan ||
-                    (this.PartOfPlan != null &&
-                    this.PartOfPlan.Equals(input.PartOfPlan))
+                    this.partOfPlan == input.partOfPlan ||
+                    (this.partOfPlan != null &&
+                    this.partOfPlan.Equals(input.partOfPlan))
                 );
         }
 
@@ -237,18 +237,18 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Access != null)
-                    hashCode = hashCode * 59 + this.Access.GetHashCode();
-                if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                if (this.Family != null)
-                    hashCode = hashCode * 59 + this.Family.GetHashCode();
-                if (this.PtrRecord != null)
-                    hashCode = hashCode * 59 + this.PtrRecord.GetHashCode();
-                if (this.Server != null)
-                    hashCode = hashCode * 59 + this.Server.GetHashCode();
-                if (this.PartOfPlan != null)
-                    hashCode = hashCode * 59 + this.PartOfPlan.GetHashCode();
+                if (this.access != null)
+                    hashCode = hashCode * 59 + this.access.GetHashCode();
+                if (this.address != null)
+                    hashCode = hashCode * 59 + this.address.GetHashCode();
+                if (this.family != null)
+                    hashCode = hashCode * 59 + this.family.GetHashCode();
+                if (this.ptrRecord != null)
+                    hashCode = hashCode * 59 + this.ptrRecord.GetHashCode();
+                if (this.server != null)
+                    hashCode = hashCode * 59 + this.server.GetHashCode();
+                if (this.partOfPlan != null)
+                    hashCode = hashCode * 59 + this.partOfPlan.GetHashCode();
                 return hashCode;
             }
         }

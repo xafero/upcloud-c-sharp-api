@@ -60,12 +60,12 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'IpAddress'
+        /// Test the property 'ipAddress'
         /// </summary>
         [Test]
-        public void IpAddressTest()
+        public void ipAddressTest()
         {
-            // TODO unit test for the property 'IpAddress'
+            // TODO unit test for the property 'ipAddress'
         }
 
     }

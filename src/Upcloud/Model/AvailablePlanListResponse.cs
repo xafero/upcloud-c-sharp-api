@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailablePlanListResponse" /> class.
         /// </summary>
-        /// <param name="Plans">Plans.</param>
-        public AvailablePlanListResponse(AvailablePlanListResponsePlans Plans = default(AvailablePlanListResponsePlans))
+        /// <param name="plans">plans.</param>
+        public AvailablePlanListResponse(AvailablePlanListResponsePlans plans = default(AvailablePlanListResponsePlans))
         {
-            this.Plans = Plans;
+            this.plans = plans;
         }
         
         /// <summary>
-        /// Gets or Sets Plans
+        /// Gets or Sets plans
         /// </summary>
         [DataMember(Name="plans", EmitDefaultValue=false)]
-        public AvailablePlanListResponsePlans Plans { get; set; }
+        public AvailablePlanListResponsePlans plans { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailablePlanListResponse {\n");
-            sb.Append("  Plans: ").Append(Plans).Append("\n");
+            sb.Append("  plans: ").Append(plans).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Plans == input.Plans ||
-                    (this.Plans != null &&
-                    this.Plans.Equals(input.Plans))
+                    this.plans == input.plans ||
+                    (this.plans != null &&
+                    this.plans.Equals(input.plans))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Plans != null)
-                    hashCode = hashCode * 59 + this.Plans.GetHashCode();
+                if (this.plans != null)
+                    hashCode = hashCode * 59 + this.plans.GetHashCode();
                 return hashCode;
             }
         }

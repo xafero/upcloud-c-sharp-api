@@ -60,12 +60,12 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'FirewallRules'
+        /// Test the property 'firewallRules'
         /// </summary>
         [Test]
-        public void FirewallRulesTest()
+        public void firewallRulesTest()
         {
-            // TODO unit test for the property 'FirewallRules'
+            // TODO unit test for the property 'firewallRules'
         }
 
     }

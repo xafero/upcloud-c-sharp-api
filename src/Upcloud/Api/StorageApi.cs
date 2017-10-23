@@ -54,9 +54,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage = null);
+        CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage);
 
         /// <summary>
         /// Create backup
@@ -66,9 +66,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> BackupStorageWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null);
+        ApiResponse<CreateStorageResponse> BackupStorageWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage);
         /// <summary>
         /// Cancel storage operation
         /// </summary>
@@ -98,9 +98,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage = null);
+        CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage);
 
         /// <summary>
         /// Clone storage
@@ -110,9 +110,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        ApiResponse<CreateStorageResponse> CloneStorageWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null);
+        ApiResponse<CreateStorageResponse> CloneStorageWithHttpInfo (Guid? storageId, CloneStorageRequest storage);
         /// <summary>
         /// Create storage
         /// </summary>
@@ -425,9 +425,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, CreateBackupStorageRequest storage = null);
+        System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, CreateBackupStorageRequest storage);
 
         /// <summary>
         /// Create backup
@@ -437,9 +437,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage);
         /// <summary>
         /// Cancel storage operation
         /// </summary>
@@ -469,9 +469,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, CloneStorageRequest storage = null);
+        System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, CloneStorageRequest storage);
 
         /// <summary>
         /// Clone storage
@@ -481,9 +481,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, CloneStorageRequest storage);
         /// <summary>
         /// Create storage
         /// </summary>
@@ -1041,9 +1041,9 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage = null)
+        public CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = BackupStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1054,13 +1054,16 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > BackupStorageWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null)
+        public ApiResponse< CreateStorageResponse > BackupStorageWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
                 throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->BackupStorage");
+            // verify the required parameter 'storage' is set
+            if (storage == null)
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->BackupStorage");
 
             var localVarPath = "/storage/{storageId}/backup";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1124,9 +1127,9 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, CreateBackupStorageRequest storage = null)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> BackupStorageAsync (Guid? storageId, CreateBackupStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await BackupStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1138,13 +1141,16 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> BackupStorageAsyncWithHttpInfo (Guid? storageId, CreateBackupStorageRequest storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
                 throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->BackupStorage");
+            // verify the required parameter 'storage' is set
+            if (storage == null)
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->BackupStorage");
 
             var localVarPath = "/storage/{storageId}/backup";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1353,9 +1359,9 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>CreateStorageResponse</returns>
-        public CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage = null)
+        public CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = CloneStorageWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1366,13 +1372,16 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>ApiResponse of CreateStorageResponse</returns>
-        public ApiResponse< CreateStorageResponse > CloneStorageWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null)
+        public ApiResponse< CreateStorageResponse > CloneStorageWithHttpInfo (Guid? storageId, CloneStorageRequest storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
                 throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->CloneStorage");
+            // verify the required parameter 'storage' is set
+            if (storage == null)
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->CloneStorage");
 
             var localVarPath = "/storage/{storageId}/clone";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1436,9 +1445,9 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of CreateStorageResponse</returns>
-        public async System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, CloneStorageRequest storage = null)
+        public async System.Threading.Tasks.Task<CreateStorageResponse> CloneStorageAsync (Guid? storageId, CloneStorageRequest storage)
         {
              ApiResponse<CreateStorageResponse> localVarResponse = await CloneStorageAsyncWithHttpInfo(storageId, storage);
              return localVarResponse.Data;
@@ -1450,13 +1459,16 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="storageId">Storage id</param>
-        /// <param name="storage"> (optional)</param>
+        /// <param name="storage"></param>
         /// <returns>Task of ApiResponse (CreateStorageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, CloneStorageRequest storage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateStorageResponse>> CloneStorageAsyncWithHttpInfo (Guid? storageId, CloneStorageRequest storage)
         {
             // verify the required parameter 'storageId' is set
             if (storageId == null)
                 throw new ApiException(400, "Missing required parameter 'storageId' when calling StorageApi->CloneStorage");
+            // verify the required parameter 'storage' is set
+            if (storage == null)
+                throw new ApiException(400, "Missing required parameter 'storage' when calling StorageApi->CloneStorage");
 
             var localVarPath = "/storage/{storageId}/clone";
             var localVarPathParams = new Dictionary<String, String>();

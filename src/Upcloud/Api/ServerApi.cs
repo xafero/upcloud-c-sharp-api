@@ -402,9 +402,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>CreateServerResponse</returns>
-        CreateServerResponse StopServer (Guid? serverId, StopServer stopServer);
+        CreateServerResponse StopServer (Guid? serverId, StopServer stopServerRequest);
 
         /// <summary>
         /// Stop server
@@ -414,9 +414,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        ApiResponse<CreateServerResponse> StopServerWithHttpInfo (Guid? serverId, StopServer stopServer);
+        ApiResponse<CreateServerResponse> StopServerWithHttpInfo (Guid? serverId, StopServer stopServerRequest);
         /// <summary>
         /// Remove tag from server
         /// </summary>
@@ -821,9 +821,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>Task of CreateServerResponse</returns>
-        System.Threading.Tasks.Task<CreateServerResponse> StopServerAsync (Guid? serverId, StopServer stopServer);
+        System.Threading.Tasks.Task<CreateServerResponse> StopServerAsync (Guid? serverId, StopServer stopServerRequest);
 
         /// <summary>
         /// Stop server
@@ -833,9 +833,9 @@ namespace Upcloud.Api
         /// </remarks>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> StopServerAsyncWithHttpInfo (Guid? serverId, StopServer stopServer);
+        System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> StopServerAsyncWithHttpInfo (Guid? serverId, StopServer stopServerRequest);
         /// <summary>
         /// Remove tag from server
         /// </summary>
@@ -3609,11 +3609,11 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>CreateServerResponse</returns>
-        public CreateServerResponse StopServer (Guid? serverId, StopServer stopServer)
+        public CreateServerResponse StopServer (Guid? serverId, StopServer stopServerRequest)
         {
-             ApiResponse<CreateServerResponse> localVarResponse = StopServerWithHttpInfo(serverId, stopServer);
+             ApiResponse<CreateServerResponse> localVarResponse = StopServerWithHttpInfo(serverId, stopServerRequest);
              return localVarResponse.Data;
         }
 
@@ -3622,16 +3622,16 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>ApiResponse of CreateServerResponse</returns>
-        public ApiResponse< CreateServerResponse > StopServerWithHttpInfo (Guid? serverId, StopServer stopServer)
+        public ApiResponse< CreateServerResponse > StopServerWithHttpInfo (Guid? serverId, StopServer stopServerRequest)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
                 throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->StopServer");
-            // verify the required parameter 'stopServer' is set
-            if (stopServer == null)
-                throw new ApiException(400, "Missing required parameter 'stopServer' when calling ServerApi->StopServer");
+            // verify the required parameter 'stopServerRequest' is set
+            if (stopServerRequest == null)
+                throw new ApiException(400, "Missing required parameter 'stopServerRequest' when calling ServerApi->StopServer");
 
             var localVarPath = "/server/{serverId}/stop";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3656,13 +3656,13 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (stopServer != null && stopServer.GetType() != typeof(byte[]))
+            if (stopServerRequest != null && stopServerRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(stopServer); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(stopServerRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = stopServer; // byte array
+                localVarPostBody = stopServerRequest; // byte array
             }
 
             // authentication (baseAuth) required
@@ -3695,11 +3695,11 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>Task of CreateServerResponse</returns>
-        public async System.Threading.Tasks.Task<CreateServerResponse> StopServerAsync (Guid? serverId, StopServer stopServer)
+        public async System.Threading.Tasks.Task<CreateServerResponse> StopServerAsync (Guid? serverId, StopServer stopServerRequest)
         {
-             ApiResponse<CreateServerResponse> localVarResponse = await StopServerAsyncWithHttpInfo(serverId, stopServer);
+             ApiResponse<CreateServerResponse> localVarResponse = await StopServerAsyncWithHttpInfo(serverId, stopServerRequest);
              return localVarResponse.Data;
 
         }
@@ -3709,16 +3709,16 @@ namespace Upcloud.Api
         /// </summary>
         /// <exception cref="Upcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="serverId">Id of server to stop</param>
-        /// <param name="stopServer"></param>
+        /// <param name="stopServerRequest"></param>
         /// <returns>Task of ApiResponse (CreateServerResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> StopServerAsyncWithHttpInfo (Guid? serverId, StopServer stopServer)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateServerResponse>> StopServerAsyncWithHttpInfo (Guid? serverId, StopServer stopServerRequest)
         {
             // verify the required parameter 'serverId' is set
             if (serverId == null)
                 throw new ApiException(400, "Missing required parameter 'serverId' when calling ServerApi->StopServer");
-            // verify the required parameter 'stopServer' is set
-            if (stopServer == null)
-                throw new ApiException(400, "Missing required parameter 'stopServer' when calling ServerApi->StopServer");
+            // verify the required parameter 'stopServerRequest' is set
+            if (stopServerRequest == null)
+                throw new ApiException(400, "Missing required parameter 'stopServerRequest' when calling ServerApi->StopServer");
 
             var localVarPath = "/server/{serverId}/stop";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3743,13 +3743,13 @@ namespace Upcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (serverId != null) localVarPathParams.Add("serverId", Configuration.ApiClient.ParameterToString(serverId)); // path parameter
-            if (stopServer != null && stopServer.GetType() != typeof(byte[]))
+            if (stopServerRequest != null && stopServerRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(stopServer); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(stopServerRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = stopServer; // byte array
+                localVarPostBody = stopServerRequest; // byte array
             }
 
             // authentication (baseAuth) required

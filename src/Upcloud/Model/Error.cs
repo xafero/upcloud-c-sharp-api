@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Error" /> class.
         /// </summary>
-        /// <param name="_Error">_Error.</param>
-        public Error(ErrorError _Error = default(ErrorError))
+        /// <param name="_error">_error.</param>
+        public Error(ErrorError _error = default(ErrorError))
         {
-            this._Error = _Error;
+            this._error = _error;
         }
         
         /// <summary>
-        /// Gets or Sets _Error
+        /// Gets or Sets _error
         /// </summary>
         [DataMember(Name="error", EmitDefaultValue=false)]
-        public ErrorError _Error { get; set; }
+        public ErrorError _error { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Error {\n");
-            sb.Append("  _Error: ").Append(_Error).Append("\n");
+            sb.Append("  _error: ").Append(_error).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this._Error == input._Error ||
-                    (this._Error != null &&
-                    this._Error.Equals(input._Error))
+                    this._error == input._error ||
+                    (this._error != null &&
+                    this._error.Equals(input._error))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._Error != null)
-                    hashCode = hashCode * 59 + this._Error.GetHashCode();
+                if (this._error != null)
+                    hashCode = hashCode * 59 + this._error.GetHashCode();
                 return hashCode;
             }
         }

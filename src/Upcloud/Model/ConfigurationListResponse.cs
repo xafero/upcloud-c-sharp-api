@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConfigurationListResponse" /> class.
         /// </summary>
-        /// <param name="ServerSizes">ServerSizes.</param>
-        public ConfigurationListResponse(ConfigurationListResponseServerSizes ServerSizes = default(ConfigurationListResponseServerSizes))
+        /// <param name="serverSizes">serverSizes.</param>
+        public ConfigurationListResponse(ConfigurationListResponseServerSizes serverSizes = default(ConfigurationListResponseServerSizes))
         {
-            this.ServerSizes = ServerSizes;
+            this.serverSizes = serverSizes;
         }
         
         /// <summary>
-        /// Gets or Sets ServerSizes
+        /// Gets or Sets serverSizes
         /// </summary>
         [DataMember(Name="server_sizes", EmitDefaultValue=false)]
-        public ConfigurationListResponseServerSizes ServerSizes { get; set; }
+        public ConfigurationListResponseServerSizes serverSizes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConfigurationListResponse {\n");
-            sb.Append("  ServerSizes: ").Append(ServerSizes).Append("\n");
+            sb.Append("  serverSizes: ").Append(serverSizes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.ServerSizes == input.ServerSizes ||
-                    (this.ServerSizes != null &&
-                    this.ServerSizes.Equals(input.ServerSizes))
+                    this.serverSizes == input.serverSizes ||
+                    (this.serverSizes != null &&
+                    this.serverSizes.Equals(input.serverSizes))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ServerSizes != null)
-                    hashCode = hashCode * 59 + this.ServerSizes.GetHashCode();
+                if (this.serverSizes != null)
+                    hashCode = hashCode * 59 + this.serverSizes.GetHashCode();
                 return hashCode;
             }
         }

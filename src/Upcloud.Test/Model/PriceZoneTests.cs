@@ -60,148 +60,148 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Name'
+        /// Test the property 'name'
         /// </summary>
         [Test]
-        public void NameTest()
+        public void nameTest()
         {
-            // TODO unit test for the property 'Name'
+            // TODO unit test for the property 'name'
         }
         /// <summary>
-        /// Test the property 'Firewall'
+        /// Test the property 'firewall'
         /// </summary>
         [Test]
-        public void FirewallTest()
+        public void firewallTest()
         {
-            // TODO unit test for the property 'Firewall'
+            // TODO unit test for the property 'firewall'
         }
         /// <summary>
-        /// Test the property 'IoRequestBackup'
+        /// Test the property 'ioRequestBackup'
         /// </summary>
         [Test]
-        public void IoRequestBackupTest()
+        public void ioRequestBackupTest()
         {
-            // TODO unit test for the property 'IoRequestBackup'
+            // TODO unit test for the property 'ioRequestBackup'
         }
         /// <summary>
-        /// Test the property 'IoRequestHdd'
+        /// Test the property 'ioRequestHdd'
         /// </summary>
         [Test]
-        public void IoRequestHddTest()
+        public void ioRequestHddTest()
         {
-            // TODO unit test for the property 'IoRequestHdd'
+            // TODO unit test for the property 'ioRequestHdd'
         }
         /// <summary>
-        /// Test the property 'IoRequestMaxiops'
+        /// Test the property 'ioRequestMaxiops'
         /// </summary>
         [Test]
-        public void IoRequestMaxiopsTest()
+        public void ioRequestMaxiopsTest()
         {
-            // TODO unit test for the property 'IoRequestMaxiops'
+            // TODO unit test for the property 'ioRequestMaxiops'
         }
         /// <summary>
-        /// Test the property 'Ipv4Address'
+        /// Test the property 'ipv4Address'
         /// </summary>
         [Test]
-        public void Ipv4AddressTest()
+        public void ipv4AddressTest()
         {
-            // TODO unit test for the property 'Ipv4Address'
+            // TODO unit test for the property 'ipv4Address'
         }
         /// <summary>
-        /// Test the property 'Ipv6Address'
+        /// Test the property 'ipv6Address'
         /// </summary>
         [Test]
-        public void Ipv6AddressTest()
+        public void ipv6AddressTest()
         {
-            // TODO unit test for the property 'Ipv6Address'
+            // TODO unit test for the property 'ipv6Address'
         }
         /// <summary>
-        /// Test the property 'PublicIpv4BandwidthIn'
+        /// Test the property 'publicIpv4BandwidthIn'
         /// </summary>
         [Test]
-        public void PublicIpv4BandwidthInTest()
+        public void publicIpv4BandwidthInTest()
         {
-            // TODO unit test for the property 'PublicIpv4BandwidthIn'
+            // TODO unit test for the property 'publicIpv4BandwidthIn'
         }
         /// <summary>
-        /// Test the property 'PublicIpv4BandwidthOut'
+        /// Test the property 'publicIpv4BandwidthOut'
         /// </summary>
         [Test]
-        public void PublicIpv4BandwidthOutTest()
+        public void publicIpv4BandwidthOutTest()
         {
-            // TODO unit test for the property 'PublicIpv4BandwidthOut'
+            // TODO unit test for the property 'publicIpv4BandwidthOut'
         }
         /// <summary>
-        /// Test the property 'PublicIpv6BandwidthIn'
+        /// Test the property 'publicIpv6BandwidthIn'
         /// </summary>
         [Test]
-        public void PublicIpv6BandwidthInTest()
+        public void publicIpv6BandwidthInTest()
         {
-            // TODO unit test for the property 'PublicIpv6BandwidthIn'
+            // TODO unit test for the property 'publicIpv6BandwidthIn'
         }
         /// <summary>
-        /// Test the property 'PublicIpv6BandwidthOut'
+        /// Test the property 'publicIpv6BandwidthOut'
         /// </summary>
         [Test]
-        public void PublicIpv6BandwidthOutTest()
+        public void publicIpv6BandwidthOutTest()
         {
-            // TODO unit test for the property 'PublicIpv6BandwidthOut'
+            // TODO unit test for the property 'publicIpv6BandwidthOut'
         }
         /// <summary>
-        /// Test the property 'ServerCore'
+        /// Test the property 'serverCore'
         /// </summary>
         [Test]
-        public void ServerCoreTest()
+        public void serverCoreTest()
         {
-            // TODO unit test for the property 'ServerCore'
+            // TODO unit test for the property 'serverCore'
         }
         /// <summary>
-        /// Test the property 'ServerMemory'
+        /// Test the property 'serverMemory'
         /// </summary>
         [Test]
-        public void ServerMemoryTest()
+        public void serverMemoryTest()
         {
-            // TODO unit test for the property 'ServerMemory'
+            // TODO unit test for the property 'serverMemory'
         }
         /// <summary>
-        /// Test the property 'StorageBackup'
+        /// Test the property 'storageBackup'
         /// </summary>
         [Test]
-        public void StorageBackupTest()
+        public void storageBackupTest()
         {
-            // TODO unit test for the property 'StorageBackup'
+            // TODO unit test for the property 'storageBackup'
         }
         /// <summary>
-        /// Test the property 'StorageHdd'
+        /// Test the property 'storageHdd'
         /// </summary>
         [Test]
-        public void StorageHddTest()
+        public void storageHddTest()
         {
-            // TODO unit test for the property 'StorageHdd'
+            // TODO unit test for the property 'storageHdd'
         }
         /// <summary>
-        /// Test the property 'StorageMaxiops'
+        /// Test the property 'storageMaxiops'
         /// </summary>
         [Test]
-        public void StorageMaxiopsTest()
+        public void storageMaxiopsTest()
         {
-            // TODO unit test for the property 'StorageMaxiops'
+            // TODO unit test for the property 'storageMaxiops'
         }
         /// <summary>
-        /// Test the property 'ServerPlan1xCPU1GB'
+        /// Test the property 'serverPlan1xCPU1GB'
         /// </summary>
         [Test]
-        public void ServerPlan1xCPU1GBTest()
+        public void serverPlan1xCPU1GBTest()
         {
-            // TODO unit test for the property 'ServerPlan1xCPU1GB'
+            // TODO unit test for the property 'serverPlan1xCPU1GB'
         }
         /// <summary>
-        /// Test the property 'ServerPlan2xCPU2GB'
+        /// Test the property 'serverPlan2xCPU2GB'
         /// </summary>
         [Test]
-        public void ServerPlan2xCPU2GBTest()
+        public void serverPlan2xCPU2GBTest()
         {
-            // TODO unit test for the property 'ServerPlan2xCPU2GB'
+            // TODO unit test for the property 'serverPlan2xCPU2GB'
         }
 
     }

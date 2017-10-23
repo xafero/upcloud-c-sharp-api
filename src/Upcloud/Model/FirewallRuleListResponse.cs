@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FirewallRuleListResponse" /> class.
         /// </summary>
-        /// <param name="FirewallRules">FirewallRules.</param>
-        public FirewallRuleListResponse(FirewallRuleListResponseFirewallRules FirewallRules = default(FirewallRuleListResponseFirewallRules))
+        /// <param name="firewallRules">firewallRules.</param>
+        public FirewallRuleListResponse(FirewallRuleListResponseFirewallRules firewallRules = default(FirewallRuleListResponseFirewallRules))
         {
-            this.FirewallRules = FirewallRules;
+            this.firewallRules = firewallRules;
         }
         
         /// <summary>
-        /// Gets or Sets FirewallRules
+        /// Gets or Sets firewallRules
         /// </summary>
         [DataMember(Name="firewall_rules", EmitDefaultValue=false)]
-        public FirewallRuleListResponseFirewallRules FirewallRules { get; set; }
+        public FirewallRuleListResponseFirewallRules firewallRules { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FirewallRuleListResponse {\n");
-            sb.Append("  FirewallRules: ").Append(FirewallRules).Append("\n");
+            sb.Append("  firewallRules: ").Append(firewallRules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.FirewallRules == input.FirewallRules ||
-                    (this.FirewallRules != null &&
-                    this.FirewallRules.Equals(input.FirewallRules))
+                    this.firewallRules == input.firewallRules ||
+                    (this.firewallRules != null &&
+                    this.firewallRules.Equals(input.firewallRules))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.FirewallRules != null)
-                    hashCode = hashCode * 59 + this.FirewallRules.GetHashCode();
+                if (this.firewallRules != null)
+                    hashCode = hashCode * 59 + this.firewallRules.GetHashCode();
                 return hashCode;
             }
         }

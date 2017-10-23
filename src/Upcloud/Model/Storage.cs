@@ -32,121 +32,121 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Storage" /> class.
         /// </summary>
-        /// <param name="Access">Access.</param>
-        /// <param name="BackupRule">BackupRule.</param>
-        /// <param name="Backups">Backups.</param>
-        /// <param name="License">License.</param>
-        /// <param name="Servers">Servers.</param>
-        /// <param name="Size">Size.</param>
-        /// <param name="State">State.</param>
-        /// <param name="Tier">Tier.</param>
-        /// <param name="Title">Title.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Uuid">Uuid.</param>
-        /// <param name="Zone">Zone.</param>
-        /// <param name="Origin">Origin.</param>
-        /// <param name="Created">Created.</param>
-        public Storage(StorageAccessType Access = default(StorageAccessType), BackupRule BackupRule = default(BackupRule), StorageBackups Backups = default(StorageBackups), decimal? License = default(decimal?), StorageServers Servers = default(StorageServers), decimal? Size = default(decimal?), StorageState State = default(StorageState), StorageTier Tier = default(StorageTier), string Title = default(string), StorageType Type = default(StorageType), Guid? Uuid = default(Guid?), string Zone = default(string), Guid? Origin = default(Guid?), string Created = default(string))
+        /// <param name="access">access.</param>
+        /// <param name="backupRule">backupRule.</param>
+        /// <param name="backups">backups.</param>
+        /// <param name="license">license.</param>
+        /// <param name="servers">servers.</param>
+        /// <param name="size">size.</param>
+        /// <param name="state">state.</param>
+        /// <param name="tier">tier.</param>
+        /// <param name="title">title.</param>
+        /// <param name="type">type.</param>
+        /// <param name="uuid">uuid.</param>
+        /// <param name="zone">zone.</param>
+        /// <param name="origin">origin.</param>
+        /// <param name="created">created.</param>
+        public Storage(StorageAccessType access = default(StorageAccessType), BackupRule backupRule = default(BackupRule), StorageBackups backups = default(StorageBackups), decimal? license = default(decimal?), StorageServers servers = default(StorageServers), decimal? size = default(decimal?), StorageState state = default(StorageState), StorageTier tier = default(StorageTier), string title = default(string), StorageType type = default(StorageType), Guid? uuid = default(Guid?), string zone = default(string), Guid? origin = default(Guid?), string created = default(string))
         {
-            this.Access = Access;
-            this.BackupRule = BackupRule;
-            this.Backups = Backups;
-            this.License = License;
-            this.Servers = Servers;
-            this.Size = Size;
-            this.State = State;
-            this.Tier = Tier;
-            this.Title = Title;
-            this.Type = Type;
-            this.Uuid = Uuid;
-            this.Zone = Zone;
-            this.Origin = Origin;
-            this.Created = Created;
+            this.access = access;
+            this.backupRule = backupRule;
+            this.backups = backups;
+            this.license = license;
+            this.servers = servers;
+            this.size = size;
+            this.state = state;
+            this.tier = tier;
+            this.title = title;
+            this.type = type;
+            this.uuid = uuid;
+            this.zone = zone;
+            this.origin = origin;
+            this.created = created;
         }
         
         /// <summary>
-        /// Gets or Sets Access
+        /// Gets or Sets access
         /// </summary>
         [DataMember(Name="access", EmitDefaultValue=false)]
-        public StorageAccessType Access { get; set; }
+        public StorageAccessType access { get; set; }
 
         /// <summary>
-        /// Gets or Sets BackupRule
+        /// Gets or Sets backupRule
         /// </summary>
         [DataMember(Name="backup_rule", EmitDefaultValue=false)]
-        public BackupRule BackupRule { get; set; }
+        public BackupRule backupRule { get; set; }
 
         /// <summary>
-        /// Gets or Sets Backups
+        /// Gets or Sets backups
         /// </summary>
         [DataMember(Name="backups", EmitDefaultValue=false)]
-        public StorageBackups Backups { get; set; }
+        public StorageBackups backups { get; set; }
 
         /// <summary>
-        /// Gets or Sets License
+        /// Gets or Sets license
         /// </summary>
         [DataMember(Name="license", EmitDefaultValue=false)]
-        public decimal? License { get; set; }
+        public decimal? license { get; set; }
 
         /// <summary>
-        /// Gets or Sets Servers
+        /// Gets or Sets servers
         /// </summary>
         [DataMember(Name="servers", EmitDefaultValue=false)]
-        public StorageServers Servers { get; set; }
+        public StorageServers servers { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// Gets or Sets size
         /// </summary>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public decimal? Size { get; set; }
+        public decimal? size { get; set; }
 
         /// <summary>
-        /// Gets or Sets State
+        /// Gets or Sets state
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public StorageState State { get; set; }
+        public StorageState state { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tier
+        /// Gets or Sets tier
         /// </summary>
         [DataMember(Name="tier", EmitDefaultValue=false)]
-        public StorageTier Tier { get; set; }
+        public StorageTier tier { get; set; }
 
         /// <summary>
-        /// Gets or Sets Title
+        /// Gets or Sets title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
+        public string title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Gets or Sets type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public StorageType Type { get; set; }
+        public StorageType type { get; set; }
 
         /// <summary>
-        /// Gets or Sets Uuid
+        /// Gets or Sets uuid
         /// </summary>
         [DataMember(Name="uuid", EmitDefaultValue=false)]
-        public Guid? Uuid { get; set; }
+        public Guid? uuid { get; set; }
 
         /// <summary>
-        /// Gets or Sets Zone
+        /// Gets or Sets zone
         /// </summary>
         [DataMember(Name="zone", EmitDefaultValue=false)]
-        public string Zone { get; set; }
+        public string zone { get; set; }
 
         /// <summary>
-        /// Gets or Sets Origin
+        /// Gets or Sets origin
         /// </summary>
         [DataMember(Name="origin", EmitDefaultValue=false)]
-        public Guid? Origin { get; set; }
+        public Guid? origin { get; set; }
 
         /// <summary>
-        /// Gets or Sets Created
+        /// Gets or Sets created
         /// </summary>
         [DataMember(Name="created", EmitDefaultValue=false)]
-        public string Created { get; set; }
+        public string created { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -156,20 +156,20 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Storage {\n");
-            sb.Append("  Access: ").Append(Access).Append("\n");
-            sb.Append("  BackupRule: ").Append(BackupRule).Append("\n");
-            sb.Append("  Backups: ").Append(Backups).Append("\n");
-            sb.Append("  License: ").Append(License).Append("\n");
-            sb.Append("  Servers: ").Append(Servers).Append("\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  Tier: ").Append(Tier).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Uuid: ").Append(Uuid).Append("\n");
-            sb.Append("  Zone: ").Append(Zone).Append("\n");
-            sb.Append("  Origin: ").Append(Origin).Append("\n");
-            sb.Append("  Created: ").Append(Created).Append("\n");
+            sb.Append("  access: ").Append(access).Append("\n");
+            sb.Append("  backupRule: ").Append(backupRule).Append("\n");
+            sb.Append("  backups: ").Append(backups).Append("\n");
+            sb.Append("  license: ").Append(license).Append("\n");
+            sb.Append("  servers: ").Append(servers).Append("\n");
+            sb.Append("  size: ").Append(size).Append("\n");
+            sb.Append("  state: ").Append(state).Append("\n");
+            sb.Append("  tier: ").Append(tier).Append("\n");
+            sb.Append("  title: ").Append(title).Append("\n");
+            sb.Append("  type: ").Append(type).Append("\n");
+            sb.Append("  uuid: ").Append(uuid).Append("\n");
+            sb.Append("  zone: ").Append(zone).Append("\n");
+            sb.Append("  origin: ").Append(origin).Append("\n");
+            sb.Append("  created: ").Append(created).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -205,74 +205,74 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Access == input.Access ||
-                    (this.Access != null &&
-                    this.Access.Equals(input.Access))
+                    this.access == input.access ||
+                    (this.access != null &&
+                    this.access.Equals(input.access))
                 ) && 
                 (
-                    this.BackupRule == input.BackupRule ||
-                    (this.BackupRule != null &&
-                    this.BackupRule.Equals(input.BackupRule))
+                    this.backupRule == input.backupRule ||
+                    (this.backupRule != null &&
+                    this.backupRule.Equals(input.backupRule))
                 ) && 
                 (
-                    this.Backups == input.Backups ||
-                    (this.Backups != null &&
-                    this.Backups.Equals(input.Backups))
+                    this.backups == input.backups ||
+                    (this.backups != null &&
+                    this.backups.Equals(input.backups))
                 ) && 
                 (
-                    this.License == input.License ||
-                    (this.License != null &&
-                    this.License.Equals(input.License))
+                    this.license == input.license ||
+                    (this.license != null &&
+                    this.license.Equals(input.license))
                 ) && 
                 (
-                    this.Servers == input.Servers ||
-                    (this.Servers != null &&
-                    this.Servers.Equals(input.Servers))
+                    this.servers == input.servers ||
+                    (this.servers != null &&
+                    this.servers.Equals(input.servers))
                 ) && 
                 (
-                    this.Size == input.Size ||
-                    (this.Size != null &&
-                    this.Size.Equals(input.Size))
+                    this.size == input.size ||
+                    (this.size != null &&
+                    this.size.Equals(input.size))
                 ) && 
                 (
-                    this.State == input.State ||
-                    (this.State != null &&
-                    this.State.Equals(input.State))
+                    this.state == input.state ||
+                    (this.state != null &&
+                    this.state.Equals(input.state))
                 ) && 
                 (
-                    this.Tier == input.Tier ||
-                    (this.Tier != null &&
-                    this.Tier.Equals(input.Tier))
+                    this.tier == input.tier ||
+                    (this.tier != null &&
+                    this.tier.Equals(input.tier))
                 ) && 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    this.title == input.title ||
+                    (this.title != null &&
+                    this.title.Equals(input.title))
                 ) && 
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.type == input.type ||
+                    (this.type != null &&
+                    this.type.Equals(input.type))
                 ) && 
                 (
-                    this.Uuid == input.Uuid ||
-                    (this.Uuid != null &&
-                    this.Uuid.Equals(input.Uuid))
+                    this.uuid == input.uuid ||
+                    (this.uuid != null &&
+                    this.uuid.Equals(input.uuid))
                 ) && 
                 (
-                    this.Zone == input.Zone ||
-                    (this.Zone != null &&
-                    this.Zone.Equals(input.Zone))
+                    this.zone == input.zone ||
+                    (this.zone != null &&
+                    this.zone.Equals(input.zone))
                 ) && 
                 (
-                    this.Origin == input.Origin ||
-                    (this.Origin != null &&
-                    this.Origin.Equals(input.Origin))
+                    this.origin == input.origin ||
+                    (this.origin != null &&
+                    this.origin.Equals(input.origin))
                 ) && 
                 (
-                    this.Created == input.Created ||
-                    (this.Created != null &&
-                    this.Created.Equals(input.Created))
+                    this.created == input.created ||
+                    (this.created != null &&
+                    this.created.Equals(input.created))
                 );
         }
 
@@ -285,34 +285,34 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Access != null)
-                    hashCode = hashCode * 59 + this.Access.GetHashCode();
-                if (this.BackupRule != null)
-                    hashCode = hashCode * 59 + this.BackupRule.GetHashCode();
-                if (this.Backups != null)
-                    hashCode = hashCode * 59 + this.Backups.GetHashCode();
-                if (this.License != null)
-                    hashCode = hashCode * 59 + this.License.GetHashCode();
-                if (this.Servers != null)
-                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
-                if (this.Size != null)
-                    hashCode = hashCode * 59 + this.Size.GetHashCode();
-                if (this.State != null)
-                    hashCode = hashCode * 59 + this.State.GetHashCode();
-                if (this.Tier != null)
-                    hashCode = hashCode * 59 + this.Tier.GetHashCode();
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.Uuid != null)
-                    hashCode = hashCode * 59 + this.Uuid.GetHashCode();
-                if (this.Zone != null)
-                    hashCode = hashCode * 59 + this.Zone.GetHashCode();
-                if (this.Origin != null)
-                    hashCode = hashCode * 59 + this.Origin.GetHashCode();
-                if (this.Created != null)
-                    hashCode = hashCode * 59 + this.Created.GetHashCode();
+                if (this.access != null)
+                    hashCode = hashCode * 59 + this.access.GetHashCode();
+                if (this.backupRule != null)
+                    hashCode = hashCode * 59 + this.backupRule.GetHashCode();
+                if (this.backups != null)
+                    hashCode = hashCode * 59 + this.backups.GetHashCode();
+                if (this.license != null)
+                    hashCode = hashCode * 59 + this.license.GetHashCode();
+                if (this.servers != null)
+                    hashCode = hashCode * 59 + this.servers.GetHashCode();
+                if (this.size != null)
+                    hashCode = hashCode * 59 + this.size.GetHashCode();
+                if (this.state != null)
+                    hashCode = hashCode * 59 + this.state.GetHashCode();
+                if (this.tier != null)
+                    hashCode = hashCode * 59 + this.tier.GetHashCode();
+                if (this.title != null)
+                    hashCode = hashCode * 59 + this.title.GetHashCode();
+                if (this.type != null)
+                    hashCode = hashCode * 59 + this.type.GetHashCode();
+                if (this.uuid != null)
+                    hashCode = hashCode * 59 + this.uuid.GetHashCode();
+                if (this.zone != null)
+                    hashCode = hashCode * 59 + this.zone.GetHashCode();
+                if (this.origin != null)
+                    hashCode = hashCode * 59 + this.origin.GetHashCode();
+                if (this.created != null)
+                    hashCode = hashCode * 59 + this.created.GetHashCode();
                 return hashCode;
             }
         }

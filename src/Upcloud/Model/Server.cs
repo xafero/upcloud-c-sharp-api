@@ -130,118 +130,118 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>The storage device boot order.</value>
         [DataMember(Name="boot_order", EmitDefaultValue=false)]
-        public BootOrderEnum? BootOrder { get; set; }
+        public BootOrderEnum? bootOrder { get; set; }
         /// <summary>
         /// The state of the server firewall rules.
         /// </summary>
         /// <value>The state of the server firewall rules.</value>
         [DataMember(Name="firewall", EmitDefaultValue=false)]
-        public FirewallEnum? Firewall { get; set; }
+        public FirewallEnum? firewall { get; set; }
         /// <summary>
         /// The model of the server&#39;s video interface.
         /// </summary>
         /// <value>The model of the server&#39;s video interface.</value>
         [DataMember(Name="video_model", EmitDefaultValue=false)]
-        public VideoModelEnum? VideoModel { get; set; }
+        public VideoModelEnum? videoModel { get; set; }
         /// <summary>
         /// The state of the VNC remote access service.
         /// </summary>
         /// <value>The state of the VNC remote access service.</value>
         [DataMember(Name="vnc", EmitDefaultValue=false)]
-        public VncEnum? Vnc { get; set; }
+        public VncEnum? vnc { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Server" /> class.
         /// </summary>
-        /// <param name="BootOrder">The storage device boot order..</param>
-        /// <param name="CoreNumber">The number of CPU cores dedicated to the server. See List server configurations..</param>
-        /// <param name="Firewall">The state of the server firewall rules. (default to FirewallEnum.On).</param>
-        /// <param name="Host">Host.</param>
-        /// <param name="Hostname">A valid hostname, e.g. host.example.com. The maximum length is 128 characters..</param>
-        /// <param name="IpAddresses">IpAddresses.</param>
-        /// <param name="License">License.</param>
-        /// <param name="MemoryAmount">The amount of main memory in megabytes. See List server configurations..</param>
-        /// <param name="NicModel">The model of the server&#39;s network interfaces. (default to &quot;e1000&quot;).</param>
-        /// <param name="Plan">The pricing plan used. If a plan is selected, the core_number and  memory_amount must match the plan if they are present. (default to &quot;custom&quot;).</param>
-        /// <param name="PlanIpv4Bytes">PlanIpv4Bytes.</param>
-        /// <param name="PlanIpv6Bytes">PlanIpv6Bytes.</param>
-        /// <param name="State">State.</param>
-        /// <param name="StorageDevices">StorageDevices.</param>
-        /// <param name="Tags">Tags.</param>
-        /// <param name="Timezone">A timezone identifier, e.g. Europe/Helsinki. See Timezones..</param>
-        /// <param name="Title">A short description..</param>
-        /// <param name="Uuid">Uuid.</param>
-        /// <param name="VideoModel">The model of the server&#39;s video interface. (default to VideoModelEnum.Vga).</param>
-        /// <param name="Vnc">The state of the VNC remote access service. (default to VncEnum.Off).</param>
-        /// <param name="VncHost">VncHost.</param>
-        /// <param name="VncPassword">The VNC remote access password..</param>
-        /// <param name="VncPort">VncPort.</param>
-        /// <param name="Zone">Zone.</param>
-        public Server(BootOrderEnum? BootOrder = default(BootOrderEnum?), decimal? CoreNumber = default(decimal?), FirewallEnum? Firewall = FirewallEnum.On, decimal? Host = default(decimal?), string Hostname = default(string), IpAddresses IpAddresses = default(IpAddresses), decimal? License = default(decimal?), decimal? MemoryAmount = default(decimal?), string NicModel = "e1000", string Plan = "custom", decimal? PlanIpv4Bytes = default(decimal?), decimal? PlanIpv6Bytes = default(decimal?), ServerState State = default(ServerState), ServerStorageDevices StorageDevices = default(ServerStorageDevices), ServerTags Tags = default(ServerTags), Timezone Timezone = default(Timezone), string Title = default(string), Guid? Uuid = default(Guid?), VideoModelEnum? VideoModel = VideoModelEnum.Vga, VncEnum? Vnc = VncEnum.Off, string VncHost = default(string), string VncPassword = default(string), string VncPort = default(string), string Zone = default(string))
+        /// <param name="bootOrder">The storage device boot order..</param>
+        /// <param name="coreNumber">The number of CPU cores dedicated to the server. See List server configurations..</param>
+        /// <param name="firewall">The state of the server firewall rules. (default to FirewallEnum.On).</param>
+        /// <param name="host">host.</param>
+        /// <param name="hostname">A valid hostname, e.g. host.example.com. The maximum length is 128 characters..</param>
+        /// <param name="ipAddresses">ipAddresses.</param>
+        /// <param name="license">license.</param>
+        /// <param name="memoryAmount">The amount of main memory in megabytes. See List server configurations..</param>
+        /// <param name="nicModel">The model of the server&#39;s network interfaces. (default to &quot;e1000&quot;).</param>
+        /// <param name="plan">The pricing plan used. If a plan is selected, the core_number and  memory_amount must match the plan if they are present. (default to &quot;custom&quot;).</param>
+        /// <param name="planIpv4Bytes">planIpv4Bytes.</param>
+        /// <param name="planIpv6Bytes">planIpv6Bytes.</param>
+        /// <param name="state">state.</param>
+        /// <param name="storageDevices">storageDevices.</param>
+        /// <param name="tags">tags.</param>
+        /// <param name="timezone">A timezone identifier, e.g. Europe/Helsinki. See Timezones..</param>
+        /// <param name="title">A short description..</param>
+        /// <param name="uuid">uuid.</param>
+        /// <param name="videoModel">The model of the server&#39;s video interface. (default to VideoModelEnum.Vga).</param>
+        /// <param name="vnc">The state of the VNC remote access service. (default to VncEnum.Off).</param>
+        /// <param name="vncHost">vncHost.</param>
+        /// <param name="vncPassword">The VNC remote access password..</param>
+        /// <param name="vncPort">vncPort.</param>
+        /// <param name="zone">zone.</param>
+        public Server(BootOrderEnum? bootOrder = default(BootOrderEnum?), decimal? coreNumber = default(decimal?), FirewallEnum? firewall = FirewallEnum.On, decimal? host = default(decimal?), string hostname = default(string), IpAddresses ipAddresses = default(IpAddresses), decimal? license = default(decimal?), decimal? memoryAmount = default(decimal?), string nicModel = "e1000", string plan = "custom", decimal? planIpv4Bytes = default(decimal?), decimal? planIpv6Bytes = default(decimal?), ServerState state = default(ServerState), ServerStorageDevices storageDevices = default(ServerStorageDevices), ServerTags tags = default(ServerTags), string timezone = default(string), string title = default(string), Guid? uuid = default(Guid?), VideoModelEnum? videoModel = VideoModelEnum.Vga, VncEnum? vnc = VncEnum.Off, string vncHost = default(string), string vncPassword = default(string), string vncPort = default(string), string zone = default(string))
         {
-            this.BootOrder = BootOrder;
-            this.CoreNumber = CoreNumber;
-            // use default value if no "Firewall" provided
-            if (Firewall == null)
+            this.bootOrder = bootOrder;
+            this.coreNumber = coreNumber;
+            // use default value if no "firewall" provided
+            if (firewall == null)
             {
-                this.Firewall = FirewallEnum.On;
+                this.firewall = FirewallEnum.On;
             }
             else
             {
-                this.Firewall = Firewall;
+                this.firewall = firewall;
             }
-            this.Host = Host;
-            this.Hostname = Hostname;
-            this.IpAddresses = IpAddresses;
-            this.License = License;
-            this.MemoryAmount = MemoryAmount;
-            // use default value if no "NicModel" provided
-            if (NicModel == null)
+            this.host = host;
+            this.hostname = hostname;
+            this.ipAddresses = ipAddresses;
+            this.license = license;
+            this.memoryAmount = memoryAmount;
+            // use default value if no "nicModel" provided
+            if (nicModel == null)
             {
-                this.NicModel = "e1000";
+                this.nicModel = "e1000";
             }
             else
             {
-                this.NicModel = NicModel;
+                this.nicModel = nicModel;
             }
-            // use default value if no "Plan" provided
-            if (Plan == null)
+            // use default value if no "plan" provided
+            if (plan == null)
             {
-                this.Plan = "custom";
+                this.plan = "custom";
             }
             else
             {
-                this.Plan = Plan;
+                this.plan = plan;
             }
-            this.PlanIpv4Bytes = PlanIpv4Bytes;
-            this.PlanIpv6Bytes = PlanIpv6Bytes;
-            this.State = State;
-            this.StorageDevices = StorageDevices;
-            this.Tags = Tags;
-            this.Timezone = Timezone;
-            this.Title = Title;
-            this.Uuid = Uuid;
-            // use default value if no "VideoModel" provided
-            if (VideoModel == null)
+            this.planIpv4Bytes = planIpv4Bytes;
+            this.planIpv6Bytes = planIpv6Bytes;
+            this.state = state;
+            this.storageDevices = storageDevices;
+            this.tags = tags;
+            this.timezone = timezone;
+            this.title = title;
+            this.uuid = uuid;
+            // use default value if no "videoModel" provided
+            if (videoModel == null)
             {
-                this.VideoModel = VideoModelEnum.Vga;
+                this.videoModel = VideoModelEnum.Vga;
             }
             else
             {
-                this.VideoModel = VideoModel;
+                this.videoModel = videoModel;
             }
-            // use default value if no "Vnc" provided
-            if (Vnc == null)
+            // use default value if no "vnc" provided
+            if (vnc == null)
             {
-                this.Vnc = VncEnum.Off;
+                this.vnc = VncEnum.Off;
             }
             else
             {
-                this.Vnc = Vnc;
+                this.vnc = vnc;
             }
-            this.VncHost = VncHost;
-            this.VncPassword = VncPassword;
-            this.VncPort = VncPort;
-            this.Zone = Zone;
+            this.vncHost = vncHost;
+            this.vncPassword = vncPassword;
+            this.vncPort = vncPort;
+            this.zone = zone;
         }
         
 
@@ -250,131 +250,131 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>The number of CPU cores dedicated to the server. See List server configurations.</value>
         [DataMember(Name="core_number", EmitDefaultValue=false)]
-        public decimal? CoreNumber { get; set; }
+        public decimal? coreNumber { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Host
+        /// Gets or Sets host
         /// </summary>
         [DataMember(Name="host", EmitDefaultValue=false)]
-        public decimal? Host { get; set; }
+        public decimal? host { get; set; }
 
         /// <summary>
         /// A valid hostname, e.g. host.example.com. The maximum length is 128 characters.
         /// </summary>
         /// <value>A valid hostname, e.g. host.example.com. The maximum length is 128 characters.</value>
         [DataMember(Name="hostname", EmitDefaultValue=false)]
-        public string Hostname { get; set; }
+        public string hostname { get; set; }
 
         /// <summary>
-        /// Gets or Sets IpAddresses
+        /// Gets or Sets ipAddresses
         /// </summary>
         [DataMember(Name="ip_addresses", EmitDefaultValue=false)]
-        public IpAddresses IpAddresses { get; set; }
+        public IpAddresses ipAddresses { get; set; }
 
         /// <summary>
-        /// Gets or Sets License
+        /// Gets or Sets license
         /// </summary>
         [DataMember(Name="license", EmitDefaultValue=false)]
-        public decimal? License { get; set; }
+        public decimal? license { get; set; }
 
         /// <summary>
         /// The amount of main memory in megabytes. See List server configurations.
         /// </summary>
         /// <value>The amount of main memory in megabytes. See List server configurations.</value>
         [DataMember(Name="memory_amount", EmitDefaultValue=false)]
-        public decimal? MemoryAmount { get; set; }
+        public decimal? memoryAmount { get; set; }
 
         /// <summary>
         /// The model of the server&#39;s network interfaces.
         /// </summary>
         /// <value>The model of the server&#39;s network interfaces.</value>
         [DataMember(Name="nic_model", EmitDefaultValue=false)]
-        public string NicModel { get; set; }
+        public string nicModel { get; set; }
 
         /// <summary>
         /// The pricing plan used. If a plan is selected, the core_number and  memory_amount must match the plan if they are present.
         /// </summary>
         /// <value>The pricing plan used. If a plan is selected, the core_number and  memory_amount must match the plan if they are present.</value>
         [DataMember(Name="plan", EmitDefaultValue=false)]
-        public string Plan { get; set; }
+        public string plan { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlanIpv4Bytes
+        /// Gets or Sets planIpv4Bytes
         /// </summary>
         [DataMember(Name="plan_ipv4_bytes", EmitDefaultValue=false)]
-        public decimal? PlanIpv4Bytes { get; set; }
+        public decimal? planIpv4Bytes { get; set; }
 
         /// <summary>
-        /// Gets or Sets PlanIpv6Bytes
+        /// Gets or Sets planIpv6Bytes
         /// </summary>
         [DataMember(Name="plan_ipv6_bytes", EmitDefaultValue=false)]
-        public decimal? PlanIpv6Bytes { get; set; }
+        public decimal? planIpv6Bytes { get; set; }
 
         /// <summary>
-        /// Gets or Sets State
+        /// Gets or Sets state
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public ServerState State { get; set; }
+        public ServerState state { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageDevices
+        /// Gets or Sets storageDevices
         /// </summary>
         [DataMember(Name="storage_devices", EmitDefaultValue=false)]
-        public ServerStorageDevices StorageDevices { get; set; }
+        public ServerStorageDevices storageDevices { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tags
+        /// Gets or Sets tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
-        public ServerTags Tags { get; set; }
+        public ServerTags tags { get; set; }
 
         /// <summary>
         /// A timezone identifier, e.g. Europe/Helsinki. See Timezones.
         /// </summary>
         /// <value>A timezone identifier, e.g. Europe/Helsinki. See Timezones.</value>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
-        public Timezone Timezone { get; set; }
+        public string timezone { get; set; }
 
         /// <summary>
         /// A short description.
         /// </summary>
         /// <value>A short description.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
+        public string title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Uuid
+        /// Gets or Sets uuid
         /// </summary>
         [DataMember(Name="uuid", EmitDefaultValue=false)]
-        public Guid? Uuid { get; set; }
+        public Guid? uuid { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets VncHost
+        /// Gets or Sets vncHost
         /// </summary>
         [DataMember(Name="vnc_host", EmitDefaultValue=false)]
-        public string VncHost { get; set; }
+        public string vncHost { get; set; }
 
         /// <summary>
         /// The VNC remote access password.
         /// </summary>
         /// <value>The VNC remote access password.</value>
         [DataMember(Name="vnc_password", EmitDefaultValue=false)]
-        public string VncPassword { get; set; }
+        public string vncPassword { get; set; }
 
         /// <summary>
-        /// Gets or Sets VncPort
+        /// Gets or Sets vncPort
         /// </summary>
         [DataMember(Name="vnc_port", EmitDefaultValue=false)]
-        public string VncPort { get; set; }
+        public string vncPort { get; set; }
 
         /// <summary>
-        /// Gets or Sets Zone
+        /// Gets or Sets zone
         /// </summary>
         [DataMember(Name="zone", EmitDefaultValue=false)]
-        public string Zone { get; set; }
+        public string zone { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -384,30 +384,30 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Server {\n");
-            sb.Append("  BootOrder: ").Append(BootOrder).Append("\n");
-            sb.Append("  CoreNumber: ").Append(CoreNumber).Append("\n");
-            sb.Append("  Firewall: ").Append(Firewall).Append("\n");
-            sb.Append("  Host: ").Append(Host).Append("\n");
-            sb.Append("  Hostname: ").Append(Hostname).Append("\n");
-            sb.Append("  IpAddresses: ").Append(IpAddresses).Append("\n");
-            sb.Append("  License: ").Append(License).Append("\n");
-            sb.Append("  MemoryAmount: ").Append(MemoryAmount).Append("\n");
-            sb.Append("  NicModel: ").Append(NicModel).Append("\n");
-            sb.Append("  Plan: ").Append(Plan).Append("\n");
-            sb.Append("  PlanIpv4Bytes: ").Append(PlanIpv4Bytes).Append("\n");
-            sb.Append("  PlanIpv6Bytes: ").Append(PlanIpv6Bytes).Append("\n");
-            sb.Append("  State: ").Append(State).Append("\n");
-            sb.Append("  StorageDevices: ").Append(StorageDevices).Append("\n");
-            sb.Append("  Tags: ").Append(Tags).Append("\n");
-            sb.Append("  Timezone: ").Append(Timezone).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Uuid: ").Append(Uuid).Append("\n");
-            sb.Append("  VideoModel: ").Append(VideoModel).Append("\n");
-            sb.Append("  Vnc: ").Append(Vnc).Append("\n");
-            sb.Append("  VncHost: ").Append(VncHost).Append("\n");
-            sb.Append("  VncPassword: ").Append(VncPassword).Append("\n");
-            sb.Append("  VncPort: ").Append(VncPort).Append("\n");
-            sb.Append("  Zone: ").Append(Zone).Append("\n");
+            sb.Append("  bootOrder: ").Append(bootOrder).Append("\n");
+            sb.Append("  coreNumber: ").Append(coreNumber).Append("\n");
+            sb.Append("  firewall: ").Append(firewall).Append("\n");
+            sb.Append("  host: ").Append(host).Append("\n");
+            sb.Append("  hostname: ").Append(hostname).Append("\n");
+            sb.Append("  ipAddresses: ").Append(ipAddresses).Append("\n");
+            sb.Append("  license: ").Append(license).Append("\n");
+            sb.Append("  memoryAmount: ").Append(memoryAmount).Append("\n");
+            sb.Append("  nicModel: ").Append(nicModel).Append("\n");
+            sb.Append("  plan: ").Append(plan).Append("\n");
+            sb.Append("  planIpv4Bytes: ").Append(planIpv4Bytes).Append("\n");
+            sb.Append("  planIpv6Bytes: ").Append(planIpv6Bytes).Append("\n");
+            sb.Append("  state: ").Append(state).Append("\n");
+            sb.Append("  storageDevices: ").Append(storageDevices).Append("\n");
+            sb.Append("  tags: ").Append(tags).Append("\n");
+            sb.Append("  timezone: ").Append(timezone).Append("\n");
+            sb.Append("  title: ").Append(title).Append("\n");
+            sb.Append("  uuid: ").Append(uuid).Append("\n");
+            sb.Append("  videoModel: ").Append(videoModel).Append("\n");
+            sb.Append("  vnc: ").Append(vnc).Append("\n");
+            sb.Append("  vncHost: ").Append(vncHost).Append("\n");
+            sb.Append("  vncPassword: ").Append(vncPassword).Append("\n");
+            sb.Append("  vncPort: ").Append(vncPort).Append("\n");
+            sb.Append("  zone: ").Append(zone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -443,124 +443,124 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.BootOrder == input.BootOrder ||
-                    (this.BootOrder != null &&
-                    this.BootOrder.Equals(input.BootOrder))
+                    this.bootOrder == input.bootOrder ||
+                    (this.bootOrder != null &&
+                    this.bootOrder.Equals(input.bootOrder))
                 ) && 
                 (
-                    this.CoreNumber == input.CoreNumber ||
-                    (this.CoreNumber != null &&
-                    this.CoreNumber.Equals(input.CoreNumber))
+                    this.coreNumber == input.coreNumber ||
+                    (this.coreNumber != null &&
+                    this.coreNumber.Equals(input.coreNumber))
                 ) && 
                 (
-                    this.Firewall == input.Firewall ||
-                    (this.Firewall != null &&
-                    this.Firewall.Equals(input.Firewall))
+                    this.firewall == input.firewall ||
+                    (this.firewall != null &&
+                    this.firewall.Equals(input.firewall))
                 ) && 
                 (
-                    this.Host == input.Host ||
-                    (this.Host != null &&
-                    this.Host.Equals(input.Host))
+                    this.host == input.host ||
+                    (this.host != null &&
+                    this.host.Equals(input.host))
                 ) && 
                 (
-                    this.Hostname == input.Hostname ||
-                    (this.Hostname != null &&
-                    this.Hostname.Equals(input.Hostname))
+                    this.hostname == input.hostname ||
+                    (this.hostname != null &&
+                    this.hostname.Equals(input.hostname))
                 ) && 
                 (
-                    this.IpAddresses == input.IpAddresses ||
-                    (this.IpAddresses != null &&
-                    this.IpAddresses.Equals(input.IpAddresses))
+                    this.ipAddresses == input.ipAddresses ||
+                    (this.ipAddresses != null &&
+                    this.ipAddresses.Equals(input.ipAddresses))
                 ) && 
                 (
-                    this.License == input.License ||
-                    (this.License != null &&
-                    this.License.Equals(input.License))
+                    this.license == input.license ||
+                    (this.license != null &&
+                    this.license.Equals(input.license))
                 ) && 
                 (
-                    this.MemoryAmount == input.MemoryAmount ||
-                    (this.MemoryAmount != null &&
-                    this.MemoryAmount.Equals(input.MemoryAmount))
+                    this.memoryAmount == input.memoryAmount ||
+                    (this.memoryAmount != null &&
+                    this.memoryAmount.Equals(input.memoryAmount))
                 ) && 
                 (
-                    this.NicModel == input.NicModel ||
-                    (this.NicModel != null &&
-                    this.NicModel.Equals(input.NicModel))
+                    this.nicModel == input.nicModel ||
+                    (this.nicModel != null &&
+                    this.nicModel.Equals(input.nicModel))
                 ) && 
                 (
-                    this.Plan == input.Plan ||
-                    (this.Plan != null &&
-                    this.Plan.Equals(input.Plan))
+                    this.plan == input.plan ||
+                    (this.plan != null &&
+                    this.plan.Equals(input.plan))
                 ) && 
                 (
-                    this.PlanIpv4Bytes == input.PlanIpv4Bytes ||
-                    (this.PlanIpv4Bytes != null &&
-                    this.PlanIpv4Bytes.Equals(input.PlanIpv4Bytes))
+                    this.planIpv4Bytes == input.planIpv4Bytes ||
+                    (this.planIpv4Bytes != null &&
+                    this.planIpv4Bytes.Equals(input.planIpv4Bytes))
                 ) && 
                 (
-                    this.PlanIpv6Bytes == input.PlanIpv6Bytes ||
-                    (this.PlanIpv6Bytes != null &&
-                    this.PlanIpv6Bytes.Equals(input.PlanIpv6Bytes))
+                    this.planIpv6Bytes == input.planIpv6Bytes ||
+                    (this.planIpv6Bytes != null &&
+                    this.planIpv6Bytes.Equals(input.planIpv6Bytes))
                 ) && 
                 (
-                    this.State == input.State ||
-                    (this.State != null &&
-                    this.State.Equals(input.State))
+                    this.state == input.state ||
+                    (this.state != null &&
+                    this.state.Equals(input.state))
                 ) && 
                 (
-                    this.StorageDevices == input.StorageDevices ||
-                    (this.StorageDevices != null &&
-                    this.StorageDevices.Equals(input.StorageDevices))
+                    this.storageDevices == input.storageDevices ||
+                    (this.storageDevices != null &&
+                    this.storageDevices.Equals(input.storageDevices))
                 ) && 
                 (
-                    this.Tags == input.Tags ||
-                    (this.Tags != null &&
-                    this.Tags.Equals(input.Tags))
+                    this.tags == input.tags ||
+                    (this.tags != null &&
+                    this.tags.Equals(input.tags))
                 ) && 
                 (
-                    this.Timezone == input.Timezone ||
-                    (this.Timezone != null &&
-                    this.Timezone.Equals(input.Timezone))
+                    this.timezone == input.timezone ||
+                    (this.timezone != null &&
+                    this.timezone.Equals(input.timezone))
                 ) && 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    this.title == input.title ||
+                    (this.title != null &&
+                    this.title.Equals(input.title))
                 ) && 
                 (
-                    this.Uuid == input.Uuid ||
-                    (this.Uuid != null &&
-                    this.Uuid.Equals(input.Uuid))
+                    this.uuid == input.uuid ||
+                    (this.uuid != null &&
+                    this.uuid.Equals(input.uuid))
                 ) && 
                 (
-                    this.VideoModel == input.VideoModel ||
-                    (this.VideoModel != null &&
-                    this.VideoModel.Equals(input.VideoModel))
+                    this.videoModel == input.videoModel ||
+                    (this.videoModel != null &&
+                    this.videoModel.Equals(input.videoModel))
                 ) && 
                 (
-                    this.Vnc == input.Vnc ||
-                    (this.Vnc != null &&
-                    this.Vnc.Equals(input.Vnc))
+                    this.vnc == input.vnc ||
+                    (this.vnc != null &&
+                    this.vnc.Equals(input.vnc))
                 ) && 
                 (
-                    this.VncHost == input.VncHost ||
-                    (this.VncHost != null &&
-                    this.VncHost.Equals(input.VncHost))
+                    this.vncHost == input.vncHost ||
+                    (this.vncHost != null &&
+                    this.vncHost.Equals(input.vncHost))
                 ) && 
                 (
-                    this.VncPassword == input.VncPassword ||
-                    (this.VncPassword != null &&
-                    this.VncPassword.Equals(input.VncPassword))
+                    this.vncPassword == input.vncPassword ||
+                    (this.vncPassword != null &&
+                    this.vncPassword.Equals(input.vncPassword))
                 ) && 
                 (
-                    this.VncPort == input.VncPort ||
-                    (this.VncPort != null &&
-                    this.VncPort.Equals(input.VncPort))
+                    this.vncPort == input.vncPort ||
+                    (this.vncPort != null &&
+                    this.vncPort.Equals(input.vncPort))
                 ) && 
                 (
-                    this.Zone == input.Zone ||
-                    (this.Zone != null &&
-                    this.Zone.Equals(input.Zone))
+                    this.zone == input.zone ||
+                    (this.zone != null &&
+                    this.zone.Equals(input.zone))
                 );
         }
 
@@ -573,54 +573,54 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.BootOrder != null)
-                    hashCode = hashCode * 59 + this.BootOrder.GetHashCode();
-                if (this.CoreNumber != null)
-                    hashCode = hashCode * 59 + this.CoreNumber.GetHashCode();
-                if (this.Firewall != null)
-                    hashCode = hashCode * 59 + this.Firewall.GetHashCode();
-                if (this.Host != null)
-                    hashCode = hashCode * 59 + this.Host.GetHashCode();
-                if (this.Hostname != null)
-                    hashCode = hashCode * 59 + this.Hostname.GetHashCode();
-                if (this.IpAddresses != null)
-                    hashCode = hashCode * 59 + this.IpAddresses.GetHashCode();
-                if (this.License != null)
-                    hashCode = hashCode * 59 + this.License.GetHashCode();
-                if (this.MemoryAmount != null)
-                    hashCode = hashCode * 59 + this.MemoryAmount.GetHashCode();
-                if (this.NicModel != null)
-                    hashCode = hashCode * 59 + this.NicModel.GetHashCode();
-                if (this.Plan != null)
-                    hashCode = hashCode * 59 + this.Plan.GetHashCode();
-                if (this.PlanIpv4Bytes != null)
-                    hashCode = hashCode * 59 + this.PlanIpv4Bytes.GetHashCode();
-                if (this.PlanIpv6Bytes != null)
-                    hashCode = hashCode * 59 + this.PlanIpv6Bytes.GetHashCode();
-                if (this.State != null)
-                    hashCode = hashCode * 59 + this.State.GetHashCode();
-                if (this.StorageDevices != null)
-                    hashCode = hashCode * 59 + this.StorageDevices.GetHashCode();
-                if (this.Tags != null)
-                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
-                if (this.Timezone != null)
-                    hashCode = hashCode * 59 + this.Timezone.GetHashCode();
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.Uuid != null)
-                    hashCode = hashCode * 59 + this.Uuid.GetHashCode();
-                if (this.VideoModel != null)
-                    hashCode = hashCode * 59 + this.VideoModel.GetHashCode();
-                if (this.Vnc != null)
-                    hashCode = hashCode * 59 + this.Vnc.GetHashCode();
-                if (this.VncHost != null)
-                    hashCode = hashCode * 59 + this.VncHost.GetHashCode();
-                if (this.VncPassword != null)
-                    hashCode = hashCode * 59 + this.VncPassword.GetHashCode();
-                if (this.VncPort != null)
-                    hashCode = hashCode * 59 + this.VncPort.GetHashCode();
-                if (this.Zone != null)
-                    hashCode = hashCode * 59 + this.Zone.GetHashCode();
+                if (this.bootOrder != null)
+                    hashCode = hashCode * 59 + this.bootOrder.GetHashCode();
+                if (this.coreNumber != null)
+                    hashCode = hashCode * 59 + this.coreNumber.GetHashCode();
+                if (this.firewall != null)
+                    hashCode = hashCode * 59 + this.firewall.GetHashCode();
+                if (this.host != null)
+                    hashCode = hashCode * 59 + this.host.GetHashCode();
+                if (this.hostname != null)
+                    hashCode = hashCode * 59 + this.hostname.GetHashCode();
+                if (this.ipAddresses != null)
+                    hashCode = hashCode * 59 + this.ipAddresses.GetHashCode();
+                if (this.license != null)
+                    hashCode = hashCode * 59 + this.license.GetHashCode();
+                if (this.memoryAmount != null)
+                    hashCode = hashCode * 59 + this.memoryAmount.GetHashCode();
+                if (this.nicModel != null)
+                    hashCode = hashCode * 59 + this.nicModel.GetHashCode();
+                if (this.plan != null)
+                    hashCode = hashCode * 59 + this.plan.GetHashCode();
+                if (this.planIpv4Bytes != null)
+                    hashCode = hashCode * 59 + this.planIpv4Bytes.GetHashCode();
+                if (this.planIpv6Bytes != null)
+                    hashCode = hashCode * 59 + this.planIpv6Bytes.GetHashCode();
+                if (this.state != null)
+                    hashCode = hashCode * 59 + this.state.GetHashCode();
+                if (this.storageDevices != null)
+                    hashCode = hashCode * 59 + this.storageDevices.GetHashCode();
+                if (this.tags != null)
+                    hashCode = hashCode * 59 + this.tags.GetHashCode();
+                if (this.timezone != null)
+                    hashCode = hashCode * 59 + this.timezone.GetHashCode();
+                if (this.title != null)
+                    hashCode = hashCode * 59 + this.title.GetHashCode();
+                if (this.uuid != null)
+                    hashCode = hashCode * 59 + this.uuid.GetHashCode();
+                if (this.videoModel != null)
+                    hashCode = hashCode * 59 + this.videoModel.GetHashCode();
+                if (this.vnc != null)
+                    hashCode = hashCode * 59 + this.vnc.GetHashCode();
+                if (this.vncHost != null)
+                    hashCode = hashCode * 59 + this.vncHost.GetHashCode();
+                if (this.vncPassword != null)
+                    hashCode = hashCode * 59 + this.vncPassword.GetHashCode();
+                if (this.vncPort != null)
+                    hashCode = hashCode * 59 + this.vncPort.GetHashCode();
+                if (this.zone != null)
+                    hashCode = hashCode * 59 + this.zone.GetHashCode();
                 return hashCode;
             }
         }

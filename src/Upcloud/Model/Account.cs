@@ -32,12 +32,12 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Account" /> class.
         /// </summary>
-        /// <param name="Credits">Credits are used to pay for cloud resources such as servers, storages, network traffic and IP addresses. Credits are automatically deducted for used resources on an hourly basis. Should the user run out of credits, active resources will be disabled and reactivated after the credit balance returns to positive. Credits can be purchased from the UpCloud website..</param>
-        /// <param name="Username">Username.</param>
-        public Account(decimal? Credits = default(decimal?), string Username = default(string))
+        /// <param name="credits">Credits are used to pay for cloud resources such as servers, storages, network traffic and IP addresses. Credits are automatically deducted for used resources on an hourly basis. Should the user run out of credits, active resources will be disabled and reactivated after the credit balance returns to positive. Credits can be purchased from the UpCloud website..</param>
+        /// <param name="username">username.</param>
+        public Account(decimal? credits = default(decimal?), string username = default(string))
         {
-            this.Credits = Credits;
-            this.Username = Username;
+            this.credits = credits;
+            this.username = username;
         }
         
         /// <summary>
@@ -45,13 +45,13 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>Credits are used to pay for cloud resources such as servers, storages, network traffic and IP addresses. Credits are automatically deducted for used resources on an hourly basis. Should the user run out of credits, active resources will be disabled and reactivated after the credit balance returns to positive. Credits can be purchased from the UpCloud website.</value>
         [DataMember(Name="credits", EmitDefaultValue=false)]
-        public decimal? Credits { get; set; }
+        public decimal? credits { get; set; }
 
         /// <summary>
-        /// Gets or Sets Username
+        /// Gets or Sets username
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
-        public string Username { get; set; }
+        public string username { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,8 +61,8 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Account {\n");
-            sb.Append("  Credits: ").Append(Credits).Append("\n");
-            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  credits: ").Append(credits).Append("\n");
+            sb.Append("  username: ").Append(username).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,14 +98,14 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Credits == input.Credits ||
-                    (this.Credits != null &&
-                    this.Credits.Equals(input.Credits))
+                    this.credits == input.credits ||
+                    (this.credits != null &&
+                    this.credits.Equals(input.credits))
                 ) && 
                 (
-                    this.Username == input.Username ||
-                    (this.Username != null &&
-                    this.Username.Equals(input.Username))
+                    this.username == input.username ||
+                    (this.username != null &&
+                    this.username.Equals(input.username))
                 );
         }
 
@@ -118,10 +118,10 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Credits != null)
-                    hashCode = hashCode * 59 + this.Credits.GetHashCode();
-                if (this.Username != null)
-                    hashCode = hashCode * 59 + this.Username.GetHashCode();
+                if (this.credits != null)
+                    hashCode = hashCode * 59 + this.credits.GetHashCode();
+                if (this.username != null)
+                    hashCode = hashCode * 59 + this.username.GetHashCode();
                 return hashCode;
             }
         }

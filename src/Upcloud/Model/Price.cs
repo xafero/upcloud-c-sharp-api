@@ -32,25 +32,25 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Price" /> class.
         /// </summary>
-        /// <param name="Amount">Amount.</param>
-        /// <param name="_Price">_Price.</param>
-        public Price(decimal? Amount = default(decimal?), decimal? _Price = default(decimal?))
+        /// <param name="amount">amount.</param>
+        /// <param name="_price">_price.</param>
+        public Price(decimal? amount = default(decimal?), decimal? _price = default(decimal?))
         {
-            this.Amount = Amount;
-            this._Price = _Price;
+            this.amount = amount;
+            this._price = _price;
         }
         
         /// <summary>
-        /// Gets or Sets Amount
+        /// Gets or Sets amount
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue=false)]
-        public decimal? Amount { get; set; }
+        public decimal? amount { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Price
+        /// Gets or Sets _price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
-        public decimal? _Price { get; set; }
+        public decimal? _price { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +60,8 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Price {\n");
-            sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  _Price: ").Append(_Price).Append("\n");
+            sb.Append("  amount: ").Append(amount).Append("\n");
+            sb.Append("  _price: ").Append(_price).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,14 +97,14 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Amount == input.Amount ||
-                    (this.Amount != null &&
-                    this.Amount.Equals(input.Amount))
+                    this.amount == input.amount ||
+                    (this.amount != null &&
+                    this.amount.Equals(input.amount))
                 ) && 
                 (
-                    this._Price == input._Price ||
-                    (this._Price != null &&
-                    this._Price.Equals(input._Price))
+                    this._price == input._price ||
+                    (this._price != null &&
+                    this._price.Equals(input._price))
                 );
         }
 
@@ -117,10 +117,10 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Amount != null)
-                    hashCode = hashCode * 59 + this.Amount.GetHashCode();
-                if (this._Price != null)
-                    hashCode = hashCode * 59 + this._Price.GetHashCode();
+                if (this.amount != null)
+                    hashCode = hashCode * 59 + this.amount.GetHashCode();
+                if (this._price != null)
+                    hashCode = hashCode * 59 + this._price.GetHashCode();
                 return hashCode;
             }
         }

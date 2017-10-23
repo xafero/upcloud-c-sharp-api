@@ -60,196 +60,196 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'BootOrder'
+        /// Test the property 'bootOrder'
         /// </summary>
         [Test]
-        public void BootOrderTest()
+        public void bootOrderTest()
         {
-            // TODO unit test for the property 'BootOrder'
+            // TODO unit test for the property 'bootOrder'
         }
         /// <summary>
-        /// Test the property 'CoreNumber'
+        /// Test the property 'coreNumber'
         /// </summary>
         [Test]
-        public void CoreNumberTest()
+        public void coreNumberTest()
         {
-            // TODO unit test for the property 'CoreNumber'
+            // TODO unit test for the property 'coreNumber'
         }
         /// <summary>
-        /// Test the property 'Firewall'
+        /// Test the property 'firewall'
         /// </summary>
         [Test]
-        public void FirewallTest()
+        public void firewallTest()
         {
-            // TODO unit test for the property 'Firewall'
+            // TODO unit test for the property 'firewall'
         }
         /// <summary>
-        /// Test the property 'Host'
+        /// Test the property 'host'
         /// </summary>
         [Test]
-        public void HostTest()
+        public void hostTest()
         {
-            // TODO unit test for the property 'Host'
+            // TODO unit test for the property 'host'
         }
         /// <summary>
-        /// Test the property 'Hostname'
+        /// Test the property 'hostname'
         /// </summary>
         [Test]
-        public void HostnameTest()
+        public void hostnameTest()
         {
-            // TODO unit test for the property 'Hostname'
+            // TODO unit test for the property 'hostname'
         }
         /// <summary>
-        /// Test the property 'IpAddresses'
+        /// Test the property 'ipAddresses'
         /// </summary>
         [Test]
-        public void IpAddressesTest()
+        public void ipAddressesTest()
         {
-            // TODO unit test for the property 'IpAddresses'
+            // TODO unit test for the property 'ipAddresses'
         }
         /// <summary>
-        /// Test the property 'License'
+        /// Test the property 'license'
         /// </summary>
         [Test]
-        public void LicenseTest()
+        public void licenseTest()
         {
-            // TODO unit test for the property 'License'
+            // TODO unit test for the property 'license'
         }
         /// <summary>
-        /// Test the property 'MemoryAmount'
+        /// Test the property 'memoryAmount'
         /// </summary>
         [Test]
-        public void MemoryAmountTest()
+        public void memoryAmountTest()
         {
-            // TODO unit test for the property 'MemoryAmount'
+            // TODO unit test for the property 'memoryAmount'
         }
         /// <summary>
-        /// Test the property 'NicModel'
+        /// Test the property 'nicModel'
         /// </summary>
         [Test]
-        public void NicModelTest()
+        public void nicModelTest()
         {
-            // TODO unit test for the property 'NicModel'
+            // TODO unit test for the property 'nicModel'
         }
         /// <summary>
-        /// Test the property 'Plan'
+        /// Test the property 'plan'
         /// </summary>
         [Test]
-        public void PlanTest()
+        public void planTest()
         {
-            // TODO unit test for the property 'Plan'
+            // TODO unit test for the property 'plan'
         }
         /// <summary>
-        /// Test the property 'PlanIpv4Bytes'
+        /// Test the property 'planIpv4Bytes'
         /// </summary>
         [Test]
-        public void PlanIpv4BytesTest()
+        public void planIpv4BytesTest()
         {
-            // TODO unit test for the property 'PlanIpv4Bytes'
+            // TODO unit test for the property 'planIpv4Bytes'
         }
         /// <summary>
-        /// Test the property 'PlanIpv6Bytes'
+        /// Test the property 'planIpv6Bytes'
         /// </summary>
         [Test]
-        public void PlanIpv6BytesTest()
+        public void planIpv6BytesTest()
         {
-            // TODO unit test for the property 'PlanIpv6Bytes'
+            // TODO unit test for the property 'planIpv6Bytes'
         }
         /// <summary>
-        /// Test the property 'State'
+        /// Test the property 'state'
         /// </summary>
         [Test]
-        public void StateTest()
+        public void stateTest()
         {
-            // TODO unit test for the property 'State'
+            // TODO unit test for the property 'state'
         }
         /// <summary>
-        /// Test the property 'StorageDevices'
+        /// Test the property 'storageDevices'
         /// </summary>
         [Test]
-        public void StorageDevicesTest()
+        public void storageDevicesTest()
         {
-            // TODO unit test for the property 'StorageDevices'
+            // TODO unit test for the property 'storageDevices'
         }
         /// <summary>
-        /// Test the property 'Tags'
+        /// Test the property 'tags'
         /// </summary>
         [Test]
-        public void TagsTest()
+        public void tagsTest()
         {
-            // TODO unit test for the property 'Tags'
+            // TODO unit test for the property 'tags'
         }
         /// <summary>
-        /// Test the property 'Timezone'
+        /// Test the property 'timezone'
         /// </summary>
         [Test]
-        public void TimezoneTest()
+        public void timezoneTest()
         {
-            // TODO unit test for the property 'Timezone'
+            // TODO unit test for the property 'timezone'
         }
         /// <summary>
-        /// Test the property 'Title'
+        /// Test the property 'title'
         /// </summary>
         [Test]
-        public void TitleTest()
+        public void titleTest()
         {
-            // TODO unit test for the property 'Title'
+            // TODO unit test for the property 'title'
         }
         /// <summary>
-        /// Test the property 'Uuid'
+        /// Test the property 'uuid'
         /// </summary>
         [Test]
-        public void UuidTest()
+        public void uuidTest()
         {
-            // TODO unit test for the property 'Uuid'
+            // TODO unit test for the property 'uuid'
         }
         /// <summary>
-        /// Test the property 'VideoModel'
+        /// Test the property 'videoModel'
         /// </summary>
         [Test]
-        public void VideoModelTest()
+        public void videoModelTest()
         {
-            // TODO unit test for the property 'VideoModel'
+            // TODO unit test for the property 'videoModel'
         }
         /// <summary>
-        /// Test the property 'Vnc'
+        /// Test the property 'vnc'
         /// </summary>
         [Test]
-        public void VncTest()
+        public void vncTest()
         {
-            // TODO unit test for the property 'Vnc'
+            // TODO unit test for the property 'vnc'
         }
         /// <summary>
-        /// Test the property 'VncHost'
+        /// Test the property 'vncHost'
         /// </summary>
         [Test]
-        public void VncHostTest()
+        public void vncHostTest()
         {
-            // TODO unit test for the property 'VncHost'
+            // TODO unit test for the property 'vncHost'
         }
         /// <summary>
-        /// Test the property 'VncPassword'
+        /// Test the property 'vncPassword'
         /// </summary>
         [Test]
-        public void VncPasswordTest()
+        public void vncPasswordTest()
         {
-            // TODO unit test for the property 'VncPassword'
+            // TODO unit test for the property 'vncPassword'
         }
         /// <summary>
-        /// Test the property 'VncPort'
+        /// Test the property 'vncPort'
         /// </summary>
         [Test]
-        public void VncPortTest()
+        public void vncPortTest()
         {
-            // TODO unit test for the property 'VncPort'
+            // TODO unit test for the property 'vncPort'
         }
         /// <summary>
-        /// Test the property 'Zone'
+        /// Test the property 'zone'
         /// </summary>
         [Test]
-        public void ZoneTest()
+        public void zoneTest()
         {
-            // TODO unit test for the property 'Zone'
+            // TODO unit test for the property 'zone'
         }
 
     }

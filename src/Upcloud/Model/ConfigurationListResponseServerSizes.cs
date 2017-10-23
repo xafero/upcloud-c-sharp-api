@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConfigurationListResponseServerSizes" /> class.
         /// </summary>
-        /// <param name="ServerSize">ServerSize.</param>
-        public ConfigurationListResponseServerSizes(List<ServerSize> ServerSize = default(List<ServerSize>))
+        /// <param name="serverSize">serverSize.</param>
+        public ConfigurationListResponseServerSizes(List<ServerSize> serverSize = default(List<ServerSize>))
         {
-            this.ServerSize = ServerSize;
+            this.serverSize = serverSize;
         }
         
         /// <summary>
-        /// Gets or Sets ServerSize
+        /// Gets or Sets serverSize
         /// </summary>
         [DataMember(Name="server_size", EmitDefaultValue=false)]
-        public List<ServerSize> ServerSize { get; set; }
+        public List<ServerSize> serverSize { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConfigurationListResponseServerSizes {\n");
-            sb.Append("  ServerSize: ").Append(ServerSize).Append("\n");
+            sb.Append("  serverSize: ").Append(serverSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.ServerSize == input.ServerSize ||
-                    (this.ServerSize != null &&
-                    this.ServerSize.SequenceEqual(input.ServerSize))
+                    this.serverSize == input.serverSize ||
+                    (this.serverSize != null &&
+                    this.serverSize.SequenceEqual(input.serverSize))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ServerSize != null)
-                    hashCode = hashCode * 59 + this.ServerSize.GetHashCode();
+                if (this.serverSize != null)
+                    hashCode = hashCode * 59 + this.serverSize.GetHashCode();
                 return hashCode;
             }
         }

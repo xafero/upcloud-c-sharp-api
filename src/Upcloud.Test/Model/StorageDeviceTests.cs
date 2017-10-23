@@ -60,12 +60,84 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Address'
+        /// Test the property 'title'
         /// </summary>
         [Test]
-        public void AddressTest()
+        public void titleTest()
         {
-            // TODO unit test for the property 'Address'
+            // TODO unit test for the property 'title'
+        }
+        /// <summary>
+        /// Test the property 'size'
+        /// </summary>
+        [Test]
+        public void sizeTest()
+        {
+            // TODO unit test for the property 'size'
+        }
+        /// <summary>
+        /// Test the property 'tier'
+        /// </summary>
+        [Test]
+        public void tierTest()
+        {
+            // TODO unit test for the property 'tier'
+        }
+        /// <summary>
+        /// Test the property 'action'
+        /// </summary>
+        [Test]
+        public void actionTest()
+        {
+            // TODO unit test for the property 'action'
+        }
+        /// <summary>
+        /// Test the property 'address'
+        /// </summary>
+        [Test]
+        public void addressTest()
+        {
+            // TODO unit test for the property 'address'
+        }
+        /// <summary>
+        /// Test the property 'partOfPlan'
+        /// </summary>
+        [Test]
+        public void partOfPlanTest()
+        {
+            // TODO unit test for the property 'partOfPlan'
+        }
+        /// <summary>
+        /// Test the property 'storage'
+        /// </summary>
+        [Test]
+        public void storageTest()
+        {
+            // TODO unit test for the property 'storage'
+        }
+        /// <summary>
+        /// Test the property 'storageSize'
+        /// </summary>
+        [Test]
+        public void storageSizeTest()
+        {
+            // TODO unit test for the property 'storageSize'
+        }
+        /// <summary>
+        /// Test the property 'storageTitle'
+        /// </summary>
+        [Test]
+        public void storageTitleTest()
+        {
+            // TODO unit test for the property 'storageTitle'
+        }
+        /// <summary>
+        /// Test the property 'type'
+        /// </summary>
+        [Test]
+        public void typeTest()
+        {
+            // TODO unit test for the property 'type'
         }
 
     }

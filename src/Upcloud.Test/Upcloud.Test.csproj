@@ -75,7 +75,7 @@ OpenAPI spec version: 1.2.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Upcloud\Upcloud.csproj">
-          <Project>{B4BA079E-980B-41E4-8E89-6B1D56D7173A}</Project>
+          <Project>{460D8B34-DCDF-47AE-8ED4-DF43079E9520}</Project>
           <Name>Upcloud</Name>
       </ProjectReference>
   </ItemGroup>

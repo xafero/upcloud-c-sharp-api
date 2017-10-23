@@ -3,20 +3,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | [**StorageAccessType**](StorageAccessType.md) |  | [optional] 
-**BackupRule** | [**BackupRule**](BackupRule.md) |  | [optional] 
-**Backups** | [**StorageBackups**](StorageBackups.md) |  | [optional] 
-**License** | **decimal?** |  | [optional] 
-**Servers** | [**StorageServers**](StorageServers.md) |  | [optional] 
-**Size** | **decimal?** |  | [optional] 
-**State** | [**StorageState**](StorageState.md) |  | [optional] 
-**Tier** | [**StorageTier**](StorageTier.md) |  | [optional] 
-**Title** | **string** |  | [optional] 
-**Type** | [**StorageType**](StorageType.md) |  | [optional] 
-**Uuid** | **Guid?** |  | [optional] 
-**Zone** | **string** |  | [optional] 
-**Origin** | **Guid?** |  | [optional] 
-**Created** | **string** |  | [optional] 
+**access** | [**StorageAccessType**](StorageAccessType.md) |  | [optional] 
+**backupRule** | [**BackupRule**](BackupRule.md) |  | [optional] 
+**backups** | [**StorageBackups**](StorageBackups.md) |  | [optional] 
+**license** | **decimal?** |  | [optional] 
+**servers** | [**StorageServers**](StorageServers.md) |  | [optional] 
+**size** | **decimal?** |  | [optional] 
+**state** | [**StorageState**](StorageState.md) |  | [optional] 
+**tier** | [**StorageTier**](StorageTier.md) |  | [optional] 
+**title** | **string** |  | [optional] 
+**type** | [**StorageType**](StorageType.md) |  | [optional] 
+**uuid** | **Guid?** |  | [optional] 
+**zone** | **string** |  | [optional] 
+**origin** | **Guid?** |  | [optional] 
+**created** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

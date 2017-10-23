@@ -30,7 +30,7 @@ namespace Upcloud.Model
     public partial class StorageDevice :  IEquatable<StorageDevice>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets PartOfPlan
+        /// Gets or Sets partOfPlan
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum PartOfPlanEnum
@@ -50,91 +50,91 @@ namespace Upcloud.Model
         }
 
         /// <summary>
-        /// Gets or Sets PartOfPlan
+        /// Gets or Sets partOfPlan
         /// </summary>
         [DataMember(Name="part_of_plan", EmitDefaultValue=false)]
-        public PartOfPlanEnum? PartOfPlan { get; set; }
+        public PartOfPlanEnum? partOfPlan { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="StorageDevice" /> class.
         /// </summary>
-        /// <param name="Title">Title.</param>
-        /// <param name="Size">Size.</param>
-        /// <param name="Tier">Tier.</param>
-        /// <param name="Action">Action.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="PartOfPlan">PartOfPlan.</param>
-        /// <param name="Storage">Storage.</param>
-        /// <param name="StorageSize">StorageSize.</param>
-        /// <param name="StorageTitle">StorageTitle.</param>
-        /// <param name="Type">Type.</param>
-        public StorageDevice(string Title = default(string), decimal? Size = default(decimal?), string Tier = default(string), string Action = default(string), string Address = default(string), PartOfPlanEnum? PartOfPlan = default(PartOfPlanEnum?), string Storage = default(string), decimal? StorageSize = default(decimal?), string StorageTitle = default(string), string Type = default(string))
+        /// <param name="title">title.</param>
+        /// <param name="size">size.</param>
+        /// <param name="tier">tier.</param>
+        /// <param name="action">action.</param>
+        /// <param name="address">address.</param>
+        /// <param name="partOfPlan">partOfPlan.</param>
+        /// <param name="storage">storage.</param>
+        /// <param name="storageSize">storageSize.</param>
+        /// <param name="storageTitle">storageTitle.</param>
+        /// <param name="type">type.</param>
+        public StorageDevice(string title = default(string), decimal? size = default(decimal?), string tier = default(string), string action = default(string), string address = default(string), PartOfPlanEnum? partOfPlan = default(PartOfPlanEnum?), string storage = default(string), decimal? storageSize = default(decimal?), string storageTitle = default(string), string type = default(string))
         {
-            this.Title = Title;
-            this.Size = Size;
-            this.Tier = Tier;
-            this.Action = Action;
-            this.Address = Address;
-            this.PartOfPlan = PartOfPlan;
-            this.Storage = Storage;
-            this.StorageSize = StorageSize;
-            this.StorageTitle = StorageTitle;
-            this.Type = Type;
+            this.title = title;
+            this.size = size;
+            this.tier = tier;
+            this.action = action;
+            this.address = address;
+            this.partOfPlan = partOfPlan;
+            this.storage = storage;
+            this.storageSize = storageSize;
+            this.storageTitle = storageTitle;
+            this.type = type;
         }
         
         /// <summary>
-        /// Gets or Sets Title
+        /// Gets or Sets title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
+        public string title { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// Gets or Sets size
         /// </summary>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public decimal? Size { get; set; }
+        public decimal? size { get; set; }
 
         /// <summary>
-        /// Gets or Sets Tier
+        /// Gets or Sets tier
         /// </summary>
         [DataMember(Name="tier", EmitDefaultValue=false)]
-        public string Tier { get; set; }
+        public string tier { get; set; }
 
         /// <summary>
-        /// Gets or Sets Action
+        /// Gets or Sets action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
-        public string Action { get; set; }
+        public string action { get; set; }
 
         /// <summary>
-        /// Gets or Sets Address
+        /// Gets or Sets address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
-        public string Address { get; set; }
+        public string address { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Storage
+        /// Gets or Sets storage
         /// </summary>
         [DataMember(Name="storage", EmitDefaultValue=false)]
-        public string Storage { get; set; }
+        public string storage { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageSize
+        /// Gets or Sets storageSize
         /// </summary>
         [DataMember(Name="storage_size", EmitDefaultValue=false)]
-        public decimal? StorageSize { get; set; }
+        public decimal? storageSize { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageTitle
+        /// Gets or Sets storageTitle
         /// </summary>
         [DataMember(Name="storage_title", EmitDefaultValue=false)]
-        public string StorageTitle { get; set; }
+        public string storageTitle { get; set; }
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Gets or Sets type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
+        public string type { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -144,16 +144,16 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StorageDevice {\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  Tier: ").Append(Tier).Append("\n");
-            sb.Append("  Action: ").Append(Action).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  PartOfPlan: ").Append(PartOfPlan).Append("\n");
-            sb.Append("  Storage: ").Append(Storage).Append("\n");
-            sb.Append("  StorageSize: ").Append(StorageSize).Append("\n");
-            sb.Append("  StorageTitle: ").Append(StorageTitle).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  title: ").Append(title).Append("\n");
+            sb.Append("  size: ").Append(size).Append("\n");
+            sb.Append("  tier: ").Append(tier).Append("\n");
+            sb.Append("  action: ").Append(action).Append("\n");
+            sb.Append("  address: ").Append(address).Append("\n");
+            sb.Append("  partOfPlan: ").Append(partOfPlan).Append("\n");
+            sb.Append("  storage: ").Append(storage).Append("\n");
+            sb.Append("  storageSize: ").Append(storageSize).Append("\n");
+            sb.Append("  storageTitle: ").Append(storageTitle).Append("\n");
+            sb.Append("  type: ").Append(type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -189,54 +189,54 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    this.title == input.title ||
+                    (this.title != null &&
+                    this.title.Equals(input.title))
                 ) && 
                 (
-                    this.Size == input.Size ||
-                    (this.Size != null &&
-                    this.Size.Equals(input.Size))
+                    this.size == input.size ||
+                    (this.size != null &&
+                    this.size.Equals(input.size))
                 ) && 
                 (
-                    this.Tier == input.Tier ||
-                    (this.Tier != null &&
-                    this.Tier.Equals(input.Tier))
+                    this.tier == input.tier ||
+                    (this.tier != null &&
+                    this.tier.Equals(input.tier))
                 ) && 
                 (
-                    this.Action == input.Action ||
-                    (this.Action != null &&
-                    this.Action.Equals(input.Action))
+                    this.action == input.action ||
+                    (this.action != null &&
+                    this.action.Equals(input.action))
                 ) && 
                 (
-                    this.Address == input.Address ||
-                    (this.Address != null &&
-                    this.Address.Equals(input.Address))
+                    this.address == input.address ||
+                    (this.address != null &&
+                    this.address.Equals(input.address))
                 ) && 
                 (
-                    this.PartOfPlan == input.PartOfPlan ||
-                    (this.PartOfPlan != null &&
-                    this.PartOfPlan.Equals(input.PartOfPlan))
+                    this.partOfPlan == input.partOfPlan ||
+                    (this.partOfPlan != null &&
+                    this.partOfPlan.Equals(input.partOfPlan))
                 ) && 
                 (
-                    this.Storage == input.Storage ||
-                    (this.Storage != null &&
-                    this.Storage.Equals(input.Storage))
+                    this.storage == input.storage ||
+                    (this.storage != null &&
+                    this.storage.Equals(input.storage))
                 ) && 
                 (
-                    this.StorageSize == input.StorageSize ||
-                    (this.StorageSize != null &&
-                    this.StorageSize.Equals(input.StorageSize))
+                    this.storageSize == input.storageSize ||
+                    (this.storageSize != null &&
+                    this.storageSize.Equals(input.storageSize))
                 ) && 
                 (
-                    this.StorageTitle == input.StorageTitle ||
-                    (this.StorageTitle != null &&
-                    this.StorageTitle.Equals(input.StorageTitle))
+                    this.storageTitle == input.storageTitle ||
+                    (this.storageTitle != null &&
+                    this.storageTitle.Equals(input.storageTitle))
                 ) && 
                 (
-                    this.Type == input.Type ||
-                    (this.Type != null &&
-                    this.Type.Equals(input.Type))
+                    this.type == input.type ||
+                    (this.type != null &&
+                    this.type.Equals(input.type))
                 );
         }
 
@@ -249,26 +249,26 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
-                if (this.Size != null)
-                    hashCode = hashCode * 59 + this.Size.GetHashCode();
-                if (this.Tier != null)
-                    hashCode = hashCode * 59 + this.Tier.GetHashCode();
-                if (this.Action != null)
-                    hashCode = hashCode * 59 + this.Action.GetHashCode();
-                if (this.Address != null)
-                    hashCode = hashCode * 59 + this.Address.GetHashCode();
-                if (this.PartOfPlan != null)
-                    hashCode = hashCode * 59 + this.PartOfPlan.GetHashCode();
-                if (this.Storage != null)
-                    hashCode = hashCode * 59 + this.Storage.GetHashCode();
-                if (this.StorageSize != null)
-                    hashCode = hashCode * 59 + this.StorageSize.GetHashCode();
-                if (this.StorageTitle != null)
-                    hashCode = hashCode * 59 + this.StorageTitle.GetHashCode();
-                if (this.Type != null)
-                    hashCode = hashCode * 59 + this.Type.GetHashCode();
+                if (this.title != null)
+                    hashCode = hashCode * 59 + this.title.GetHashCode();
+                if (this.size != null)
+                    hashCode = hashCode * 59 + this.size.GetHashCode();
+                if (this.tier != null)
+                    hashCode = hashCode * 59 + this.tier.GetHashCode();
+                if (this.action != null)
+                    hashCode = hashCode * 59 + this.action.GetHashCode();
+                if (this.address != null)
+                    hashCode = hashCode * 59 + this.address.GetHashCode();
+                if (this.partOfPlan != null)
+                    hashCode = hashCode * 59 + this.partOfPlan.GetHashCode();
+                if (this.storage != null)
+                    hashCode = hashCode * 59 + this.storage.GetHashCode();
+                if (this.storageSize != null)
+                    hashCode = hashCode * 59 + this.storageSize.GetHashCode();
+                if (this.storageTitle != null)
+                    hashCode = hashCode * 59 + this.storageTitle.GetHashCode();
+                if (this.type != null)
+                    hashCode = hashCode * 59 + this.type.GetHashCode();
                 return hashCode;
             }
         }

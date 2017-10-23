@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AddIpRequest" /> class.
         /// </summary>
-        /// <param name="IpAddress">IpAddress.</param>
-        public AddIpRequest(IpAddress IpAddress = default(IpAddress))
+        /// <param name="ipAddress">ipAddress.</param>
+        public AddIpRequest(IpAddress ipAddress = default(IpAddress))
         {
-            this.IpAddress = IpAddress;
+            this.ipAddress = ipAddress;
         }
         
         /// <summary>
-        /// Gets or Sets IpAddress
+        /// Gets or Sets ipAddress
         /// </summary>
         [DataMember(Name="ip_address", EmitDefaultValue=false)]
-        public IpAddress IpAddress { get; set; }
+        public IpAddress ipAddress { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AddIpRequest {\n");
-            sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
+            sb.Append("  ipAddress: ").Append(ipAddress).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.IpAddress == input.IpAddress ||
-                    (this.IpAddress != null &&
-                    this.IpAddress.Equals(input.IpAddress))
+                    this.ipAddress == input.ipAddress ||
+                    (this.ipAddress != null &&
+                    this.ipAddress.Equals(input.ipAddress))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.IpAddress != null)
-                    hashCode = hashCode * 59 + this.IpAddress.GetHashCode();
+                if (this.ipAddress != null)
+                    hashCode = hashCode * 59 + this.ipAddress.GetHashCode();
                 return hashCode;
             }
         }

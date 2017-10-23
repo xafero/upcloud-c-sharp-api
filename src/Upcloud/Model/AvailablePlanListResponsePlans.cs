@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailablePlanListResponsePlans" /> class.
         /// </summary>
-        /// <param name="Plan">Plan.</param>
-        public AvailablePlanListResponsePlans(List<Plan> Plan = default(List<Plan>))
+        /// <param name="plan">plan.</param>
+        public AvailablePlanListResponsePlans(List<Plan> plan = default(List<Plan>))
         {
-            this.Plan = Plan;
+            this.plan = plan;
         }
         
         /// <summary>
-        /// Gets or Sets Plan
+        /// Gets or Sets plan
         /// </summary>
         [DataMember(Name="plan", EmitDefaultValue=false)]
-        public List<Plan> Plan { get; set; }
+        public List<Plan> plan { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailablePlanListResponsePlans {\n");
-            sb.Append("  Plan: ").Append(Plan).Append("\n");
+            sb.Append("  plan: ").Append(plan).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Plan == input.Plan ||
-                    (this.Plan != null &&
-                    this.Plan.SequenceEqual(input.Plan))
+                    this.plan == input.plan ||
+                    (this.plan != null &&
+                    this.plan.SequenceEqual(input.plan))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Plan != null)
-                    hashCode = hashCode * 59 + this.Plan.GetHashCode();
+                if (this.plan != null)
+                    hashCode = hashCode * 59 + this.plan.GetHashCode();
                 return hashCode;
             }
         }

@@ -60,12 +60,12 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property '_Error'
+        /// Test the property '_error'
         /// </summary>
         [Test]
-        public void _ErrorTest()
+        public void _errorTest()
         {
-            // TODO unit test for the property '_Error'
+            // TODO unit test for the property '_error'
         }
 
     }

@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerListResponse" /> class.
         /// </summary>
-        /// <param name="Servers">Servers.</param>
-        public ServerListResponse(ServerListResponseServers Servers = default(ServerListResponseServers))
+        /// <param name="servers">servers.</param>
+        public ServerListResponse(ServerListResponseServers servers = default(ServerListResponseServers))
         {
-            this.Servers = Servers;
+            this.servers = servers;
         }
         
         /// <summary>
-        /// Gets or Sets Servers
+        /// Gets or Sets servers
         /// </summary>
         [DataMember(Name="servers", EmitDefaultValue=false)]
-        public ServerListResponseServers Servers { get; set; }
+        public ServerListResponseServers servers { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ServerListResponse {\n");
-            sb.Append("  Servers: ").Append(Servers).Append("\n");
+            sb.Append("  servers: ").Append(servers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Servers == input.Servers ||
-                    (this.Servers != null &&
-                    this.Servers.Equals(input.Servers))
+                    this.servers == input.servers ||
+                    (this.servers != null &&
+                    this.servers.Equals(input.servers))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Servers != null)
-                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
+                if (this.servers != null)
+                    hashCode = hashCode * 59 + this.servers.GetHashCode();
                 return hashCode;
             }
         }

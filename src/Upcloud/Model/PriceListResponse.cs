@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PriceListResponse" /> class.
         /// </summary>
-        /// <param name="Prices">Prices.</param>
-        public PriceListResponse(PriceListResponsePrices Prices = default(PriceListResponsePrices))
+        /// <param name="prices">prices.</param>
+        public PriceListResponse(PriceListResponsePrices prices = default(PriceListResponsePrices))
         {
-            this.Prices = Prices;
+            this.prices = prices;
         }
         
         /// <summary>
-        /// Gets or Sets Prices
+        /// Gets or Sets prices
         /// </summary>
         [DataMember(Name="prices", EmitDefaultValue=false)]
-        public PriceListResponsePrices Prices { get; set; }
+        public PriceListResponsePrices prices { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PriceListResponse {\n");
-            sb.Append("  Prices: ").Append(Prices).Append("\n");
+            sb.Append("  prices: ").Append(prices).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Prices == input.Prices ||
-                    (this.Prices != null &&
-                    this.Prices.Equals(input.Prices))
+                    this.prices == input.prices ||
+                    (this.prices != null &&
+                    this.prices.Equals(input.prices))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Prices != null)
-                    hashCode = hashCode * 59 + this.Prices.GetHashCode();
+                if (this.prices != null)
+                    hashCode = hashCode * 59 + this.prices.GetHashCode();
                 return hashCode;
             }
         }

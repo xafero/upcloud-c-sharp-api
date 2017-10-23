@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ZoneListResponse" /> class.
         /// </summary>
-        /// <param name="Zones">Zones.</param>
-        public ZoneListResponse(ZoneListResponseZones Zones = default(ZoneListResponseZones))
+        /// <param name="zones">zones.</param>
+        public ZoneListResponse(ZoneListResponseZones zones = default(ZoneListResponseZones))
         {
-            this.Zones = Zones;
+            this.zones = zones;
         }
         
         /// <summary>
-        /// Gets or Sets Zones
+        /// Gets or Sets zones
         /// </summary>
         [DataMember(Name="zones", EmitDefaultValue=false)]
-        public ZoneListResponseZones Zones { get; set; }
+        public ZoneListResponseZones zones { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ZoneListResponse {\n");
-            sb.Append("  Zones: ").Append(Zones).Append("\n");
+            sb.Append("  zones: ").Append(zones).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Zones == input.Zones ||
-                    (this.Zones != null &&
-                    this.Zones.Equals(input.Zones))
+                    this.zones == input.zones ||
+                    (this.zones != null &&
+                    this.zones.Equals(input.zones))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Zones != null)
-                    hashCode = hashCode * 59 + this.Zones.GetHashCode();
+                if (this.zones != null)
+                    hashCode = hashCode * 59 + this.zones.GetHashCode();
                 return hashCode;
             }
         }

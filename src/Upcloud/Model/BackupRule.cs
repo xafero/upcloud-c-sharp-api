@@ -30,7 +30,7 @@ namespace Upcloud.Model
     public partial class BackupRule :  IEquatable<BackupRule>, IValidatableObject
     {
         /// <summary>
-        /// Gets or Sets Interval
+        /// Gets or Sets interval
         /// </summary>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum IntervalEnum
@@ -86,35 +86,35 @@ namespace Upcloud.Model
         }
 
         /// <summary>
-        /// Gets or Sets Interval
+        /// Gets or Sets interval
         /// </summary>
         [DataMember(Name="interval", EmitDefaultValue=false)]
-        public IntervalEnum? Interval { get; set; }
+        public IntervalEnum? interval { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="BackupRule" /> class.
         /// </summary>
-        /// <param name="Interval">Interval.</param>
-        /// <param name="Time">Time.</param>
-        /// <param name="Retention">Retention.</param>
-        public BackupRule(IntervalEnum? Interval = default(IntervalEnum?), string Time = default(string), decimal? Retention = default(decimal?))
+        /// <param name="interval">interval.</param>
+        /// <param name="time">time.</param>
+        /// <param name="retention">retention.</param>
+        public BackupRule(IntervalEnum? interval = default(IntervalEnum?), string time = default(string), decimal? retention = default(decimal?))
         {
-            this.Interval = Interval;
-            this.Time = Time;
-            this.Retention = Retention;
+            this.interval = interval;
+            this.time = time;
+            this.retention = retention;
         }
         
 
         /// <summary>
-        /// Gets or Sets Time
+        /// Gets or Sets time
         /// </summary>
         [DataMember(Name="time", EmitDefaultValue=false)]
-        public string Time { get; set; }
+        public string time { get; set; }
 
         /// <summary>
-        /// Gets or Sets Retention
+        /// Gets or Sets retention
         /// </summary>
         [DataMember(Name="retention", EmitDefaultValue=false)]
-        public decimal? Retention { get; set; }
+        public decimal? retention { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -124,9 +124,9 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BackupRule {\n");
-            sb.Append("  Interval: ").Append(Interval).Append("\n");
-            sb.Append("  Time: ").Append(Time).Append("\n");
-            sb.Append("  Retention: ").Append(Retention).Append("\n");
+            sb.Append("  interval: ").Append(interval).Append("\n");
+            sb.Append("  time: ").Append(time).Append("\n");
+            sb.Append("  retention: ").Append(retention).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -162,19 +162,19 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Interval == input.Interval ||
-                    (this.Interval != null &&
-                    this.Interval.Equals(input.Interval))
+                    this.interval == input.interval ||
+                    (this.interval != null &&
+                    this.interval.Equals(input.interval))
                 ) && 
                 (
-                    this.Time == input.Time ||
-                    (this.Time != null &&
-                    this.Time.Equals(input.Time))
+                    this.time == input.time ||
+                    (this.time != null &&
+                    this.time.Equals(input.time))
                 ) && 
                 (
-                    this.Retention == input.Retention ||
-                    (this.Retention != null &&
-                    this.Retention.Equals(input.Retention))
+                    this.retention == input.retention ||
+                    (this.retention != null &&
+                    this.retention.Equals(input.retention))
                 );
         }
 
@@ -187,12 +187,12 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Interval != null)
-                    hashCode = hashCode * 59 + this.Interval.GetHashCode();
-                if (this.Time != null)
-                    hashCode = hashCode * 59 + this.Time.GetHashCode();
-                if (this.Retention != null)
-                    hashCode = hashCode * 59 + this.Retention.GetHashCode();
+                if (this.interval != null)
+                    hashCode = hashCode * 59 + this.interval.GetHashCode();
+                if (this.time != null)
+                    hashCode = hashCode * 59 + this.time.GetHashCode();
+                if (this.retention != null)
+                    hashCode = hashCode * 59 + this.retention.GetHashCode();
                 return hashCode;
             }
         }

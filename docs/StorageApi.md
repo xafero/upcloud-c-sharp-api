@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 <a name="backupstorage"></a>
 # **BackupStorage**
-> CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage = null)
+> CreateStorageResponse BackupStorage (Guid? storageId, CreateBackupStorageRequest storage)
 
 Create backup
 
@@ -118,7 +118,7 @@ namespace Example
 
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
-            var storage = new CreateBackupStorageRequest(); // CreateBackupStorageRequest |  (optional) 
+            var storage = new CreateBackupStorageRequest(); // CreateBackupStorageRequest | 
 
             try
             {
@@ -140,7 +140,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storageId** | **Guid?**| Storage id | 
- **storage** | [**CreateBackupStorageRequest**](CreateBackupStorageRequest.md)|  | [optional] 
+ **storage** | [**CreateBackupStorageRequest**](CreateBackupStorageRequest.md)|  | 
 
 ### Return type
 
@@ -223,7 +223,7 @@ void (empty response body)
 
 <a name="clonestorage"></a>
 # **CloneStorage**
-> CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage = null)
+> CreateStorageResponse CloneStorage (Guid? storageId, CloneStorageRequest storage)
 
 Clone storage
 
@@ -249,7 +249,7 @@ namespace Example
 
             var apiInstance = new StorageApi();
             var storageId = storageId_example;  // Guid? | Storage id
-            var storage = new CloneStorageRequest(); // CloneStorageRequest |  (optional) 
+            var storage = new CloneStorageRequest(); // CloneStorageRequest | 
 
             try
             {
@@ -271,7 +271,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **storageId** | **Guid?**| Storage id | 
- **storage** | [**CloneStorageRequest**](CloneStorageRequest.md)|  | [optional] 
+ **storage** | [**CloneStorageRequest**](CloneStorageRequest.md)|  | 
 
 ### Return type
 

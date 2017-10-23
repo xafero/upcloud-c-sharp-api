@@ -22,54 +22,62 @@ using Upcloud.Model;
 
 namespace Upcloud.Test
 {
+  /// <summary>
+  ///  Class for testing PlanApi
+  /// </summary>
+  [TestFixture]
+  public class PlanApiTests
+  {
+    private PlanApi instance;
+
     /// <summary>
-    ///  Class for testing PlanApi
+    /// Setup before each unit test
     /// </summary>
-    [TestFixture]
-    public class PlanApiTests
+    [SetUp]
+    public void Init()
     {
-        private PlanApi instance;
-
-        /// <summary>
-        /// Setup before each unit test
-        /// </summary>
-        [SetUp]
-        public void Init()
-        {
-            instance = new PlanApi();
-        }
-
-        /// <summary>
-        /// Clean up after each unit test
-        /// </summary>
-        [TearDown]
-        public void Cleanup()
-        {
-
-        }
-
-        /// <summary>
-        /// Test an instance of PlanApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' PlanApi
-            //Assert.IsInstanceOfType(typeof(PlanApi), instance, "instance is a PlanApi");
-        }
-
-        
-        /// <summary>
-        /// Test ListPlans
-        /// </summary>
-        [Test]
-        public void ListPlansTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ListPlans();
-            //Assert.IsInstanceOf<AvailablePlanListResponse> (response, "response is AvailablePlanListResponse");
-        }
-        
+      instance = new PlanApi();
     }
+
+    /// <summary>
+    /// Clean up after each unit test
+    /// </summary>
+    [TearDown]
+    public void Cleanup()
+    {
+
+    }
+
+    /// <summary>
+    /// Test an instance of PlanApi
+    /// </summary>
+    [Test]
+    public void InstanceTest()
+    {
+      // TODO uncomment below to test 'IsInstanceOfType' PlanApi
+      //Assert.IsInstanceOfType(typeof(PlanApi), instance, "instance is a PlanApi");
+    }
+
+
+    /// <summary>
+    /// Test ListPlans
+    /// </summary>
+    [Test]
+    public void ListPlansTest()
+    {
+      AvailablePlanListResponse response = instance.ListPlans();
+      List<Plan> plans = response.plans.plan;
+
+      Assert.AreNotEqual(0, plans.Count);
+      Plan plan = plans[0];
+      Assert.NotNull(plan.coreNumber);
+      Assert.NotNull(plan.memoryAmount);
+      Assert.NotNull(plan.name);
+      Assert.NotNull(plan.publicTrafficOut);
+      Assert.NotNull(plan.storageSize);
+      Assert.NotNull(plan.storageTier);
+    }
+
+  }
 
 }

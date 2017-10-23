@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FirewallRuleCreateResponse" /> class.
         /// </summary>
-        /// <param name="FirewallRule">FirewallRule.</param>
-        public FirewallRuleCreateResponse(FirewallRule FirewallRule = default(FirewallRule))
+        /// <param name="firewallRule">firewallRule.</param>
+        public FirewallRuleCreateResponse(FirewallRule firewallRule = default(FirewallRule))
         {
-            this.FirewallRule = FirewallRule;
+            this.firewallRule = firewallRule;
         }
         
         /// <summary>
-        /// Gets or Sets FirewallRule
+        /// Gets or Sets firewallRule
         /// </summary>
         [DataMember(Name="firewall_rule", EmitDefaultValue=false)]
-        public FirewallRule FirewallRule { get; set; }
+        public FirewallRule firewallRule { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FirewallRuleCreateResponse {\n");
-            sb.Append("  FirewallRule: ").Append(FirewallRule).Append("\n");
+            sb.Append("  firewallRule: ").Append(firewallRule).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.FirewallRule == input.FirewallRule ||
-                    (this.FirewallRule != null &&
-                    this.FirewallRule.Equals(input.FirewallRule))
+                    this.firewallRule == input.firewallRule ||
+                    (this.firewallRule != null &&
+                    this.firewallRule.Equals(input.firewallRule))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.FirewallRule != null)
-                    hashCode = hashCode * 59 + this.FirewallRule.GetHashCode();
+                if (this.firewallRule != null)
+                    hashCode = hashCode * 59 + this.firewallRule.GetHashCode();
                 return hashCode;
             }
         }

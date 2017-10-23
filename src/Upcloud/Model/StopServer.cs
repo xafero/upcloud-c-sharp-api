@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StopServer" /> class.
         /// </summary>
-        /// <param name="StopServer">StopServer.</param>
-        public StopServer(StopServerRequest StopServer = default(StopServerRequest))
+        /// <param name="_stopServer">_stopServer.</param>
+        public StopServer(StopServerRequest _stopServer = default(StopServerRequest))
         {
-            this.StopServer = StopServer;
+            this._stopServer = _stopServer;
         }
         
         /// <summary>
-        /// Gets or Sets StopServer
+        /// Gets or Sets _stopServer
         /// </summary>
         [DataMember(Name="stop_server", EmitDefaultValue=false)]
-        public StopServerRequest StopServer { get; set; }
+        public StopServerRequest _stopServer { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StopServer {\n");
-            sb.Append("  StopServer: ").Append(StopServer).Append("\n");
+            sb.Append("  _stopServer: ").Append(_stopServer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.StopServer == input.StopServer ||
-                    (this.StopServer != null &&
-                    this.StopServer.Equals(input.StopServer))
+                    this._stopServer == input._stopServer ||
+                    (this._stopServer != null &&
+                    this._stopServer.Equals(input._stopServer))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.StopServer != null)
-                    hashCode = hashCode * 59 + this.StopServer.GetHashCode();
+                if (this._stopServer != null)
+                    hashCode = hashCode * 59 + this._stopServer.GetHashCode();
                 return hashCode;
             }
         }

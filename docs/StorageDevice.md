@@ -3,16 +3,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | **string** |  | [optional] 
-**Size** | **decimal?** |  | [optional] 
-**Tier** | **string** |  | [optional] 
-**Action** | **string** |  | [optional] 
-**Address** | **string** |  | [optional] 
-**PartOfPlan** | **string** |  | [optional] 
-**Storage** | **string** |  | [optional] 
-**StorageSize** | **decimal?** |  | [optional] 
-**StorageTitle** | **string** |  | [optional] 
-**Type** | **string** |  | [optional] 
+**title** | **string** |  | [optional] 
+**size** | **decimal?** |  | [optional] 
+**tier** | **string** |  | [optional] 
+**action** | **string** |  | [optional] 
+**address** | **string** |  | [optional] 
+**partOfPlan** | **string** |  | [optional] 
+**storage** | **string** |  | [optional] 
+**storageSize** | **decimal?** |  | [optional] 
+**storageTitle** | **string** |  | [optional] 
+**type** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

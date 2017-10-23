@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ErrorCode** | [**ErrorCode**](ErrorCode.md) |  | [optional] 
-**ErrorStatus** | [**ErrorStatus**](ErrorStatus.md) |  | [optional] 
+**errorCode** | [**ErrorCode**](ErrorCode.md) |  | [optional] 
+**errorStatus** | [**ErrorStatus**](ErrorStatus.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

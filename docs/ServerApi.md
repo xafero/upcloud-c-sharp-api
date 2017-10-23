@@ -1131,7 +1131,7 @@ Name | Type | Description  | Notes
 
 <a name="stopserver"></a>
 # **StopServer**
-> CreateServerResponse StopServer (Guid? serverId, StopServer stopServer)
+> CreateServerResponse StopServer (Guid? serverId, StopServer stopServerRequest)
 
 Stop server
 
@@ -1157,12 +1157,12 @@ namespace Example
 
             var apiInstance = new ServerApi();
             var serverId = serverId_example;  // Guid? | Id of server to stop
-            var stopServer = new StopServer(); // StopServer | 
+            var stopServerRequest = new StopServer(); // StopServer | 
 
             try
             {
                 // Stop server
-                CreateServerResponse result = apiInstance.StopServer(serverId, stopServer);
+                CreateServerResponse result = apiInstance.StopServer(serverId, stopServerRequest);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1179,7 +1179,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serverId** | **Guid?**| Id of server to stop | 
- **stopServer** | [**StopServer**](StopServer.md)|  | 
+ **stopServerRequest** | [**StopServer**](StopServer.md)|  | 
 
 ### Return type
 

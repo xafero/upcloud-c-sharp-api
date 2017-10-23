@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountResponse" /> class.
         /// </summary>
-        /// <param name="Account">Account.</param>
-        public AccountResponse(Account Account = default(Account))
+        /// <param name="account">account.</param>
+        public AccountResponse(Account account = default(Account))
         {
-            this.Account = Account;
+            this.account = account;
         }
         
         /// <summary>
-        /// Gets or Sets Account
+        /// Gets or Sets account
         /// </summary>
         [DataMember(Name="account", EmitDefaultValue=false)]
-        public Account Account { get; set; }
+        public Account account { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AccountResponse {\n");
-            sb.Append("  Account: ").Append(Account).Append("\n");
+            sb.Append("  account: ").Append(account).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Account == input.Account ||
-                    (this.Account != null &&
-                    this.Account.Equals(input.Account))
+                    this.account == input.account ||
+                    (this.account != null &&
+                    this.account.Equals(input.account))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Account != null)
-                    hashCode = hashCode * 59 + this.Account.GetHashCode();
+                if (this.account != null)
+                    hashCode = hashCode * 59 + this.account.GetHashCode();
                 return hashCode;
             }
         }

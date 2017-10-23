@@ -60,52 +60,52 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'CoreNumber'
+        /// Test the property 'coreNumber'
         /// </summary>
         [Test]
-        public void CoreNumberTest()
+        public void coreNumberTest()
         {
-            // TODO unit test for the property 'CoreNumber'
+            // TODO unit test for the property 'coreNumber'
         }
         /// <summary>
-        /// Test the property 'MemoryAmount'
+        /// Test the property 'memoryAmount'
         /// </summary>
         [Test]
-        public void MemoryAmountTest()
+        public void memoryAmountTest()
         {
-            // TODO unit test for the property 'MemoryAmount'
+            // TODO unit test for the property 'memoryAmount'
         }
         /// <summary>
-        /// Test the property 'Name'
+        /// Test the property 'name'
         /// </summary>
         [Test]
-        public void NameTest()
+        public void nameTest()
         {
-            // TODO unit test for the property 'Name'
+            // TODO unit test for the property 'name'
         }
         /// <summary>
-        /// Test the property 'PublicTrafficOut'
+        /// Test the property 'publicTrafficOut'
         /// </summary>
         [Test]
-        public void PublicTrafficOutTest()
+        public void publicTrafficOutTest()
         {
-            // TODO unit test for the property 'PublicTrafficOut'
+            // TODO unit test for the property 'publicTrafficOut'
         }
         /// <summary>
-        /// Test the property 'StorageSize'
+        /// Test the property 'storageSize'
         /// </summary>
         [Test]
-        public void StorageSizeTest()
+        public void storageSizeTest()
         {
-            // TODO unit test for the property 'StorageSize'
+            // TODO unit test for the property 'storageSize'
         }
         /// <summary>
-        /// Test the property 'StorageTier'
+        /// Test the property 'storageTier'
         /// </summary>
         [Test]
-        public void StorageTierTest()
+        public void storageTierTest()
         {
-            // TODO unit test for the property 'StorageTier'
+            // TODO unit test for the property 'storageTier'
         }
 
     }

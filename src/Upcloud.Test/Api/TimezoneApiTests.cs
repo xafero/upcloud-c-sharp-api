@@ -22,54 +22,61 @@ using Upcloud.Model;
 
 namespace Upcloud.Test
 {
+  /// <summary>
+  ///  Class for testing TimezoneApi
+  /// </summary>
+  [TestFixture]
+  public class TimezoneApiTests
+  {
+    private TimezoneApi instance;
+
     /// <summary>
-    ///  Class for testing TimezoneApi
+    /// Setup before each unit test
     /// </summary>
-    [TestFixture]
-    public class TimezoneApiTests
+    [SetUp]
+    public void Init()
     {
-        private TimezoneApi instance;
-
-        /// <summary>
-        /// Setup before each unit test
-        /// </summary>
-        [SetUp]
-        public void Init()
-        {
-            instance = new TimezoneApi();
-        }
-
-        /// <summary>
-        /// Clean up after each unit test
-        /// </summary>
-        [TearDown]
-        public void Cleanup()
-        {
-
-        }
-
-        /// <summary>
-        /// Test an instance of TimezoneApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' TimezoneApi
-            //Assert.IsInstanceOfType(typeof(TimezoneApi), instance, "instance is a TimezoneApi");
-        }
-
-        
-        /// <summary>
-        /// Test ListTimezones
-        /// </summary>
-        [Test]
-        public void ListTimezonesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ListTimezones();
-            //Assert.IsInstanceOf<TimezoneListResponse> (response, "response is TimezoneListResponse");
-        }
-        
+      instance = new TimezoneApi();
     }
+
+    /// <summary>
+    /// Clean up after each unit test
+    /// </summary>
+    [TearDown]
+    public void Cleanup()
+    {
+
+    }
+
+    /// <summary>
+    /// Test an instance of TimezoneApi
+    /// </summary>
+    [Test]
+    public void InstanceTest()
+    {
+      // TODO uncomment below to test 'IsInstanceOfType' TimezoneApi
+      //Assert.IsInstanceOfType(typeof(TimezoneApi), instance, "instance is a TimezoneApi");
+    }
+
+
+    /// <summary>
+    /// Test ListTimezones
+    /// </summary>
+    [Test]
+    public void ListTimezonesTest()
+    {
+      var response = instance.ListTimezones();
+      var continentals = new String[] {
+                "Africa", "America", "Antarctica", "Arctic", "Asia", "Atlantic", "Australia", "Europe", "Indian", "Pacific"
+        };
+
+      var timezones = response.timezones.timezone;
+      Assert.True(timezones
+              .All(timezone =>
+                      continentals.Contains(timezone.Split('/')[0]) || timezone.Equals("UTC")
+              ));
+    }
+
+  }
 
 }

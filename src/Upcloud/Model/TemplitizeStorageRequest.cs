@@ -32,10 +32,10 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TemplitizeStorageRequest" /> class.
         /// </summary>
-        /// <param name="Title">A short description..</param>
-        public TemplitizeStorageRequest(string Title = default(string))
+        /// <param name="title">A short description..</param>
+        public TemplitizeStorageRequest(string title = default(string))
         {
-            this.Title = Title;
+            this.title = title;
         }
         
         /// <summary>
@@ -43,7 +43,7 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>A short description.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
+        public string title { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -53,7 +53,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TemplitizeStorageRequest {\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  title: ").Append(title).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -89,9 +89,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Title == input.Title ||
-                    (this.Title != null &&
-                    this.Title.Equals(input.Title))
+                    this.title == input.title ||
+                    (this.title != null &&
+                    this.title.Equals(input.title))
                 );
         }
 
@@ -104,8 +104,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Title != null)
-                    hashCode = hashCode * 59 + this.Title.GetHashCode();
+                if (this.title != null)
+                    hashCode = hashCode * 59 + this.title.GetHashCode();
                 return hashCode;
             }
         }
@@ -117,10 +117,10 @@ namespace Upcloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Title (string) maxLength
-            if(this.Title != null && this.Title.Length > 64)
+            // title (string) maxLength
+            if(this.title != null && this.title.Length > 64)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Title, length must be less than 64.", new [] { "Title" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for title, length must be less than 64.", new [] { "title" });
             }
 
             yield break;

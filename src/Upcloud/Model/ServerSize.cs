@@ -32,25 +32,25 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerSize" /> class.
         /// </summary>
-        /// <param name="CoreNumber">CoreNumber.</param>
-        /// <param name="MemoryAmount">MemoryAmount.</param>
-        public ServerSize(decimal? CoreNumber = default(decimal?), decimal? MemoryAmount = default(decimal?))
+        /// <param name="coreNumber">coreNumber.</param>
+        /// <param name="memoryAmount">memoryAmount.</param>
+        public ServerSize(decimal? coreNumber = default(decimal?), decimal? memoryAmount = default(decimal?))
         {
-            this.CoreNumber = CoreNumber;
-            this.MemoryAmount = MemoryAmount;
+            this.coreNumber = coreNumber;
+            this.memoryAmount = memoryAmount;
         }
         
         /// <summary>
-        /// Gets or Sets CoreNumber
+        /// Gets or Sets coreNumber
         /// </summary>
         [DataMember(Name="core_number", EmitDefaultValue=false)]
-        public decimal? CoreNumber { get; set; }
+        public decimal? coreNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets MemoryAmount
+        /// Gets or Sets memoryAmount
         /// </summary>
         [DataMember(Name="memory_amount", EmitDefaultValue=false)]
-        public decimal? MemoryAmount { get; set; }
+        public decimal? memoryAmount { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +60,8 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ServerSize {\n");
-            sb.Append("  CoreNumber: ").Append(CoreNumber).Append("\n");
-            sb.Append("  MemoryAmount: ").Append(MemoryAmount).Append("\n");
+            sb.Append("  coreNumber: ").Append(coreNumber).Append("\n");
+            sb.Append("  memoryAmount: ").Append(memoryAmount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,14 +97,14 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.CoreNumber == input.CoreNumber ||
-                    (this.CoreNumber != null &&
-                    this.CoreNumber.Equals(input.CoreNumber))
+                    this.coreNumber == input.coreNumber ||
+                    (this.coreNumber != null &&
+                    this.coreNumber.Equals(input.coreNumber))
                 ) && 
                 (
-                    this.MemoryAmount == input.MemoryAmount ||
-                    (this.MemoryAmount != null &&
-                    this.MemoryAmount.Equals(input.MemoryAmount))
+                    this.memoryAmount == input.memoryAmount ||
+                    (this.memoryAmount != null &&
+                    this.memoryAmount.Equals(input.memoryAmount))
                 );
         }
 
@@ -117,10 +117,10 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CoreNumber != null)
-                    hashCode = hashCode * 59 + this.CoreNumber.GetHashCode();
-                if (this.MemoryAmount != null)
-                    hashCode = hashCode * 59 + this.MemoryAmount.GetHashCode();
+                if (this.coreNumber != null)
+                    hashCode = hashCode * 59 + this.coreNumber.GetHashCode();
+                if (this.memoryAmount != null)
+                    hashCode = hashCode * 59 + this.memoryAmount.GetHashCode();
                 return hashCode;
             }
         }

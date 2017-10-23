@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TagListResponseTags" /> class.
         /// </summary>
-        /// <param name="Tag">Tag.</param>
-        public TagListResponseTags(List<Tag> Tag = default(List<Tag>))
+        /// <param name="tag">tag.</param>
+        public TagListResponseTags(List<Tag> tag = default(List<Tag>))
         {
-            this.Tag = Tag;
+            this.tag = tag;
         }
         
         /// <summary>
-        /// Gets or Sets Tag
+        /// Gets or Sets tag
         /// </summary>
         [DataMember(Name="tag", EmitDefaultValue=false)]
-        public List<Tag> Tag { get; set; }
+        public List<Tag> tag { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TagListResponseTags {\n");
-            sb.Append("  Tag: ").Append(Tag).Append("\n");
+            sb.Append("  tag: ").Append(tag).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Tag == input.Tag ||
-                    (this.Tag != null &&
-                    this.Tag.SequenceEqual(input.Tag))
+                    this.tag == input.tag ||
+                    (this.tag != null &&
+                    this.tag.SequenceEqual(input.tag))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Tag != null)
-                    hashCode = hashCode * 59 + this.Tag.GetHashCode();
+                if (this.tag != null)
+                    hashCode = hashCode * 59 + this.tag.GetHashCode();
                 return hashCode;
             }
         }

@@ -3,9 +3,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The new tag | 
-**Description** | **string** | Description of the tag | [optional] 
-**Servers** | [**TagServers**](TagServers.md) |  | [optional] 
+**name** | **string** | The new tag | 
+**description** | **string** | Description of the tag | [optional] 
+**servers** | [**TagServers**](TagServers.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -60,20 +60,20 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Credits'
+        /// Test the property 'credits'
         /// </summary>
         [Test]
-        public void CreditsTest()
+        public void creditsTest()
         {
-            // TODO unit test for the property 'Credits'
+            // TODO unit test for the property 'credits'
         }
         /// <summary>
-        /// Test the property 'Username'
+        /// Test the property 'username'
         /// </summary>
         [Test]
-        public void UsernameTest()
+        public void usernameTest()
         {
-            // TODO unit test for the property 'Username'
+            // TODO unit test for the property 'username'
         }
 
     }

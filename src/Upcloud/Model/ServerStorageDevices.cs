@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerStorageDevices" /> class.
         /// </summary>
-        /// <param name="StorageDevice">StorageDevice.</param>
-        public ServerStorageDevices(List<StorageDevice> StorageDevice = default(List<StorageDevice>))
+        /// <param name="storageDevice">storageDevice.</param>
+        public ServerStorageDevices(List<StorageDevice> storageDevice = default(List<StorageDevice>))
         {
-            this.StorageDevice = StorageDevice;
+            this.storageDevice = storageDevice;
         }
         
         /// <summary>
-        /// Gets or Sets StorageDevice
+        /// Gets or Sets storageDevice
         /// </summary>
         [DataMember(Name="storage_device", EmitDefaultValue=false)]
-        public List<StorageDevice> StorageDevice { get; set; }
+        public List<StorageDevice> storageDevice { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ServerStorageDevices {\n");
-            sb.Append("  StorageDevice: ").Append(StorageDevice).Append("\n");
+            sb.Append("  storageDevice: ").Append(storageDevice).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.StorageDevice == input.StorageDevice ||
-                    (this.StorageDevice != null &&
-                    this.StorageDevice.SequenceEqual(input.StorageDevice))
+                    this.storageDevice == input.storageDevice ||
+                    (this.storageDevice != null &&
+                    this.storageDevice.SequenceEqual(input.storageDevice))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.StorageDevice != null)
-                    hashCode = hashCode * 59 + this.StorageDevice.GetHashCode();
+                if (this.storageDevice != null)
+                    hashCode = hashCode * 59 + this.storageDevice.GetHashCode();
                 return hashCode;
             }
         }

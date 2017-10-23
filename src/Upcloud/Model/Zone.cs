@@ -32,25 +32,25 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Zone" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-        public Zone(string Name = default(string), string Description = default(string))
+        /// <param name="name">name.</param>
+        /// <param name="description">description.</param>
+        public Zone(string name = default(string), string description = default(string))
         {
-            this.Name = Name;
-            this.Description = Description;
+            this.name = name;
+            this.description = description;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Description
+        /// Gets or Sets description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        public string description { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +60,8 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Zone {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  name: ").Append(name).Append("\n");
+            sb.Append("  description: ").Append(description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,14 +97,14 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.name == input.name ||
+                    (this.name != null &&
+                    this.name.Equals(input.name))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    this.description == input.description ||
+                    (this.description != null &&
+                    this.description.Equals(input.description))
                 );
         }
 
@@ -117,10 +117,10 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.name != null)
+                    hashCode = hashCode * 59 + this.name.GetHashCode();
+                if (this.description != null)
+                    hashCode = hashCode * 59 + this.description.GetHashCode();
                 return hashCode;
             }
         }

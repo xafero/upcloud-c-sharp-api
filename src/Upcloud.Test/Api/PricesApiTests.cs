@@ -22,54 +22,72 @@ using Upcloud.Model;
 
 namespace Upcloud.Test
 {
+  /// <summary>
+  ///  Class for testing PricesApi
+  /// </summary>
+  [TestFixture]
+  public class PricesApiTests
+  {
+    private PricesApi instance;
+
     /// <summary>
-    ///  Class for testing PricesApi
+    /// Setup before each unit test
     /// </summary>
-    [TestFixture]
-    public class PricesApiTests
+    [SetUp]
+    public void Init()
     {
-        private PricesApi instance;
-
-        /// <summary>
-        /// Setup before each unit test
-        /// </summary>
-        [SetUp]
-        public void Init()
-        {
-            instance = new PricesApi();
-        }
-
-        /// <summary>
-        /// Clean up after each unit test
-        /// </summary>
-        [TearDown]
-        public void Cleanup()
-        {
-
-        }
-
-        /// <summary>
-        /// Test an instance of PricesApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' PricesApi
-            //Assert.IsInstanceOfType(typeof(PricesApi), instance, "instance is a PricesApi");
-        }
-
-        
-        /// <summary>
-        /// Test ListPrices
-        /// </summary>
-        [Test]
-        public void ListPricesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ListPrices();
-            //Assert.IsInstanceOf<PriceListResponse> (response, "response is PriceListResponse");
-        }
-        
+      instance = new PricesApi();
     }
+
+    /// <summary>
+    /// Clean up after each unit test
+    /// </summary>
+    [TearDown]
+    public void Cleanup()
+    {
+
+    }
+
+    /// <summary>
+    /// Test an instance of PricesApi
+    /// </summary>
+    [Test]
+    public void InstanceTest()
+    {
+      // TODO uncomment below to test 'IsInstanceOfType' PricesApi
+      //Assert.IsInstanceOfType(typeof(PricesApi), instance, "instance is a PricesApi");
+    }
+
+
+    /// <summary>
+    /// Test ListPrices
+    /// </summary>
+    [Test]
+    public void ListPricesTest()
+    {
+      PriceListResponse response = instance.ListPrices();
+      List<PriceZone> priceZones = response.prices.zone;
+      PriceZone priceZone = priceZones[0];
+
+      Assert.AreNotEqual(0, priceZones.Count);
+      Assert.NotNull(priceZone.name);
+      Assert.NotNull(priceZone.firewall);
+      Assert.NotNull(priceZone.ioRequestBackup);
+      Assert.NotNull(priceZone.ioRequestMaxiops);
+      Assert.NotNull(priceZone.ipv4Address);
+      Assert.NotNull(priceZone.ipv6Address);
+      Assert.NotNull(priceZone.publicIpv4BandwidthIn);
+      Assert.NotNull(priceZone.publicIpv4BandwidthOut);
+      Assert.NotNull(priceZone.publicIpv6BandwidthIn);
+      Assert.NotNull(priceZone.publicIpv6BandwidthOut);
+      Assert.NotNull(priceZone.serverCore);
+      Assert.NotNull(priceZone.serverMemory);
+      Assert.NotNull(priceZone.serverPlan1xCPU1GB);
+      Assert.NotNull(priceZone.serverPlan2xCPU2GB);
+      Assert.NotNull(priceZone.storageBackup);
+      Assert.NotNull(priceZone.storageMaxiops);
+    }
+
+  }
 
 }

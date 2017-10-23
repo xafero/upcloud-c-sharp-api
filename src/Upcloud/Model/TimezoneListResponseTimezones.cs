@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneListResponseTimezones" /> class.
         /// </summary>
-        /// <param name="Timezone">Timezone.</param>
-        public TimezoneListResponseTimezones(List<string> Timezone = default(List<string>))
+        /// <param name="timezone">timezone.</param>
+        public TimezoneListResponseTimezones(List<string> timezone = default(List<string>))
         {
-            this.Timezone = Timezone;
+            this.timezone = timezone;
         }
         
         /// <summary>
-        /// Gets or Sets Timezone
+        /// Gets or Sets timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
-        public List<string> Timezone { get; set; }
+        public List<string> timezone { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimezoneListResponseTimezones {\n");
-            sb.Append("  Timezone: ").Append(Timezone).Append("\n");
+            sb.Append("  timezone: ").Append(timezone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Timezone == input.Timezone ||
-                    (this.Timezone != null &&
-                    this.Timezone.SequenceEqual(input.Timezone))
+                    this.timezone == input.timezone ||
+                    (this.timezone != null &&
+                    this.timezone.SequenceEqual(input.timezone))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Timezone != null)
-                    hashCode = hashCode * 59 + this.Timezone.GetHashCode();
+                if (this.timezone != null)
+                    hashCode = hashCode * 59 + this.timezone.GetHashCode();
                 return hashCode;
             }
         }

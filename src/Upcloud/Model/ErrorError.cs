@@ -32,25 +32,25 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorError" /> class.
         /// </summary>
-        /// <param name="ErrorCode">ErrorCode.</param>
-        /// <param name="ErrorStatus">ErrorStatus.</param>
-        public ErrorError(ErrorCode ErrorCode = default(ErrorCode), ErrorStatus ErrorStatus = default(ErrorStatus))
+        /// <param name="errorCode">errorCode.</param>
+        /// <param name="errorStatus">errorStatus.</param>
+        public ErrorError(ErrorCode errorCode = default(ErrorCode), ErrorStatus errorStatus = default(ErrorStatus))
         {
-            this.ErrorCode = ErrorCode;
-            this.ErrorStatus = ErrorStatus;
+            this.errorCode = errorCode;
+            this.errorStatus = errorStatus;
         }
         
         /// <summary>
-        /// Gets or Sets ErrorCode
+        /// Gets or Sets errorCode
         /// </summary>
         [DataMember(Name="error_code", EmitDefaultValue=false)]
-        public ErrorCode ErrorCode { get; set; }
+        public ErrorCode errorCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets ErrorStatus
+        /// Gets or Sets errorStatus
         /// </summary>
         [DataMember(Name="error_status", EmitDefaultValue=false)]
-        public ErrorStatus ErrorStatus { get; set; }
+        public ErrorStatus errorStatus { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +60,8 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ErrorError {\n");
-            sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
-            sb.Append("  ErrorStatus: ").Append(ErrorStatus).Append("\n");
+            sb.Append("  errorCode: ").Append(errorCode).Append("\n");
+            sb.Append("  errorStatus: ").Append(errorStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,14 +97,14 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.ErrorCode == input.ErrorCode ||
-                    (this.ErrorCode != null &&
-                    this.ErrorCode.Equals(input.ErrorCode))
+                    this.errorCode == input.errorCode ||
+                    (this.errorCode != null &&
+                    this.errorCode.Equals(input.errorCode))
                 ) && 
                 (
-                    this.ErrorStatus == input.ErrorStatus ||
-                    (this.ErrorStatus != null &&
-                    this.ErrorStatus.Equals(input.ErrorStatus))
+                    this.errorStatus == input.errorStatus ||
+                    (this.errorStatus != null &&
+                    this.errorStatus.Equals(input.errorStatus))
                 );
         }
 
@@ -117,10 +117,10 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ErrorCode != null)
-                    hashCode = hashCode * 59 + this.ErrorCode.GetHashCode();
-                if (this.ErrorStatus != null)
-                    hashCode = hashCode * 59 + this.ErrorStatus.GetHashCode();
+                if (this.errorCode != null)
+                    hashCode = hashCode * 59 + this.errorCode.GetHashCode();
+                if (this.errorStatus != null)
+                    hashCode = hashCode * 59 + this.errorStatus.GetHashCode();
                 return hashCode;
             }
         }

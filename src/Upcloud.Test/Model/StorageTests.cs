@@ -60,44 +60,116 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Size'
+        /// Test the property 'access'
         /// </summary>
         [Test]
-        public void SizeTest()
+        public void accessTest()
         {
-            // TODO unit test for the property 'Size'
+            // TODO unit test for the property 'access'
         }
         /// <summary>
-        /// Test the property 'Tier'
+        /// Test the property 'backupRule'
         /// </summary>
         [Test]
-        public void TierTest()
+        public void backupRuleTest()
         {
-            // TODO unit test for the property 'Tier'
+            // TODO unit test for the property 'backupRule'
         }
         /// <summary>
-        /// Test the property 'Title'
+        /// Test the property 'backups'
         /// </summary>
         [Test]
-        public void TitleTest()
+        public void backupsTest()
         {
-            // TODO unit test for the property 'Title'
+            // TODO unit test for the property 'backups'
         }
         /// <summary>
-        /// Test the property 'Zone'
+        /// Test the property 'license'
         /// </summary>
         [Test]
-        public void ZoneTest()
+        public void licenseTest()
         {
-            // TODO unit test for the property 'Zone'
+            // TODO unit test for the property 'license'
         }
         /// <summary>
-        /// Test the property 'BackupRule'
+        /// Test the property 'servers'
         /// </summary>
         [Test]
-        public void BackupRuleTest()
+        public void serversTest()
         {
-            // TODO unit test for the property 'BackupRule'
+            // TODO unit test for the property 'servers'
+        }
+        /// <summary>
+        /// Test the property 'size'
+        /// </summary>
+        [Test]
+        public void sizeTest()
+        {
+            // TODO unit test for the property 'size'
+        }
+        /// <summary>
+        /// Test the property 'state'
+        /// </summary>
+        [Test]
+        public void stateTest()
+        {
+            // TODO unit test for the property 'state'
+        }
+        /// <summary>
+        /// Test the property 'tier'
+        /// </summary>
+        [Test]
+        public void tierTest()
+        {
+            // TODO unit test for the property 'tier'
+        }
+        /// <summary>
+        /// Test the property 'title'
+        /// </summary>
+        [Test]
+        public void titleTest()
+        {
+            // TODO unit test for the property 'title'
+        }
+        /// <summary>
+        /// Test the property 'type'
+        /// </summary>
+        [Test]
+        public void typeTest()
+        {
+            // TODO unit test for the property 'type'
+        }
+        /// <summary>
+        /// Test the property 'uuid'
+        /// </summary>
+        [Test]
+        public void uuidTest()
+        {
+            // TODO unit test for the property 'uuid'
+        }
+        /// <summary>
+        /// Test the property 'zone'
+        /// </summary>
+        [Test]
+        public void zoneTest()
+        {
+            // TODO unit test for the property 'zone'
+        }
+        /// <summary>
+        /// Test the property 'origin'
+        /// </summary>
+        [Test]
+        public void originTest()
+        {
+            // TODO unit test for the property 'origin'
+        }
+        /// <summary>
+        /// Test the property 'created'
+        /// </summary>
+        [Test]
+        public void createdTest()
+        {
+            // TODO unit test for the property 'created'
         }
 
     }

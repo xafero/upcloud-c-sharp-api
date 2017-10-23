@@ -60,28 +60,52 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Access'
+        /// Test the property 'access'
         /// </summary>
         [Test]
-        public void AccessTest()
+        public void accessTest()
         {
-            // TODO unit test for the property 'Access'
+            // TODO unit test for the property 'access'
         }
         /// <summary>
-        /// Test the property 'Family'
+        /// Test the property 'address'
         /// </summary>
         [Test]
-        public void FamilyTest()
+        public void addressTest()
         {
-            // TODO unit test for the property 'Family'
+            // TODO unit test for the property 'address'
         }
         /// <summary>
-        /// Test the property 'Server'
+        /// Test the property 'family'
         /// </summary>
         [Test]
-        public void ServerTest()
+        public void familyTest()
         {
-            // TODO unit test for the property 'Server'
+            // TODO unit test for the property 'family'
+        }
+        /// <summary>
+        /// Test the property 'ptrRecord'
+        /// </summary>
+        [Test]
+        public void ptrRecordTest()
+        {
+            // TODO unit test for the property 'ptrRecord'
+        }
+        /// <summary>
+        /// Test the property 'server'
+        /// </summary>
+        [Test]
+        public void serverTest()
+        {
+            // TODO unit test for the property 'server'
+        }
+        /// <summary>
+        /// Test the property 'partOfPlan'
+        /// </summary>
+        [Test]
+        public void partOfPlanTest()
+        {
+            // TODO unit test for the property 'partOfPlan'
         }
 
     }

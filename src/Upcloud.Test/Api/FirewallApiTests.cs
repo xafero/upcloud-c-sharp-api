@@ -22,94 +22,183 @@ using Upcloud.Model;
 
 namespace Upcloud.Test
 {
+  /// <summary>
+  ///  Class for testing FirewallApi
+  /// </summary>
+  [TestFixture]
+  public class FirewallApiTests
+  {
+    private FirewallApi instance;
+    private Server testServer;
+    private FirewallRule testFirewallRule;
+    private List<FirewallRule> testFirewallRules = new List<FirewallRule>();
     /// <summary>
-    ///  Class for testing FirewallApi
+    /// Setup before each unit test
     /// </summary>
-    [TestFixture]
-    public class FirewallApiTests
+    [SetUp]
+    public void Init()
     {
-        private FirewallApi instance;
+      instance = new FirewallApi
+      {
+        Configuration = {
+                    Username = "toughbyte",
+                    Password = "Topsekret5"
+                }
+      };
 
-        /// <summary>
-        /// Setup before each unit test
-        /// </summary>
-        [SetUp]
-        public void Init()
-        {
-            instance = new FirewallApi();
-        }
+      Utils.deleteAllServers();
 
-        /// <summary>
-        /// Clean up after each unit test
-        /// </summary>
-        [TearDown]
-        public void Cleanup()
-        {
+      StorageDevice testStorageDevice = new StorageDevice
+      {
+        action = "clone",
+        title = "Debian from a template",
+        size = 50,
+        storage = "01000000-0000-4000-8000-000020030100",
+        tier = "maxiops"
+      };
 
-        }
+      testServer = Utils.createReadyServer();
 
-        /// <summary>
-        /// Test an instance of FirewallApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' FirewallApi
-            //Assert.IsInstanceOfType(typeof(FirewallApi), instance, "instance is a FirewallApi");
-        }
-
-        
-        /// <summary>
-        /// Test CreateFirewallRule
-        /// </summary>
-        [Test]
-        public void CreateFirewallRuleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Guid? serverId = null;
-            //FirewallRuleRequest firewallRule = null;
-            //var response = instance.CreateFirewallRule(serverId, firewallRule);
-            //Assert.IsInstanceOf<FirewallRuleCreateResponse> (response, "response is FirewallRuleCreateResponse");
-        }
-        
-        /// <summary>
-        /// Test DeleteFirewallRule
-        /// </summary>
-        [Test]
-        public void DeleteFirewallRuleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Guid? serverId = null;
-            //Guid? firewallRuleNumber = null;
-            //instance.DeleteFirewallRule(serverId, firewallRuleNumber);
-            
-        }
-        
-        /// <summary>
-        /// Test GetFirewallRule
-        /// </summary>
-        [Test]
-        public void GetFirewallRuleTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Guid? serverId = null;
-            //Guid? firewallRuleNumber = null;
-            //var response = instance.GetFirewallRule(serverId, firewallRuleNumber);
-            //Assert.IsInstanceOf<FirewallRuleCreateResponse> (response, "response is FirewallRuleCreateResponse");
-        }
-        
-        /// <summary>
-        /// Test ServerServerIdFirewallRuleGet
-        /// </summary>
-        [Test]
-        public void ServerServerIdFirewallRuleGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Guid? serverId = null;
-            //var response = instance.ServerServerIdFirewallRuleGet(serverId);
-            //Assert.IsInstanceOf<FirewallRuleListResponse> (response, "response is FirewallRuleListResponse");
-        }
-        
+      testFirewallRule = new FirewallRule
+      {
+        position = (500),
+        direction = FirewallRule.DirectionEnum.In,
+        family = AddressFamily.IPv4,
+        protocol = FirewallRule.ProtocolEnum.Tcp,
+        sourceAddressStart = "192.168.1.1",
+        sourceAddressEnd = "192.168.1.255",
+        sourcePortStart = (1),
+        sourcePortEnd = (32000),
+        destinationPortStart = (22),
+        destinationPortEnd = (22),
+        action = FirewallRule.ActionEnum.Accept,
+        comment = "Allow SSH from this network"
+      };
     }
+
+    /// <summary>
+    /// Clean up after each unit test
+    /// </summary>
+    [TearDown]
+    public void Cleanup()
+    {
+      Utils.deleteAllServers();
+    }
+
+    [TestFixtureSetUp]
+    public void SetUpEach()
+    {
+      Guid? serverId = testServer.uuid;
+
+      FirewallRule firewallRule = instance.CreateFirewallRule(
+              serverId, new FirewallRuleRequest
+              {
+                firewallRule =
+                      new FirewallRule
+                      {
+                        direction = FirewallRule.DirectionEnum.In,
+                        family = AddressFamily.IPv4,
+                        protocol = FirewallRule.ProtocolEnum.Tcp,
+                        sourceAddressStart = "193.168.1.1",
+                        sourceAddressEnd = "193.168.1.255",
+                        sourcePortStart = 1,
+                        sourcePortEnd = 32000,
+                        destinationPortStart = 22,
+                        destinationPortEnd = 22,
+                        action = FirewallRule.ActionEnum.Accept,
+                        comment = "Common firewall rule"
+                      }
+              }
+      ).firewallRule;
+
+      testFirewallRules.Add(firewallRule);
+    }
+
+    [TestFixtureTearDown]
+    public void TearDownEach()
+    {
+      Guid? serverId = testServer.uuid;
+      foreach (FirewallRule firewallRule in testFirewallRules)
+      {
+        instance.DeleteFirewallRule(serverId, firewallRule.position);
+      }
+      testFirewallRules.Clear();
+    }
+
+    /// <summary>
+    /// Test an instance of FirewallApi
+    /// </summary>
+    [Test]
+    public void InstanceTest()
+    {
+      // TODO uncomment below to test 'IsInstanceOfType' FirewallApi
+      //Assert.IsInstanceOfType(typeof(FirewallApi), instance, "instance is a FirewallApi");
+    }
+
+
+    /// <summary>
+    /// Test CreateFirewallRule
+    /// </summary>
+    [Test]
+    public void CreateFirewallRuleTest()
+    {
+      Guid? serverId = testServer.uuid;
+
+      FirewallRule createdRule = instance.CreateFirewallRule(
+              serverId,
+              new FirewallRuleRequest
+              {
+                firewallRule = testFirewallRule
+              }).firewallRule;
+
+      Assert.AreEqual(createdRule.direction, FirewallRule.DirectionEnum.In);
+      Assert.AreEqual(createdRule.action, FirewallRule.ActionEnum.Accept);
+      Assert.AreEqual(createdRule.family, AddressFamily.IPv4);
+      Assert.AreEqual(createdRule.icmpType, "");
+      Assert.AreEqual(createdRule.destinationAddressStart, "");
+      Assert.AreEqual(createdRule.destinationPortEnd, "");
+      Assert.AreEqual(createdRule.destinationPortStart, "22");
+      Assert.AreEqual(createdRule.destinationPortEnd, "22");
+      Assert.AreEqual(createdRule.sourceAddressStart, "192.168.1.1");
+      Assert.AreEqual(createdRule.sourceAddressEnd, "192.168.1.255");
+      Assert.AreEqual(createdRule.sourcePortStart, (1));
+      Assert.AreEqual(createdRule.sourcePortEnd, (32000));
+
+      instance.DeleteFirewallRule(serverId, createdRule.position);
+    }
+
+    /// <summary>
+    /// Test DeleteFirewallRule
+    /// </summary>
+    [Test]
+    public void DeleteFirewallRuleTest()
+    {
+      Guid? serverId = testServer.uuid;
+      var createdRule = instance.CreateFirewallRule(
+              serverId,
+              new FirewallRuleRequest { firewallRule = testFirewallRule }).firewallRule;
+      var ruleForDelete = instance.GetFirewallRule(serverId, createdRule.position).firewallRule;
+      Assert.AreEqual(createdRule.position, ruleForDelete.position);
+      instance.DeleteFirewallRule(serverId, ruleForDelete.position);
+      ApiException exception = Assert.Throws<ApiException>(() =>
+                instance.GetFirewallRule(serverId, ruleForDelete.position)
+        );
+      Assert.AreEqual(exception.Message, "Not Found");
+
+    }
+
+    /// <summary>
+    /// Test ServerServerIdFirewallRuleGet
+    /// </summary>
+    [Test]
+    public void ServerServerIdFirewallRuleGetTest()
+    {
+      Guid? serverId = testServer.uuid;
+      List<FirewallRule> firewallRules = instance.ServerServerIdFirewallRuleGet(serverId).firewallRules.firewallRule;
+
+      Assert.True(firewallRules.Any(item => item.comment.Equals("Common firewall rule")));
+    }
+
+  }
 
 }

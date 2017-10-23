@@ -60,20 +60,20 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'StopType'
+        /// Test the property 'stopType'
         /// </summary>
         [Test]
-        public void StopTypeTest()
+        public void stopTypeTest()
         {
-            // TODO unit test for the property 'StopType'
+            // TODO unit test for the property 'stopType'
         }
         /// <summary>
-        /// Test the property 'Timeout'
+        /// Test the property 'timeout'
         /// </summary>
         [Test]
-        public void TimeoutTest()
+        public void timeoutTest()
         {
-            // TODO unit test for the property 'Timeout'
+            // TODO unit test for the property 'timeout'
         }
 
     }

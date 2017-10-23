@@ -60,12 +60,12 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Zone'
+        /// Test the property 'zone'
         /// </summary>
         [Test]
-        public void ZoneTest()
+        public void zoneTest()
         {
-            // TODO unit test for the property 'Zone'
+            // TODO unit test for the property 'zone'
         }
 
     }

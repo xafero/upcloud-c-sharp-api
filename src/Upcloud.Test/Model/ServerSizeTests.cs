@@ -60,20 +60,20 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'CoreNumber'
+        /// Test the property 'coreNumber'
         /// </summary>
         [Test]
-        public void CoreNumberTest()
+        public void coreNumberTest()
         {
-            // TODO unit test for the property 'CoreNumber'
+            // TODO unit test for the property 'coreNumber'
         }
         /// <summary>
-        /// Test the property 'MemoryAmount'
+        /// Test the property 'memoryAmount'
         /// </summary>
         [Test]
-        public void MemoryAmountTest()
+        public void memoryAmountTest()
         {
-            // TODO unit test for the property 'MemoryAmount'
+            // TODO unit test for the property 'memoryAmount'
         }
 
     }

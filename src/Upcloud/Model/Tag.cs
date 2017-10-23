@@ -37,22 +37,22 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Tag" /> class.
         /// </summary>
-        /// <param name="Name">The new tag (required).</param>
-        /// <param name="Description">Description of the tag.</param>
-        /// <param name="Servers">Servers.</param>
-        public Tag(string Name = default(string), string Description = default(string), TagServers Servers = default(TagServers))
+        /// <param name="name">The new tag (required).</param>
+        /// <param name="description">Description of the tag.</param>
+        /// <param name="servers">servers.</param>
+        public Tag(string name = default(string), string description = default(string), TagServers servers = default(TagServers))
         {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
+            // to ensure "name" is required (not null)
+            if (name == null)
             {
-                throw new InvalidDataException("Name is a required property for Tag and cannot be null");
+                throw new InvalidDataException("name is a required property for Tag and cannot be null");
             }
             else
             {
-                this.Name = Name;
+                this.name = name;
             }
-            this.Description = Description;
-            this.Servers = Servers;
+            this.description = description;
+            this.servers = servers;
         }
         
         /// <summary>
@@ -60,20 +60,20 @@ namespace Upcloud.Model
         /// </summary>
         /// <value>The new tag</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         /// <summary>
         /// Description of the tag
         /// </summary>
         /// <value>Description of the tag</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        public string description { get; set; }
 
         /// <summary>
-        /// Gets or Sets Servers
+        /// Gets or Sets servers
         /// </summary>
         [DataMember(Name="servers", EmitDefaultValue=false)]
-        public TagServers Servers { get; set; }
+        public TagServers servers { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,9 +83,9 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Tag {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Servers: ").Append(Servers).Append("\n");
+            sb.Append("  name: ").Append(name).Append("\n");
+            sb.Append("  description: ").Append(description).Append("\n");
+            sb.Append("  servers: ").Append(servers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,19 +121,19 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.name == input.name ||
+                    (this.name != null &&
+                    this.name.Equals(input.name))
                 ) && 
                 (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    this.description == input.description ||
+                    (this.description != null &&
+                    this.description.Equals(input.description))
                 ) && 
                 (
-                    this.Servers == input.Servers ||
-                    (this.Servers != null &&
-                    this.Servers.Equals(input.Servers))
+                    this.servers == input.servers ||
+                    (this.servers != null &&
+                    this.servers.Equals(input.servers))
                 );
         }
 
@@ -146,12 +146,12 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
-                if (this.Servers != null)
-                    hashCode = hashCode * 59 + this.Servers.GetHashCode();
+                if (this.name != null)
+                    hashCode = hashCode * 59 + this.name.GetHashCode();
+                if (this.description != null)
+                    hashCode = hashCode * 59 + this.description.GetHashCode();
+                if (this.servers != null)
+                    hashCode = hashCode * 59 + this.servers.GetHashCode();
                 return hashCode;
             }
         }
@@ -163,22 +163,22 @@ namespace Upcloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // Name (string) maxLength
-            if(this.Name != null && this.Name.Length > 32)
+            // name (string) maxLength
+            if(this.name != null && this.name.Length > 32)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be less than 32.", new [] { "Name" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for name, length must be less than 32.", new [] { "name" });
             }
 
-            // Name (string) minLength
-            if(this.Name != null && this.Name.Length < 1)
+            // name (string) minLength
+            if(this.name != null && this.name.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Name, length must be greater than 1.", new [] { "Name" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for name, length must be greater than 1.", new [] { "name" });
             }
 
-            // Description (string) maxLength
-            if(this.Description != null && this.Description.Length > 255)
+            // description (string) maxLength
+            if(this.description != null && this.description.Length > 255)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Description, length must be less than 255.", new [] { "Description" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for description, length must be less than 255.", new [] { "description" });
             }
 
             yield break;

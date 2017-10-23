@@ -60,12 +60,12 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Timezones'
+        /// Test the property 'timezones'
         /// </summary>
         [Test]
-        public void TimezonesTest()
+        public void timezonesTest()
         {
-            // TODO unit test for the property 'Timezones'
+            // TODO unit test for the property 'timezones'
         }
 
     }

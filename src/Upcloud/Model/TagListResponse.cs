@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TagListResponse" /> class.
         /// </summary>
-        /// <param name="Tags">Tags.</param>
-        public TagListResponse(TagListResponseTags Tags = default(TagListResponseTags))
+        /// <param name="tags">tags.</param>
+        public TagListResponse(TagListResponseTags tags = default(TagListResponseTags))
         {
-            this.Tags = Tags;
+            this.tags = tags;
         }
         
         /// <summary>
-        /// Gets or Sets Tags
+        /// Gets or Sets tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
-        public TagListResponseTags Tags { get; set; }
+        public TagListResponseTags tags { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TagListResponse {\n");
-            sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("  tags: ").Append(tags).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Tags == input.Tags ||
-                    (this.Tags != null &&
-                    this.Tags.Equals(input.Tags))
+                    this.tags == input.tags ||
+                    (this.tags != null &&
+                    this.tags.Equals(input.tags))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Tags != null)
-                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
+                if (this.tags != null)
+                    hashCode = hashCode * 59 + this.tags.GetHashCode();
                 return hashCode;
             }
         }

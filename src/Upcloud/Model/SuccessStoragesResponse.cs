@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SuccessStoragesResponse" /> class.
         /// </summary>
-        /// <param name="Storages">Storages.</param>
-        public SuccessStoragesResponse(SuccessStoragesResponseStorages Storages = default(SuccessStoragesResponseStorages))
+        /// <param name="storages">storages.</param>
+        public SuccessStoragesResponse(SuccessStoragesResponseStorages storages = default(SuccessStoragesResponseStorages))
         {
-            this.Storages = Storages;
+            this.storages = storages;
         }
         
         /// <summary>
-        /// Gets or Sets Storages
+        /// Gets or Sets storages
         /// </summary>
         [DataMember(Name="storages", EmitDefaultValue=false)]
-        public SuccessStoragesResponseStorages Storages { get; set; }
+        public SuccessStoragesResponseStorages storages { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SuccessStoragesResponse {\n");
-            sb.Append("  Storages: ").Append(Storages).Append("\n");
+            sb.Append("  storages: ").Append(storages).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Storages == input.Storages ||
-                    (this.Storages != null &&
-                    this.Storages.Equals(input.Storages))
+                    this.storages == input.storages ||
+                    (this.storages != null &&
+                    this.storages.Equals(input.storages))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Storages != null)
-                    hashCode = hashCode * 59 + this.Storages.GetHashCode();
+                if (this.storages != null)
+                    hashCode = hashCode * 59 + this.storages.GetHashCode();
                 return hashCode;
             }
         }

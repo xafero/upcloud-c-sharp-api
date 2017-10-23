@@ -32,57 +32,57 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Plan" /> class.
         /// </summary>
-        /// <param name="CoreNumber">CoreNumber.</param>
-        /// <param name="MemoryAmount">MemoryAmount.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="PublicTrafficOut">PublicTrafficOut.</param>
-        /// <param name="StorageSize">StorageSize.</param>
-        /// <param name="StorageTier">StorageTier.</param>
-        public Plan(decimal? CoreNumber = default(decimal?), decimal? MemoryAmount = default(decimal?), string Name = default(string), string PublicTrafficOut = default(string), string StorageSize = default(string), string StorageTier = default(string))
+        /// <param name="coreNumber">coreNumber.</param>
+        /// <param name="memoryAmount">memoryAmount.</param>
+        /// <param name="name">name.</param>
+        /// <param name="publicTrafficOut">publicTrafficOut.</param>
+        /// <param name="storageSize">storageSize.</param>
+        /// <param name="storageTier">storageTier.</param>
+        public Plan(decimal? coreNumber = default(decimal?), decimal? memoryAmount = default(decimal?), string name = default(string), string publicTrafficOut = default(string), string storageSize = default(string), string storageTier = default(string))
         {
-            this.CoreNumber = CoreNumber;
-            this.MemoryAmount = MemoryAmount;
-            this.Name = Name;
-            this.PublicTrafficOut = PublicTrafficOut;
-            this.StorageSize = StorageSize;
-            this.StorageTier = StorageTier;
+            this.coreNumber = coreNumber;
+            this.memoryAmount = memoryAmount;
+            this.name = name;
+            this.publicTrafficOut = publicTrafficOut;
+            this.storageSize = storageSize;
+            this.storageTier = storageTier;
         }
         
         /// <summary>
-        /// Gets or Sets CoreNumber
+        /// Gets or Sets coreNumber
         /// </summary>
         [DataMember(Name="core_number", EmitDefaultValue=false)]
-        public decimal? CoreNumber { get; set; }
+        public decimal? coreNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets MemoryAmount
+        /// Gets or Sets memoryAmount
         /// </summary>
         [DataMember(Name="memory_amount", EmitDefaultValue=false)]
-        public decimal? MemoryAmount { get; set; }
+        public decimal? memoryAmount { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         /// <summary>
-        /// Gets or Sets PublicTrafficOut
+        /// Gets or Sets publicTrafficOut
         /// </summary>
         [DataMember(Name="public_traffic_out", EmitDefaultValue=false)]
-        public string PublicTrafficOut { get; set; }
+        public string publicTrafficOut { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageSize
+        /// Gets or Sets storageSize
         /// </summary>
         [DataMember(Name="storage_size", EmitDefaultValue=false)]
-        public string StorageSize { get; set; }
+        public string storageSize { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageTier
+        /// Gets or Sets storageTier
         /// </summary>
         [DataMember(Name="storage_tier", EmitDefaultValue=false)]
-        public string StorageTier { get; set; }
+        public string storageTier { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -92,12 +92,12 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Plan {\n");
-            sb.Append("  CoreNumber: ").Append(CoreNumber).Append("\n");
-            sb.Append("  MemoryAmount: ").Append(MemoryAmount).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  PublicTrafficOut: ").Append(PublicTrafficOut).Append("\n");
-            sb.Append("  StorageSize: ").Append(StorageSize).Append("\n");
-            sb.Append("  StorageTier: ").Append(StorageTier).Append("\n");
+            sb.Append("  coreNumber: ").Append(coreNumber).Append("\n");
+            sb.Append("  memoryAmount: ").Append(memoryAmount).Append("\n");
+            sb.Append("  name: ").Append(name).Append("\n");
+            sb.Append("  publicTrafficOut: ").Append(publicTrafficOut).Append("\n");
+            sb.Append("  storageSize: ").Append(storageSize).Append("\n");
+            sb.Append("  storageTier: ").Append(storageTier).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,34 +133,34 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.CoreNumber == input.CoreNumber ||
-                    (this.CoreNumber != null &&
-                    this.CoreNumber.Equals(input.CoreNumber))
+                    this.coreNumber == input.coreNumber ||
+                    (this.coreNumber != null &&
+                    this.coreNumber.Equals(input.coreNumber))
                 ) && 
                 (
-                    this.MemoryAmount == input.MemoryAmount ||
-                    (this.MemoryAmount != null &&
-                    this.MemoryAmount.Equals(input.MemoryAmount))
+                    this.memoryAmount == input.memoryAmount ||
+                    (this.memoryAmount != null &&
+                    this.memoryAmount.Equals(input.memoryAmount))
                 ) && 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.name == input.name ||
+                    (this.name != null &&
+                    this.name.Equals(input.name))
                 ) && 
                 (
-                    this.PublicTrafficOut == input.PublicTrafficOut ||
-                    (this.PublicTrafficOut != null &&
-                    this.PublicTrafficOut.Equals(input.PublicTrafficOut))
+                    this.publicTrafficOut == input.publicTrafficOut ||
+                    (this.publicTrafficOut != null &&
+                    this.publicTrafficOut.Equals(input.publicTrafficOut))
                 ) && 
                 (
-                    this.StorageSize == input.StorageSize ||
-                    (this.StorageSize != null &&
-                    this.StorageSize.Equals(input.StorageSize))
+                    this.storageSize == input.storageSize ||
+                    (this.storageSize != null &&
+                    this.storageSize.Equals(input.storageSize))
                 ) && 
                 (
-                    this.StorageTier == input.StorageTier ||
-                    (this.StorageTier != null &&
-                    this.StorageTier.Equals(input.StorageTier))
+                    this.storageTier == input.storageTier ||
+                    (this.storageTier != null &&
+                    this.storageTier.Equals(input.storageTier))
                 );
         }
 
@@ -173,18 +173,18 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.CoreNumber != null)
-                    hashCode = hashCode * 59 + this.CoreNumber.GetHashCode();
-                if (this.MemoryAmount != null)
-                    hashCode = hashCode * 59 + this.MemoryAmount.GetHashCode();
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.PublicTrafficOut != null)
-                    hashCode = hashCode * 59 + this.PublicTrafficOut.GetHashCode();
-                if (this.StorageSize != null)
-                    hashCode = hashCode * 59 + this.StorageSize.GetHashCode();
-                if (this.StorageTier != null)
-                    hashCode = hashCode * 59 + this.StorageTier.GetHashCode();
+                if (this.coreNumber != null)
+                    hashCode = hashCode * 59 + this.coreNumber.GetHashCode();
+                if (this.memoryAmount != null)
+                    hashCode = hashCode * 59 + this.memoryAmount.GetHashCode();
+                if (this.name != null)
+                    hashCode = hashCode * 59 + this.name.GetHashCode();
+                if (this.publicTrafficOut != null)
+                    hashCode = hashCode * 59 + this.publicTrafficOut.GetHashCode();
+                if (this.storageSize != null)
+                    hashCode = hashCode * 59 + this.storageSize.GetHashCode();
+                if (this.storageTier != null)
+                    hashCode = hashCode * 59 + this.storageTier.GetHashCode();
                 return hashCode;
             }
         }

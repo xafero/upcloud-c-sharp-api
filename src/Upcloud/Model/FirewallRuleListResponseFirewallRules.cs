@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FirewallRuleListResponseFirewallRules" /> class.
         /// </summary>
-        /// <param name="FirewallRule">FirewallRule.</param>
-        public FirewallRuleListResponseFirewallRules(List<FirewallRule> FirewallRule = default(List<FirewallRule>))
+        /// <param name="firewallRule">firewallRule.</param>
+        public FirewallRuleListResponseFirewallRules(List<FirewallRule> firewallRule = default(List<FirewallRule>))
         {
-            this.FirewallRule = FirewallRule;
+            this.firewallRule = firewallRule;
         }
         
         /// <summary>
-        /// Gets or Sets FirewallRule
+        /// Gets or Sets firewallRule
         /// </summary>
         [DataMember(Name="firewall_rule", EmitDefaultValue=false)]
-        public List<FirewallRule> FirewallRule { get; set; }
+        public List<FirewallRule> firewallRule { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FirewallRuleListResponseFirewallRules {\n");
-            sb.Append("  FirewallRule: ").Append(FirewallRule).Append("\n");
+            sb.Append("  firewallRule: ").Append(firewallRule).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.FirewallRule == input.FirewallRule ||
-                    (this.FirewallRule != null &&
-                    this.FirewallRule.SequenceEqual(input.FirewallRule))
+                    this.firewallRule == input.firewallRule ||
+                    (this.firewallRule != null &&
+                    this.firewallRule.SequenceEqual(input.firewallRule))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.FirewallRule != null)
-                    hashCode = hashCode * 59 + this.FirewallRule.GetHashCode();
+                if (this.firewallRule != null)
+                    hashCode = hashCode * 59 + this.firewallRule.GetHashCode();
                 return hashCode;
             }
         }

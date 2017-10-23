@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimezoneListResponse" /> class.
         /// </summary>
-        /// <param name="Timezones">Timezones.</param>
-        public TimezoneListResponse(TimezoneListResponseTimezones Timezones = default(TimezoneListResponseTimezones))
+        /// <param name="timezones">timezones.</param>
+        public TimezoneListResponse(TimezoneListResponseTimezones timezones = default(TimezoneListResponseTimezones))
         {
-            this.Timezones = Timezones;
+            this.timezones = timezones;
         }
         
         /// <summary>
-        /// Gets or Sets Timezones
+        /// Gets or Sets timezones
         /// </summary>
         [DataMember(Name="timezones", EmitDefaultValue=false)]
-        public TimezoneListResponseTimezones Timezones { get; set; }
+        public TimezoneListResponseTimezones timezones { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimezoneListResponse {\n");
-            sb.Append("  Timezones: ").Append(Timezones).Append("\n");
+            sb.Append("  timezones: ").Append(timezones).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Timezones == input.Timezones ||
-                    (this.Timezones != null &&
-                    this.Timezones.Equals(input.Timezones))
+                    this.timezones == input.timezones ||
+                    (this.timezones != null &&
+                    this.timezones.Equals(input.timezones))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Timezones != null)
-                    hashCode = hashCode * 59 + this.Timezones.GetHashCode();
+                if (this.timezones != null)
+                    hashCode = hashCode * 59 + this.timezones.GetHashCode();
                 return hashCode;
             }
         }

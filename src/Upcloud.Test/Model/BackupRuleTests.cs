@@ -60,20 +60,28 @@ namespace Upcloud.Test
         }
 
         /// <summary>
-        /// Test the property 'Interval'
+        /// Test the property 'interval'
         /// </summary>
         [Test]
-        public void IntervalTest()
+        public void intervalTest()
         {
-            // TODO unit test for the property 'Interval'
+            // TODO unit test for the property 'interval'
         }
         /// <summary>
-        /// Test the property 'Retention'
+        /// Test the property 'time'
         /// </summary>
         [Test]
-        public void RetentionTest()
+        public void timeTest()
         {
-            // TODO unit test for the property 'Retention'
+            // TODO unit test for the property 'time'
+        }
+        /// <summary>
+        /// Test the property 'retention'
+        /// </summary>
+        [Test]
+        public void retentionTest()
+        {
+            // TODO unit test for the property 'retention'
         }
 
     }

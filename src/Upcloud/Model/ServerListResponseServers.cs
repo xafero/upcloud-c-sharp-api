@@ -32,17 +32,17 @@ namespace Upcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerListResponseServers" /> class.
         /// </summary>
-        /// <param name="Server">Server.</param>
-        public ServerListResponseServers(List<Server> Server = default(List<Server>))
+        /// <param name="server">server.</param>
+        public ServerListResponseServers(List<Server> server = default(List<Server>))
         {
-            this.Server = Server;
+            this.server = server;
         }
         
         /// <summary>
-        /// Gets or Sets Server
+        /// Gets or Sets server
         /// </summary>
         [DataMember(Name="server", EmitDefaultValue=false)]
-        public List<Server> Server { get; set; }
+        public List<Server> server { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +52,7 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ServerListResponseServers {\n");
-            sb.Append("  Server: ").Append(Server).Append("\n");
+            sb.Append("  server: ").Append(server).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +88,9 @@ namespace Upcloud.Model
 
             return 
                 (
-                    this.Server == input.Server ||
-                    (this.Server != null &&
-                    this.Server.SequenceEqual(input.Server))
+                    this.server == input.server ||
+                    (this.server != null &&
+                    this.server.SequenceEqual(input.server))
                 );
         }
 
@@ -103,8 +103,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Server != null)
-                    hashCode = hashCode * 59 + this.Server.GetHashCode();
+                if (this.server != null)
+                    hashCode = hashCode * 59 + this.server.GetHashCode();
                 return hashCode;
             }
         }

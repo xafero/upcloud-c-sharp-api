@@ -22,54 +22,53 @@ using Upcloud.Model;
 
 namespace Upcloud.Test
 {
+  /// <summary>
+  ///  Class for testing ZoneApi
+  /// </summary>
+  [TestFixture]
+  public class ZoneApiTests
+  {
+    private ZoneApi instance;
+
     /// <summary>
-    ///  Class for testing ZoneApi
+    /// Setup before each unit test
     /// </summary>
-    [TestFixture]
-    public class ZoneApiTests
+    [SetUp]
+    public void Init()
     {
-        private ZoneApi instance;
-
-        /// <summary>
-        /// Setup before each unit test
-        /// </summary>
-        [SetUp]
-        public void Init()
-        {
-            instance = new ZoneApi();
-        }
-
-        /// <summary>
-        /// Clean up after each unit test
-        /// </summary>
-        [TearDown]
-        public void Cleanup()
-        {
-
-        }
-
-        /// <summary>
-        /// Test an instance of ZoneApi
-        /// </summary>
-        [Test]
-        public void InstanceTest()
-        {
-            // TODO uncomment below to test 'IsInstanceOfType' ZoneApi
-            //Assert.IsInstanceOfType(typeof(ZoneApi), instance, "instance is a ZoneApi");
-        }
-
-        
-        /// <summary>
-        /// Test ListZones
-        /// </summary>
-        [Test]
-        public void ListZonesTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ListZones();
-            //Assert.IsInstanceOf<ZoneListResponse> (response, "response is ZoneListResponse");
-        }
-        
+      instance = new ZoneApi();
     }
+
+    /// <summary>
+    /// Clean up after each unit test
+    /// </summary>
+    [TearDown]
+    public void Cleanup()
+    {
+
+    }
+
+    /// <summary>
+    /// Test an instance of ZoneApi
+    /// </summary>
+    [Test]
+    public void InstanceTest()
+    {
+      // TODO uncomment below to test 'IsInstanceOfType' ZoneApi
+      //Assert.IsInstanceOfType(typeof(ZoneApi), instance, "instance is a ZoneApi");
+    }
+
+
+    /// <summary>
+    /// Test ListZones
+    /// </summary>
+    [Test]
+    public void ListZonesTest()
+    {
+      var response = instance.ListZones();
+      Assert.True(response.zones.zone.Count > 0);
+    }
+
+  }
 
 }
