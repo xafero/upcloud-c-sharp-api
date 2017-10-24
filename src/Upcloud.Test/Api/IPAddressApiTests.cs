@@ -41,8 +41,8 @@ namespace Upcloud.Test
       instance = new IPAddressApi
       {
         Configuration = {
-                    Username = "toughbyte",
-                    Password = "Topsekret5"
+                    Username = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_USER"),
+                    Password = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_PASSWORD")
                 }
       };
       testServer = Utils.createReadyServer();
@@ -84,7 +84,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' IPAddressApi
       Assert.IsInstanceOfType(typeof(IPAddressApi), instance, "instance is a IPAddressApi");
     }
 

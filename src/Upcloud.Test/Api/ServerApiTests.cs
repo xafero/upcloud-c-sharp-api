@@ -75,7 +75,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' ServerApi
       //Assert.IsInstanceOfType(typeof(ServerApi), instance, "instance is a ServerApi");
     }
 

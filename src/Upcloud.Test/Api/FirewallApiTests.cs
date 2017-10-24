@@ -41,8 +41,8 @@ namespace Upcloud.Test
       instance = new FirewallApi
       {
         Configuration = {
-                    Username = "toughbyte",
-                    Password = "Topsekret5"
+                    Username = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_USER"),
+                    Password = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_PASSWORD")
                 }
       };
 
@@ -131,7 +131,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' FirewallApi
       //Assert.IsInstanceOfType(typeof(FirewallApi), instance, "instance is a FirewallApi");
     }
 

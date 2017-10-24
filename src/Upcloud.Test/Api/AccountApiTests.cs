@@ -59,7 +59,6 @@ namespace Upcloud.Test
     [Category("RunOnlyThis")]
     public void GetAccountTest()
     {
-      // TODO uncomment below to test the method and replace null with proper value
       var response = instance.GetAccount();
       Assert.IsInstanceOf<AccountResponse>(response, "response is AccountResponse");
       Assert.AreEqual("toughbyte", response.account.username);

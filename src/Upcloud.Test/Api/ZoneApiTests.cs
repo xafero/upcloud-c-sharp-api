@@ -54,7 +54,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' ZoneApi
       //Assert.IsInstanceOfType(typeof(ZoneApi), instance, "instance is a ZoneApi");
     }
 

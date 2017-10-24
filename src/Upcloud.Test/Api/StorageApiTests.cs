@@ -56,7 +56,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' StorageApi
       //Assert.IsInstanceOfType(typeof(StorageApi), instance, "instance is a StorageApi");
     }
 

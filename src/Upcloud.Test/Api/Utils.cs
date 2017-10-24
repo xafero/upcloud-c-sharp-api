@@ -47,9 +47,8 @@ namespace Upcloud.Test
     {
       Configuration = new Configuration
       {
-        Username = "toughbyte",
-        Password = "Topsekret5"
-        // BasePath = "http://localhost:8080/1.2"
+        Username = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_USER"),
+        Password = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_PASSWORD")
       }
     };
 

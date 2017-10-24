@@ -55,7 +55,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' TagApi
       //Assert.IsInstanceOfType(typeof(TagApi), instance, "instance is a TagApi");
     }
 

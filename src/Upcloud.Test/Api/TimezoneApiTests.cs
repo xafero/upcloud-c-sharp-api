@@ -54,7 +54,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' TimezoneApi
       //Assert.IsInstanceOfType(typeof(TimezoneApi), instance, "instance is a TimezoneApi");
     }
 

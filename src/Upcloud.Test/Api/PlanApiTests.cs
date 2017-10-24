@@ -54,7 +54,6 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      // TODO uncomment below to test 'IsInstanceOfType' PlanApi
       //Assert.IsInstanceOfType(typeof(PlanApi), instance, "instance is a PlanApi");
     }
 
