@@ -1,6 +1,17 @@
+
+
 # Upcloud - the C# library for the Upcloud api
 
 The UpCloud API consists of operations used to control resources on UpCloud. The API is a web service interface. HTTPS is used to connect to the API. The API follows the principles of a RESTful web service wherever possible. The base URL for all API operations is  https://api.upcloud.com/. All API operations require authentication.
+
+## Table of content
+* [Frameworks supported](#frameworks-supported)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Documentation](#documentation)
+* [Issues](#issues)
+* [Contributing](#contributing-optional)
+* [License](#license)
 
 <a name="frameworks-supported"></a>
 ## Frameworks supported
@@ -45,8 +56,8 @@ nuget pack -Build -OutputDirectory out Upcloud.csproj
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
 
-<a name="getting-started"></a>
-## Getting Started
+<a name="usage"></a>
+## Usage
 
 ```csharp
 using System;
@@ -84,8 +95,8 @@ namespace Example
 }
 ```
 
-<a name="documentation-for-api-endpoints"></a>
-## Documentation for API Endpoints
+<a name="documentation"></a>
+## Documentation
 
 All URIs are relative to *https://api.upcloud.com/1.2*
 
@@ -234,3 +245,10 @@ Class | Method | HTTP request | Description
 
 - **Type**: HTTP basic authentication
 
+
+## Issues
+[Open a new issue here](https://github.com/UpCloudLtd/upcloud-c-sharp-api/issues/new).
+
+## License
+
+This project is distributed under the [MIT License](https://opensource.org/licenses/MIT), see LICENSE.txt for more information.
