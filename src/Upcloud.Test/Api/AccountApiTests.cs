@@ -37,8 +37,8 @@ namespace Upcloud.Test
     public void Init()
     {
       instance = new AccountApi();
-      instance.Configuration.Username = "toughbyte";
-      instance.Configuration.Password = "Topsekret5";
+      instance.Configuration.Username = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_USER");
+      instance.Configuration.Password = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_PASSWORD");
     }
 
     /// <summary>

@@ -16,4 +16,4 @@ mono nuget.exe install NUnit.Runners -Version 2.6.4 -OutputDirectory packages
 
 echo "[INFO] Build the solution and run the unit test"
 xbuild Upcloud.sln && \
-    mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe src/Upcloud.Test/bin/Debug/Upcloud.Test.dll
+    mono ./packages/NUnit.Runners.2.6.4/tools/nunit-console.exe src/Upcloud.Test/bin/Debug/Upcloud.Test.dll -include RunOnlyThis
