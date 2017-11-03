@@ -1,7 +1,8 @@
-#
 language: csharp
 mono:
-  - latest
+- latest
 solution: Upcloud.sln
 script:
-  - /bin/sh ./mono_nunit_test.sh
+- "/bin/sh ./mono_nunit_test.sh"
+env:
+  secure: pvUg+cv67bJhWEksFZQXosxK6q41c6TMtnW2vTUX6mSX2YdJsU+ohcuqe4hOjxnerOV6W7qwUYy1umRrec7ERjym00NVm2V5BBnQAr0cb/MSxTgUBj43F3rKSZkZz3v9/fecUAWmJyrwuIajoQLCeaUfqr/a8BsxmiphBTxSMdIDP6YCa5wyVIalgwWiqVsIQgAbPyCWF+m3gkwfAu9jP8PoHDa7QSJmxuJeu7nd+0M0HsEl/zjMgjggOspMJdj8rq504T69wMFlirrR4M5YWr0AIPye++Q8hnXbqk/RLKF87NoEi3+ZeC/gzRQ6WGbCb77Erhsp64ABWTz0DN3j7DDh6KZBM62sHhWhc+dM//UxLhqf7s3R2MB0TXBbkDiDJhu1FJDXwD5TLDi7G/aSPHBWyY6JOYfFFDaMf1VtroSmwPE07bIMdXViGeA9OIUTVB0uRAmOIQCVzzyKxa/T2Uu0QBo9BERVSV1/DdKoiGKtyL1k31No1g0OOkARVvkCKXeihdPokozq0dlJHG4xOrCWH4pA8vYBPBE7Lq2W3C1FzDX1ICD1q0DJ/KW3NCt6azW79aahf4Foc/DYA/At9TJGLQjdCT8JZJq1h1AEkRiYagQjHwd+rVlpSDIaOk8L11iMJHw6UNOO0jtLzv/mbyovOnjnZKjCUWoYw4B8Kyk=
