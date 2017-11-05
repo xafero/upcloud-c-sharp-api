@@ -1,6 +1,4 @@
-
-
-# Upcloud - the C# library for the Upcloud api
+# UpCloud C# API client library
 
 [![Build Status](https://travis-ci.org/UpCloudLtd/upcloud-c-sharp-api.svg?branch=master)](https://travis-ci.org/UpCloudLtd/upcloud-c-sharp-api)
 
