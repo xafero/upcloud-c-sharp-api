@@ -2,23 +2,24 @@
 
 [![Build Status](https://travis-ci.org/UpCloudLtd/upcloud-c-sharp-api.svg?branch=master)](https://travis-ci.org/UpCloudLtd/upcloud-c-sharp-api)
 
-The UpCloud API consists of operations used to control resources on UpCloud. The API is a web service interface. HTTPS is used to connect to the API. The API follows the principles of a RESTful web service wherever possible. The base URL for all API operations is  https://api.upcloud.com/. All API operations require authentication.
+This C# API client for the UpCloud API provides a web service interface using HTTPS. It allows extensively featured resource management on UpCloud's IaaS with easy to use functions. The API client follows the RESTful web service principles wherever possible.
+
+The base URL for all API operations is  https://api.upcloud.com/ and require basic authentication using UpCloud username and password. We recommend [creating a subaccount](https://www.upcloud.com/support/server-tags-and-group-accounts/) dedicated for the API communication for security purposes. This allows you to restrict API access by servers, storages, and tags ensuring you will never accidentally affect critical systems.
 
 ## Table of content
 * [Frameworks supported](#frameworks-supported)
+* [Dependencies](#dependencies)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Documentation](#documentation)
 * [Issues](#issues)
-* [Contributing](#contributing-optional)
 * [License](#license)
 
-<a name="frameworks-supported"></a>
+
 ## Frameworks supported
 - .NET 4.0 or later
 - Windows Phone 7.1 (Mango)
 
-<a name="dependencies"></a>
 ## Dependencies
 - [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0 or later
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
@@ -31,9 +32,9 @@ Install-Package Newtonsoft.Json
 
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
-<a name="installation"></a>
+
 ## Installation
-Run the following command to generate the DLL
+Run the following command to generate the DLL.
 - [Mac/Linux] `/bin/sh build.sh`
 - [Windows] `build.bat`
 
@@ -43,7 +44,7 @@ using Upcloud.Api;
 using Upcloud.Client;
 using Upcloud.Model;
 ```
-<a name="packaging"></a>
+
 ## Packaging
 
 A `.nuspec` is included with the project. You can follow the Nuget quickstart to [create](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#create-the-package) and [publish](https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package#publish-the-package) packages.
@@ -56,7 +57,6 @@ nuget pack -Build -OutputDirectory out Upcloud.csproj
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
 
-<a name="usage"></a>
 ## Usage
 
 ```csharp
@@ -74,8 +74,8 @@ namespace Example
         {
 
             // Configure HTTP basic authorization: baseAuth
-            Configuration.Default.Username = "YOUR_USERNAME";
-            Configuration.Default.Password = "YOUR_PASSWORD";
+            Configuration.Default.Username = Environment.GetEnvironmentVariable("UPCLOUD_USERNAME");
+            Configuration.Default.Password = Environment.GetEnvironmentVariable("UPCLOUD_PASSWORD");
 
             var apiInstance = new AccountApi();
 
@@ -95,7 +95,6 @@ namespace Example
 }
 ```
 
-<a name="documentation"></a>
 ## Documentation
 
 All URIs are relative to *https://api.upcloud.com/1.2*
@@ -160,8 +159,7 @@ Class | Method | HTTP request | Description
 *ZoneApi* | [**ListZones**](docs/ZoneApi.md#listzones) | **GET** /zone | List available zones
 
 
-<a name="documentation-for-models"></a>
-## Documentation for Models
+## Documentation of the models
 
  - [Model.Account](docs/Account.md)
  - [Model.AccountResponse](docs/AccountResponse.md)
@@ -237,17 +235,19 @@ Class | Method | HTTP request | Description
  - [Model.ZoneListResponseZones](docs/ZoneListResponseZones.md)
 
 
-<a name="documentation-for-authorization"></a>
-## Documentation for Authorization
+## Documentation for authorization
 
-<a name="baseAuth"></a>
+It's recommended to store the username and password as environmental variables while developing API applications to avoid accidentally publishing your account credentials.
+
 ### baseAuth
 
 - **Type**: HTTP basic authentication
+- **Username**: Your UpCloud API username
+- **Password**: Your UpCloud API user's password
 
 
 ## Issues
-[Open a new issue here](https://github.com/UpCloudLtd/upcloud-c-sharp-api/issues/new).
+Found a bug, have a problem using the client, or anything else about the library you would want to mention? [Open a new issue here](https://github.com/UpCloudLtd/upcloud-c-sharp-api/issues/new) to get in contact.
 
 ## License
 
