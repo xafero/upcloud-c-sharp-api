@@ -61,7 +61,7 @@ namespace Upcloud.Test
     {
       var response = instance.GetAccount();
       Assert.IsInstanceOf<AccountResponse>(response, "response is AccountResponse");
-      Assert.AreEqual("toughbyte", response.account.username);
+      Assert.AreEqual(Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_USER"), response.account.username);
     }
 
   }
