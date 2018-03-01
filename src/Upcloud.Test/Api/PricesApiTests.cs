@@ -1,10 +1,10 @@
-/* 
+/*
  * Upcloud api
  *
  * The UpCloud API consists of operations used to control resources on UpCloud. The API is a web service interface. HTTPS is used to connect to the API. The API follows the principles of a RESTful web service wherever possible. The base URL for all API operations is  https://api.upcloud.com/. All API operations require authentication.
  *
  * OpenAPI spec version: 1.2.0
- * 
+ *
  */
 
 using System;
@@ -82,7 +82,6 @@ namespace Upcloud.Test
       Assert.NotNull(priceZone.serverCore);
       Assert.NotNull(priceZone.serverMemory);
       Assert.NotNull(priceZone.serverPlan1xCPU1GB);
-      Assert.NotNull(priceZone.serverPlan2xCPU2GB);
       Assert.NotNull(priceZone.storageBackup);
       Assert.NotNull(priceZone.storageMaxiops);
     }
