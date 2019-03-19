@@ -181,7 +181,7 @@ namespace Upcloud.Test
         List<Server> serverList = serverApi.ListServers().servers.server;
         foreach (Server server in serverList)
         {
-          deleteServer(server, 0);
+          deleteServer(server, 5);
         }
       }
       catch (ApiException e)
@@ -191,9 +191,18 @@ namespace Upcloud.Test
       }
     }
 
+    public static Server findOrCreateReadyServer()
+    {
+      List<Server> servers = serverApi.ListServers().servers.server;
+      var server = servers.FirstOrDefault(s => s.state == ServerState.Started);
+
+      if (server != null) {
+        return server;
+      } else {
+        return createReadyServer();
+      }
+    }
 
   }
-
-
 
 }

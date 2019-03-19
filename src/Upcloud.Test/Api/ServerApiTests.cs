@@ -40,6 +40,8 @@ namespace Upcloud.Test
     public void Init()
     {
       instance = new ServerApi();
+      instance.Configuration.Username = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_USER");
+      instance.Configuration.Password = Environment.GetEnvironmentVariable("UPCLOUD_API_TEST_PASSWORD");
 
       testStorageDevice = new StorageDevice
       {
@@ -107,6 +109,21 @@ namespace Upcloud.Test
       Assert.AreEqual(prevSize + 1, servers.Count);
     }
 
-  }
+    /// <summary>
+    /// Test RestartServer
+    /// </summary>
+    [Test]
+    public void RestartServerTest()
+    {
+      Server server = Utils.findOrCreateReadyServer();
 
+      var result = instance.RestartServer(
+        server.uuid,
+        new RestartServer(RestartServer.StopTypeEnum.Soft, 30, RestartServer.TimeoutActionEnum.Destroy)
+      );
+
+      // FIXME: restart takes a while, so not sure how to test this...
+      Assert.AreEqual(ServerState.Started, result.server.state);
+    }
+  }
 }
