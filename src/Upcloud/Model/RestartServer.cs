@@ -1,10 +1,10 @@
-/* 
+/*
  * Upcloud api
  *
  * The UpCloud API consists of operations used to control resources on UpCloud. The API is a web service interface. HTTPS is used to connect to the API. The API follows the principles of a RESTful web service wherever possible. The base URL for all API operations is  https://api.upcloud.com/. All API operations require authentication.
  *
  * OpenAPI spec version: 1.2.0
- * 
+ *
  */
 
 using System;
@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Upcloud.Client.SwaggerDateConverter;
+using static Upcloud.Model.RestartServerWrap;
 
 namespace Upcloud.Model
 {
@@ -36,13 +37,13 @@ namespace Upcloud.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StopTypeEnum
         {
-            
+
             /// <summary>
             /// Enum Soft for "soft"
             /// </summary>
             [EnumMember(Value = "soft")]
             Soft,
-            
+
             /// <summary>
             /// Enum Hard for "hard"
             /// </summary>
@@ -57,13 +58,13 @@ namespace Upcloud.Model
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TimeoutActionEnum
         {
-            
+
             /// <summary>
             /// Enum Destroy for "destroy"
             /// </summary>
             [EnumMember(Value = "destroy")]
             Destroy,
-            
+
             /// <summary>
             /// Enum Ignore for "ignore"
             /// </summary>
@@ -72,46 +73,15 @@ namespace Upcloud.Model
         }
 
         /// <summary>
-        /// Restart type
+        /// Gets or Sets restartServer
         /// </summary>
-        /// <value>Restart type</value>
-        [DataMember(Name="stop_type", EmitDefaultValue=false)]
-        public StopTypeEnum? stopType { get; set; }
-        /// <summary>
-        /// Action to take if timeout limit is exceeded.
-        /// </summary>
-        /// <value>Action to take if timeout limit is exceeded.</value>
-        [DataMember(Name="timeout_action", EmitDefaultValue=false)]
-        public TimeoutActionEnum? timeoutAction { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestartServer" /> class.
-        /// </summary>
-        /// <param name="stopType">Restart type (default to StopTypeEnum.Soft).</param>
-        /// <param name="timeout">Stop timeout in seconds.</param>
-        /// <param name="timeoutAction">Action to take if timeout limit is exceeded..</param>
+        [DataMember(Name="restart_server", EmitDefaultValue=false)]
+        public RestartServerWrap restartServer { get; set; }
+
         public RestartServer(StopTypeEnum? stopType = StopTypeEnum.Soft, decimal? timeout = default(decimal?), TimeoutActionEnum? timeoutAction = default(TimeoutActionEnum?))
         {
-            // use default value if no "stopType" provided
-            if (stopType == null)
-            {
-                this.stopType = StopTypeEnum.Soft;
-            }
-            else
-            {
-                this.stopType = stopType;
-            }
-            this.timeout = timeout;
-            this.timeoutAction = timeoutAction;
+            this.restartServer = new RestartServerWrap(stopType, timeout, timeoutAction);
         }
-        
-
-        /// <summary>
-        /// Stop timeout in seconds
-        /// </summary>
-        /// <value>Stop timeout in seconds</value>
-        [DataMember(Name="timeout", EmitDefaultValue=false)]
-        public decimal? timeout { get; set; }
-
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -121,13 +91,11 @@ namespace Upcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RestartServer {\n");
-            sb.Append("  stopType: ").Append(stopType).Append("\n");
-            sb.Append("  timeout: ").Append(timeout).Append("\n");
-            sb.Append("  timeoutAction: ").Append(timeoutAction).Append("\n");
+            sb.Append("  restartServer: ").Append(restartServer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
-  
+
         /// <summary>
         /// Returns the JSON string presentation of the object
         /// </summary>
@@ -157,21 +125,11 @@ namespace Upcloud.Model
             if (input == null)
                 return false;
 
-            return 
+            return
                 (
-                    this.stopType == input.stopType ||
-                    (this.stopType != null &&
-                    this.stopType.Equals(input.stopType))
-                ) && 
-                (
-                    this.timeout == input.timeout ||
-                    (this.timeout != null &&
-                    this.timeout.Equals(input.timeout))
-                ) && 
-                (
-                    this.timeoutAction == input.timeoutAction ||
-                    (this.timeoutAction != null &&
-                    this.timeoutAction.Equals(input.timeoutAction))
+                    this.restartServer == input.restartServer ||
+                    (this.restartServer != null &&
+                    this.restartServer.Equals(input.restartServer))
                 );
         }
 
@@ -184,12 +142,8 @@ namespace Upcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.stopType != null)
-                    hashCode = hashCode * 59 + this.stopType.GetHashCode();
-                if (this.timeout != null)
-                    hashCode = hashCode * 59 + this.timeout.GetHashCode();
-                if (this.timeoutAction != null)
-                    hashCode = hashCode * 59 + this.timeoutAction.GetHashCode();
+                if (this.restartServer != null)
+                    hashCode = hashCode * 59 + this.restartServer.GetHashCode();
                 return hashCode;
             }
         }
@@ -201,18 +155,6 @@ namespace Upcloud.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
-            // timeout (decimal?) maximum
-            if(this.timeout > (decimal?)600)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for timeout, must be a value less than or equal to 600.", new [] { "timeout" });
-            }
-
-            // timeout (decimal?) minimum
-            if(this.timeout < (decimal?)1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for timeout, must be a value greater than or equal to 1.", new [] { "timeout" });
-            }
-
             yield break;
         }
     }
