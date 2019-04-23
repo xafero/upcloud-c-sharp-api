@@ -133,7 +133,7 @@ namespace Upcloud.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);
+                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, -1, param.Value.ContentType);
             }
 
             if (postBody != null) // http body (model or byte[]) parameter

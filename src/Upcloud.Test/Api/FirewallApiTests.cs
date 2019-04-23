@@ -85,7 +85,7 @@ namespace Upcloud.Test
       Utils.deleteAllServers();
     }
 
-    [TestFixtureSetUp]
+    [SetUp]
     public void SetUpEach()
     {
       Guid? serverId = testServer.uuid;
@@ -114,7 +114,7 @@ namespace Upcloud.Test
       testFirewallRules.Add(firewallRule);
     }
 
-    [TestFixtureTearDown]
+    [TearDown]
     public void TearDownEach()
     {
       Guid? serverId = testServer.uuid;

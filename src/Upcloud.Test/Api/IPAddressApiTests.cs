@@ -60,7 +60,7 @@ namespace Upcloud.Test
 
     }
 
-    [TestFixtureSetUp]
+    [SetUp]
     public void SetUpEach()
     {
       Guid? serverId = testServer.uuid;
@@ -69,7 +69,7 @@ namespace Upcloud.Test
       testIpAddress = response.ipAddress;
     }
 
-    [TestFixtureTearDown]
+    [TearDown]
     public void TearDownEach()
     {
       if (testIpAddress != null)
@@ -84,7 +84,7 @@ namespace Upcloud.Test
     [Test]
     public void InstanceTest()
     {
-      Assert.IsInstanceOfType(typeof(IPAddressApi), instance, "instance is a IPAddressApi");
+      Assert.IsInstanceOf(typeof(IPAddressApi), instance, "instance is a IPAddressApi");
     }
 
 
